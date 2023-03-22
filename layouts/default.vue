@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-app(dark)
+  v-app#app(dark)
     v-app-bar(fixed app)
       v-toolbar-title M
       v-spacer
@@ -7,10 +7,13 @@
       span Link 2
       span Link 3
     v-main
-      v-container#main(fluid)
+      v-container(fluid)
         Nuxt
-    v-footer(:absolute="!fixed" app)
+    v-footer#footer(:absolute="!fixed" app)
       span &copy; #{new Date().getFullYear()}
+      span.pl-5 Mason Gentry
+      v-spacer
+      span mgentry@masongentry.com
 </template>
 
 <script>
@@ -43,6 +46,15 @@ export default {
   background-color: unset !important
   box-shadow: unset !important
 
-#main
+#app
   padding: 0 46px
+
+#footer
+  font-size: 18px
+  line-height: 24px
+  background-color: unset
+  display: flex
+  align-items: center
+  height: 100px
+  border-top: #FFFFFF 1px solid
 </style>
