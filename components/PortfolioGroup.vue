@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   v-row.portfolio-group
-    v-col(:md="items.length === 2 ? 6 : 12" v-for="n in items.length" :key="n")
+    v-col(:md="items.length === 2 || items[n-1].position ? 6 : 12" v-for="n in items.length" :key="n" :offset-md="items[n-1].position ? 6 : 0")
       PortfolioItem(:item="items[n-1]")
 
 

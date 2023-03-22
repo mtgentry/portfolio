@@ -31,7 +31,9 @@ img
   font-size: 19px
   line-height: 25px
 
+
 .description
   font-size: 16px
   line-height: 21px
+
 </style>
