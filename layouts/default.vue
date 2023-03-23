@@ -1,15 +1,16 @@
 <template lang="pug">
-  v-app#app(dark)
-    v-app-bar(fixed app)
+  v-app#app(ref="app" :style="style")
+    v-app-bar(fixed app :style="style")
       v-toolbar-title M
       v-spacer
       span Link 1
       span Link 2
       span Link 3
+
     v-main
       v-container(fluid)
         Nuxt
-    v-footer#footer(:absolute="!fixed" app)
+    v-footer#footer(absolute app)
       span &copy; #{new Date().getFullYear()}
       span.pl-5 Mason Gentry
       v-spacer
@@ -17,14 +18,23 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'DefaultLayout',
-  data () {
-    return {
-      fixed: false,
-      title: 'Vuetify.js'
-    }
-  }
+  mounted() {
+    this.$store.commit('changeBackgroundColor', this.backgroundColor)
+  },
+  computed: {
+    style() {
+      if (this.$route.path === '/') {
+        return `background-color: ${this.backgroundColor}`
+      } else {
+        return `background: linear-gradient(to bottom, ${this.backgroundColor}, #FFFFFF) no-repeat top; background-size: 100% 2000px;`
+      }
+    },
+    ...mapState(['backgroundColor',])
+  },
+
 }
 </script>
 
@@ -43,13 +53,11 @@ export default {
   font-family: 'Resist Sans', sans-serif
 
 .theme--dark.v-app-bar.v-toolbar.v-sheet
-  background-color: #282725 !important
   box-shadow: unset !important
   padding: 0 46px
 
 #app
   padding: 0 46px
-  background-color: #282725
 
 #footer
   font-size: 18px
@@ -63,4 +71,6 @@ export default {
   a
     color: #FFFFFF
     text-decoration: none
+
+
 </style>

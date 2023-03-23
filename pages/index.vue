@@ -5,6 +5,9 @@
       PortfolioGroup(:items="items1")
       PortfolioGroup(:items="items2")
       PortfolioGroup(:items="items3")
+      PortfolioGroup(:items="items1")
+      PortfolioGroup(:items="items2")
+      PortfolioGroup(:items="items3")
 
 </template>
 
