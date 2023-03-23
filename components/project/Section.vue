@@ -18,5 +18,6 @@ export default {
 
 div
   padding: 130px 163px
+  color: #282725
 
 </style>

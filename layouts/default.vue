@@ -52,7 +52,7 @@ export default {
 .v-application
   font-family: 'Resist Sans', sans-serif
 
-.v-app-bar.v-toolbar.v-sheet
+.theme--dark.v-app-bar.v-toolbar.v-sheet
   box-shadow: unset !important
   padding: 0 46px
 
