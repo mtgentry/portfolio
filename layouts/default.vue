@@ -13,7 +13,7 @@
       span &copy; #{new Date().getFullYear()}
       span.pl-5 Mason Gentry
       v-spacer
-      span mgentry@masongentry.com
+      a(href="mailto:mgentry@masongentry.com") mgentry@masongentry.com
 </template>
 
 <script>
@@ -31,23 +31,25 @@ export default {
 <style lang="sass">
 @font-face
   font-family: 'Resist Sans'
-  src: url('/fonts/resist-sans-text-light.otf')
+  src: url('/fonts/resist-sans-text-regular.ttf')
   font-weight: 300
 
 @font-face
   font-family: 'Resist Sans'
-  src: url('/fonts/ResistSansText-Medium.ttf')
+  src: url('/fonts/resist-sans-text-medium.ttf')
   font-weight: 600
 
 .v-application
   font-family: 'Resist Sans', sans-serif
 
 .theme--dark.v-app-bar.v-toolbar.v-sheet
-  background-color: unset !important
+  background-color: #282725 !important
   box-shadow: unset !important
+  padding: 0 46px
 
 #app
   padding: 0 46px
+  background-color: #282725
 
 #footer
   font-size: 18px
@@ -57,4 +59,8 @@ export default {
   align-items: center
   height: 100px
   border-top: #FFFFFF 1px solid
+
+  a
+    color: #FFFFFF
+    text-decoration: none
 </style>
