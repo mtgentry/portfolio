@@ -29,7 +29,7 @@ export default {
       if (this.$route.path === '/') {
         return `background-color: ${this.backgroundColor}`
       } else {
-        return `background: linear-gradient(to bottom, ${this.backgroundColor}, #FFFFFF) no-repeat top; background-size: 100% 2000px;`
+        return `background: linear-gradient(to bottom, ${this.backgroundColor}, #FFFFFF) no-repeat top; background-size: 100% 4000px;`
       }
     },
     ...mapState(['backgroundColor',])
@@ -52,7 +52,7 @@ export default {
 .v-application
   font-family: 'Resist Sans', sans-serif
 
-.theme--dark.v-app-bar.v-toolbar.v-sheet
+.v-app-bar.v-toolbar.v-sheet
   box-shadow: unset !important
   padding: 0 46px
 
