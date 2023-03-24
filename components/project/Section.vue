@@ -5,7 +5,7 @@
     p(v-for="text in section.text") {{ text }}
   v-row.section.images(v-else)
     v-col(v-for="image in section.images" :cols="12 / section.images.length")
-      img(:src="`/projects/${$route.params.project}/${image.name}`")
+      img(:src="`/projects/${$route.params.project}/media/${image.name}`")
 
 
 </template>

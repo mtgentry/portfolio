@@ -1,7 +1,7 @@
 <template lang="pug">
   v-row(justify="center" align="center")
     v-col(cols="12")
-      Top(:text="data.description")
+      Top(:text="data.header")
       Section(v-for="section in data.layout" :section="section")
 
 
@@ -19,24 +19,19 @@ export default {
   data() {
     return {
       data: {
-        top: '',
+        header: '',
         layout: [],
       },
       backgroundColor: '#6CAF82',
     }
   },
+  async fetch() {
+    this.data = await this.$axios.get(`/projects/${this.$route.params.project}/layout.json`)
+        .then((response) => response.data)
+  },
   mounted() {
     this.$store.commit('changeBackgroundColor', this.backgroundColor)
-    this.getData()
   },
-  methods: {
-    getData() {
-      this.$axios.get(`/projects/${this.$route.params.project}/layout.json`)
-        .then((response) => {
-          this.data = response.data
-        })
-    }
-  }
 
 }
 </script>

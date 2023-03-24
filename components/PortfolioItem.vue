@@ -1,20 +1,16 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   div.item
-    img(:src="item?.src || placeholder" :class="item.small ? 'small' : 'large'")
-    div.title {{ item.title }}
-    div.description {{ item.description }}
+    nuxt-link(:to="`/project/${project_name}`")
+      img(:src="`projects/${project_name}/media/${project.image}`" class="large")
+      div.title {{ project.title }}
+      div.description {{ project.description }}
 
 </template>
 
 <script>
 export default {
-  props: ['item'],
-  data() {
-    return {
-      placeholder: '/images/placeholder.jpg'
-    }
-  }
+  props: ['project', 'project_name'],
 }
 </script>
 
