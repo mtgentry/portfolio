@@ -1,6 +1,6 @@
 <template lang="pug">
   v-app#app(ref="app" :style="style")
-    v-app-bar(fixed app :style="style")
+    v-app-bar(fixed app :style="style" flat ref="navbar")
       nuxt-link(to="/")
         v-toolbar-title M
       v-spacer
@@ -20,8 +20,10 @@
 
 <script>
 import { mapState } from 'vuex'
+import HideNavbar from "@/components/mixins/HideNavbar.vue";
 export default {
   name: 'DefaultLayout',
+  mixins: [HideNavbar],
   mounted() {
     this.$store.commit('changeBackgroundColor', this.backgroundColor)
   },
@@ -54,7 +56,7 @@ export default {
   font-family: 'Resist Sans', sans-serif
 
 .theme--dark.v-app-bar.v-toolbar.v-sheet
-  box-shadow: unset !important
+
   padding: 0 46px
 
 #app
