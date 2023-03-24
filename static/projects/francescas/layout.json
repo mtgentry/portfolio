@@ -4,6 +4,7 @@
     "title": "Francesca's",
     "description": "1111"
   },
+  "backgroundColor": "#6CAF82",
   "header": "When Francesca's came to us, their brand was stale. Their 11-15 yr old female customers had grown more sophisticated than when the company was first founded in 2006. They now preferred hipper brands like Nasty Gal and Nylon. At the same time, our creative brief stated the rebrand shouldn't alienate the parents of these young women. We came up with a few solutions which tested very well with both young women and their parents.",
   "layout": [
     {
@@ -28,11 +29,11 @@
     {
       "images": [
         {
-          "name": "francescas_2.jpg",
+          "name": "2.jpg",
           "position": "center"
         },
         {
-          "name": "francescas_3.jpg",
+          "name": "3.jpg",
           "position": "center"
         }
       ]

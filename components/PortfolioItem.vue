@@ -1,16 +1,16 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   div.item
-    nuxt-link(:to="`/project/${project_name}`")
-      img(:src="`projects/${project_name}/media/${project.image}`" class="large")
-      div.title {{ project.title }}
-      div.description {{ project.description }}
+    nuxt-link(:to="`/project/${project.name}`")
+      img(:src="`projects/${project.name}/media/${project.cover.image}`" class="large")
+      div.title {{ project.cover.title }}
+      div.description {{ project.cover.description }}
 
 </template>
 
 <script>
 export default {
-  props: ['project', 'project_name'],
+  props: ['project'],
 }
 </script>
 

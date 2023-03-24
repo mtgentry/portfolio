@@ -1,8 +1,8 @@
 <template lang="pug">
-  v-row(justify="center" align="center")
+  v-row(justify="center" align="center" v-if="project")
     v-col(cols="12")
-      Top(:text="data.header")
-      Section(v-for="section in data.layout" :section="section")
+      Top(:text="project.header")
+      Section(v-for="section in project.layout" :section="section")
 
 
 </template>
@@ -18,19 +18,19 @@ export default {
   },
   data() {
     return {
-      data: {
-        header: '',
-        layout: [],
-      },
-      backgroundColor: '#6CAF82',
+      project: null,
     }
   },
   async fetch() {
-    this.data = await this.$axios.get(`/projects/${this.$route.params.project}/layout.json`)
+    if (this.$store.state.projects) {
+      this.project = this.$store.state.projects[this.$route.params.project]
+    }
+
+    if (!this.project) {
+      this.project = await this.$axios.get(`/projects/${this.$route.params.project}/layout.json`)
         .then((response) => response.data)
-  },
-  mounted() {
-    this.$store.commit('changeBackgroundColor', this.backgroundColor)
+    }
+    this.$store.commit('changeBackgroundColor', this.project.backgroundColor)
   },
 
 }
