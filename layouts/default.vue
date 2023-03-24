@@ -1,7 +1,8 @@
 <template lang="pug">
   v-app#app(ref="app" :style="style")
     v-app-bar(fixed app :style="style")
-      v-toolbar-title M
+      nuxt-link(to="/")
+        v-toolbar-title M
       v-spacer
       span Link 1
       span Link 2
@@ -58,6 +59,9 @@ export default {
 
 #app
   padding: 0 46px
+  a
+    color: #FFFFFF
+    text-decoration: none
 
 #footer
   font-size: 18px
@@ -68,9 +72,6 @@ export default {
   height: 100px
   border-top: #FFFFFF 1px solid
 
-  a
-    color: #FFFFFF
-    text-decoration: none
 
 
 </style>

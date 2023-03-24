@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     getData() {
-      this.$axios.get(`/projects/${this.$route.params.project}.json`)
+      this.$axios.get(`/projects/${this.$route.params.project}/layout.json`)
         .then((response) => {
           this.data = response.data
         })
