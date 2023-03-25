@@ -4,7 +4,7 @@
     span.font-weight-bold(v-if="section.title") {{ section.title }}
     p(v-for="text in section.text") {{ text }}
   v-row.section.images(v-else)
-    v-col(v-for="image in section.images" :cols="12 / section.images.length")
+    v-col(v-for="image in section.images" :cols="12 / section.images.length" :key="image.name")
       img(:src="`/projects/${$route.params.project}/media/${image.name}`")
 
 
