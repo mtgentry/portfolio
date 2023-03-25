@@ -1,5 +1,6 @@
 export const state = () => ({
-  backgroundColor: "#282725",
+  backgroundColor: "#FFFFFF",
+  homeBackgroundColor: "#282725",
   projects: null,
 })
 

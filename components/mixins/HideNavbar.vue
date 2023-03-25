@@ -3,6 +3,7 @@ export default {
   data() {
     return {
       lastScrollTop: 0,
+      oldBackgroundColor: null,
     }
   },
   mounted() {
@@ -14,7 +15,13 @@ export default {
         vue.hideNav()
       } else if (st < this.lastScrollTop) {
         vue.showNav()
-      } // else was horizontal scroll
+      }
+      if (vue.$route.path === '/') return
+      if (st > 500) {
+        vue.makeBackgroundWhite()
+      } else if (st > 0 && st <= 500) {
+        vue.makeBackgroundBColor()
+      }
       this.lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
     }, false);
   },
@@ -24,6 +31,15 @@ export default {
     },
     hideNav() {
       this.$refs.navbar.$el.classList.add('hidden')
+    },
+    makeBackgroundWhite() {
+      console.log('white')
+      this.$store.commit('changeBackgroundColor', "#ffffff")
+    },
+    makeBackgroundBColor() {
+      console.log(this.backgroundColor)
+      if (this.$store.state.backgroundColor !== "#ffffff") this.oldBackgroundColor = this.$store.state.backgroundColor
+      this.$store.commit('changeBackgroundColor', this.oldBackgroundColor)
     },
   },
 }

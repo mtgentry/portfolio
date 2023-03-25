@@ -16,6 +16,7 @@ export default {
     Section,
     Top,
   },
+  transition: 'fade',
   data() {
     return {
       project: null,

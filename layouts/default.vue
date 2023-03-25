@@ -29,11 +29,13 @@ export default {
   },
   computed: {
     style() {
-      if (this.$route.path === '/') {
-        return `background-color: ${this.backgroundColor}`
+      let backgroundColor;
+      if (this.$route.path === "/") {
+        backgroundColor = this.$store.state.homeBackgroundColor
       } else {
-        return `background: linear-gradient(to bottom, ${this.backgroundColor}, #FFFFFF) no-repeat top; background-size: 100% 4000px;`
+        backgroundColor = this.$store.state.backgroundColor
       }
+      return `background-color: ${backgroundColor}; transition: background-color 1s;`
     },
     ...mapState(['backgroundColor',])
   },
