@@ -2,7 +2,7 @@
   v-row(justify="center" align="center" v-if="project")
     v-col(cols="12")
       Top(:text="project.header")
-      Section(v-for="section in project.layout" :section="section")
+      Section(v-for="section in project.layout" :section="section" :key="section.name")
 
 
 </template>
