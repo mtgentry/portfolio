@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  div.item
+  div.item(data-aos="fade-up")
     nuxt-link(:to="`/project/${project.name}`")
       img(:src="`projects/${project.name}/media/${project.cover.image}`" class="large")
       div.title {{ project.cover.title }}
@@ -9,18 +9,25 @@
 </template>
 
 <script>
+
+
+
 export default {
   props: ['project'],
+
 }
 </script>
 
 <style lang="sass" scoped>
 
 img
+  min-height: 500px
+
   &.large
     width: 100%
   &.small
     width: 60%
+
 
 .title
   font-weight: 500

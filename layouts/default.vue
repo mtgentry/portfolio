@@ -76,6 +76,4 @@ export default {
   height: 100px
   border-top: #FFFFFF 1px solid
 
-
-
 </style>

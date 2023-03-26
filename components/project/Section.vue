@@ -13,7 +13,6 @@
 <script>
 export default {
   props: ['section'],
-
 }
 </script>
 
@@ -29,6 +28,7 @@ export default {
   justify-content: center
 
   img
+    min-height: 500px
     width: 100%
 
 

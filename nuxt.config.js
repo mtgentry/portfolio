@@ -31,6 +31,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: "@/plugins/aos", mode: "client" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -41,7 +42,8 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
-    'nuxt-compress'
+    'nuxt-compress',
+    '@vueuse/nuxt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

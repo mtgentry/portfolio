@@ -33,11 +33,9 @@ export default {
       this.$refs.navbar.$el.classList.add('hidden')
     },
     makeBackgroundWhite() {
-      console.log('white')
       this.$store.commit('changeBackgroundColor', "#ffffff")
     },
     makeBackgroundBColor() {
-      console.log(this.backgroundColor)
       if (this.$store.state.backgroundColor !== "#ffffff") this.oldBackgroundColor = this.$store.state.backgroundColor
       this.$store.commit('changeBackgroundColor', this.oldBackgroundColor)
     },
