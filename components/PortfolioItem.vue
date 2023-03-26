@@ -2,16 +2,20 @@
 <template lang="pug">
   div.item(data-aos="fade-up")
     nuxt-link(:to="`/project/${project.name}`")
-      img(:src="`projects/${project.name}/media/${project.cover.image}`" class="large")
+      Media(:project_name="project.name" :media="project.cover.media")
       div.title {{ project.cover.title }}
       div.description {{ project.cover.description }}
 
 </template>
 
 <script>
+import Media from "@/components/Media.vue";
 
 export default {
   props: ['project'],
+  components: {
+    Media,
+  }
 
 }
 </script>

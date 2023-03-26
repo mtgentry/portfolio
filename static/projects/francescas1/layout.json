@@ -1,8 +1,11 @@
 {
   "cover": {
-    "image": "1.jpg",
+    "media": {
+      "name": "1.jpg",
+      "position": "center"
+    },
     "title": "Francesca's",
-    "description": "1111",
+    "description": "2",
     "multiple": true
   },
   "backgroundColor": "#6CAF82",
@@ -16,7 +19,15 @@
       ]
     },
     {
-      "images": [
+      "media": [
+        {
+          "name": "6.mp4",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "media": [
         {
           "name": "1.jpg",
           "position": "center"
@@ -28,10 +39,10 @@
       "text": ["The second paragraph of copy. This one is shorter. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis."]
     },
     {
-      "images": [
+      "media": [
         {
           "name": "2.jpg",
-          "position": "center"
+          "position": "right"
         },
         {
           "name": "3.jpg",
