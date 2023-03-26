@@ -1,8 +1,7 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  v-row.portfolio-group
-    v-col(:md="12")
-      PortfolioItem(:project="project")
+  v-col(:md="project.cover.multiple ? 6 : 12")
+    PortfolioItem(:project="project")
 
 </template>
 
