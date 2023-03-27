@@ -27,6 +27,9 @@ export default {
   mounted() {
     this.$store.commit('changeBackgroundColor', this.backgroundColor)
   },
+  updated() {
+    this.$AOS.refresh()
+  },
   computed: {
     style() {
       let backgroundColor;

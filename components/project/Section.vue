@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   div.section
-    div.text(v-if="section.title")
+    div.text(v-if="section.text")
       span.font-weight-bold(v-if="section.title" data-aos="fade-up") {{ section.title }}
       p(v-for="text in section.text" data-aos="fade-up") {{ text }}
     v-row(v-else-if="section.media")
