@@ -16,13 +16,14 @@ export default {
       } else if (st < this.lastScrollTop) {
         vue.showNav()
       }
+      this.lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
       if (vue.$route.path === '/') return
       if (st > 500) {
         vue.makeBackgroundWhite()
       } else if (st > 0 && st <= 500) {
         vue.makeBackgroundBColor()
       }
-      this.lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+
     }, false);
   },
   methods: {
@@ -33,9 +34,11 @@ export default {
       this.$refs.navbar.$el.classList.add('hidden')
     },
     makeBackgroundWhite() {
+      this.$refs.navbar.$el.classList.add('whiteBG')
       this.$store.commit('changeBackgroundColor', "#ffffff")
     },
     makeBackgroundBColor() {
+      this.$refs.navbar.$el.classList.remove('whiteBG')
       if (this.$store.state.backgroundColor !== "#ffffff") this.oldBackgroundColor = this.$store.state.backgroundColor
       this.$store.commit('changeBackgroundColor', this.oldBackgroundColor)
     },
@@ -46,8 +49,8 @@ export default {
 <style lang="sass">
 header
   transform: translateY(0)!important
-
+  transition: transform 300ms linear !important
   &.hidden
-    transition: transform 300ms linear
+
     transform: translateY(-100%)!important
 </style>

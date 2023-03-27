@@ -31,13 +31,13 @@ export default {
     style() {
       let backgroundColor;
       if (this.$route.path === "/") {
-        backgroundColor = this.$store.state.homeBackgroundColor
+        backgroundColor = this.homeBackgroundColor
       } else {
-        backgroundColor = this.$store.state.backgroundColor
+        backgroundColor = this.backgroundColor
       }
       return `background-color: ${backgroundColor}; transition: background-color 1s;`
     },
-    ...mapState(['backgroundColor',])
+    ...mapState(['backgroundColor', 'homeBackgroundColor', 'fontColor'])
   },
 
 }
@@ -63,9 +63,17 @@ export default {
 
 #app
   padding: 0 46px
+
   a
     color: #FFFFFF
     text-decoration: none
+
+header
+  &.whiteBG
+    color: #282725!important
+
+    a
+      color: #282725!important
 
 #footer
   font-size: 18px

@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   div.item(data-aos="fade-up" :style="{'justify-content': media.position || 'center'}" :class="media.position? 'position' : ''" )
-    video(autoplay muted loop v-if="is_video")
+    video(muted v-if="is_video" controls)
       source(:src="mediaPath" type="video/mp4")
       span Your browser does not support the video tag.
     img(:src="mediaPath" v-else)
@@ -37,6 +37,9 @@ export default {
     width: 80%
 
 img
+  width: 100%
+
+video
   width: 100%
 
 </style>
