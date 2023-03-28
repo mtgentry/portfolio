@@ -1,6 +1,7 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  v-col(:md="project.cover.multiple ? 6 : 12")
+  v-col.portfolio-group(:md="project.cover.multiple ? 6 : 12"
+    :style="{'justify-content': project.position || 'center'}")
     PortfolioItem(:project="project")
 
 </template>
@@ -14,5 +15,6 @@ export default {
 
 <style lang="sass" scoped>
 .portfolio-group
-  margin: 64px 0
+  padding-bottom: 170px
+  display: flex
 </style>

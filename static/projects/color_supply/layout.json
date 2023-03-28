@@ -1,0 +1,26 @@
+{
+  "cover": {
+    "media": {
+      "name": "1.jpg",
+      "width": "60%",
+      "position": "left"
+    },
+    "title": "Color Supply",
+    "categories": "UI, UX, Product Design"
+  },
+  "backgroundColor": "#6CAF82",
+  "textColor": "#ffffff",
+  "header": "",
+  "layout": [
+    {
+      "title": "The first paragraph headline",
+      "text": [
+        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla.",
+        "The first body copy, consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis."
+      ]
+    }
+  ]
+}
+
+
+
