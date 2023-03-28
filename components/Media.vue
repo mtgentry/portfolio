@@ -1,10 +1,9 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  div.item(:style="{'justify-content': media.position || 'center'}")
-    video(muted v-if="is_video" controls :style="{'width': media.width || '100%'}")
-      source(:src="mediaPath" type="video/mp4")
-      span Your browser does not support the video tag.
-    img(v-else :src="mediaPath" :style="{'width': media.width || '100%'}")
+  video.item(muted v-if="is_video" controls :style=`{"width": media.width || "100%", 'justify-content': media.position || ''}`)
+    source(:src="mediaPath" type="video/mp4")
+    span Your browser does not support the video tag.
+  img.item(v-else :src="mediaPath" :style=`{'width': media.width || '100%', 'justify-content': media.position || ''}`)
 
 </template>
 
@@ -26,10 +25,7 @@ export default {
 <style lang="sass" scoped>
 
 .item
-  display: flex
-  align-items: center
   min-height: 300px
-  height: 100%
 
 .position
   img

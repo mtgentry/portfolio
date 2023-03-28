@@ -1,13 +1,13 @@
 {
   "cover": {
     "media": {
-      "name": "1.jpg",
-      "width": "60%"
+      "name": "3.jpg"
     },
     "title": "Wilson",
     "categories": "Visual Design",
     "multiple": "true",
-    "position": "right"
+    "position": "right",
+    "width": "60%"
   },
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",

@@ -1,13 +1,12 @@
 {
   "cover": {
     "media": {
-      "name": "1.jpg",
-      "width": "50%",
-      "position": "right"
+      "name": "1.jpg"
     },
     "title": "State of Postgres",
     "categories": "Product Design, Visual Design",
-    "position": "right"
+    "position": "right",
+    "width": "50%"
   },
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",

@@ -3,7 +3,7 @@
   div.item(data-aos="fade-up")
     nuxt-link(:to="`/project/${project.name}`")
       Media(:project_name="project.name" :media="project.cover.media")
-      div.pt-3.title {{ project.cover.title }}
+      div.pt-2.title {{ project.cover.title }}
       div.categories {{ project.cover.categories }}
 
 </template>
@@ -40,5 +40,8 @@ img
 .categories
   font-size: 16px
   line-height: 21px
+
+.item
+  align-items: start
 
 </style>

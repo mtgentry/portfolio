@@ -1,13 +1,12 @@
 {
   "cover": {
     "media": {
-      "name": "1.jpg",
-      "width": "70%",
-      "position": "left"
+      "name": "1.jpg"
     },
     "title": "Cliffwater",
     "categories": "Visual Design, Branding, UI, UX",
-    "position": "left"
+    "position": "left",
+    "width": "70%"
   },
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",
