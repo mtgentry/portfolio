@@ -1,10 +1,10 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   div.item(:style="{'justify-content': media.position || 'center'}" :class="media.position? 'position' : ''" )
-    video(muted v-if="is_video" controls data-aos="fade-up")
+    video(muted v-if="is_video" controls)
       source(:src="mediaPath" type="video/mp4")
       span Your browser does not support the video tag.
-    img(:src="mediaPath" v-else data-aos="fade-up")
+    img(:src="mediaPath" v-else)
 
 
 </template>

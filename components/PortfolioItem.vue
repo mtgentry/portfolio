@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  div.item()
+  div.item(data-aos="fade-up")
     nuxt-link(:to="`/project/${project.name}`")
       Media(:project_name="project.name" :media="project.cover.media")
       div.title {{ project.cover.title }}

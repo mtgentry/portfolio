@@ -4,7 +4,7 @@
     div.text(v-if="section.text")
       span.font-weight-bold(v-if="section.title" data-aos="fade-up") {{ section.title }}
       p(v-for="text in section.text" data-aos="fade-up") {{ text }}
-    v-row(v-else-if="section.media")
+    v-row(v-else-if="section.media" data-aos="fade-up")
       v-col(v-for="media in section.media" :cols="12 / media.length" :key="media.name")
         Media(:media="media" :project_name="$route.params.project")
 </template>
@@ -37,5 +37,8 @@ export default {
   img
     width: 100%
 
+.text
+  [data-aos=fade-up]
+    transform: translate3d(0, 30px, 0)
 
 </style>
