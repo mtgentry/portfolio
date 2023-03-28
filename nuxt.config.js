@@ -42,8 +42,7 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
-    'nuxt-compress',
-    '@vueuse/nuxt'
+    'nuxt-compress'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
