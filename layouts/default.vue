@@ -74,6 +74,8 @@ export default {
 
   padding: 0 46px
 
+
+
 #app
   padding: 0 46px
   transition: background-color 1s ease-in-out
@@ -84,6 +86,9 @@ export default {
 
   header
     transition: background-color 1s ease-in-out
+
+  main
+    min-height: 200vh
 
 #footer
   font-size: 18px
