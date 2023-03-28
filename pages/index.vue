@@ -25,6 +25,9 @@ export default {
   },
   mounted() {
     this.$store.commit('setBackgroundColor', "#282725")
+    setTimeout(() => {
+      this.$AOS.refresh()
+    }, 1000)
   },
   async fetch() {
     if (this.projectStore) {
