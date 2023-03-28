@@ -26,7 +26,6 @@ export default {
   padding-bottom: 185px
 
   .text
-    color: #282725
     padding: 0 400px
 
 .images

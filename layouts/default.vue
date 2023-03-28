@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-app#app(ref="app" :style="{backgroundColor: bgColor}")
+  v-app#app(ref="app" :style="{backgroundColor: bgColor, color: mainTextColor}")
     v-app-bar(fixed app :style="{backgroundColor: bgColor, color: txColor}" flat ref="navbar")
       nuxt-link(to="/")
         v-toolbar-title M
@@ -50,6 +50,15 @@ export default {
       }
       return textColor
     },
+    mainTextColor() {
+      let color;
+      if (this.$route.path === "/") {
+        color = "#FFFFFF"
+      } else {
+        color = "#282725"
+      }
+      return color
+    },
     ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor'])
   },
 
@@ -74,8 +83,6 @@ export default {
 
   padding: 0 46px
 
-
-
 #app
   padding: 0 46px
   transition: background-color 1s ease-in-out
@@ -99,4 +106,6 @@ export default {
   height: 100px
   border-top: #FFFFFF 1px solid
 
+.theme--dark.v-footer
+  color: inherit
 </style>
