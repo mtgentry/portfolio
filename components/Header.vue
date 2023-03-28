@@ -17,4 +17,6 @@ export default {
   .text
     font-size: 50px
     line-height: 66px
+    padding-top: 100px
+    padding-bottom: 160px
 </style>

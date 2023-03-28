@@ -4,9 +4,9 @@
       nuxt-link(to="/")
         v-toolbar-title M
       v-spacer
-      span Link 1
-      span Link 2
-      span Link 3
+      span.pr-3 Link 1
+      span.pr-3 Link 2
+      span.pr-3 Link 3
 
     v-main
       v-container(fluid)
