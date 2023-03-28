@@ -50,7 +50,7 @@ export default {
       }
       return textColor
     },
-    ...mapState(['backgroundColor', 'homeBackgroundColor', 'fontColor', 'textColor'])
+    ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor'])
   },
 
 }
