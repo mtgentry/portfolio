@@ -24,7 +24,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.commit('changeBackgroundColor', "#282725")
+    this.$store.commit('setBackgroundColor', "#282725")
   },
   async fetch() {
     if (this.projectStore) {

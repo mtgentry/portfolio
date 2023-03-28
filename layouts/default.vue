@@ -1,6 +1,6 @@
 <template lang="pug">
-  v-app#app(ref="app" :style="style")
-    v-app-bar(fixed app :style="style" flat ref="navbar")
+  v-app#app(ref="app" :style="{backgroundColor: bgColor}")
+    v-app-bar(fixed app :style="{backgroundColor: bgColor, color: txColor}" flat ref="navbar")
       nuxt-link(to="/")
         v-toolbar-title M
       v-spacer
@@ -25,22 +25,32 @@ export default {
   name: 'DefaultLayout',
   mixins: [HideNavbar],
   mounted() {
-    this.$store.commit('changeBackgroundColor', this.backgroundColor)
+    this.$store.commit('setBackgroundColor', this.backgroundColor)
   },
   updated() {
+    // reposition fade effect elements
     this.$AOS.refresh()
   },
   computed: {
-    style() {
+    bgColor() {
       let backgroundColor;
       if (this.$route.path === "/") {
         backgroundColor = this.homeBackgroundColor
       } else {
         backgroundColor = this.backgroundColor
       }
-      return `background-color: ${backgroundColor}; transition: background-color 1s;`
+      return backgroundColor
     },
-    ...mapState(['backgroundColor', 'homeBackgroundColor', 'fontColor'])
+    txColor() {
+      let textColor;
+      if (this.$route.path === "/") {
+        textColor = this.homeTextColor
+      } else {
+        textColor = this.textColor
+      }
+      return textColor
+    },
+    ...mapState(['backgroundColor', 'homeBackgroundColor', 'fontColor', 'textColor'])
   },
 
 }
@@ -66,17 +76,14 @@ export default {
 
 #app
   padding: 0 46px
+  transition: background-color 1s ease-in-out
 
   a
-    color: #FFFFFF
+    color: inherit
     text-decoration: none
 
-header
-  &.whiteBG
-    color: #282725!important
-
-    a
-      color: #282725!important
+  header
+    transition: background-color 1s ease-in-out
 
 #footer
   font-size: 18px

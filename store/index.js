@@ -1,20 +1,19 @@
 export const state = () => ({
-  backgroundColor: "#FFFFFF",
+  backgroundColor: "#ffffff",
+  textColor: "#ffffff",
   homeBackgroundColor: "#282725",
+  homeTextColor: "#ffffff",
   projects: null,
 })
 
-export const getters = {
-  getBackgroundColor(state) {
-    return state.backgroundColor
-  }
-}
-
 export const mutations = {
-  changeBackgroundColor(state, color) {
+  setBackgroundColor(state, color) {
     state.backgroundColor = color
   },
   setProjects(state, projects) {
     state.projects = projects
   },
+  setTextColor(state, color) {
+    state.textColor = color
+  }
 }

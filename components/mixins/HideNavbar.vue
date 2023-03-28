@@ -4,10 +4,11 @@ export default {
     return {
       lastScrollTop: 0,
       oldBackgroundColor: null,
+      oldTextColor: null,
     }
   },
   mounted() {
-    this.$store.commit('changeBackgroundColor', this.backgroundColor)
+    this.$store.commit('setBackgroundColor', this.backgroundColor)
     let vue = this
     window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
       let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
@@ -35,12 +36,15 @@ export default {
     },
     makeBackgroundWhite() {
       this.$refs.navbar.$el.classList.add('whiteBG')
-      this.$store.commit('changeBackgroundColor', "#ffffff")
+      this.$store.commit('setBackgroundColor', "#ffffff")
+      this.$store.commit('setTextColor', "#282725")
     },
     makeBackgroundBColor() {
       this.$refs.navbar.$el.classList.remove('whiteBG')
       if (this.$store.state.backgroundColor !== "#ffffff") this.oldBackgroundColor = this.$store.state.backgroundColor
-      this.$store.commit('changeBackgroundColor', this.oldBackgroundColor)
+      if (this.$store.state.textColor !== "#282725") this.oldTextColor = this.$store.state.textColor
+      this.$store.commit('setBackgroundColor', this.oldBackgroundColor)
+      this.$store.commit('setTextColor', this.oldTextColor)
     },
   },
 }
@@ -49,8 +53,8 @@ export default {
 <style lang="sass">
 header
   transform: translateY(0)!important
-  transition: transform 300ms linear !important
-  &.hidden
+  transition: transform 300ms linear, background-color 1s ease-in-out, color 1s ease-in-out !important
 
+  &.hidden
     transform: translateY(-100%)!important
 </style>
