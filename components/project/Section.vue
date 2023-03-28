@@ -1,9 +1,9 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   div.section
-    div.text(v-if="section.text")
-      span.font-weight-bold(v-if="section.title" data-aos="fade-up") {{ section.title }}
-      p(v-for="text in section.text" data-aos="fade-up") {{ text }}
+    div.text(v-if="section.text" data-aos="fade-up")
+      span.font-weight-bold(v-if="section.title") {{ section.title }}
+      p(v-for="text in section.text") {{ text }}
     v-row(v-else-if="section.media" data-aos="fade-up")
       v-col(v-for="media in section.media" :cols="12 / media.length" :key="media.name")
         Media(:media="media" :project_name="$route.params.project")
