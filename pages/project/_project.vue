@@ -2,6 +2,7 @@
   v-row(justify="center" align="center" v-if="project")
     v-col(cols="12")
       Top(:text="project.header")
+    v-col(cols="12")
       Section(v-for="section in project.layout" :section="section" :key="section.name")
 
 
@@ -37,3 +38,10 @@ export default {
 
 }
 </script>
+
+<style lang="sass" scoped>
+  .col
+    display: flex
+    align-items: center
+    flex-direction: column
+</style>

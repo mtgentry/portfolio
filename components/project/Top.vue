@@ -1,6 +1,7 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  div(:style="{color: textColor}") {{ text }}
+  div.top(:style="{color: textColor}")
+    div {{ text }}
 
 </template>
 
@@ -17,7 +18,13 @@ export default {
 
 <style lang="sass" scoped>
 
-div
-  padding: 130px 163px
+.top
+  padding-top: 130px
+  padding-bottom: 130px
+  max-width: 659px
+
+  @media (max-width: 768px)
+    padding-top: 80px
+    padding-bottom: 80px
 
 </style>

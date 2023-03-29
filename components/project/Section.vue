@@ -1,12 +1,12 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  div.section
-    div.text(v-if="section.text" data-aos="fade-up")
-      span.font-weight-bold(v-if="section.title") {{ section.title }}
-      p(v-for="text in section.text") {{ text }}
-    v-row(v-else-if="section.media" data-aos="fade-up")
-      v-col(v-for="media in section.media" :cols="12 / media.length" :key="media.name")
-        Media(:media="media" :project_name="$route.params.project")
+  v-row.section
+    v-col(v-if="section.text" data-aos="fade-up")
+      div.text
+        span.font-weight-bold(v-if="section.title") {{ section.title }}
+        p(v-for="text in section.text") {{ text }}
+    v-col(v-else-if="section.media" data-aos="fade-up" v-for="media in section.media" :cols="12 / media.length" :key="media.name")
+      Media(:media="media" :project_name="$route.params.project")
 </template>
 
 <script>
@@ -25,8 +25,11 @@ export default {
 .section
   padding-bottom: 185px
 
-  .text
-    padding: 0 400px
+  @media (max-width: 768px)
+    padding-bottom: 90px
+
+.text
+  max-width: 659px
 
 .images
   display: flex
