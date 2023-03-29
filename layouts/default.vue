@@ -1,6 +1,6 @@
 <template lang="pug">
-  v-app#app(ref="app" :style="{backgroundColor: bgColor, color: mainTextColor}")
-    v-app-bar(fixed app :style="{backgroundColor: bgColor, color: txColor}" flat ref="navbar")
+  v-app#app(ref="app" :style=`{backgroundColor: bgColor, color: mainTextColor}`)
+    v-app-bar(fixed app :style=`{backgroundColor: bgColor, color: txColor}` flat ref="navbar")
       nuxt-link(to="/")
         v-toolbar-title M
       v-spacer
@@ -80,12 +80,13 @@ export default {
   font-family: 'Resist Sans', sans-serif
 
 .theme--dark.v-app-bar.v-toolbar.v-sheet
+  padding: 0 34px
 
-  padding: 0 46px
 
 #app
-  padding: 0 46px
+  padding: 0 34px
   transition: background-color 1s ease-in-out
+
 
   a
     color: inherit

@@ -22,15 +22,6 @@ export default {
 
 <style lang="sass" scoped>
 
-img
-  min-height: 500px
-
-  &.large
-    width: 100%
-  &.small
-    width: 60%
-
-
 .title
   font-weight: 500
   font-size: 19px
@@ -43,5 +34,9 @@ img
 
 .item
   align-items: start
+
+  @media (max-width: 768px)
+    width: unset
+    max-height: 400px
 
 </style>

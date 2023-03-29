@@ -25,16 +25,11 @@ export default {
 <style lang="sass" scoped>
 
 .item
-  min-height: 300px
-
-.position
-  img
-    width: 80%
-
-img
   width: 100%
 
-video
-  width: 100%
+  @media (max-width: 768px)
+    width: unset!important
+    max-width: 100%!important
+
 
 </style>
