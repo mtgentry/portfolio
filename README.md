@@ -1,69 +1,101 @@
 # portfolio
 
-## Build Setup
+## Setup
+
+Have [Nodejs](https://nodejs.org/en/download) installed on your machine.
+
+and clone the repository:
 
 ```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+git clone https://github.com/jTiKey/portfolio.git
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+In the project directory, you run to install yarn:
 
-## Special Directories
+```bash
+npm install --global yarn
+```
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+then run  to install the dependencies:
 
 
-### `pages`
+```bash
+# Run one
+yarn install
+````
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+## Run server
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+This command will start a server at [http:\\localhost:3000](http:\\localhost:3000):
 
-### `plugins`
+```bash
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+yarn dev
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+```
 
-### `static`
+## Customizing projects
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
+The projects are located in './static/projects/'. The layout of each page is located in`./pages/projects/[project]/layout.json.
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+The structure of [layout.json](./static/projects/francescas/layout.json) is:
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+```json
+{
+  "cover": { // homepage settings
+    "media": {
+      "name": "1.jpg" // The name of the image or video in the media folder of each project
+    },
+    "title": "",
+    "categories": "",
+    "multiple": "false", // this project has half the width
+    "position": "right", // left or center
+    "width": "60%"
+  },
+  "backgroundColor": "#6CAF82", // Project page backgaround color
+  "textColor": "#ffffff", // Project page header text color
+  "header": "", // Project page header text
+  "layout": [
+    {
+      "title": "Paragraph header",
+      "text": [
+        "list of paragraphs",
+        "list of paragraphs"
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "6.mp4",
+          "position": "center" // left or right
+        },
+        {
+          "name": "4.jpg",
+          "position": "center" // left or right
+        }
+      ]
+    },
+    {
+      "text": [
+        "title can be skipped"
+      ]
+    }
+  ]
+}
+```
 
-### `store`
+Be sure to have the json verified. One typo can make the whole page crash.
 
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+If you add a new project, be sure to add it to [order.json](./static/projects/order.json).
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+Also, on digitalocean, you need to add the project to [Apps -> portfolio -> Settings -> porfolio -> HTTP Request Routes ->
+Edit -> scroll down to + Add new route -> change Route Path to /project/[project_name] -> Save](https://cloud.digitalocean.com/apps/80a91dc4-0ff5-44ac-8f22-468aeb5b1a95/settings/portfolio?i=053ce1)
+
+## Deploy
+
+Once you are ready to update the website, be sure to have git installed, pushing a new commit will update the website.
+
+```bash
+git commit -m "things that changed"
+git push
+```
