@@ -28,6 +28,7 @@ export default {
   methods: {
     load() {
       this.loaded = true
+      this.$AOS.refresh()
     }
   }
 }
@@ -43,6 +44,7 @@ export default {
     max-width: 100%!important
 
 .custom-fade-in
+  min-height: 50vh
   opacity: 0
   transition: opacity 1s ease-in-out
 
