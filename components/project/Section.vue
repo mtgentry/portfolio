@@ -1,11 +1,11 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   v-row.section
-    v-col(v-if="section.text" data-aos="fade-up")
+    v-col.pa-0(v-if="section.text" data-aos="fade-up")
       div.text
-        span.font-weight-bold(v-if="section.title") {{ section.title }}
+        span.title(v-if="section.title") {{ section.title }}
         p(v-for="text in section.text") {{ text }}
-    v-col(v-else-if="section.media" data-aos="fade-up" v-for="media in section.media" :cols="12 / media.length" :key="media.name")
+    v-col.pa-0(v-else-if="section.media" data-aos="fade-up" v-for="media in section.media" :cols="12 / media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
 </template>
 
@@ -24,6 +24,14 @@ export default {
 
 .section
   padding-bottom: 185px
+
+  .title
+    font-weight: 500
+    font-size: 24px
+    line-height: 143.02%
+
+  p:last-child
+    margin-bottom: 0
 
   @media (max-width: 768px)
     padding-bottom: 90px
