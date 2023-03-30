@@ -55,6 +55,7 @@ The structure of [layout.json](./static/work/francescas/layout.json) is:
   "backgroundColor": "#6CAF82", // Project page backgaround color
   "textColor": "#ffffff", // Project page header text color
   "header": "", // Project page header text
+  "seo_description": "This is what google will show",
   "layout": [
     {
       "title": "Paragraph header",
@@ -84,12 +85,7 @@ The structure of [layout.json](./static/work/francescas/layout.json) is:
 }
 ```
 
-Be sure to have the json verified. One typo can make the whole page crash.
-
-If you add a new project, be sure to add it to [order.json](./static/work/order.json).
-
-Also, on digitalocean, you need to add the project to [Apps -> portfolio -> Settings -> porfolio -> HTTP Request Routes ->
-Edit -> scroll down to + Add new route -> change Route Path to /project/[project_name] -> Save](https://cloud.digitalocean.com/apps/80a91dc4-0ff5-44ac-8f22-468aeb5b1a95/settings/portfolio?i=053ce1)
+Be sure to have the json don't have errors. One typo can make the whole page crash.
 
 ## Deploy
 

@@ -12,12 +12,24 @@ import Header from '~/components/Header.vue'
 import PortfolioGroup from "@/components/PortfolioGroup.vue";
 import {mapState} from "vuex";
 export default {
-  name: 'IndexPage',
   components: {
     Header,
     PortfolioGroup
   },
   transition: 'fade',
+  fetchOnServer: true,
+  head() {
+    return {
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: ''
+        }
+      ]
+    }
+  },
   data() {
     return {
       projects: {},
@@ -58,8 +70,8 @@ export default {
 </script>
 
 <style lang="sass">
-  .fade-enter-active, .fade-leave-active
-    transition: opacity 1s
-  .fade-enter, .fade-leave-to
-    opacity: 0
+.fade-enter-active, .fade-leave-active
+  transition: opacity 1s
+.fade-enter, .fade-leave-to
+  opacity: 0
 </style>

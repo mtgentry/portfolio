@@ -17,7 +17,21 @@ export default {
     Section,
     Top,
   },
+  fetchOnServer: true,
   transition: 'fade',
+  head() {
+    return {
+      title: this.project.cover.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.project.seo_description
+        }
+      ]
+    }
+  },
   data() {
     return {
       project: null,
