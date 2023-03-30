@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   div.item(data-aos="fade-up")
-    nuxt-link(:to="`/project/${project.name}`")
+    nuxt-link(:to="`/work/${project.name}`")
       Media(:project_name="project.name" :media="project.cover.media")
       div.pt-2.title {{ project.cover.title }}
       div.categories {{ project.cover.categories }}

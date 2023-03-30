@@ -29,7 +29,7 @@ export default {
     }
 
     if (!this.project) {
-      this.project = await this.$axios.get(`/projects/${this.$route.params.project}/layout.json`)
+      this.project = await this.$axios.get(`/work/${this.$route.params.project}/layout.json`)
         .then((response) => response.data)
     }
     this.$store.commit('setBackgroundColor', this.project.backgroundColor)

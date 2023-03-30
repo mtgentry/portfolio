@@ -36,9 +36,9 @@ yarn dev
 
 ## Customizing projects
 
-The projects are located in './static/projects/'. The layout of each page is located in`./pages/projects/[project]/layout.json.
+The projects are located in './static/work/'. The layout of each page is located in`./pages/work/[project]/layout.json.
 
-The structure of [layout.json](./static/projects/francescas/layout.json) is:
+The structure of [layout.json](./static/work/francescas/layout.json) is:
 
 ```json
 {
@@ -86,7 +86,7 @@ The structure of [layout.json](./static/projects/francescas/layout.json) is:
 
 Be sure to have the json verified. One typo can make the whole page crash.
 
-If you add a new project, be sure to add it to [order.json](./static/projects/order.json).
+If you add a new project, be sure to add it to [order.json](./static/work/order.json).
 
 Also, on digitalocean, you need to add the project to [Apps -> portfolio -> Settings -> porfolio -> HTTP Request Routes ->
 Edit -> scroll down to + Add new route -> change Route Path to /project/[project_name] -> Save](https://cloud.digitalocean.com/apps/80a91dc4-0ff5-44ac-8f22-468aeb5b1a95/settings/portfolio?i=053ce1)

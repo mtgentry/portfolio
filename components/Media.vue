@@ -16,7 +16,7 @@ export default {
       return this.media.name.includes('mp4')
     },
     mediaPath() {
-      return `/projects/${this.project_name}/media/${this.media.name}`
+      return `/work/${this.project_name}/media/${this.media.name}`
     }
   }
 }

@@ -34,14 +34,14 @@ export default {
       this.projects = this.projectStore
       return
     }
-    this.order = await this.$axios.$get('/projects/order.json').then((response) => response.order)
+    this.order = await this.$axios.$get('/work/order.json').then((response) => response.order)
     let projects = {}
     //loop order
     for (let i = 0; i < this.order.length; i++) {
       //get project name
       let project_name = this.order[i]
       //get project data
-      let project = await this.$axios.$get(`/projects/${project_name}/layout.json`).then((response) => response)
+      let project = await this.$axios.$get(`/work/${project_name}/layout.json`).then((response) => response)
       project.name = project_name
       //add project to projects
       projects[project_name] = project
