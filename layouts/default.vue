@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-app#app(ref="app" :style=`{backgroundColor: bgColor, color: mainTextColor}`)
+  v-app#app.display-animation(ref="app" :style=`{backgroundColor: bgColor, color: mainTextColor}` :class="{'loaded': !loading}")
     v-app-bar(fixed app :style=`{backgroundColor: bgColor, color: txColor}` flat ref="navbar")
       nuxt-link(to="/")
         v-toolbar-title M
@@ -7,7 +7,6 @@
       span.pr-3 Link 1
       span.pr-3 Link 2
       span.pr-3 Link 3
-
     v-main
       v-container(fluid)
         Nuxt
@@ -26,10 +25,9 @@ export default {
   mixins: [HideNavbar],
   mounted() {
     this.$store.commit('setBackgroundColor', this.backgroundColor)
-  },
-  updated() {
-    // reposition fade effect elements
-    this.$AOS.refresh()
+    setTimeout(() => {
+      this.$AOS.refresh()
+    }, 1000)
   },
   computed: {
     bgColor() {
@@ -59,7 +57,7 @@ export default {
       }
       return color
     },
-    ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor'])
+    ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'loading'])
   },
 
 }
@@ -85,7 +83,7 @@ export default {
 
 #app
   padding: 0 34px
-  transition: background-color 1s ease-in-out
+  transition: background-color 1s ease-in-out, opacity 1s ease-in-out
 
 
   a
@@ -109,4 +107,13 @@ export default {
 
 .theme--dark.v-footer
   color: inherit
+
+.display-animation
+  opacity: 0
+
+  &.loaded
+    opacity: 1
+
+body
+  background-color: #282725
 </style>

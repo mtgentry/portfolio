@@ -28,7 +28,12 @@ export default {
   methods: {
     load() {
       this.loaded = true
-      this.$AOS.refresh()
+      if (this.project_name === 'francescas') {
+        this.$store.commit('setLoading', false)
+      }
+      setTimeout(() => {
+        this.$AOS.refresh()
+      }, 1000)
     }
   }
 }

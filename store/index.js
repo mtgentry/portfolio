@@ -4,6 +4,7 @@ export const state = () => ({
   homeBackgroundColor: "#282725",
   homeTextColor: "#ffffff",
   projects: null,
+  loading: true,
 })
 
 export const mutations = {
@@ -15,5 +16,8 @@ export const mutations = {
   },
   setTextColor(state, color) {
     state.textColor = color
+  },
+  setLoading(state, loading) {
+    state.loading = loading
   }
 }

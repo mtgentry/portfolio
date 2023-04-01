@@ -19,7 +19,18 @@ export default {
   },
   fetchOnServer: true,
   transition: 'fade',
-  head() {
+  async head() {
+    this.$store.commit('setLoading', false)
+    if (this.$store.state.projects) {
+      this.project = this.$store.state.projects[this.$route.params.project]
+    }
+
+    if (!this.project) {
+      this.project = await this.$axios.get(`/work/${this.$route.params.project}/layout.json`)
+        .then((response) => response.data)
+    }
+    this.$store.commit('setBackgroundColor', this.project.backgroundColor)
+    this.$store.commit('setTextColor', this.project.textColor)
     return {
       title: this.project.cover.title,
       meta: [
@@ -36,18 +47,6 @@ export default {
     return {
       project: null,
     }
-  },
-  async fetch() {
-    if (this.$store.state.projects) {
-      this.project = this.$store.state.projects[this.$route.params.project]
-    }
-
-    if (!this.project) {
-      this.project = await this.$axios.get(`/work/${this.$route.params.project}/layout.json`)
-        .then((response) => response.data)
-    }
-    this.$store.commit('setBackgroundColor', this.project.backgroundColor)
-    this.$store.commit('setTextColor', this.project.textColor)
   },
 
 }
