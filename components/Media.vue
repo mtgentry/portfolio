@@ -48,6 +48,9 @@ export default {
   opacity: 0
   transition: opacity 1s ease-in-out
 
+  @media (max-width: 768px)
+    min-height: unset
+
   &.loaded
     opacity: 1
 </style>
