@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  video.item(muted v-if="is_video" controls :style=`{"width": media.width || "100%", 'justify-content': media.position || ''}`)
+  video.item(muted v-if="is_video" autoplay :style=`{"width": media.width || "100%", 'justify-content': media.position || ''}`)
     source(:src="mediaPath" type="video/mp4")
     span Your browser does not support the video tag.
   img.item(v-else :src="mediaPath" :style=`{'width': media.width || '100%', 'justify-content': media.position || ''}`
