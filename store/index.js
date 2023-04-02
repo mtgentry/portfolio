@@ -5,6 +5,7 @@ export const state = () => ({
   homeTextColor: "#ffffff",
   projects: null,
   loading: true,
+  project: null,
 })
 
 export const mutations = {
@@ -19,5 +20,8 @@ export const mutations = {
   },
   setLoading(state, loading) {
     state.loading = loading
+  },
+  setProject(state, project) {
+    state.project = project
   }
 }

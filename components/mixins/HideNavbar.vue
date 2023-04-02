@@ -3,8 +3,10 @@ export default {
   data() {
     return {
       lastScrollTop: 0,
-      oldBackgroundColor: null,
-      oldTextColor: null,
+      white: {
+        backgroundColor: "#ffffff",
+        textColor: "#282725"
+      },
     }
   },
   mounted() {
@@ -36,15 +38,13 @@ export default {
     },
     makeBackgroundWhite() {
       this.$refs.navbar.$el.classList.add('whiteBG')
-      this.$store.commit('setBackgroundColor', "#ffffff")
-      this.$store.commit('setTextColor', "#282725")
+      this.$store.commit('setBackgroundColor', this.white.backgroundColor)
+      this.$store.commit('setTextColor', this.white.textColor)
     },
     makeBackgroundBColor() {
       this.$refs.navbar.$el.classList.remove('whiteBG')
-      if (this.$store.state.backgroundColor !== "#ffffff") this.oldBackgroundColor = this.$store.state.backgroundColor
-      if (this.$store.state.textColor !== "#282725") this.oldTextColor = this.$store.state.textColor
-      this.$store.commit('setBackgroundColor', this.oldBackgroundColor)
-      this.$store.commit('setTextColor', this.oldTextColor)
+      this.$store.commit('setBackgroundColor', this.$store.state.project.backgroundColor)
+      this.$store.commit('setTextColor',  this.$store.state.project.textColor)
     },
   },
 }

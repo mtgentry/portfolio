@@ -31,6 +31,7 @@ export default {
     }
     this.$store.commit('setBackgroundColor', this.project.backgroundColor)
     this.$store.commit('setTextColor', this.project.textColor)
+    this.$store.commit('setProject', this.project)
     return {
       title: this.project.cover.title,
       meta: [
