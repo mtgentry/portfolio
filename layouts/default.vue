@@ -116,4 +116,7 @@ export default {
 
 body
   background-color: #282725
+
+html, body
+  scrollbar-color: #C1C1C1 #F1F1F1
 </style>
