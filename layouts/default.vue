@@ -119,4 +119,5 @@ body
 
 html, body
   scrollbar-color: #C1C1C1 #F1F1F1
+  background: #282725 //safari settings
 </style>
