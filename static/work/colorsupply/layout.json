@@ -1,27 +1,83 @@
 {
   "cover": {
     "media": {
-      "name": "1.jpg"
+      "name": "colorsupply_thumb.jpg"
     },
     "title": "Color Supply",
     "categories": "UI, UX, Product Design",
     "width": "60%",
     "position": "left"
   },
-  "backgroundColor": "#6CAF82",
-  "textColor": "#ffffff",
-  "header": "",
+  "backgroundColor": "#F8F080",
+  "textColor": "#282725",
+"header": "Choosing colors for a design project can be daunting. I created a tool to make it easy.",
   "seo_description": "",
   "layout": [
     {
-      "title": "The first paragraph headline",
-      "text": [
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla.",
+
+
+      "title": "A different approach",
+      "text": ["Competitors like Adobe Kuler require users to create colors at the root level. Color Supply uses guardrails to help job-to-be-done of picking colors. Everything the user does is contained  within the bounds of color theory.  So any color palette they choose will be rooted in color theory.",
         "The first body copy, consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis."
       ]
-    }
+    },
+    {
+      "media": [
+        {
+          "name": "1.jpg",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "colorwheels.mp4",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "The second paragraph headline",
+      "text": ["Another innovation I made was to use SVG's which change color based on the currently selected palette. This helps users imagine what the colors would look like on their project. "]
+    },
+    {
+     "media": [
+        {
+          "name": "pick_colors.mp4",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "svg_illustrations.mp4",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "text": [
+        "Third section of text here. No headline. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
+        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
+      ]
+    },
+    {
+      "title": "Fourth headline is here",
+      "text": [
+        "Fourth section of text here. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
+        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
+      ]},
+    {
+      "title": "Fifth headline is here",
+      "text":  [
+        "Fifth body of text here. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
+        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
+      ]}
   ]
 }
+
 
 
 
