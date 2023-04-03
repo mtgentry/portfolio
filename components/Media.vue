@@ -1,10 +1,10 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  video.item(muted v-if="is_video" autoplay :style=`{"width": media.width || "100%", 'justify-content': media.position || ''}`)
+  video.item(muted v-if="is_video" loop ref="video" :style=`{"width": media.width || "100%", 'justify-content': media.position || ''}`)
     source(:src="mediaPath" type="video/mp4")
     span Your browser does not support the video tag.
   img.item(v-else :src="mediaPath" :style=`{'width': media.width || '100%', 'justify-content': media.position || ''}`
-    @load="load" :class="{'custom-fade-in': this.project_name === 'francescas', 'loaded': loaded}")
+     @load="load" :class="{'custom-fade-in': this.project_name === 'francescas', 'loaded': loaded}")
 
 </template>
 
@@ -14,8 +14,21 @@ export default {
   props: ['media', 'project_name'],
   data() {
     return {
-      loaded: false
+      loaded: false,
+      playVisibleVideosTimeout: null,
     }
+  },
+  mounted() {
+    if (!this.$refs.video) {
+      return
+    }
+    window.addEventListener("scroll", () => {
+      clearTimeout(this.playVisibleVideosTimeout);
+      this.playVisibleVideosTimeout = setTimeout(this.playVisibleVideos, 100);
+    }, {passive: true});
+
+    window.addEventListener("resize", this.playVisibleVideos);
+    window.addEventListener("DOMContentLoaded", this.playVisibleVideos);
   },
   computed: {
     is_video() {
@@ -34,6 +47,19 @@ export default {
       setTimeout(() => {
         this.$AOS.refresh()
       }, 1000)
+    },
+    playVisibleVideos() {
+      console.log('playVisibleVideos')
+      if (this.elementIsVisible(this.$refs.video)) {
+        this.$refs.video.play()
+      } else {
+        this.$refs.video.pause()
+      }
+    },
+
+    elementIsVisible(el) {
+      let rect = el.getBoundingClientRect();
+      return (rect.bottom >= 0 && rect.right >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.left <= (window.innerWidth || document.documentElement.clientWidth));
     }
   }
 }
