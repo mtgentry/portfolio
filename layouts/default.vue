@@ -115,9 +115,9 @@ export default {
     opacity: 1
 
 body
-  background-color: #282725
+  background-color: #C1C1C1
 
 html, body
   scrollbar-color: #C1C1C1 #F1F1F1
-  background: #282725 //safari settings
+  background: #C1C1C1 //safari settings
 </style>
