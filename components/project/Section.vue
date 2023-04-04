@@ -23,12 +23,12 @@ export default {
 <style lang="sass" scoped>
 
 .section
-  padding-bottom: 185px
+  padding-bottom: 140px
 
   .title
     font-weight: 500
     font-size: 23px
-    line-height: 143.02%
+    line-height: 200%
 
   p:last-child
     margin-bottom: 0

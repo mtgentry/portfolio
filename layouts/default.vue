@@ -83,6 +83,10 @@ export default {
 .v-toolbar__title
   user-select: none
 
+p
+  font-size: 18px
+
+
 #app
   padding: 0 34px
   transition: background-color 1s ease-in-out, opacity 1s ease-in-out, color 2s ease-in-out

@@ -21,9 +21,10 @@ export default {
 .top
   padding-top: 130px
   padding-bottom: 130px
-  max-width: 659px
-  font-size: 23px
+  max-width: 80%
+  font-size: 24px
   line-height: 160%
+  font-weight: 500
 
   @media (max-width: 768px)
     padding-top: 80px
