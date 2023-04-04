@@ -80,6 +80,8 @@ export default {
 .theme--dark.v-app-bar.v-toolbar.v-sheet
   padding: 0 34px
 
+.v-toolbar__title
+  user-select: none
 
 #app
   padding: 0 34px
