@@ -83,7 +83,7 @@ export default {
 
 #app
   padding: 0 34px
-  transition: background-color 1s ease-in-out, opacity 1s ease-in-out
+  transition: background-color 1s ease-in-out, opacity 1s ease-in-out, color 2s ease-in-out
 
 
   a

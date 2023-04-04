@@ -49,7 +49,6 @@ export default {
       }, 1000)
     },
     playVisibleVideos() {
-      console.log('playVisibleVideos')
       if (this.elementIsVisible(this.$refs.video)) {
         this.$refs.video.play()
       } else {

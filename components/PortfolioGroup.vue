@@ -15,14 +15,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.portfolio-group
-  padding-bottom: 170px
-  display: flex
-
-  @media (max-width: 768px)
-    padding-bottom: 90px
-    justify-content: end!important
-
 .portfolio-item
 
   @media (max-width: 768px)
@@ -32,5 +24,14 @@ export default {
   &.mobileFullWidth
     @media (max-width: 768px)
       width: 100%!important
+
+.portfolio-group
+  padding-bottom: 170px
+  display: flex
+  transition: opacity 1s ease-in-out,color 2s ease-in-out!important
+
+  @media (max-width: 768px)
+    padding-bottom: 90px
+    justify-content: end!important
 
 </style>
