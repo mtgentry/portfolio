@@ -9,20 +9,57 @@
     "position": "right",
     "width": "60%"
   },
-  "backgroundColor": "#6CAF82",
+  "backgroundColor": "#222533",
   "textColor": "#ffffff",
-  "header": "",
+  "header": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec consequat justo. Pellentesque quis viverra odio. Cras tincidunt ex eu vehicula sodales. Ut sit amet nulla arcu. Pellentesque libero est, ornare ac bibendum in, aliquam nec enim. Cras mollis elit eu nibh convallis posuere. Integer eget magna ex. Donec id dignissim sapien.",
   "seo_description": "",
   "layout": [
+   
     {
-      "title": "The first paragraph headline",
-      "text": [
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla.",
-        "The first body copy, consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis."
+      "media": [
+        {
+          "name": "bedtime_1.jpg",
+          "position": "center"
+        }
       ]
-    }
+    },
+    
+    {
+      "title": "The second paragraph headline",
+      "text": ["Another innovation I made was to use SVG's which change color based on the currently selected palette. This helps users imagine what the colors would look like on their project. "]
+    },
+    {
+     "media": [
+        {
+          "name": "bedtime_2.jpg",
+          "position": "center"
+        }
+      ]
+    },
+    
+    {
+      "text": [
+        "Third section of text here. No headline. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
+        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
+      ]
+    },
+    {
+      "title": "Fourth headline is here",
+      "text": [
+        "Fourth section of text here. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
+        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
+      ]},
+    {
+      "title": "Fifth headline is here",
+      "text":  [
+        "Fifth body of text here. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
+        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
+      ]}
   ]
 }
+
+
+
 
 
 

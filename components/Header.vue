@@ -7,7 +7,7 @@
 export default {
   data() {
     return {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut tincidunt bibendumnior malesuada rhoncus, lectus'
+      text: 'Designer of intuitive, beautiful, and playful digital products. I like building things that make people\'s lives easier.'
     }
   }
 }

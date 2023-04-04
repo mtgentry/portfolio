@@ -8,65 +8,58 @@
   },
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",
-  "header": "When Francesca's came to us, their brand was stale. Their 11-15 yr old female customers had grown more sophisticated than when the company was first founded in 2006. They now preferred hipper brands like Nasty Gal and Nylon. At the same time, our creative brief stated the rebrand shouldn't alienate the parents of these young women. We came up with a few solutions which tested very well with both young women and their parents.",
+  "header": "The world of fashion moves fast with young girls. They try on new clothes and discard old identities. At this age they're open to new style suggestions but you can't be too forceful. With this in mind, we worked with Francesca's to re-imagine their brand as a helpful big sister to help their young customers navigate the early years of adolescence.",
   "seo_description": "",
   "layout": [
-    {
-      "title": "The first paragraph headline",
-      "text": [
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla.",
-        "The first body copy, consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis."
-      ]
-    },
-    {
+    
+
+{
       "media": [
         {
-          "name": "6.mp4",
+          "name": "franny_1.jpg",
           "position": "center"
         }
       ]
     },
+
+
+    {
+      "title": "Time for a change",
+      "text": [
+        "When Francesca's came to us, their brand was stale. Their 11-15 yr old female customers had grown more sophisticated than when the company was first founded in 2006. Girls now preferred hipper brands like Nasty Gal and Nylon. Francescas needed to modernize.",
+        "But at the same time, the company didn't want to alienate the parents of these young women. We came up with a brand direction which tested very well with young women and their parents. It was hipper, but not too hip.",
+       "Since these young women were still figuring out their sense of style, we wanted to hold their hand a bit – much like a big sister."
+      ]
+    },
     {
       "media": [
         {
-          "name": "1.jpg",
+          "name": "franny_3.jpg",
           "position": "center"
         }
       ]
     },
+    
     {
-      "title": "The second paragraph headline",
-      "text": ["The second paragraph of copy. This one is shorter. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis."]
+      
+      "text": ["To deliver on this we came up with the idea of  an \"editorial\" browsing experience to subtly reveal style suggestions. The experience would be the online equivalent of flipping through a fashion magazine.  Like how browsing Teen Vogue might reveal new fashion trends."]
     },
     {
       "media": [
+       
         {
-          "name": "2.jpg",
-          "position": "left"
-        },
-        {
-          "name": "3.jpg"
+          "name": "franny_4.jpg"
         }
       ]
     },
     {
       "text": [
-        "Third section of text here. No headline. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
+        "We put the editorial concept in front of users and it proved to be the most popular feature we tested. After getting validation, we designed a CMS that allowed the Francesca's editorial team to regularly update item pairings that worked well together.",
+        "In addition to the rebrand, we also made a concerted effort to optimize Francesca's checkout experience. We designed several checkout flows and did user testing to find which one worked best. The two winning designs were later A/B tested by the client to further optimize the site."
       ]
-    },
-    {
-      "title": "Fourth headline is here",
-      "text": [
-        "Fourth section of text here. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
-      ]},
-    {
-      "title": "Fifth headline is here",
-      "text":  [
-        "Fifth body of text here. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
-      ]}
+    }
+   
+    
   ]
 }
 
