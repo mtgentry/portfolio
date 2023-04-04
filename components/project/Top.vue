@@ -22,7 +22,7 @@ export default {
   padding-top: 130px
   padding-bottom: 130px
   max-width: 659px
-  font-size: 24px
+  font-size: 23px
   line-height: 160%
 
   @media (max-width: 768px)

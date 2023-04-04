@@ -27,7 +27,7 @@ export default {
 
   .title
     font-weight: 500
-    font-size: 24px
+    font-size: 23px
     line-height: 143.02%
 
   p:last-child

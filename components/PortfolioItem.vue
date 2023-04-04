@@ -24,12 +24,12 @@ export default {
 
 .title
   font-weight: 500
-  font-size: 19px
-  line-height: 25px
+  font-size: 23px
+  line-height: 200%
 
 
 .categories
-  font-size: 16px
+  font-size: 18px
   line-height: 21px
 
 .item
