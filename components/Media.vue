@@ -1,10 +1,11 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  video.item(muted v-if="is_video" playsinline loop ref="video" :style=`{"width": media.width || "100%", 'justify-content': media.position || ''}`)
+  video.item(muted v-if="is_video" playsinline loop ref="video"
+    :style=`{"width": media.width || "100%", 'justify-content': media.position || ''}`)
     source(:src="mediaPath" type="video/mp4")
     span Your browser does not support the video tag.
   img.item(v-else :src="mediaPath" :style=`{'width': media.width || '100%', 'justify-content': media.position || ''}`
-     @load="load" :class="{'custom-fade-in': this.project_name === 'francescas', 'loaded': loaded}")
+    @load="load" :class="{'custom-fade-in': this.project_name === 'francescas', 'loaded': loaded}")
 
 </template>
 
@@ -29,6 +30,9 @@ export default {
 
     window.addEventListener("resize", this.playVisibleVideos);
     window.addEventListener("DOMContentLoaded", this.playVisibleVideos);
+
+    this.$refs.video.controls = this.isSafari()
+
   },
   computed: {
     is_video() {
@@ -59,6 +63,17 @@ export default {
     elementIsVisible(el) {
       let rect = el.getBoundingClientRect();
       return (rect.bottom >= 0 && rect.right >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.left <= (window.innerWidth || document.documentElement.clientWidth));
+    },
+
+    isSafari() {
+      const platformExpression = /Mac|iPhone|iPod|iPad/i;
+      const rejectedExpression = /Chrome|Android|CriOS|FxiOS|EdgiOS/i;
+      const expectedExpression = /Safari/i;
+      const agent = navigator.userAgent;
+      if (rejectedExpression.test(agent)) {
+        return false;
+      }
+      return platformExpression.test(agent) && expectedExpression.test(agent);
     }
   }
 }
