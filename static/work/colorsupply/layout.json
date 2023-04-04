@@ -10,43 +10,38 @@
   },
   "backgroundColor": "#F8F080",
   "textColor": "#282725",
-"header": "Choosing colors for a design project can be daunting. I created a tool to make it easy.",
+"header": "Choosing colors for a design project can be daunting. I created a tool to make it easy. Color Supply is a color picking tool that helps designers, illustrators, and developers pick colors for their projects.",
   "seo_description": "",
   "layout": [
-    {
 
 
-      "title": "A different approach",
-      "text": ["Competitors like Adobe Kuler require users to create colors at the root level. Color Supply uses guardrails to help job-to-be-done of picking colors. Everything the user does is contained  within the bounds of color theory.  So any color palette they choose will be rooted in color theory.",
-        "The first body copy, consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis."
+ 
+
+
+    {
+"title": "A different approach",
+      "text": [
+        "Sites like Adobe Kuler require users to create colors an an atomic level. They provide lots control but it comes at the expense of speed.  Like a sniper rifle. That granular control can be helpful if you have a color palette already in mind, but my research indicated most people picked colors from scratch.",
+        "I created Color Supply with  \"guardrails\" to help users get to their colors faster. One of those guardrails is color theory. Everything the user does is contained within the bounds of color theory, so any color palette a user chooses will have some logic contained within it."
+        
       ]
     },
-    {
+
+{
       "media": [
         {
-          "name": "1.jpg",
+          "name": "colorwheels2.mp4",
           "position": "center"
         }
       ]
     },
-    {
-      "media": [
-        {
-          "name": "colorwheels.mp4",
-          "position": "center"
-        }
-      ]
-    },
-    {
-      "title": "The second paragraph headline",
-      "text": ["Another innovation I made was to use SVG's which change color based on the currently selected palette. This helps users imagine what the colors would look like on their project. "]
-    },
-    {
-     "media": [
-        {
-          "name": "pick_colors.mp4",
-          "position": "center"
-        }
+
+
+
+     {
+
+      "text": [
+        "Another innovation was to embed SVG illustrations on the page. When you select a new palette the illustrations change to the colors you selected. This helps users imagine what the colors would look like on their project."
       ]
     },
     {
@@ -57,24 +52,28 @@
         }
       ]
     },
+   
     {
-      "text": [
-        "Third section of text here. No headline. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
-      ]
+     
+      "text": ["The site can also help you find palettes based on an \"anchor\" color you want to use. For example if your brand guidelines for a project specify red as a dominant color,  the HEX picker will suggest palettes that go with that particular shade of red."]
     },
     {
-      "title": "Fourth headline is here",
-      "text": [
-        "Fourth section of text here. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
-      ]},
+     "media": [
+        {
+          "name": "pick_colors_wide.mp4",
+          "position": "center"
+        }
+      ]
+    },
+    
     {
-      "title": "Fifth headline is here",
-      "text":  [
-        "Fifth body of text here. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
-      ]}
+      "text": [
+        "All of these features speed up the color picking process.  If Adobe Kuler is a rifle, Color Supply is a shotgun.",
+        "Version 2 of the site is currently underway. There will be more functionality and a lightweight Chrome extension. The site has proved to be quite popular. It regularly goes viral on Twitter and is most popular in Japan."
+      ]
+    }
+    
+    
   ]
 }
 

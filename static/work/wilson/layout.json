@@ -3,25 +3,52 @@
     "media": {
       "name": "wilson_thumb.jpg"
     },
-    "title": "Wilson",
+   "title": "Wilson",
     "categories": "Visual Design",
     "multiple": "true",
     "position": "right",
     "width": "60%",
     "mobileInherit": true
   },
-  "backgroundColor": "#6CAF82",
+  "backgroundColor": "#B72B35",
   "textColor": "#ffffff",
-  "header": "",
+  "header": "Wilson is a 100 year old sports company with a long legacy of sponsoring top athletes. We helped them update their brand and website to appeal to modern athletes.",
   "seo_description": "",
   "layout": [
+    
+
+{
+      "media": [
+        {
+          "name": "wilson_golf_homepage.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+
     {
-      "title": "The first paragraph headline",
+     
       "text": [
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla.",
-        "The first body copy, consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis."
+       
+        
+       "This site redesign was part of a brand overhaul. I was tasked with designing several key parts of the site including the golf and tennis divisions. A key part of the brief was to highlight their all-star roster of athletes."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "wilson_tennis_product_page.jpg",
+          "position": "center"
+        }
       ]
     }
+    
+    
+    
+    
+   
+    
   ]
 }
 
