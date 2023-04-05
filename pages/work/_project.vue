@@ -54,8 +54,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  .col
-    display: flex
-    align-items: center
-    flex-direction: column
+.col
+  display: flex
+  align-items: center
+  flex-direction: column
 </style>
