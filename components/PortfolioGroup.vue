@@ -26,7 +26,7 @@ export default {
       width: 100%!important
 
 .portfolio-group
-  padding-bottom: 170px
+  padding-bottom: 100px
   display: flex
   transition: opacity 1s ease-in-out,color 2s ease-in-out!important
 

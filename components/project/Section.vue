@@ -29,6 +29,7 @@ export default {
     font-weight: 500
     font-size: 23px
     line-height: 200%
+    
 
   p:last-child
     margin-bottom: 0

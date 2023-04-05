@@ -8,18 +8,91 @@
     "position": "right",
     "width": "50%"
   },
-  "backgroundColor": "#6CAF82",
+  "backgroundColor": "#67c7a3",
   "textColor": "#ffffff",
-  "header": "",
+  "header": "Saving bookmarks is a pain. Mojave is a browser extension that makes it easy.",
   "seo_description": "",
   "layout": [
+    
+
+{
+      "media": [
+        {
+          "name": "drag_and_drop.mp4",
+          "position": "center"
+        }
+      ]
+    },
+
+
     {
-      "title": "The first paragraph headline",
+      
       "text": [
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla.",
-        "The first body copy, consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis."
+        "Everyone thinks their way of saving bookmarks is the right way.  As a designer and visual person, I wanted to see all of my bookmarks on the page at once. Tools like Pinboard, Pocket, Delicious, and others don't support this.",
+        "And I wanted to be able to save them as quickly as possible. After a long search to find a tool that suited me, I decided to make build one myself. To date, there have been tens of thousands of bookmarks saved. Below are still frames from an instructional video I created for the launch."
+       
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "mojave_1.jpg",
+          "position": "center"
+        }
+      ]
+    },
+    
+
+ {
+      "media": [
+        {
+          "name": "mojave_2.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+     {
+      "media": [
+        {
+          "name": "mojave_3.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+    
+ {
+      "media": [
+        {
+          "name": "mojave_4.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "media": [
+       
+        {
+          "name": "mojave_5.jpg"
+        }
+      ]
+    },
+
+    {
+      
+      "text": [
+        "2023 Update: While Mojave was a popular product, it wasn't a great business. Because of that we shut it down last year."
+       
+       
       ]
     }
+    
+
+
+   
+    
   ]
 }
 

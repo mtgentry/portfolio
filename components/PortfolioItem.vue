@@ -22,15 +22,17 @@ export default {
 
 <style lang="sass" scoped>
 
+
 .title
-  font-weight: 500
-  font-size: 23px
-  line-height: 200%
+  
+  font-size: 19px
+  padding-top: 4px
+  line-height: 110%
 
 
 .categories
-  font-size: 18px
-  line-height: 21px
+  font-size: 16px
+  
 
 .item
   align-items: start

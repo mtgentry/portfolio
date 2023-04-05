@@ -15,11 +15,17 @@
   "layout": [
 
 
- 
+{
+      "media": [
+        {
+          "name": "color_supply3.gif",
+          "position": "center"
+        }
+      ]
+    },
 
-
-    {
-"title": "A different approach",
+{
+"title": "A different approach to picking colors",
       "text": [
         "Sites like Adobe Kuler require users to create colors an an atomic level. They provide lots control but it comes at the expense of speed.  Like a sniper rifle. That granular control can be helpful if you have a color palette already in mind, but my research indicated most people picked colors from scratch.",
         "I created Color Supply with  \"guardrails\" to help users get to their colors faster. One of those guardrails is color theory. Everything the user does is contained within the bounds of color theory, so any color palette a user chooses will have some logic contained within it."
@@ -37,14 +43,15 @@
     },
 
 
-
      {
 
       "text": [
         "Another innovation was to embed SVG illustrations on the page. When you select a new palette the illustrations change to the colors you selected. This helps users imagine what the colors would look like on their project."
       ]
     },
-    {
+   
+
+{
       "media": [
         {
           "name": "svg_illustrations.mp4",
@@ -52,7 +59,7 @@
         }
       ]
     },
-   
+
     {
      
       "text": ["The site can also help you find palettes based on an \"anchor\" color you want to use. For example if your brand guidelines for a project specify red as a dominant color,  the HEX picker will suggest palettes that go with that particular shade of red."]
@@ -69,7 +76,8 @@
     {
       "text": [
         "All of these features speed up the color picking process.  If Adobe Kuler is a rifle, Color Supply is a shotgun.",
-        "Version 2 of the site is currently underway. There will be more functionality and a lightweight Chrome extension. The site has proved to be quite popular. It regularly goes viral on Twitter and is most popular in Japan."
+        "Version 2 of the site is currently underway. There will be more functionality and a lightweight Chrome extension. The site has proved to be quite popular. It regularly goes viral on Twitter and is most popular in Japan.",
+        "Try it out here: http://colorsupplyyy.com"
       ]
     }
     
