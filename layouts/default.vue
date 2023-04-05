@@ -10,7 +10,7 @@
     v-main
       v-container(fluid)
         Nuxt
-    v-footer#footer(absolute app)
+    v-footer#footer(absolute app :style=`{borderTopColor: mainTextColor}`)
       span &copy; #{new Date().getFullYear()}
       span.pl-5 Mason Gentry
       v-spacer
@@ -89,7 +89,7 @@ p
 
 #app
   padding: 0 34px
-  transition: background-color 1s ease-in-out, opacity 1s ease-in-out, color 2s ease-in-out
+  transition: background-color 1s ease-in-out, opacity 1s ease-in-out, color 1s ease-in-out
 
 
   a
@@ -110,6 +110,9 @@ p
   align-items: center
   height: 100px
   border-top: #FFFFFF 1px solid
+  transition: border-top-color 1s ease-in-out
+
+
 
 .theme--dark.v-footer
   color: inherit
@@ -120,10 +123,7 @@ p
   &.loaded
     opacity: 1
 
-body
-  background-color: #C1C1C1
-
 html, body
   scrollbar-color: #C1C1C1 #F1F1F1
-  background: #C1C1C1 //safari settings
+  background-color: #C1C1C1 //safari settings
 </style>
