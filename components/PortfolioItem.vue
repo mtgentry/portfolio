@@ -3,8 +3,8 @@
   div.item(:data-aos=`project.name === "francescas" ? "" : "fade-up"`)
     nuxt-link(:to="`/work/${project.name}`")
       Media(:project_name="project.name" :media="project.cover.media")
-      div.pt-2.title {{ project.cover.title }}
-      div.categories {{ project.cover.categories }}
+      div.pt-2.title(v-html="project.cover.title")
+      div.categories(v-html="project.cover.categories")
 
 </template>
 
@@ -24,7 +24,7 @@ export default {
 
 
 .title
-  
+
   font-size: 19px
   padding-top: 4px
   line-height: 110%
@@ -32,7 +32,7 @@ export default {
 
 .categories
   font-size: 16px
-  
+
 
 .item
   align-items: start

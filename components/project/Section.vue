@@ -3,8 +3,8 @@
   v-row.section
     v-col.pa-0(v-if="section.text" data-aos="fade-up")
       div.text
-        span.title(v-if="section.title") {{ section.title }}
-        p(v-for="text in section.text") {{ text }}
+        span.title(v-if="section.title" v-html="section.title" )
+        p(v-for="text in section.text" v-html="text")
     v-col.pa-0(v-else-if="section.media" data-aos="fade-up" v-for="media in section.media" :cols="12 / media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
 </template>
@@ -29,7 +29,7 @@ export default {
     font-weight: 500
     font-size: 23px
     line-height: 200%
-    
+
 
   p:last-child
     margin-bottom: 0

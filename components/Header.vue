@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  div.text {{ text }}
+  div.text(v-html="text" )
 </template>
 
 <script>
