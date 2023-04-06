@@ -80,6 +80,9 @@ export default {
 .theme--dark.v-app-bar.v-toolbar.v-sheet
   padding: 0 34px
 
+  @media (max-width: 768px)
+    padding: 0 10px
+
 .v-toolbar__title
   user-select: none
 
@@ -91,6 +94,8 @@ p
   padding: 0 34px
   transition: background-color 1s ease-in-out, opacity 1s ease-in-out, color 1s ease-in-out
 
+  @media (max-width: 768px)
+    padding: 0 10px
 
   a
     color: inherit
