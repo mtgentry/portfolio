@@ -2,15 +2,22 @@
 <template lang="pug">
   v-col.portfolio-group(:md="project.cover.multiple ? 6 : 12" cols=12
     :style=`{"justify-content": project.cover.position || 'center'}`)
+    vue-if-bot(v-if="project.cover.forbidIndex")
+      PortfolioItem.portfolio-item(:project="project" :style=`{"width": project.cover.width || '100%'}`
+        :class="{'mobileFullWidth': !project.cover.mobileInherit}")
     PortfolioItem.portfolio-item(:project="project" :style=`{"width": project.cover.width || '100%'}`
-      :class="{'mobileFullWidth': !project.cover.mobileInherit}")
+        :class="{'mobileFullWidth': !project.cover.mobileInherit}" v-else)
 
 </template>
 
 <script>
+import VueIfBot from 'vue-if-bot'
 
 export default {
   props: ['project'],
+  components: {
+    VueIfBot
+  }
 }
 </script>
 

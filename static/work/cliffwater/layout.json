@@ -6,14 +6,15 @@
     "title": "Cliffwater",
     "categories": "Visual Design, Branding, UI, UX",
     "position": "left",
-    "width": "70%"
+    "width": "70%",
+    "forbidIndex": true
   },
   "backgroundColor": "#2F74B2",
   "textColor": "#ffffff",
   "header": "Cliffwater wrote the book on private debt. Literally.",
   "seo_description": "",
   "layout": [
-    
+
 
 {
       "media": [
@@ -30,8 +31,8 @@
       "text": ["- -",
         "Agency: Hampar Productions"]
     }
-   
-    
+
+
   ]
 }
 

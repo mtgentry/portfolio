@@ -1,4 +1,3 @@
-<!-- Please remove this file from your project -->
 <template lang="pug">
   div.item(:data-aos=`project.name === "francescas" ? "" : "fade-up"`)
     nuxt-link(:to="`/work/${project.name}`")
