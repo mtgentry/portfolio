@@ -130,5 +130,5 @@ p
 
 html, body
   scrollbar-color: #C1C1C1 #F1F1F1
-  background-color: #C1C1C1 //safari settings
+  background-color: #282725 //safari settings
 </style>
