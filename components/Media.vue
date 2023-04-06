@@ -31,7 +31,7 @@ export default {
     window.addEventListener("resize", this.playVisibleVideos);
     window.addEventListener("DOMContentLoaded", this.playVisibleVideos);
 
-    this.$refs.video.controls = this.isSafari()
+    this.$refs.video.controls = this.isIos()
 
   },
   computed: {
@@ -65,15 +65,14 @@ export default {
       return (rect.bottom >= 0 && rect.right >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.left <= (window.innerWidth || document.documentElement.clientWidth));
     },
 
-    isSafari() {
-      const platformExpression = /Mac|iPhone|iPod|iPad/i;
-      const rejectedExpression = /Chrome|Android|CriOS|FxiOS|EdgiOS/i;
-      const expectedExpression = /Safari/i;
+    isIos() {
+      const platformExpression = /iPhone/i;
+      const rejectedExpression = /Android|CriOS|FxiOS|EdgiOS/i;
       const agent = navigator.userAgent;
       if (rejectedExpression.test(agent)) {
         return false;
       }
-      return platformExpression.test(agent) && expectedExpression.test(agent);
+      return platformExpression.test(agent)
     }
   }
 }
