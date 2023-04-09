@@ -76,8 +76,30 @@
     {
       "text": [
         "All of these features speed up the color picking process.  If Adobe Kuler is a rifle, Color Supply is a shotgun.",
-        "Version 2 of the site is currently underway. There will be more functionality and a lightweight Chrome extension. The site has proved to be quite popular. It regularly goes viral on Twitter and is most popular in Japan.",
-        "Try it out here: http://colorsupplyyy.com"
+        "Version 2 of the site is currently underway. There will be more functionality and a lightweight Chrome extension. The site has proved to be quite popular. It regularly goes viral on Twitter and is most popular in Japan."
+       
+      ]
+    },
+
+{
+      "media": [
+        {
+          "name": "tweets.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+
+
+
+    {
+     
+      "text": [
+
+"Try it out here: <a href='http://colorsupplyyy.com/app' target='_blank'>colorsupplyyy.com</a>"
+       
+
       ]
     }
     

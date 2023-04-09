@@ -8,12 +8,15 @@
     "position": "right",
     "width": "50%"
   },
-  "backgroundColor": "#67c7a3",
-  "textColor": "#ffffff",
+  "backgroundColor": "#292929",
+  "textColor": "#fff",
   "header": "Saving bookmarks is a pain. Mojave is a browser extension that makes it easy.",
   "seo_description": "",
   "layout": [
     
+  
+
+
 
 {
       "media": [
@@ -28,66 +31,51 @@
     {
       
       "text": [
-        "Everyone thinks their way of saving bookmarks is the right way.  As a designer and visual person, I wanted to see all of my bookmarks on the page at once. Tools like Pinboard, Pocket, Delicious, and others don't support this.",
-        "And I wanted to be able to save them as quickly as possible. After a long search to find a tool that suited me, I decided to make build one myself. To date, there have been tens of thousands of bookmarks saved. Below are still frames from an instructional video I created for the launch."
+        "Mojave lets you see all your bookmarks at once. Tools like Pinboard, Pocket, Delicious, and others don't have this functionality. When you can see all your bookmark folders and links on the page, you can save them quickly. You don't have to think about what tags you should use to classify a link."
+     
        
       ]
     },
-    {
-      "media": [
-        {
-          "name": "mojave_1.jpg",
-          "position": "center"
-        }
-      ]
-    },
-    
+
+
 
  {
       "media": [
         {
-          "name": "mojave_2.jpg",
+          "name": "menus.jpg",
           "position": "center"
         }
       ]
     },
 
-     {
-      "media": [
-        {
-          "name": "mojave_3.jpg",
-          "position": "center"
-        }
-      ]
-    },
 
-    
- {
-      "media": [
-        {
-          "name": "mojave_4.jpg",
-          "position": "center"
-        }
-      ]
-    },
-
-    {
-      "media": [
-       
-        {
-          "name": "mojave_5.jpg"
-        }
-      ]
-    },
-
-    {
+{
       
       "text": [
-        "2023 Update: While Mojave was a popular product, it wasn't a great business. Because of that we shut it down last year."
-       
+        "Mojave was loved by it's users with tens of thousands of bookmarks saved. But unfortunately the company was unable to find a business model to sustain it.",
+        ""
        
       ]
+    },
+
+
+
+
+    {
+      "media": [
+        {
+          "name": "mojave_extension.mp4",
+          "position": "center"
+        }
+      ]
     }
+    
+
+ 
+
+ 
+
+   
     
 
 
