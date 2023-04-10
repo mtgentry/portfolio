@@ -3,17 +3,20 @@
     v-col(cols="12")
       Header
     PortfolioGroup(v-if="projects !== {}" v-for="project_name in Object.keys(projects)" :project="projects[project_name]" :key="project_name")
-
+    v-col(cols="12")
+      Footer
 </template>
 
 <script>
 import Header from '~/components/Header.vue'
 import PortfolioGroup from "@/components/PortfolioGroup.vue";
 import {mapState} from "vuex";
+import Footer from "@/components/Footer.vue";
 export default {
   components: {
     Header,
-    PortfolioGroup
+    PortfolioGroup,
+    Footer
   },
   transition: 'fade',
   fetchOnServer: true,
@@ -67,10 +70,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass">
-.fade-enter-active, .fade-leave-active
-  transition: opacity 1s
-.fade-enter, .fade-leave-to
-  opacity: 0
-</style>

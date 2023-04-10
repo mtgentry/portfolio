@@ -7,14 +7,9 @@
     // span.pr-3 Link 1
     // span.pr-3 Link 2
     // span.pr-3 Link 3
-    v-main
+    v-main.pa-0
       v-container(fluid)
         Nuxt
-    v-footer#footer(absolute app :style=`{borderTopColor: mainTextColor}`)
-      span &copy; #{new Date().getFullYear()}
-      span.pl-5 Mason Gentry
-      v-spacer
-      a(href="mailto:mgentry@masongentry.com") mgentry@masongentry.com
 </template>
 
 <script>
@@ -107,16 +102,6 @@ p
   main
     min-height: 200vh
 
-#footer
-  font-size: 18px
-  line-height: 24px
-  background-color: unset
-  display: flex
-  align-items: center
-  height: 100px
-  border-top: #FFFFFF 1px solid
-  transition: border-top-color 1s ease-in-out
-
 
 
 .theme--dark.v-footer
@@ -131,4 +116,9 @@ p
 html, body
   scrollbar-color: #C1C1C1 #F1F1F1
   background-color: #282725 //safari settings
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity 1s
+.fade-enter, .fade-leave-to
+  opacity: 0
 </style>

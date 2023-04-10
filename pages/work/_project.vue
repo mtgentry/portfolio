@@ -4,18 +4,21 @@
       Top(:text="project.header")
     v-col(cols="12")
       Section(v-for="section in project.layout" :section="section" :key="section.name")
-
+    v-col(cols="12")
+      Footer
 
 </template>
 
 <script>
 import Top from '~/components/project/Top.vue'
 import Section from "@/components/project/Section.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   components: {
     Section,
     Top,
+    Footer
   },
   fetchOnServer: true,
   transition: 'fade',
