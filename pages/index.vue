@@ -2,8 +2,7 @@
   v-row(justify="center" align="center")
     v-col(cols="12")
       Header
-      v-row
-        PortfolioGroup(v-if="projects !== {}" v-for="project_name in Object.keys(projects)" :project="projects[project_name]" :key="project_name")
+    PortfolioGroup(v-if="projects !== {}" v-for="project_name in Object.keys(projects)" :project="projects[project_name]" :key="project_name")
 
 </template>
 
