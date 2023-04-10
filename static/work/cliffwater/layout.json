@@ -4,7 +4,7 @@
       "name": "cliffwater_thumb.jpg"
     },
     "title": "Cliffwater",
-    "categories": "Visual Design, Branding, UI, UX",
+    "categories": "Branding, Visual Design, UI, UX",
     "position": "left",
     "width": "70%",
     "forbidIndex": true
@@ -24,6 +24,25 @@
         }
       ]
     },
+
+
+ {
+
+      "text": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus pulvinar iaculis. Integer molestie efficitur placerat. Sed et libero vel nulla rutrum consectetur. Nulla vulputate luctus urna, eget feugiat mi rhoncus eu. ",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate luctus urna, eget feugiat mi rhoncus eu. "]
+    },
+
+
+{
+      "media": [
+        {
+          "name": "data_stacks.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+
 
 
     {
