@@ -19,7 +19,7 @@
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
     "vue": "^2.7.10",
-    "vue-gtag": "1.16.1",
+    "vue-gtag": "^1.16.1",
     "vue-if-bot": "^1.2.0",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",

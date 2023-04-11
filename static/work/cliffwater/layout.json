@@ -19,7 +19,7 @@
 {
       "media": [
         {
-          "name": "cliffwater_1.jpg",
+          "name": "cliffwater_homepage.jpg",
           "position": "center"
         }
       ]
@@ -28,9 +28,29 @@
 
  {
 
-      "text": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus pulvinar iaculis. Integer molestie efficitur placerat. Sed et libero vel nulla rutrum consectetur. Nulla vulputate luctus urna, eget feugiat mi rhoncus eu. ",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate luctus urna, eget feugiat mi rhoncus eu. "]
+      "text": ["Cliffwater is an alternative investment adviser and fund manager. When I first met with them I realized they are well respected in their field. They needed a new brand and website to match. ",
+        "When a new brand and website are needed usually the brand gets defined first. However after our initial meeting it was clear the website was a more urgent priority.",
+         "So I proposed an \"agile\" version of a rebrand that took place while we redesigned the site. It worked suprisingly well."
+      ]
     },
+
+
+{
+      "media": [
+        {
+          "name": "square_in_pool.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+
+{
+
+      "text": ["Private debt is an asset class most people are unfamiliar with. I worked with illustrator Birgit Palma to visualize and make accessible much of the institutional knowledge Cliffwater had accrued over the years.",
+              "The ultimate goal was to make the opaque world of private debt more understandable to potential customers." ]
+    },
+
 
 
 {
@@ -43,7 +63,21 @@
     },
 
 
+{
 
+      "text": ["Our agile method of branding proved to work better than expected. I will consider doing it on future projects as well."]
+    },
+
+
+
+{
+      "media": [
+        {
+          "name": "upward_arrows.jpg",
+          "position": "center"
+        }
+      ]
+    },
 
     {
 
