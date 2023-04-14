@@ -8,7 +8,7 @@
     "position": "right",
     "width": "50%"
   },
-  "backgroundColor": "#727272",
+  "backgroundColor": "#3BA076",
   "textColor": "#fff",
   "header": "Saving bookmarks is a pain. Mojave is a browser extension that makes it easy.",
   "seo_description": "",
@@ -31,8 +31,8 @@
     {
       
       "text": [
-        "Mojave lets you see all your bookmarks at once. Tools like Pinboard, Pocket, Delicious, and others don't have this functionality. When you can see all your bookmark folders and links on the page, you can save them quickly. You don't have to think about what tags you should use to classify a link."
-     
+        "Mojave lets you see all your bookmarks at once. Tools like Pinboard, Pocket, Delicious, and others don't have this functionality.",
+       "When you can see all your bookmark folders and links on one page, you can save them quickly. And you don't have to think about what tags you should use to classify a link. Overall there's less cognive load on the user."
        
       ]
     },
@@ -52,7 +52,7 @@
 {
       
       "text": [
-        "Mojave was loved by it's users with tens of thousands of bookmarks saved. But unfortunately the company was unable to find a business model to sustain it.",
+        "I was the design lead for Mojave. It was loved by it's users with tens of thousands of bookmarks saved. But unfortunately the company was unable to find a business model to sustain itself.",
         ""
        
       ]
