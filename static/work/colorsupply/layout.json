@@ -10,76 +10,77 @@
   },
   "backgroundColor": "#F8F080",
   "textColor": "#282725",
-"header": "Choosing colors for a design project can be daunting. I created a tool to make it easy. Color Supply is a color picking tool that helps designers, illustrators, and developers pick colors for their projects.",
+"header": "Choosing colors for a design project can be daunting. I created a tool to make it easy. Color Supply helps designers, illustrators, and developers pick colors for their projects.",
   "seo_description": "",
   "layout": [
 
 
+
 {
       "media": [
         {
-          "name": "color_supply3.gif",
+          "name": "color_supply_wheel.jpg",
           "position": "center"
         }
       ]
     },
 
+
+
 {
-"title": "A different approach to picking colors",
+"title": "A different approach to color picking",
       "text": [
-        "Sites like Adobe Kuler require users to create colors an an atomic level. They provide lots control but it comes at the expense of speed.  Like a sniper rifle. That granular control can be helpful if you have a color palette already in mind, but my research indicated most people picked colors from scratch.",
-        "I created Color Supply with  \"guardrails\" to help users get to their colors faster. One of those guardrails is color theory. Everything the user does is contained within the bounds of color theory, so any color palette a user chooses will have some logic contained within it."
+        "Sites like Adobe Kuler require users to create colors an an atomic level. They provide lots control but it comes at the expense of speed. They're like a sniper rifle. Granular control can be helpful if you have a color palette already in mind, but my research indicated most people picked colors from scratch.",
+        "I created Color Supply with  \"guardrails\" in place. One of those guardrails is color theory. Any selected palette is rooted in color theory, so even picking blindly will get you something nice.",
+        "One main way to find colors is by selecting a wheel."
         
       ]
     },
 
+
 {
       "media": [
         {
-          "name": "colorwheels2.mp4",
+          "name": "every_color_wheel.mp4",
           "position": "center"
         }
       ]
     },
 
 
-     {
+{
 
       "text": [
-        "Another innovation was to embed SVG illustrations on the page. When you select a new palette the illustrations change to the colors you selected. This helps users imagine what the colors would look like on their project."
+        "Once a color wheel is selected, you can explore palettes within that wheel. When you select a new palette SVG illustrations change to the colors you selected. This helps you imagine what the colors would look like on your project."
       ]
     },
    
 
+
 {
       "media": [
         {
-          "name": "svg_illustrations.mp4",
+          "name": "svgs_all.mp4",
           "position": "center"
         }
       ]
     },
-
-    {
      
-      "text": ["The site can also help you find palettes based on an \"anchor\" color you want to use. For example if your brand guidelines for a project specify red as a dominant color,  the HEX picker will suggest palettes that go with that particular shade of red."]
-    },
-    {
-     "media": [
-        {
-          "name": "pick_colors_wide.mp4",
-          "position": "center"
-        }
-      ]
-    },
+   
     
     {
       "text": [
+        "The site can also help you find palettes based on an \"anchor\" color you want to use. For example if your brand guidelines for a project specify red as a dominant color,  the HEX picker will suggest palettes that go with that particular shade of red.",
         "All of these features speed up the color picking process.  If Adobe Kuler is a rifle, Color Supply is a shotgun.",
         "Version 2 of the site is currently underway. There will be more functionality and a lightweight Chrome extension. The site has proved to be quite popular. It regularly goes viral on Twitter and is most popular in Japan."
        
       ]
     },
+
+
+ 
+
+
 
 {
       "media": [
