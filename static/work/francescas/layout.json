@@ -8,7 +8,7 @@
   },
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",
-  "header": "The world of fashion moves fast with young girls. They try on new clothes and discard old identities. At this age they're open to new style suggestions but you can't be too forceful. With this in mind, we worked with Francesca's to re-imagine their brand as a helpful big sister to help their young customers navigate the early years of adolescence.",
+  "header": "Fashion moves fast for young girls. They try on new clothes and discard old identities. At this age they're open to new style suggestions but you can't be too forceful. With this in mind, we worked with Francesca's to re-imagine their brand as a helpful big sister to help their young customers navigate the early years of adolescence.",
   "seo_description": "",
   "layout": [
     
@@ -26,11 +26,15 @@
     {
       "title": "Time for a change",
       "text": [
-        "When Francesca's came to us, their brand was stale. Their 11-15 yr old female customers had grown more sophisticated than when the company was first founded in 2006. Girls now preferred hipper brands like Nasty Gal and Nylon. Francescas needed to modernize.",
-        "But at the same time, the company didn't want to alienate the parents of these young women. We came up with a brand direction which tested very well with young women and their parents. It was hipper, but not too hip.",
-       "Since these young women were still figuring out their sense of style, we wanted to hold their hand a bit – much like a big sister."
+        "When Francesca's came to us, their brand was stale. Their 11-15 year old female customers had grown more sophisticated than when the company was first founded in 2006. Girls now preferred hipper brands like Madewell and Asos.",
+        "Francecas needed a refresh.",
+        "But at the same time, the company didn't want to alienate the parents of these young women. We came up with a brand direction which tested very well with everyone. It was hipper, but not too hip."
+       
       ]
     },
+
+
+
     {
       
 
@@ -41,11 +45,17 @@
         }
       ]
     },
-    
+
     {
-      
-      "text": ["To deliver on this we came up with the idea of  an \"editorial\" browsing experience to subtly reveal style suggestions. The experience would be the online equivalent of flipping through a fashion magazine.  Like how browsing Teen Vogue might reveal new fashion trends."]
+      "title": "The Strategy",
+      "text": [
+        
+       "Since these young women were still figuring out their sense of style, we wanted to hold their hand a bit – much like a big sister.",
+       "To deliver on this we came up with the idea of  an \"editorial\" browsing experience to subtly reveal style suggestions. The experience would be the online equivalent to flipping through a fashion magazine. Like how browsing Teen Vogue might reveal new fashion trends."
+      ]
     },
+    
+    
     {
       "media": [
        
