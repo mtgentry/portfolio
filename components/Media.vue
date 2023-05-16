@@ -111,4 +111,5 @@ export default {
 
 .aspect-container
   overflow: hidden
+  display: flex
 </style>
