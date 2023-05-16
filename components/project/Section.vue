@@ -7,14 +7,18 @@
         p(v-for="text in section.text" v-html="text")
     v-col(v-else-if="section.media" data-aos="fade-up" v-for="media in section.media" :cols="12 / media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
+    v-col(v-else-if="section.quote" data-aos="fade-up")
+      Quote(:quote="section.quote")
 </template>
 
 <script>
 import Media from "@/components/Media.vue";
+import Quote from "@/components/project/Quote.vue";
 
 export default {
   props: ['section'],
   components: {
+    Quote,
     Media,
   }
 }
