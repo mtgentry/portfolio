@@ -7,6 +7,7 @@
       span Your browser does not support the video tag.
     img.item(v-else :src="mediaPath" :style=`{'width': media.width || '100%', 'justify-content': media.position || ''}`
       @load="load" :class="{'custom-fade-in': this.project_name === 'francescas', 'loaded': loaded}")
+    div.text-center.pt-1(v-if="media.title" v-html="media.title")
 
 </template>
 
