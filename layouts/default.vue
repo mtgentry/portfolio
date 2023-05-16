@@ -2,7 +2,8 @@
   v-app#app.display-animation(ref="app" :style=`{backgroundColor: bgColor, color: mainTextColor}` :class="{'loaded': !loading}")
     v-app-bar(fixed app :style=`{backgroundColor: bgColor, color: txColor}` flat ref="navbar")
       nuxt-link(to="/")
-        v-toolbar-title M
+        v-toolbar-title
+          img#logo(src="/images/logo.svg" alt="Mason Gentry Logo" height="50px")
       v-spacer
     // span.pr-3 Link 1
     // span.pr-3 Link 2
@@ -121,4 +122,7 @@ html, body
   transition: opacity 1s
 .fade-enter, .fade-leave-to
   opacity: 0
+
+#logo
+  width: 27px
 </style>
