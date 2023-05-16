@@ -9,8 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - Mason Gentry',
-    title: 'Portfolio',
+    titleTemplate: 'Mason Gentry',
     htmlAttrs: {
       lang: 'en'
     },
