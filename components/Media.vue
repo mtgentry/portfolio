@@ -87,7 +87,7 @@ export default {
 //add grow effect on main page
 #main
   $animation-time: 0.5s
-  $scale: scale3d(1.1, 1.1, 1.1)
+  $scale: scale3d(1.03, 1.03, 1.03)
 
   .item
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)
