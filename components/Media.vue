@@ -1,13 +1,15 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  div.aspect-container
+  div
     video.item(muted v-if="is_video" playsinline loop ref="video"
       :style=`{"width": media.width || "100%", 'justify-content': media.position || ''}`)
       source(:src="mediaPath" type="video/mp4")
       span Your browser does not support the video tag.
-    img.item(v-else :src="mediaPath" :style=`{'width': media.width || '100%', 'justify-content': media.position || ''}`
-      @load="load" :class="{'custom-fade-in': this.project_name === 'francescas', 'loaded': loaded}")
-    div.text-center.pt-1(v-if="media.title" v-html="media.title")
+    div(v-else)
+      div.aspect-container
+        img.item( :src="mediaPath" :style=`{'width': media.width || '100%', 'justify-content': media.position || ''}`
+          @load="load" :class="{'custom-fade-in': this.project_name === 'francescas', 'loaded': loaded}")
+      div.text-center.pt-1(v-if="media.title" v-html="media.title")
 
 </template>
 
