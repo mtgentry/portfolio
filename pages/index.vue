@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-row(justify="center" align="center")
+  v-row#main(justify="center" align="center")
     v-col(cols="12")
       Header
     PortfolioGroup(v-if="projects !== {}" v-for="project_name in Object.keys(projects)" :project="projects[project_name]" :key="project_name")

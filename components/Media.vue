@@ -82,17 +82,25 @@ export default {
 
 <style lang="sass" scoped>
 
+//add grow effect on main page
+#main
+  $animation-time: 0.5s
+  $scale: scale3d(1.1, 1.1, 1.1)
+
+  .item
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)
+    transform-style: preserve-3d
+    transition: transform $animation-time ease-in-out
+
+    &:hover
+      will-change: transform
+      transform: translate3d(0px, 0px, 0px) $scale rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)
+
+  .custom-fade-in
+    transition: opacity 1s ease-in-out, transform $animation-time ease-in-out
+
 .item
   width: 100%
-
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)
-  transform-style: preserve-3d
-  transition: transform 0.5s ease-in-out
-
-  &:hover
-    will-change: transform
-    transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1.1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)
-
 
   @media (max-width: 768px)
     width: unset!important
@@ -101,7 +109,7 @@ export default {
 .custom-fade-in
   min-height: 50vh
   opacity: 0
-  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out
+  transition: opacity 1s ease-in-out
 
   @media (max-width: 768px)
     min-height: unset
