@@ -9,17 +9,21 @@
       Media(:media="media" :project_name="$route.params.project")
     v-col(v-else-if="section.quote" data-aos="fade-up")
       Quote(:quote="section.quote")
+    v-col.w-100(v-else-if="section.credits" data-aos="fade-up")
+      Credits(:credits="section.credits")
 </template>
 
 <script>
 import Media from "@/components/Media.vue";
 import Quote from "@/components/project/Quote.vue";
+import Credits from "@/components/project/Credits.vue";
 
 export default {
   props: ['section'],
   components: {
     Quote,
     Media,
+    Credits
   }
 }
 </script>
@@ -28,6 +32,8 @@ export default {
 
 .section
   padding-bottom: 140px
+  min-width: 50%
+
 
   .title
     font-weight: 500
