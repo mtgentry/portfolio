@@ -11,16 +11,20 @@
       Quote(:quote="section.quote")
     v-col.w-100(v-else-if="section.credits" data-aos="fade-up")
       Credits(:credits="section.credits")
+    v-col.w-100(v-else-if="section.string" data-aos="fade-up")
+      String.text(:string="section.string")
 </template>
 
 <script>
 import Media from "@/components/Media.vue";
 import Quote from "@/components/project/Quote.vue";
 import Credits from "@/components/project/Credits.vue";
+import String from "@/components/project/String.vue";
 
 export default {
   props: ['section'],
   components: {
+    String,
     Quote,
     Media,
     Credits

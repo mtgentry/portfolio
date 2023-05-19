@@ -37,6 +37,9 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+  env: {
+    IS_AGENCY: process.env.IS_AGENCY || false
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -75,11 +78,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    // extend(config, { isClient }) {
-    //   // Extend only webpack config for client-bundle
-    //   if (isClient) {
-    //     config.devtool = 'source-map'
-    //   }
-    // }
+    extend(config, { isClient }) {
+      // Extend only webpack config for client-bundle
+      if (isClient) {
+        config.devtool = 'source-map'
+      }
+    }
   }
 }
