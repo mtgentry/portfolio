@@ -1,15 +1,10 @@
-<template>
-  <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
-  </v-app>
+<template lang="pug">
+  v-container#error(fluid)
+    v-row
+      v-col
+        h1(v-if="error.statusCode === 404") {{ pageNotFound }}
+        h1(v-else) {{ otherError }}
+
 </template>
 
 <script>
@@ -25,10 +20,11 @@ export default {
   data () {
     return {
       pageNotFound: '404 Not Found',
-      otherError: 'An error occurred'
+      otherError: 'An error occurred',
     }
   },
-  head () {
+  head() {
+    this.$store.commit('setLoading', false)
     const title =
       this.error.statusCode === 404 ? this.pageNotFound : this.otherError
     return {
@@ -38,8 +34,8 @@ export default {
 }
 </script>
 
-<style scoped>
-h1 {
-  font-size: 20px;
-}
+<style scoped lang="sass">
+#error
+  padding-top: 100px
+  color: #fff
 </style>

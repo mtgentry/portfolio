@@ -5,10 +5,11 @@
         v-toolbar-title
           img#logo(src="/images/logo.svg" alt="Mason Gentry Logo" height="50px")
       v-spacer
-      span.pr-3
-        NuxtLink(to="/unlimited_design") Unlimited Design
-      span.pr-3
-        NuxtLink(to="/pricing") Pricing
+      div(v-if="is_agency")
+        span.pr-3
+          NuxtLink(to="/unlimited_design") Unlimited Design
+        span.pr-3
+          NuxtLink(to="/pricing") Pricing
     v-main.pa-0
       v-container(fluid)
         Nuxt
@@ -30,6 +31,9 @@ export default {
     this.$store.commit('setLoading', false)
   },
   computed: {
+    is_agency() {
+      return process.env.IS_AGENCY
+    },
     bgColor() {
       let backgroundColor;
       if (this.$route.path === "/") {

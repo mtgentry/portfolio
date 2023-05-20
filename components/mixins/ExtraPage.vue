@@ -25,6 +25,11 @@ export default {
       project: null
     }
   },
+  mounted() {
+    if (!process.env.IS_AGENCY) {
+      return this.$nuxt.error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
   async head() {
     this.project = await this.$axios.get(`/pages/${this.$route.name}/layout.json`)
       .then((response) => response.data)
