@@ -20,7 +20,7 @@ export default {
         vue.showNav()
       }
       this.lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-      if (vue.$route.path === '/') return
+      if (!vue.$route.path.includes('work')) return
       if (st > 500) {
         vue.makeBackgroundWhite()
       } else if (st > 0 && st <= 500) {
@@ -42,9 +42,11 @@ export default {
       this.$store.commit('setTextColor', this.white.textColor)
     },
     makeBackgroundBColor() {
+      let backgroundColor = this.$store.state.project ? this.$store.state.project.backgroundColor : this.$store.state.homeBackgroundColor
+      let textColor = this.$store.state.project ? this.$store.state.project.textColor : this.$store.state.homeTextColor
       this.$refs.navbar.$el.classList.remove('whiteBG')
-      this.$store.commit('setBackgroundColor', this.$store.state.project.backgroundColor)
-      this.$store.commit('setTextColor',  this.$store.state.project.textColor)
+      this.$store.commit('setBackgroundColor', backgroundColor)
+      this.$store.commit('setTextColor',  textColor)
     },
   },
 }

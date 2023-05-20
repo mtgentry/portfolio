@@ -1,33 +1,46 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  v-row.section
+  v-row.section(:class="{ slim: !section.media, 'slim-padding': slim_padding }")
     v-col(v-if="section.text" data-aos="fade-up")
-      div.text
-        span.title(v-if="section.title" v-html="section.title" )
-        p(v-for="text in section.text" v-html="text")
+      String(:texts="section.text" :size="section.size" :title="section.title")
     v-col(v-else-if="section.media" data-aos="fade-up" v-for="media in section.media" :cols="12 / media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
     v-col(v-else-if="section.quote" data-aos="fade-up")
       Quote(:quote="section.quote")
     v-col.w-100(v-else-if="section.credits" data-aos="fade-up")
       Credits(:credits="section.credits")
-    v-col.w-100(v-else-if="section.string" data-aos="fade-up")
-      String.text(:string="section.string")
+    v-col.w-100(v-else-if="section.faq" data-aos="fade-up")
+      Faq(:faqs="section.faq")
+    v-col.w-100(v-else-if="section.button" data-aos="fade-up")
+      Button(:button="section.button")
 </template>
 
 <script>
 import Media from "@/components/Media.vue";
 import Quote from "@/components/project/Quote.vue";
 import Credits from "@/components/project/Credits.vue";
+import Faq from "@/components/project/Faq.vue";
+import Button from "@/components/project/Button.vue";
 import String from "@/components/project/String.vue";
 
 export default {
-  props: ['section'],
+  props: {
+    section: {
+      type: Object,
+      required: true
+    },
+    slim_padding: {
+      type: Boolean,
+      default: false
+    }
+  },
   components: {
     String,
     Quote,
     Media,
-    Credits
+    Credits,
+    Faq,
+    Button
   }
 }
 </script>
@@ -38,12 +51,8 @@ export default {
   padding-bottom: 140px
   min-width: 50%
 
-
-  .title
-    font-weight: 500
-    font-size: 23px
-    line-height: 200%
-
+  &.slim-padding
+    padding-bottom: 20px
 
   p:last-child
     margin-bottom: 0
@@ -51,7 +60,7 @@ export default {
   @media (max-width: 768px)
     padding-bottom: 90px
 
-.text
+.slim
   max-width: 659px
 
 .images

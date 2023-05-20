@@ -5,9 +5,10 @@
         v-toolbar-title
           img#logo(src="/images/logo.svg" alt="Mason Gentry Logo" height="50px")
       v-spacer
-    // span.pr-3 Link 1
-    // span.pr-3 Link 2
-    // span.pr-3 Link 3
+      span.pr-3
+        NuxtLink(to="/unlimited_design") Unlimited Design
+      span.pr-3
+        NuxtLink(to="/pricing") Pricing
     v-main.pa-0
       v-container(fluid)
         Nuxt
@@ -24,6 +25,9 @@ export default {
     setTimeout(() => {
       this.$AOS.refresh()
     }, 1000)
+  },
+  async head() {
+    this.$store.commit('setLoading', false)
   },
   computed: {
     bgColor() {

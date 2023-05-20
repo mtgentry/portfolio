@@ -23,7 +23,6 @@ export default {
   fetchOnServer: true,
   transition: 'fade',
   async head() {
-    this.$store.commit('setLoading', false)
     if (this.$store.state.projects) {
       this.project = this.$store.state.projects[this.$route.params.project]
     }
