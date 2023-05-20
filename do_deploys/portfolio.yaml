@@ -1,0 +1,35 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+domains:
+- domain: masongentry.com
+  type: PRIMARY
+envs:
+- key: BASE_URL
+  scope: RUN_AND_BUILD_TIME
+  value: ${APP_URL}
+- key: NODE_ENV
+  scope: RUN_AND_BUILD_TIME
+  value: production
+ingress:
+  rules:
+  - component:
+      name: portfolio
+    match:
+      path:
+        prefix: /
+name: portfolio
+region: sfo
+services:
+- build_command: yarn build
+  environment_slug: node-js
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: mtgentry/portfolio
+  http_port: 8080
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: portfolio
+  run_command: yarn start --hostname 0.0.0.0 --port 8080
+  source_dir: /
