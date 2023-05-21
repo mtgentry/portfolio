@@ -6,10 +6,8 @@
           img#logo(src="/images/logo.svg" alt="Mason Gentry Logo" height="50px")
       v-spacer
       div(v-if="is_agency")
-        span.pr-3
-          NuxtLink(to="/unlimited_design") Unlimited Design
-        span.pr-3
-          NuxtLink(to="/pricing") Pricing
+        span.pr-3(v-for="url in getUrls" :key="url")
+          NuxtLink(:to="url") {{ formatUrl(url) }}
     v-main.pa-0
       v-container(fluid)
         Nuxt
@@ -29,6 +27,11 @@ export default {
   },
   async head() {
     this.$store.commit('setLoading', false)
+  },
+  methods:{
+    formatUrl(s) {
+        return s.substring(1).replace(/^_*(.)|_+(.)/g, (s, c, d) => c ? c.toUpperCase() : ' ' + d.toUpperCase())
+    },
   },
   computed: {
     is_agency() {
@@ -60,6 +63,11 @@ export default {
         color = "#282725"
       }
       return color
+    },
+    getUrls() {
+      return this.$router.getRoutes().map((route) => route.path).filter(
+        (path) => path !== '/work/:project?'
+      )
     },
     ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'loading'])
   },
