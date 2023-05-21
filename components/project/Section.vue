@@ -13,6 +13,8 @@
       Faq(:faqs="section.faq")
     v-col.w-100(v-else-if="section.button" data-aos="fade-up")
       Button(:button="section.button")
+    v-col.w-100(v-else-if="section.form" data-aos="fade-up")
+      MailchimpForm
 </template>
 
 <script>

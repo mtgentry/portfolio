@@ -12,11 +12,13 @@
 import Section from "@/components/project/Section.vue";
 import Footer from "@/components/Footer.vue";
 import {mapState} from "vuex";
+import MailchimpForm from "@/components/MailchimpForm.vue";
 
 export default {
   components: {
     Section,
-    Footer
+    Footer,
+    MailchimpForm
   },
   fetchOnServer: false,
   transition: 'fade',
