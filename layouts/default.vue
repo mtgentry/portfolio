@@ -3,7 +3,7 @@
     v-app-bar(fixed app :style=`{backgroundColor: bgColor, color: txColor}` flat ref="navbar")
       nuxt-link(to="/")
         v-toolbar-title
-          img#logo(src="/images/logo.svg" alt="Mason Gentry Logo" height="50px")
+          Logo(:color="txColor")
       v-spacer
       div(v-if="is_agency")
         span.pr-3(v-for="url in getUrls" :key="url")
@@ -16,9 +16,13 @@
 <script>
 import { mapState } from 'vuex'
 import HideNavbar from "@/components/mixins/HideNavbar.vue";
+import Logo from "@/components/Logo.vue";
 export default {
   name: 'DefaultLayout',
   mixins: [HideNavbar],
+  components: {
+    Logo,
+  },
   mounted() {
     this.$store.commit('setBackgroundColor', this.backgroundColor)
     setTimeout(() => {
@@ -138,7 +142,4 @@ html, body
   transition: opacity 1s
 .fade-enter, .fade-leave-to
   opacity: 0
-
-#logo
-  width: 27px
 </style>
