@@ -54,7 +54,7 @@ export default {
   ],
 
   axios: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000'
+    baseURL: `${process.env.BASE_URL}/domains/${process.env.IS_AGENCY === '1' ? 'agency' : 'portfolio'}`
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

@@ -1,10 +1,10 @@
 <template lang="pug">
-  v-row#main(justify="center" align="center")
+  v-row#main(justify="center" align="center" v-if="layout")
     v-col(cols="12")
-      Header
+      Header(:text="layout.header")
     PortfolioGroup(v-if="projects !== {}" v-for="project_name in Object.keys(projects)" :project="projects[project_name]" :key="project_name")
     v-col(cols="12")
-      Footer
+      Footer(:name="layout.name" :email="layout.email")
 </template>
 
 <script>
@@ -35,6 +35,7 @@ export default {
   data() {
     return {
       projects: {},
+      layout: null,
     }
   },
   mounted() {
@@ -48,16 +49,18 @@ export default {
       this.projects = this.projectStore
       return
     }
-    this.order = await this.$axios.$get('/work/order.json').then((response) => response.order)
+    this.layout = await this.$axios.$get('/homepage.json').then((response) => response)
+    let order = this.layout.order
+    let navbar = this.$router.getRoutes().map((route) => route.path).filter(
+      (path) => path !== '/work/:project?'
+    )
+    this.$store.commit('setNavBar', navbar)
     let projects = {}
-    //loop order
-    for (let i = 0; i < this.order.length; i++) {
-      //get project name
-      let project_name = this.order[i]
-      //get project data
+
+    for (let i = 0; i < order.length; i++) {
+      let project_name = order[i]
       let project = await this.$axios.$get(`/work/${project_name}/layout.json`).then((response) => response)
       project.name = project_name
-      //add project to projects
       projects[project_name] = project
     }
     this.projects = projects

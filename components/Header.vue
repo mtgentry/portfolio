@@ -5,9 +5,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      text: 'Designer of intuitive, beautiful, and playful digital products. I like building things that make people\'s lives easier.'
+  props: {
+    text: {
+      type: String,
+      default: ''
     }
   }
 }

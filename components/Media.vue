@@ -43,7 +43,8 @@ export default {
       return this.media.name.includes('mp4')
     },
     mediaPath() {
-      return `/work/${this.project_name}/media/${this.media.name}`
+      let domain = process.env.IS_AGENCY ? 'agency' : 'portfolio'
+      return `/domains/${domain}/work/${this.project_name}/media/${this.media.name}`
     }
   },
   methods: {

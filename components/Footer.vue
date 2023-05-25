@@ -2,14 +2,24 @@
 <template lang="pug">
   v-footer#footer(absolute app :style=`{borderTopColor: mainTextColor, color: mainTextColor}`)
     span &copy; #{new Date().getFullYear()}
-    span.pl-5 Mason Gentry
+    span.pl-5(v-html="name")
     v-spacer
-    a(href="mailto:mgentry@masongentry.com") mgentry@masongentry.com
+    a(:href="email") {{ email }}
 </template>
 
 <script>
 export default {
   name: 'Footer',
+  props: {
+    name: {
+      type: String,
+      default: ''
+    },
+    email: {
+      type: String,
+      default: ''
+    }
+  },
   computed: {
     mainTextColor() {
       let color;

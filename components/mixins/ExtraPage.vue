@@ -34,7 +34,10 @@ export default {
   },
   async head() {
     this.project = await this.$axios.get(`/pages/${this.$route.name}/layout.json`)
-      .then((response) => response.data)
+      .then((response) => response.data).catch((e) => {
+        console.log(e)
+        this.$nuxt.error({ statusCode: 404, message: 'Page not found' })
+      })
     this.$store.commit('setBackgroundColor', this.$store.state.homeBackgroundColor)
     this.$store.commit('setTextColor', this.$store.state.homeTextColor)
 

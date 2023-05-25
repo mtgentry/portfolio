@@ -1,0 +1,17 @@
+{
+  "header": "Agency header",
+  "name": "Agency",
+  "email": "agency@masongentry.com",
+  "order": [
+    "francescas",
+    "colorsupply",
+    "wilson",
+    "bedtime",
+    "mojave",
+    "cliffwater"
+  ],
+  "navBar": [
+    "unlimited_design",
+    "pricing"
+  ]
+}
