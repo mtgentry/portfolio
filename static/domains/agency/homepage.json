@@ -1,6 +1,6 @@
 {
   "header": "We make persuasive, emotional design, that converts browsers into buyers.",
-  "name": "Agency",
+  "name": "Agencyy",
   "email": "mason@hoopladesign.com",
   "order": [
     "francescas",
@@ -9,6 +9,7 @@
   ],
   "navBar": [
     "unlimited_design",
-    "pricing"
+    "pricing",
+    "test"
   ]
 }
