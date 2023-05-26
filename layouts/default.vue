@@ -5,9 +5,8 @@
         v-toolbar-title
           Logo(:color="txColor")
       v-spacer
-      div(v-if="is_agency")
-        span.pr-3(v-for="url in getUrls" :key="url")
-          NuxtLink(:to="url") {{ formatUrl(url) }}
+      span.pr-3(v-for="url in getUrls" :key="url")
+        NuxtLink(:to="url") {{ formatUrl(url) }}
     v-main.pa-0
       v-container(fluid)
         Nuxt
@@ -20,10 +19,16 @@ import Logo from "@/components/Logo.vue";
 export default {
   name: 'DefaultLayout',
   mixins: [HideNavbar],
+  data() {
+    return {
+      navBar: [],
+    }
+  },
   components: {
     Logo,
   },
-  mounted() {
+  async mounted() {
+    this.navBar = await this.$axios.$get('/homepage.json').then((response) => response.navBar) || []
     this.$store.commit('setBackgroundColor', this.backgroundColor)
     setTimeout(() => {
       this.$AOS.refresh()
@@ -34,13 +39,14 @@ export default {
   },
   methods:{
     formatUrl(s) {
-        return s.substring(1).replace(/^_*(.)|_+(.)/g, (s, c, d) => c ? c.toUpperCase() : ' ' + d.toUpperCase())
+      return s.substring(1).replace(/^_*(.)|_+(.)/g, (s, c, d) => c ? c.toUpperCase() : ' ' + d.toUpperCase())
     },
+    sortArray(array, sortArray) {
+      return [...array].sort(
+        (a, b) => sortArray.indexOf(a.replace('/', '')) - sortArray.indexOf(b.replace('/', ''))
+      )},
   },
   computed: {
-    is_agency() {
-      return process.env.IS_AGENCY
-    },
     bgColor() {
       let backgroundColor;
       if (this.$route.path === "/") {
@@ -69,9 +75,9 @@ export default {
       return color
     },
     getUrls() {
-      return this.$router.getRoutes().map((route) => route.path).filter(
-        (path) => path !== '/work/:project?'
-      )
+      return this.sortArray(this.$router.getRoutes().map((route) => route.path).filter(
+        (path) => path !== '/work/:project?' && this.navBar.includes(path.replace('/', ''))
+      ), this.navBar)
     },
     ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'loading'])
   },
