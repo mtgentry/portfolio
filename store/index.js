@@ -6,7 +6,7 @@ export const state = () => ({
   projects: null,
   loading: true,
   project: null,
-  navBar: [],
+  layout: {},
 })
 
 export const mutations = {
@@ -25,7 +25,7 @@ export const mutations = {
   setProject(state, project) {
     state.project = project
   },
-  setNavBar(state, navBar) {
-    state.navBar = navBar
+  setLayout(state, layout) {
+    state.layout = layout
   }
 }

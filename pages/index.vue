@@ -4,7 +4,7 @@
       Header(:text="layout.header")
     PortfolioGroup(v-if="projects !== {}" v-for="project_name in Object.keys(projects)" :project="projects[project_name]" :key="project_name")
     v-col(cols="12")
-      Footer(:name="layout.name" :email="layout.email")
+      Footer
 </template>
 
 <script>
@@ -35,7 +35,7 @@ export default {
   data() {
     return {
       projects: {},
-      layout: null,
+      layout: {},
     }
   },
   mounted() {
@@ -49,16 +49,15 @@ export default {
       this.projects = this.projectStore
       return
     }
-    this.layout = await this.$axios.$get('/homepage.json').then((response) => response)
-    let order = this.layout.order
-    let navbar = this.$router.getRoutes().map((route) => route.path).filter(
-      (path) => path !== '/work/:project?'
-    )
-    this.$store.commit('setNavBar', navbar)
     let projects = {}
-
-    for (let i = 0; i < order.length; i++) {
-      let project_name = order[i]
+    if (this.$store.state.layout.length) {
+      this.layout = this.$store.state.layout
+    } else {
+      this.layout = await this.$axios.$get('/homepage.json').then((response) => response)
+      this.$store.commit('setLayout', this.layout)
+    }
+    for (let i = 0; i < this.layout.order.length; i++) {
+      let project_name = this.layout.order[i]
       let project = await this.$axios.$get(`/work/${project_name}/layout.json`).then((response) => response)
       project.name = project_name
       projects[project_name] = project
@@ -68,7 +67,7 @@ export default {
   },
   computed: {
     ...mapState({
-      projectStore: state => state.projects
+      projectStore: state => state.projects,
     })
   }
 }

@@ -21,20 +21,27 @@ export default {
   mixins: [HideNavbar],
   data() {
     return {
-      navBar: [],
+      layout: {},
     }
   },
   components: {
     Logo,
   },
-  async mounted() {
-    this.navBar = await this.$axios.$get('/homepage.json').then((response) => response.navBar) || []
+  async fetch() {
+    if (this.$store.state.layout.length) {
+      this.layout = this.$store.state.layout
+    } else {
+      this.layout = await this.$axios.$get('/homepage.json').then((response) => response)
+      this.$store.commit('setLayout', this.layout)
+    }
+  },
+  mounted() {
     this.$store.commit('setBackgroundColor', this.backgroundColor)
     setTimeout(() => {
       this.$AOS.refresh()
     }, 1000)
   },
-  async head() {
+  head() {
     this.$store.commit('setLoading', false)
   },
   methods:{
@@ -75,9 +82,12 @@ export default {
       return color
     },
     getUrls() {
+      if (!this.layout.navBar) {
+        return []
+      }
       return this.sortArray(this.$router.getRoutes().map((route) => route.path).filter(
-        (path) => path !== '/work/:project?' && this.navBar.includes(path.replace('/', ''))
-      ), this.navBar)
+        (path) => path !== '/work/:project?' && this.layout.navBar.includes(path.replace('/', ''))
+      ), this.layout.navBar)
     },
     ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'loading'])
   },

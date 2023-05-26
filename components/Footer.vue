@@ -2,24 +2,16 @@
 <template lang="pug">
   v-footer#footer(absolute app :style=`{borderTopColor: mainTextColor, color: mainTextColor}`)
     span &copy; #{new Date().getFullYear()}
-    span.pl-5(v-html="name")
+    span.pl-5(v-html="layout.name")
     v-spacer
-    a(:href="email") {{ email }}
+    a(:href="layout.email") {{ layout.email }}
 </template>
 
 <script>
+import {mapState} from "vuex";
+
 export default {
   name: 'Footer',
-  props: {
-    name: {
-      type: String,
-      default: ''
-    },
-    email: {
-      type: String,
-      default: ''
-    }
-  },
   computed: {
     mainTextColor() {
       let color;
@@ -29,7 +21,8 @@ export default {
         color = "#282725"
       }
       return color
-    }
+    },
+    ...mapState(['layout'])
   }
 }
 </script>
