@@ -34,6 +34,18 @@ yarn dev
 
 ```
 
+## Run agency site: 
+
+Change .env file to: IS_AGENCY=1
+
+
+
+## Run portfolio site: 
+
+Change .env file to: IS_AGENCY=0
+
+
+
 ## Customizing projects
 
 The projects are located in './static/work/'. The layout of each page is located in`./pages/work/[project]/layout.json.

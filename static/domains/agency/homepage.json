@@ -1,14 +1,11 @@
 {
-  "header": "Agency header",
+  "header": "We make persuasive, emotional design, that converts browsers into buyers.",
   "name": "Agency",
-  "email": "agency@masongentry.com",
+  "email": "mason@hoopladesign.com",
   "order": [
     "francescas",
-    "colorsupply",
-    "wilson",
-    "bedtime",
-    "mojave",
-    "cliffwater"
+    "stjane",
+    "colorsupply"
   ],
   "navBar": [
     "unlimited_design",
