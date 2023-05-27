@@ -3,7 +3,7 @@
   v-row
     v-col.faq-title(cols="12") FAQ
     v-col(cols="12")
-      v-expansion-panels(v-model="panel" multiple)
+      v-expansion-panels(v-model="panel" multiple flat)
         v-expansion-panel(v-for="(faq, i) in faqs" :key="i" :title="faq.question" :text="faq.answer")
           v-expansion-panel-header
             span(v-html="faq.question")
@@ -36,6 +36,13 @@ export default {
 v-expansion-panels
   width: 600px
 
+.v-expansion-panel--active > .v-expansion-panel-header
+  min-height: 0
+
+.v-expansion-panel--active:not(:first-child), .v-expansion-panel--active + .v-expansion-panel
+  margin-top: 0
+
+
 .v-expansion-panel
   border-bottom: white 1px solid
   padding: 21px 0 36px 0
@@ -46,7 +53,9 @@ v-expansion-panels
 
 
 .v-expansion-panel-header
+  min-height: 0
   padding: 0
+  margin-bottom: 10px
   font-weight: 500
   font-size: 25px
   line-height: 33px

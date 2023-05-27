@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-row#unlimited-design(justify="center" align="center" v-if="project")
+  v-row#extra(justify="center" align="center" v-if="project")
     v-col(cols="12")
       Section(v-for="(section, i) in project.layout" slim_padding
         :section="section" :key="section.name" :style="{color: textColor}")
@@ -59,8 +59,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-#unlimited-design
-  padding-top: 100px
+#extra
+  padding: 100px 0
 .col
   display: flex
   align-items: center
