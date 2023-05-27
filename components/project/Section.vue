@@ -1,19 +1,19 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   v-row.section(:class="{ slim: !section.media, 'slim-padding': slim_padding }")
-    v-col(v-if="section.text" data-aos="fade-up")
+    v-col(v-if="section.text" :data-aos="section.animation ? section.animation : 'fade-up'")
       String(:texts="section.text" :size="section.size" :title="section.title")
-    v-col(v-else-if="section.media" data-aos="fade-up" v-for="media in section.media" :cols="12 / media.length" :key="media.name")
+    v-col(v-else-if="section.media" :data-aos="section.animation ? section.animation : 'fade-up'" v-for="media in section.media" :cols="12 / media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
-    v-col(v-else-if="section.quote" data-aos="fade-up")
+    v-col(v-else-if="section.quote" :data-aos="section.animation ? section.animation : 'fade-up'")
       Quote(:quote="section.quote")
-    v-col.w-100(v-else-if="section.credits" data-aos="fade-up")
+    v-col.w-100(v-else-if="section.credits" :data-aos="section.animation ? section.animation : 'fade-up'")
       Credits(:credits="section.credits")
-    v-col.w-100(v-else-if="section.faq" data-aos="fade-up")
+    v-col.w-100(v-else-if="section.faq" :data-aos="section.animation ? section.animation : 'fade-up'")
       Faq(:faqs="section.faq")
-    v-col.w-100(v-else-if="section.button" data-aos="fade-up")
+    v-col.w-100(v-else-if="section.button" :data-aos="section.animation ? section.animation : 'fade-up'")
       Button(:button="section.button")
-    v-col.w-100(v-else-if="section.form" data-aos="fade-up")
+    v-col.w-100(v-else-if="section.form" :data-aos="section.animation ? section.animation : 'fade-up'")
       MailchimpForm
 </template>
 
