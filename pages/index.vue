@@ -35,7 +35,6 @@ export default {
   data() {
     return {
       projects: {},
-      layout: {},
     }
   },
   mounted() {
@@ -49,15 +48,16 @@ export default {
       this.projects = this.projectStore
       return
     }
-    let projects = {}
-    if (this.$store.state.layout.length) {
-      this.layout = this.$store.state.layout
+    let layout
+    if (!this.$store.state.layout) {
+      layout = await this.$axios.$get('/homepage.json').then((response) => response)
+      this.$store.commit('setLayout', layout)
     } else {
-      this.layout = await this.$axios.$get('/homepage.json').then((response) => response)
-      this.$store.commit('setLayout', this.layout)
+      layout = this.$store.state.layout
     }
-    for (let i = 0; i < this.layout.order.length; i++) {
-      let project_name = this.layout.order[i]
+    let projects = {}
+    for (let i = 0; i < layout.order.length; i++) {
+      let project_name = layout.order[i]
       let project = await this.$axios.$get(`/work/${project_name}/layout.json`).then((response) => response)
       project.name = project_name
       projects[project_name] = project
@@ -68,6 +68,7 @@ export default {
   computed: {
     ...mapState({
       projectStore: state => state.projects,
+      layout: state => state.layout
     })
   }
 }

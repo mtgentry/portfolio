@@ -19,23 +19,16 @@ import Logo from "@/components/Logo.vue";
 export default {
   name: 'DefaultLayout',
   mixins: [HideNavbar],
-  data() {
-    return {
-      layout: {},
-    }
-  },
   components: {
     Logo,
   },
   async fetch() {
-    if (this.$store.state.layout.length) {
-      this.layout = this.$store.state.layout
-    } else {
-      this.layout = await this.$axios.$get('/homepage.json').then((response) => response)
-      this.$store.commit('setLayout', this.layout)
+    if (!this.$store.state.layout) {
+      let layout = await this.$axios.$get('/homepage.json').then((response) => response)
+      this.$store.commit('setLayout', layout)
     }
   },
-  mounted() {
+  async mounted() {
     this.$store.commit('setBackgroundColor', this.backgroundColor)
     setTimeout(() => {
       this.$AOS.refresh()
@@ -82,14 +75,14 @@ export default {
       return color
     },
     getUrls() {
-      if (!this.layout.navBar) {
+      if (!this.layout?.navBar) {
         return []
       }
       return this.sortArray(this.$router.getRoutes().map((route) => route.path).filter(
         (path) => path !== '/work/:project?' && this.layout.navBar.includes(path.replace('/', ''))
       ), this.layout.navBar)
     },
-    ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'loading'])
+    ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'loading', 'layout'])
   },
 
 }

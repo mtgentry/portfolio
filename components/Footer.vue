@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  v-footer#footer(absolute app :style=`{borderTopColor: mainTextColor, color: mainTextColor}`)
+  v-footer#footer(absolute app :style=`{borderTopColor: mainTextColor, color: mainTextColor}` v-if="layout")
     span &copy; #{new Date().getFullYear()}
     span.pl-5(v-html="layout.name")
     v-spacer
@@ -15,10 +15,10 @@ export default {
   computed: {
     mainTextColor() {
       let color;
-      if (this.$route.path === "/") {
-        color = "#FFFFFF"
-      } else {
+      if (this.$route.path.includes('work')) {
         color = "#282725"
+      } else {
+        color = "#FFFFFF"
       }
       return color
     },

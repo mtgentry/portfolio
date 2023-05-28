@@ -6,7 +6,7 @@ export const state = () => ({
   projects: null,
   loading: true,
   project: null,
-  layout: {},
+  layout: null,
 })
 
 export const mutations = {
