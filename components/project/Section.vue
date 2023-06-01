@@ -3,7 +3,7 @@
   v-row.section(:class="{ slim: !section.media, 'slim-padding': slim_padding }")
     v-col(v-if="section.text" :data-aos="section.animation ? section.animation : 'fade-up'")
       String(:texts="section.text" :size="section.size" :title="section.title")
-    v-col(v-else-if="section.media" :data-aos="section.animation ? section.animation : 'fade-up'" v-for="media in section.media" :cols="12 / media.length" :key="media.name")
+    v-col(v-else-if="section.media" :data-aos="media.animation ? media.animation : 'fade-up'" v-for="media in section.media" :cols="12 / media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
     v-col(v-else-if="section.quote" :data-aos="section.animation ? section.animation : 'fade-up'")
       Quote(:quote="section.quote")

@@ -16,7 +16,8 @@
         {
           "name": "francescas_1.jpg",
           "position": "center",
-          "title": "Francesca's"
+          "title": "Francesca's",
+          "animation": "fade"
         }
       ]
     },
@@ -25,7 +26,7 @@
       "text": [
         "When Francesca's came to us, their brand was stale. Their 11-15 year old female customers had grown more sophisticated than when the company was first founded in 2006. Girls now preferred hipper brands like Madewell and Asos. But at the same time, the company didn't want to alienate the parents of these young women.",
         "They wanted a site design that was hipper, but not too hip."
-       
+
 
       ]
     },
