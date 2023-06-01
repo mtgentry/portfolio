@@ -44,7 +44,17 @@ export default {
     },
     mediaPath() {
       let domain = process.env.IS_AGENCY ? 'agency' : 'portfolio'
-      return `/domains/${domain}/work/${this.project_name}/media/${this.media.name}`
+      return `/domains/${domain}/${this.pageType}/${this.project_name_or_work}/media/${this.media.name}`
+    },
+    pageType() {
+      if (this.project_name) {
+        return 'work'
+      } else if (this.$route.name) {
+        return 'pages'
+      }
+    },
+    project_name_or_work() {
+      return this.project_name || this.$route.name
     }
   },
   methods: {
