@@ -1,7 +1,7 @@
 {
   "cover": {
     "media": {
-      "name": "jane_thumb.jpg"
+      "name": "stjane_thumb.jpg"
     },
     "title": "St. Jane",
     "categories": "Art Direction, Product Renderings"
@@ -25,7 +25,7 @@
       "text": [
         "All of the images you see here were created in 3D software. This process provides greater control and keeps expenses down. It is often faster than traditional photography, especially after your initial 3D models are created.",
         "Our work with St. Jane started with product images and has since moved on to lifestyle imagery (what you see on this page). If you're an e-commerce store the need for high quality images never stops. That's why our Unlimited design option may make sense for you."
-        
+
 
       ]
     },
@@ -39,7 +39,7 @@
           "name": "jane_2.jpg",
           "position": "left",
         "width": "50%"
-      
+
         }
       ]
     },
@@ -52,7 +52,7 @@
           "name": "jane_3.jpg",
           "position": "right",
           "width": "50%"
-         
+
         }
       ]
     },
@@ -63,7 +63,7 @@
       "text": [
 
         "In addition to creating images from scratch, we've also improved their existing catalog of images. Below is a photo from their library. Their original photo isn't bad per-se, but we were still still able to make it 10x better."
-       
+
       ]
     },
 
@@ -99,8 +99,8 @@
       "text": [
         "We put the editorial concept in front of users and it proved to be the most popular feature we tested. After getting validation, we designed a CMS that allowed the Francesca's editorial team to regularly update item pairings that worked well together.",
         "In addition to the rebrand, we also made a concerted effort to optimize Francesca's checkout experience. We designed several checkout flows and did user testing to find which one worked best. The two winning designs were later A/B tested by the client to further optimize the site."
-     
-   
+
+
       ]
     }
 

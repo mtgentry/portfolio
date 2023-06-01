@@ -15,6 +15,9 @@
       Button(:button="section.button")
     v-col.w-100(v-else-if="section.form" :data-aos="section.animation ? section.animation : 'fade-up'")
       MailchimpForm
+    v-col.w-100(v-else-if="section.svgs" :data-aos="section.animation ? section.animation : 'fade-up'")
+      SVGs
+
 </template>
 
 <script>
@@ -24,6 +27,7 @@ import Credits from "@/components/project/Credits.vue";
 import Faq from "@/components/project/Faq.vue";
 import Button from "@/components/project/Button.vue";
 import String from "@/components/project/String.vue";
+import SVGs from "@/components/SVGs.vue";
 
 export default {
   props: {
@@ -42,7 +46,8 @@ export default {
     Media,
     Credits,
     Faq,
-    Button
+    Button,
+    SVGs
   }
 }
 </script>
