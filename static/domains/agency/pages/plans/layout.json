@@ -2,11 +2,13 @@
   "backgroundColor": "#222533",
   "textColor": "#ffffff",
   "seo_description": "",
+  "animation": "fade",
   "layout": [
     {
       "size": "h1",
-      "title": "Test",
-      "text": ["Our model..."]
+      "title": "Plans",
+       "animation": "fade",
+      "text": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum vitae quam sed."]
     },
 
 

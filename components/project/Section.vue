@@ -17,6 +17,9 @@
       MailchimpForm
     v-col.w-100(v-else-if="section.svgs" :data-aos="section.animation ? section.animation : 'fade-up'")
       SVGs
+    v-col.w-100(v-else-if="section.plans" :data-aos="section.animation ? section.animation : 'fade-up'")
+      Plans
+
 
 </template>
 
@@ -28,6 +31,7 @@ import Faq from "@/components/project/Faq.vue";
 import Button from "@/components/project/Button.vue";
 import String from "@/components/project/String.vue";
 import SVGs from "@/components/SVGs.vue";
+import Plans from "@/components/Plans.vue";
 
 export default {
   props: {
