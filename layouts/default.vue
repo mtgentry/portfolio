@@ -130,7 +130,7 @@ p
     transition: background-color 1s ease-in-out
 
   main
-    min-height: 200vh
+    min-height: 100vh
 
 
 
