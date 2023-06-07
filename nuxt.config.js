@@ -9,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: 'Mason Gentry',
+    titleTemplate: process.env.IS_AGENCY === '1' ? 'Hoopla Design' : 'Mason Gentry',
     htmlAttrs: {
       lang: 'en'
     },

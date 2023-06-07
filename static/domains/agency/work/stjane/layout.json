@@ -38,16 +38,9 @@
         {
           "name": "jane_2.jpg",
           "position": "left",
-        "width": "50%"
+          "width": "50%"
 
-        }
-      ]
-    },
-
-    {
-
-
-      "media": [
+        },
         {
           "name": "jane_3.jpg",
           "position": "right",
@@ -56,7 +49,6 @@
         }
       ]
     },
-
 
     {
       "title": "Images better than real life",
@@ -69,7 +61,7 @@
 
 
 
-{
+    {
 
 
       "media": [
