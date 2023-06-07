@@ -24,7 +24,8 @@ export default {
   transition: 'fade',
   data() {
     return {
-      project: null
+      project: null,
+      page_name: null
     }
   },
   mounted() {
@@ -33,7 +34,7 @@ export default {
     }
   },
   async head() {
-    this.project = await this.$axios.get(`/pages/${this.$route.name}/layout.json`)
+    this.project = await this.$axios.get(`/pages/${this.page_name || this.$route.name}/layout.json`)
       .then((response) => response.data).catch((e) => {
         console.log(e)
         this.$nuxt.error({ statusCode: 404, message: 'Page not found' })
