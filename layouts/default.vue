@@ -49,7 +49,7 @@ export default {
   computed: {
     bgColor() {
       let backgroundColor;
-      if (this.$route.path === "/") {
+      if (this.homePage) {
         backgroundColor = this.homeBackgroundColor
       } else {
         backgroundColor = this.backgroundColor
@@ -58,7 +58,7 @@ export default {
     },
     txColor() {
       let textColor;
-      if (this.$route.path === "/") {
+      if (this.homePage) {
         textColor = this.homeTextColor
       } else {
         textColor = this.textColor
@@ -67,7 +67,7 @@ export default {
     },
     mainTextColor() {
       let color;
-      if (this.$route.path === "/") {
+      if (this.homePage) {
         color = "#FFFFFF"
       } else {
         color = "#282725"
@@ -81,6 +81,9 @@ export default {
       return this.sortArray(this.$router.getRoutes().map((route) => route.path).filter(
         (path) => path !== '/work/:project?' && this.layout.navBar.includes(path.replace('/', ''))
       ), this.layout.navBar)
+    },
+    homePage() {
+      return this.$route.path === "/" || this.$route.path === "/work"
     },
     ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'loading', 'layout'])
   },
