@@ -118,6 +118,7 @@ p
   font-size: 20px
 
 
+
 #app
   padding: 0 34px
   transition: background-color 1s ease-in-out, opacity 1s ease-in-out, color 1s ease-in-out
@@ -134,6 +135,9 @@ p
 
   main
     min-height: 100vh
+
+
+
 
 
 

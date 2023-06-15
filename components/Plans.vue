@@ -16,7 +16,7 @@
         <li>Lorem Ipsum dolor</li>
         <li>Lorem Ipsum dolor</li>
       </ul>
-      <button>Get started</button>
+      <a :href="url1" class="plan-button">Get started</a>
     </div>
     <div class="plan" id="quarterly">
       <h2>Quarterly</h2>
@@ -34,7 +34,7 @@
         <li>Lorem Ipsum dolor</li>
         <li>Lorem Ipsum dolor</li>
       </ul>
-      <button>Get started</button>
+      <a :href="url2" class="plan-button">Get started</a>
     </div>
     <div class="plan" id="yearly">
       <h2>Yearly</h2>
@@ -52,10 +52,30 @@
         <li>Lorem Ipsum dolor</li>
         <li>Lorem Ipsum dolor</li>
       </ul>
-      <button>Get started</button>
+      <a :href="url3" class="plan-button">Get started</a>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      url1: 'https://buy.stripe.com/00gdU11rk1KCaiY5kl', 
+       url2: '/work',
+        url3: 'http://yahoo.com'
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
 
 <style scoped>
 .subheader-text {
@@ -71,7 +91,6 @@
   text-align: left;
   margin-bottom: 30px;
   margin-top:5px;
-
 }
 
 .plan-container {
@@ -79,9 +98,7 @@
   justify-content: space-between;
   max-width: 691px;
   gap: 10px;
-  //border:1px solid #ff0000;
   justify-content: center;
-
 }
 
 .plan {
@@ -98,7 +115,6 @@
   box-sizing: border-box;
   border-radius: 7px;
   color: #282725;
-  border: 1px solid blue;
 }
 
 .plan h2 {
@@ -108,7 +124,6 @@
 }
 
 .plan h3 {
-
   margin-bottom:0px;
   font-size: 14px;
 }
@@ -161,18 +176,21 @@
   margin-left: -7px;
 }
 
-.plan button {
+.plan-button {
+  display: inline-block;
   width: 232px;
   max-width: 100%;
   height: 44px;
   background: #2805FF;
-  color: white;
+  color: #fff !important; 
   font-size: 17px;
+  text-decoration: none;
   border: none;
   border-radius: 22px;
   text-align: center;
   align-self: center;
   padding-bottom:5px;
+  line-height: 44px; 
 }
 
 @media (max-width: 768px) {
@@ -182,8 +200,4 @@
   }
 }
 
-
 </style>
-
-<script setup>
-</script>

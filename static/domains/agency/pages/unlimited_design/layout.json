@@ -9,7 +9,7 @@
 
     {
       "size": "h1",
-      "title": "Unlimited Design",
+      "title": "Unlimited Design, <br >One Monthly Rate.",
       "animation": "fade",
 
 
@@ -20,12 +20,35 @@
 
       ]
     },
+
+
+
+     {
+  "cta": 1,
+  "animation": "fade",
+  "link": "/work"
+},
+
+  
+    {
+  "cta": 1,
+  "animation": "fade",
+  "text": "Subscribe",
+  "link": "work"
+},
+
+  
+
+
+
     {
   "svgs": 1,
   "animation": "fade"
 },
 
-  
+
+
+
 
 
 

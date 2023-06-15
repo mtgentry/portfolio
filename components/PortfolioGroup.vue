@@ -40,4 +40,7 @@ export default {
     padding-bottom: 90px
     justify-content: end!important
 
+
+
+
 </style>

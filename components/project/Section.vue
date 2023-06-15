@@ -19,6 +19,10 @@
       SVGs
     v-col.w-100(v-else-if="section.plans" :data-aos="section.animation ? section.animation : 'fade-up'")
       Plans
+    v-col.w-100(v-else-if="section.cta" :data-aos="section.animation ? section.animation : 'fade-up'")
+      CTA
+    v-col.w-100(v-else-if="section.pricing" :data-aos="section.animation ? section.animation : 'fade-up'")
+      Pricing
 
 
 </template>
@@ -32,6 +36,8 @@ import Button from "@/components/project/Button.vue";
 import String from "@/components/project/String.vue";
 import SVGs from "@/components/SVGs.vue";
 import Plans from "@/components/Plans.vue";
+import CTA from "@/components/CTA.vue";
+import Pricing from "@/components/Pricing.vue";
 
 export default {
   props: {
@@ -51,7 +57,9 @@ export default {
     Credits,
     Faq,
     Button,
-    SVGs
+    SVGs,
+    Pricing,
+    CTA
   }
 }
 </script>
@@ -63,7 +71,7 @@ export default {
   min-width: 50%
 
   &.slim-padding
-    padding-bottom: 20px
+    padding-bottom: 0px
 
   p:last-child
     margin-bottom: 0

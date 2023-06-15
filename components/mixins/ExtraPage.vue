@@ -62,8 +62,14 @@ export default {
 <style lang="sass" scoped>
 #extra
   padding: 100px 0
+
+
 .col
   display: flex
   align-items: center
   flex-direction: column
+
+
+
+
 </style>

@@ -99,6 +99,8 @@ The structure of [layout.json](./static/work/francescas/layout.json) is:
 
 Be sure to have the json don't have errors. One typo can make the whole page crash.
 
+H1,H2,H3 is defined in components/project/String.vue
+
 ## Deploy
 
 Once you are ready to update the website, be sure to have git installed, pushing a new commit will update the website.

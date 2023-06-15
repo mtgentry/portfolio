@@ -11,9 +11,21 @@
 
 
 
+   {
+  "cta": 1,
+  "animation": "fade"
+},
 
 
+   {
+  "logo": 1,
+  "animation": "fade"
+},
 
+   {
+  "footer": 1,
+  "animation": "fade"
+},
 
 
 
