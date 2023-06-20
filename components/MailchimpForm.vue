@@ -5,7 +5,7 @@
 
     #mc_embed_signup {
      
-margin-top: -12px;
+margin-top: -30px;
  z-index: 0;
 
 }

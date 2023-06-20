@@ -23,6 +23,14 @@
       CTA
     v-col.w-100(v-else-if="section.pricing" :data-aos="section.animation ? section.animation : 'fade-up'")
       Pricing
+    v-col.w-100(v-else-if="section.faq2" :data-aos="section.animation ? section.animation : 'fade-up'")
+      Faq2
+    v-col.w-100(v-else-if="section.planscta" :data-aos="section.animation ? section.animation : 'fade-up'")
+      PlansCTA
+    v-col.w-100(v-else-if="section.workcta" :data-aos="section.animation ? section.animation : 'fade-up'")
+      WorkCTA
+
+
 
 
 </template>
@@ -38,6 +46,9 @@ import SVGs from "@/components/SVGs.vue";
 import Plans from "@/components/Plans.vue";
 import CTA from "@/components/CTA.vue";
 import Pricing from "@/components/Pricing.vue";
+import Faq2 from "@/components/Faq2.vue";
+import PlansCTA from "@/components/PlansCTA.vue";
+import WorkCTA from "@/components/WorkCTA.vue";
 
 export default {
   props: {

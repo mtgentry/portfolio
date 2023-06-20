@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   v-row
-    v-col.faq-title(cols="12") FAQ
+    v-col.faq-title(cols="12") 
     v-col(cols="12")
       v-expansion-panels(v-model="panel" multiple flat)
         v-expansion-panel(v-for="(faq, i) in faqs" :key="i" :title="faq.question" :text="faq.answer")

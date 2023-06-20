@@ -33,9 +33,9 @@ export default {
 
 <style lang="sass" scoped>
 h1
-  font-weight: 100
+  font-weight: 500
   font-size: 50px
-  line-height: 100%
+  line-height: 120%
 h2
   font-size: 35px
   line-height: 100%
