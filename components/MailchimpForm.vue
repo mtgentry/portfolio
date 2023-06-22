@@ -4,11 +4,11 @@
   <style type="text/css">
 
     #mc_embed_signup {
-     
-margin-top: -30px;
- z-index: 0;
 
-}
+      margin-top: -30px;
+      z-index: 0;
+
+    }
 
 
     #mc_embed_signup_scroll {
@@ -19,28 +19,28 @@ margin-top: -30px;
       height: 101px;
     }
 
-   
 
 
- #mc_embed_signup .mc-field-group input {
+
+    #mc_embed_signup .mc-field-group input {
       padding: 8px;
       border:1px solid #fff;
       color: #fff;
       transition: border-color 0.3s ease;
     }
 
- #mc_embed_signup .mc-field-group input:focus {
+    #mc_embed_signup .mc-field-group input:focus {
       padding: 8px;
       border:1px solid #fff;
       outline: none;
       color: #fff;
     }
 
-     #mc_embed_signup .mc-field-group input::placeholder {
+    #mc_embed_signup .mc-field-group input::placeholder {
       color: #535251;
     }
 
-   
+
 
 
     #mc_embed_signup .button{
@@ -52,17 +52,17 @@ margin-top: -30px;
       font-weight: 400;
       font-size: 23px;
       transition: all 0.01s ease-in-out 0s;
-  
 
-      
-    
+
+
+
     }
 
     #mc_embed_signup .button:hover{
       background-color: #1F00DC;
-      
-     
-    
+
+
+
     }
 
     .mc-field-group label {
@@ -73,7 +73,7 @@ margin-top: -30px;
       padding-bottom: 3px;
       color: #fff;
       letter-spacing: .5px;
-   
+
 
 
     }
@@ -93,41 +93,40 @@ margin-top: -30px;
     }
 
 
- #mc_embed_signup #mce-success-response {
+    #mc_embed_signup #mce-success-response {
 
- color: #fff;
+      color: #fff;
 
     }
 
 
     #mce-error-response {
 
-     color: #ff0000;
-    
+      color: #ff0000;
+
     }
 
 
 
     #mce-FNAME {
-      
+
       color: #535251;
     }
 
     #mce-EMAIL {
-   
+
       color: #535251;
     }
 
 
-#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
+    #mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
 
-border: 2px solid #ff0000;
-  
-  }
-}
+      border: 2px solid #ff0000;
+
+    }
     .mce_inline_error {
 
- 
+
     }
 
     .brandingLogo {
@@ -135,6 +134,10 @@ border: 2px solid #ff0000;
       display: flex;
       justify-content: center;
       margin-top:100px;
+    }
+
+    #mc_embed_signup form {
+      margin: 60px 30px;
     }
   </style>
   <div id="mc_embed_signup">
