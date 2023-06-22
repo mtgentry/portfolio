@@ -90,6 +90,7 @@ export default {
 
 .slim
   max-width: 659px
+  width: 100%
 
 .images
   display: flex
