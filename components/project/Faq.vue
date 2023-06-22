@@ -1,10 +1,10 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   v-row
-    v-col.faq-title(cols="12") 
+    v-col.faq-title(cols="12")
     v-col(cols="12")
       v-expansion-panels(v-model="panel" multiple flat)
-        v-expansion-panel(v-for="(faq, i) in faqs" :key="i" :title="faq.question" :text="faq.answer")
+        v-expansion-panel(v-for="(faq, i) in faqs" :key="i" :title="faq.question" :text="faq.answer" readonly)
           v-expansion-panel-header
             span(v-html="faq.question")
           v-expansion-panel-content
@@ -18,7 +18,7 @@ export default {
   props: ['faqs'],
   data() {
     return {
-      panel: [0]
+      panel: Array.from({ length: this.faqs.length }, (value, index) => index)
     }
   }
 }
@@ -78,4 +78,6 @@ v-expansion-panels
 .theme--dark.v-expansion-panels .v-expansion-panel:not(:first-child)::after
   border-color: transparent
 
+.v-expansion-panel-header__icon
+  display: none
 </style>
