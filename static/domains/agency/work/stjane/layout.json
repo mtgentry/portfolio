@@ -38,14 +38,13 @@
         {
           "name": "jane_2.jpg",
           "position": "left",
-          "width": "50%"
-
+          "width": "100%",
+          "cols": 8
         },
         {
           "name": "jane_3.jpg",
-          "position": "right",
-          "width": "50%"
-
+          "position": "left",
+          "width": "100%"
         }
       ]
     },
