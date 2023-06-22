@@ -1,9 +1,9 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  video.item(muted v-if="is_video" playsinline loop ref="video"
-    :style=`{"width": media.width || "100%", 'justify-content': media.position || ''}`)
-    source(:src="mediaPath" type="video/mp4")
-    span Your browser does not support the video tag.
+  div.d-flex(v-if="is_video" :style=`{'justify-content': media.position || ''}`)
+    video.item(muted playsinline loop ref="video" :style=`{"width": media.width || "100%"}`)
+      source(:src="mediaPath" type="video/mp4")
+      span Your browser does not support the video tag.
   div(v-else)
     div.aspect-container(:style=`{'justify-content': media.position || ''}`)
       img.item( :src="mediaPath" :style=`{'width': media.width || '100%'}`
