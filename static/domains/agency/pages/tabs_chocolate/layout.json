@@ -13,9 +13,9 @@
       "size": "h1",
        "animation": "fade",
       "title": "Using design to grow your revenue",
-      "text": ["If you work at a startup or run an online business, making your website pretty isn't the end goal. You want to grow. More clicks, sign ups, revenue, whatever.",
+      "text": ["If you work at a startup or run an online business, making your website pretty isn't the end goal. You want to grow. You want more clicks, more sign ups, or more revenue."
 
-"Here's one trick I use to increase conversions. At the start of a site redesign I'll look at each page and remove or move any unnecessary elements. I’m ruthless about it. If something is on the page that doesn’t help the user complete a goal, it’s gone."
+
       ]
     },
 
@@ -23,11 +23,48 @@
  {
       "size": "h2",
       "animation": "fade",
-      "title": "Ask yourself, what can I remove?",
-      "text": ["What elements here distract users from purchasing? I see some things that can be removed:"
+      "title": "The Pixel Purge",
+      "text": ["Here's one trick we use to increase conversions. The technical term for the process is called usability optimization or interface decluttering. We call it the Pixel Purge.",
+        "At the start of a site redesign we look at each page and remove or move any unnecessary elements. We're ruthless. If something is on the page that doesn’t help the user complete a primary goal, it’s gone."
+         
 
       ]
     },
+
+
+ {
+      "size": "h2",
+      "animation": "fade",
+      "title": "Tabs Teardown",
+      "text": ["We recently did this process for a popular chocolate company. Their product page was busy with excessive marketing touts, poor quality images, and product functionality that new vistors didn't need."
+
+
+      ]
+    },
+
+
+    {
+      "media": [
+ {
+          "name": "tabs.mp4",
+           "animation": "fade",
+           "position": "center",
+           "width": "50%"
+
+        }
+      ]
+    },
+ {
+      "size": "h2",
+      "animation": "fade",
+      "title": "What can we remove?",
+      "text": ["Immediately we saw some things that could be removed. Anything that distracted visitors from purchasing was removed. Things like:"
+
+      ]
+    },
+    
+
+
 
 
 
@@ -37,7 +74,7 @@
     {
       "media": [
  {
-          "name": "tabs_1.jpg",
+          "name": "tabs_2.jpg",
            "animation": "fade",
            "position": "center",
            "width": "50%"
@@ -47,12 +84,11 @@
     },
 
 
-
      {
      
       "animation": "fade",
       "title": "Gray background",
-      "text": ["Color can be distracting if not used well. The gray background here doesn't add to the visual design. Let's make it white instead."
+      "text": ["Color can be distracting if not used well. The gray background here doesn't add to the visual design. We mnade it white instead."
 
       ]
     },
@@ -61,7 +97,7 @@
       "size": "h3",
       "animation": "fade",
       "title": "Account login",
-      "text": ["This isn't a site people will login to frequently (if at all). Let's remove the account login button."
+      "text": ["This isn't a site people login to frequently. So we removed the account login button."
 
       ]
     },
@@ -74,7 +110,7 @@
       "size": "h3",
       "animation": "fade",
       "title": "Track your order",
-      "text": ["Most users don't come to this page to track their order. Let's put an order tracking link in the order confirmation email instead. And maybe the footer."
+      "text": ["Most customers don't come to this page to track their order. So we put an order tracking link in the order confirmation email and the footer instead."
 
       ]
     },
@@ -84,7 +120,7 @@
       "size": "h3",
       "animation": "fade",
       "title": "Support phone number",
-      "text": ["A support phone number at the top of the page might make sense for an expensive item. But not for chocolate. Let's remove the phone number and put it in the order confirmation email. And maybe the footer."
+      "text": ["A support phone number at the top of the page might make sense for an expensive item. But not for chocolate. We removed the phone number and put it in the order confirmation email and the footer."
 
       ]
     },
@@ -93,7 +129,7 @@
       "size": "h3",
       "animation": "fade",
       "title": "Marketing touts on product image",
-      "text": ["100% satisfaction guarantee isn't a tangible enough benefit to warrant it's prominent placement here. And it hinders the product image. Remove it."
+      "text": ["100% satisfaction guarantee isn't a tangible enough benefit to warrant it's prominent placement here. And it hinders the product image. We removed it."
 
       ]
     },
@@ -102,7 +138,7 @@
       "size": "h3",
       "animation": "fade",
       "title": "As seen on",
-      "text": ["Social proof helps drive conversions but I would try moving these to the homepage."
+      "text": ["Social proof helps drive conversions but we wanted to try adding more social proof to the homepage."
 
       ]
     },
@@ -110,10 +146,10 @@
 
 
  {
-      "size": "h3",
+      "size": "h2",
       "animation": "fade",
-      "title": "What elements can be moved?",
-      "text": ["If something can’t be removed entirely it can often be moved elsewhere. Here’s a few elements that are helpful but in the wrong place."
+      "title": "What can we move?",
+      "text": ["If something shouldn't be removed entirely it can often be moved elsewhere. Here’s a few elements that were useful but in the wrong place."
 
       ]
     },
@@ -122,7 +158,7 @@
       "size": "h3",
        "animation": "fade",
       "title": "Guarantees and benefits",
-      "text": ["These items are at the wrong place in the page hierarchy. A user's eye scans a page from top to bottom – and the 30 day guarantee appears before the user knows what the product is. Thats weird. Let's move it and the other benefits below the product image."
+      "text": ["These were at the wrong place in the page hierarchy. A user's eye scans a page from top to bottom – and the 30 day guarantee appeared before the user knows what the product is. Thats weird. We moved it along with the other benefits below the product image."
 
       ]
     },
@@ -131,7 +167,7 @@
       "size": "h3",
       "animation": "fade",
       "title": "Product review wording",
-      "text": ["The wording next to the product rating feels jumbled – the 4.4 out of 5 part is redundant since that information can be seen in how many stars are filled. Lets change the copy to read 1,475 reviews and underline it so users know its a link. Generally I don't want to lead people off the product page but customer reviews can help convince a user who is unsure if the product is right for them."
+      "text": ["The wording next to the product rating felt jumbled – the 4.4 out of 5 part was redundant since that information can be seen in how many stars are filled. We changed the copy to read 1,475 reviews and underlined it so users know its a link. Generally I don't want to lead people off the product page but customer reviews can help convince a user who is unsure if the product is right for them."
 
       ]
     },
@@ -140,8 +176,7 @@
   {
       "size": "h3",
       "animation": "fade",
-      "title": "Customer quote",
-      "text": ["I'm on the fence about this one. It could help conversions but the placement feels a little odd. It might be better lower on the page its own section. But you could test this to be sure. After making these changes (and a few other tweaks) our page looks like this:"
+      "text": ["After making these changes (and a few other tweaks) our page looks like this:"
 
       ]
     },
@@ -151,7 +186,7 @@
     {
       "media": [
  {
-          "name": "tabs_1.jpg",
+          "name": "tabs_3.jpg",
            "animation": "fade",
            "position": "center",
            "width": "50%"
@@ -161,9 +196,17 @@
     },
 
 
+
   {
       "animation": "fade",
-      "text": ["Much cleaner, right? And it should convert better now."
+      "text": ["Short test copy"
+
+      ]
+    },
+
+  {
+      "animation": "fade",
+      "text": ["Much cleaner, right? We in the early stages of A/B testing but the early results are promising. We will add hard numbers once we have them."
 
       ]
     },
@@ -171,15 +214,34 @@
     {
       "size": "h2",
       "animation": "fade",
-      "title": "When I like to A/B test",
+      "title": "Do ugly websites convert better?",
       "text": [
-        "There has always been a tension between (left-brained) direct marketing and (right-brained) brand folks. Direct marketing people like to A/B test everything and follow the results wherever they may lead. If they see orange buttons get more clicks, the whole site gets them.",
-        "The problem with this is you cannot A/B test your way to a great looking website.",
-        "In my experience the folks who let A/B testing be their North Star end up with a hodgepodge of links, images, and buttons that don't tell a cohesive story. And the messiness of it all will hurt your conversions and LTV.",
-        "On the flip side we have brand minded folks who want to create beautiful work and not have its impact be questioned. I once worked on a TV campaign that aired in select markets in the midwest. It was designed to increase sales. The client spent a few million dollars for the air time. After the ads ran I asked our account guy how they performed. He said sales were up in some stores and down in others. After several million dollars spent! The client could have done nothing at all and still had the same result.",
-        "The truth is both types of people are needed. The creatives and the testers.",
+        "There has always been a tension between direct marketing and brand people. Direct marketers like to A/B test everything and follow the results wherever they may lead. If they see orange buttons get more clicks, the whole site gets orange buttons.",
+        "The problem with this is you cannot A/B test your way to a great performing website. In my experience the folks who let A/B testing be their North Star end up with a hodgepodge of links, images, and buttons that don't tell a cohesive story. And the messiness of it all will hurt your conversions and LTV.",
+        "On the flip side we have brand minded folks who want to create beautiful work and not have its impact be questioned. These are those designers in Brooklyn who want to win awards and don't care about conversions. If you test a bare-bones homepage against theirs, the simple version will win suprisingly often.",
+        
+        "The takeway is NOT that ugly designs convert better. If you were to come up with a third version that is well designed AND optimized, it would likely convert the best.",
+         "The truth is direct marketers and brand people are needed. The testers and the creatives.",
         "I prefer to make a site look great first, then test. Focus on visual design, UX, imagery, and copywriting first. That stuff speaks to people’s emotions and increases sales.",
         "After that, I'll test different images, messaging, and offers. That stuff increases sales too. But that testing will be within the boundaries of the brand. That way you don’t end up with a Frankenstein-looking site."
+      ]
+    },
+
+
+  {
+      "animation": "fade",
+      "text": ["Short test copy"
+
+      ]
+    },
+{
+      "size": "h2",
+      "animation": "fade",
+      "title": "How we work",
+      "text": [
+        "We make websites thatlook great first, then test them. We find it's best to focus on visual design, UX, imagery, and copywriting first. The stuff speaks to people’s emotions and increases sales.",
+        "After that, we'll test different images, messaging, and offers. That stuff increases sales too. But that testing will be within the boundaries of the brand. That way you don’t end up with a Frankenstein-looking site."
+        
       ]
     },
 

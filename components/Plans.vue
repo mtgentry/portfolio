@@ -2,7 +2,7 @@
   <div class="plan-container">
     <div class="plan" id="monthly">
       <h2>Monthly</h2>
-      <p class="subhead">No minimum commitment. Pause or cancel anytime.</p>
+      <p class="subhead">Pause or cancel anytime.</p>
       <div class="price">
         <span class="currency">$</span>
         <span class="amount">4,995</span>
@@ -10,49 +10,50 @@
       </div>
       <h3>What's included</h3>
       <ul>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
+        <li>One request at a time</li>
+        <li>Unlimited users</li>
+        <li>No minimum commitment</li>
+        <li>Easy credit card payments</li>
+        <li>Pause or cancel anytime</li>
       </ul>
       <a :href="url1" class="plan-button">Get started</a>
     </div>
-    <div class="plan" id="quarterly">
+    <div class="plan" id="monthly">
       <h2>Quarterly</h2>
-      <p class="subhead">No minimum commitment. Pause or cancel anytime.</p>
+      <p class="subhead">Save $500 per month.</p>
       <div class="price">
         <span class="currency">$</span>
-        <span class="amount">4,995</span>
+        <span class="amount">4,495</span>
         <span class="period">/month</span>
       </div>
       <h3>What's included</h3>
       <ul>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
+        <li>One request at a time</li>
+        <li>Unlimited users</li>
+        <li>No minimum commitment</li>
+        <li>Easy credit card payments</li>
+        <li>Pause or cancel anytime</li>
       </ul>
-      <a :href="url2" class="plan-button">Get started</a>
+      <a :href="url1" class="plan-button">Get started</a>
     </div>
-    <div class="plan" id="yearly">
+
+    <div class="plan" id="monthly">
       <h2>Yearly</h2>
-      <p class="subhead">No minimum commitment. Pause or cancel anytime.</p>
+      <p class="subhead">Save $1,000/month.</p>
       <div class="price">
         <span class="currency">$</span>
-        <span class="amount">4,995</span>
+        <span class="amount">3,995</span>
         <span class="period">/month</span>
       </div>
       <h3>What's included</h3>
       <ul>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
-        <li>Lorem Ipsum dolor</li>
+        <li>One request at a time</li>
+        <li>Unlimited users</li>
+        <li>No minimum commitment</li>
+        <li>Easy credit card payments</li>
+        <li>Pause or cancel anytime</li>
       </ul>
-      <a :href="url3" class="plan-button">Get started</a>
+      <a :href="url1" class="plan-button">Get started</a>
     </div>
   </div>
 </template>
@@ -111,7 +112,7 @@ export default {
   max-width: 211px;
   height: auto;
   background: white;
-  padding: 20px 20px 20px;
+  padding: 12px 19px 20px 19px;
   box-sizing: border-box;
   border-radius: 7px;
   color: #282725;
@@ -129,7 +130,7 @@ export default {
 }
 
 .plan p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 130%;
 }
 
@@ -178,10 +179,11 @@ export default {
 
 .plan-button {
   display: inline-block;
-  width: 232px;
+  width: 181px;
   max-width: 100%;
   height: 44px;
   background: #2805FF;
+ 
   color: #fff !important; 
   font-size: 17px;
   text-decoration: none;
