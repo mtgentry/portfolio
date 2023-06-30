@@ -23,6 +23,9 @@
         <div class="brandingLogo"><a href="http://eepurl.com/irBcos" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></div>
         -->
       </form>
+      <br>
+      <br>
+      <br>
     </div>
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
     <!--End mc_embed_signup-->
@@ -33,12 +36,14 @@
 #mc_embed_signup form {
 
     margin: 0 20px;
+
 }
 
 #mc_embed_signup {
 
   margin-top: 0;
   z-index: 0;
+ 
 
 }
 
@@ -84,8 +89,6 @@
   font-weight: 400;
   font-size: 23px;
   transition: all 0.01s ease-in-out 0s;
-
-
 
 
 }
@@ -167,6 +170,62 @@
   justify-content: center;
   margin-top:100px;
 }
+
+
+
+
+
+@media (max-width: 600px) {
+  #mc_embed_signup {
+   
+  }
+
+  #mc_embed_signup_scroll {
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+  }
+
+  .mc-field-group,
+  #mc_embed_signup .button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .mc-field-group label {
+    margin-left: 0;
+  }
+
+  
+#mc_embed_signup {
+
+ margin-top:-15px;
+ width: 100%;
+}
+
+#mc_embed_signup form {
+ width:334px;
+}
+
+
+.mc-field-group input {
+ margin-left:-26px;
+ width: 100%;
+}
+
+
+
+#mc_embed_signup .button{
+margin-left: -49px;
+width:322px; 
+}
+
+
+
+}
+
+
+
 
 </style>
 <script setup>

@@ -16,7 +16,7 @@
         <li>Easy credit card payments</li>
         <li>Pause or cancel anytime</li>
       </ul>
-      <a :href="url1" class="plan-button">Get started</a>
+      <a :href="url1" class="plan-button">Get Started</a>
     </div>
     <div class="plan" id="monthly">
       <h2>Quarterly</h2>
@@ -34,7 +34,7 @@
         <li>Easy credit card payments</li>
         <li>Pause or cancel anytime</li>
       </ul>
-      <a :href="url1" class="plan-button">Get started</a>
+      <a :href="url1" class="plan-button">Get Started</a>
     </div>
 
     <div class="plan" id="monthly">
@@ -53,7 +53,7 @@
         <li>Easy credit card payments</li>
         <li>Pause or cancel anytime</li>
       </ul>
-      <a :href="url1" class="plan-button">Get started</a>
+      <a :href="url1" class="plan-button">Get Started</a>
     </div>
   </div>
 </template>
@@ -182,17 +182,14 @@ export default {
   width: 181px;
   max-width: 100%;
   height: 44px;
-  background: #2805FF;
- 
-  color: #fff !important; 
+
   font-size: 17px;
   text-decoration: none;
-  border: none;
+border: 1px solid #282725;
   border-radius: 22px;
   text-align: center;
   align-self: center;
-  padding-bottom:5px;
-  line-height: 44px; 
+  line-height: 41px; 
 }
 
 @media (max-width: 768px) {
