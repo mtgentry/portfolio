@@ -14,7 +14,8 @@
         <li>Unlimited users</li>
         <li>No minimum commitment</li>
         <li>Easy credit card payments</li>
-        <li>Pause or cancel anytime</li>
+        <li>Pause or cancel anytime</li> 
+        
       </ul>
       <a :href="url1" class="plan-button">Get Started</a>
     </div>
@@ -34,7 +35,7 @@
         <li>Easy credit card payments</li>
         <li>Pause or cancel anytime</li>
       </ul>
-      <a :href="url1" class="plan-button">Get Started</a>
+      <a :href="url2" class="plan-button">Get Started</a>
     </div>
 
     <div class="plan" id="monthly">
@@ -53,7 +54,7 @@
         <li>Easy credit card payments</li>
         <li>Pause or cancel anytime</li>
       </ul>
-      <a :href="url1" class="plan-button">Get Started</a>
+      <a :href="url3" class="plan-button">Get Started</a>
     </div>
   </div>
 </template>
@@ -62,9 +63,9 @@
 export default {
   data() {
     return {
-      url1: 'https://buy.stripe.com/00gdU11rk1KCaiY5kl', 
-       url2: '/work',
-        url3: 'http://yahoo.com'
+      url1: 'https://buy.stripe.com/28o5nvc5Y74W4YEbIK', 
+       url2: 'https://buy.stripe.com/5kAdU1fiaexodva4gj',
+        url3: ''
     }
   }
 }

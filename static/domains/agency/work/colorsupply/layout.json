@@ -10,7 +10,7 @@
   },
   "backgroundColor": "#F8F080",
   "textColor": "#282725",
-  "header": "Choosing colors for a design project can be daunting. I created a tool to make it easy. Color Supply helps designers, illustrators, and developers pick colors for their projects.",
+  "header": "Choosing colors for a new project can be daunting. We made it easy.",
   "seo_description": "",
   "layout": [
 
@@ -28,13 +28,10 @@
 
 
     {
-      "title": "The Problem with Color Pickers",
+      "title": "A New Way to Fuel Growth",
       "text": [
-        "Some tools like <a href='https://color.adobe.com' target='_blank'>Adobe Kuler </a> enable users to create colors at an atomic level. They're like a sniper rifle – they provide precise control but it comes at the expense of speed. That control is helpful if you have a color palette already in mind that you want to modify. But my research indicated most people picked colors from scratch.",
-        "Color Supply works differently by showing users premade color palettes. They can select multiple color palettes for their project and refine them later.",
-        "First you select one of ten color wheels. Each wheel has a theme with the default being used to demonstrate color theory."
-
-
+        "Sometimes distribution channels that you used to depend on no longer work and you need to find new ways to find customers. This is how Color Supply came about. Color Supply was an engineering-as-marketing initiative designed to capture email leads."
+       
       ]
     },
 
@@ -50,13 +47,47 @@
     },
 
 
+
+
     {
-
+      "title": "Design for Impact",
       "text": [
-        "After selecting a wheel you can explore color palettes within that theme. The color you click will be the dominant color in the palettes shown."
+      "In general we like to design fast and get user feedback. But for this project, we had to do some research first to make sure we made something users would immediately love. Our research indicated we should focus on three key parts:",
+       "From our research, we decided the product should focus on three key parts:"
+      ]
+    },
 
 
 
+    {
+      "title": "Ready-to-Use Color Palettes",
+      "text": [
+        "These pre-made color palettes give users a head start when choosing colors. They can pick multiple color combos, save them, and tweak them later."
+      ]
+    },
+
+    {
+      "title": "Color Wheels",
+      "text": [
+        "There are ten color wheels to guide users when picking colors. Each wheel has a theme with the default being used to demonstrate color theory."
+      ]
+    },
+
+
+    {
+      "title": "Color Preview ",
+      "text": [
+        "When you click a palette, the shapes and icons change to those colors. This helps you picture what the colors would look like in your project."
+        "All these features make choosing colors much quicker."
+      ]
+    },
+
+
+    {
+      "title": "Results",
+      "text": [
+        "We're now Color Supply's one-stop design partner and continue to improve their tool. The site is a big hit and has gathered tens of thousands of emails. It often goes viral on Twitter and is most popular in Japan."
+     
       ]
     },
 
@@ -74,12 +105,6 @@
 
 
 
-    {
-
-      "text": [
-        "When you click a palette, SVG illustrations change to the selected colors. This helps you imagine what the colors would look like on your project."
-      ]
-    },
 
 
 
@@ -93,16 +118,6 @@
     },
 
 
-
-    {
-      "text": [
-        "The site can also help you find palettes based on an \"anchor\" color you want to use. For example if your brand guidelines for a project specify red as a dominant color,  the HEX picker will suggest palettes that go with that particular shade of red.",
-        "All of these features speed up the color picking process.",
-        "Version 2 of the site is currently being designed. There will be more functionality and a lightweight Chrome extension.",
-        "The site is popular. It regularly goes viral on Twitter and is most used in Japan."
-
-      ]
-    },
 
 
 

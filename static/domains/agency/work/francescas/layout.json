@@ -8,7 +8,7 @@
   },
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",
-  "header": "Fashion moves fast for young girls. They try on new clothes and discard old identities. At this age they're open to new style suggestions but you can't be too forceful. With this in mind, we re-imagined the Francesca's brand as a cool big sister to help their customers navigate the early years of adolescence.",
+  "header": "Fashion moves fast for young girls. They try on new clothes and discard old identities. They are eager to try new styles, but you can't be too forceful. With this in mind, we re-imagined the Francesca's website as a cool big sister to help these young shoppers navigate their early teen years.",
   "seo_description": "",
   "layout": [
     {
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Time for a change",
+      "title": "Time for a Refresh",
       "text": [
-        "When Francesca's came to us, their brand was stale. Their 11-15 year old female customers had grown more sophisticated than when the company was first founded in 2006. Girls now preferred hipper brands like Madewell and Asos. But at the same time, the company didn't want to alienate the parents of these young women.",
-        "They wanted a site design that was hipper, but not too hip."
+        "When Francesca's came to us, their brand was stale. Their customers, mainly girls aged 11-15, had grown more sophisticated than when the company started in 2006. These girls now liked hipper brands like Madewell and ASOS. At the same time, we needed to make sure their parents didn't feel left out.",
+        "Francesca's wanted their website to to be cool, but not too edgy."
 
 
       ]
@@ -48,8 +48,8 @@
       "title": "The Strategy",
       "text": [
 
-        "Since these young women were still figuring out their sense of style, we wanted to hold their hand a bit – much like a big sister.",
-        "To deliver on this we came up with the idea of  an \"editorial\" browsing experience to subtly reveal style suggestions. The experience would be the online equivalent to flipping through a fashion magazine. Like how browsing Teen Vogue might reveal new fashion trends."
+        "Since these girls are still figuring out their fashion sense, we wanted to guide them, like an older sister would.",
+        "To do this, we created a way to browse that showed style ideas subtly, like flipping through a fashion magazine. When we shared this idea with our users, they loved it. So we designed a CMS for Francesca's editorial team to regularly update item pairings that worked well together."
       ]
     },
 
@@ -64,8 +64,8 @@
     },
     {
       "text": [
-        "We put the editorial concept in front of users and it proved to be the most popular feature we tested. After getting validation, we designed a CMS that allowed the Francesca's editorial team to regularly update item pairings that worked well together.",
-        "In addition to the rebrand, we also made a concerted effort to optimize Francesca's checkout experience. We designed several checkout flows and did user testing to find which one worked best. The two winning designs were later A/B tested by the client to further optimize the site."
+        "Along with the site redesign, we worked hard to make Francesca's checkout process better. We came up with different designs for this and had users try them out. This helped us see which design worked best."
+
        
     
       ]
