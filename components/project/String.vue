@@ -38,7 +38,7 @@ h1
   line-height: 120%
 h2
   font-size: 35px
-  line-height: 100%
+  line-height: 120%
 h3
   font-weight: 500
   font-size: 24px
