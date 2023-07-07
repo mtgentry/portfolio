@@ -35,7 +35,7 @@ export default {
 h1
   font-weight: 500
   font-size: 50px
-  line-height: 120%
+  line-height: 220%
 h2
   font-size: 35px
   line-height: 120%
