@@ -36,9 +36,11 @@ h1
   font-weight: 500
   font-size: 50px
   line-height: 120%
+  padding-bottom: 10px
 h2
   font-size: 35px
   line-height: 120%
+  padding-bottom: 5px
 h3
   font-weight: 500
   font-size: 24px

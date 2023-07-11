@@ -1955,9 +1955,9 @@
     prettier "^1.18.2 || ^2.0.0"
 
 "@vue/shared@^3.2.47":
-  version "3.2.47"
-  resolved "https://registry.npmjs.org/@vue/shared/-/shared-3.2.47.tgz"
-  integrity sha512-BHGyyGN3Q97EZx0taMQ+OLNuZcW3d37ZEVmEAyeoA9ERdGvm9Irc/0Fua8SNyOtV1w6BS4q25wbMzJujO9HIfQ==
+  version "3.3.4"
+  resolved "https://registry.npmjs.org/@vue/shared/-/shared-3.3.4.tgz"
+  integrity sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"

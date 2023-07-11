@@ -127,7 +127,7 @@
 
  {
       "animation": "disable",
-      "text": ["It's much cleaner, right? We're still A/B testing the old and new pages, but so far it's looking good. We'll share more data when we have it."]
+      "text": ["It's much cleaner, right? We're still A/B testing the old and new pages, but so far it's looking good."]
     },
     {
       "size": "h2",

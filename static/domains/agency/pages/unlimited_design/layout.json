@@ -6,7 +6,7 @@
     {
       "size": "h1",
       "title": "Unlimited Design, <br >One Monthly Rate.",
-      "animation": "fade",
+      "animation": "disable",
       "text": ["Our model is different from most. There are no phone calls. No fancy offices. No client lunches. But the work, the thing that matters the most, is excellent. <br><br>Skip the hassle of hiring freelancers or spending exorbitant amounts on an agency or full-time designer. We streamline the process by offering unlimited design requests for a straightforward monthly fee. You can send as many requests as you like, and we'll systematically complete each one, usually within a matter of days. <br><br>Best of all you can pause or cancel your design subscription at any time."
       ]
     },
@@ -14,7 +14,7 @@
 
  {
       "size": "h2",
-      "animation": "fade",
+      "animation": "disable",
       "title": "How it works",
       "text": ["I will create a Trello project for us and you can submit tasks there one at a time. Your deliverable will be completed in 48 hours on average (complex tasks take longer). I’ll revise until you’re 100% satisfied. You can even create a backlog of tasks. For that, I complete tasks one at a time in the order in which you arrange them."
 
@@ -25,11 +25,11 @@
 
     {
       "svgs": 1,
-      "animation": "fade"
+      "animation": "disable"
     },
     {
       "planscta": 1,
-      "animation": "fade",
+      "animation": "disable",
       "link": "/plans"
     }
   ]
