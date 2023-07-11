@@ -35,66 +35,7 @@
       ]
     },
 
-
-
-    {
-      "media": [
-        {
-          "name": "color_wheels.jpg",
-          "position": "center"
-        }
-      ]
-    },
-
-
-
-
-    {
-      "title": "Design for Impact",
-      "text": [
-      "In general we like to design fast and get user feedback. But for this project, we had to do some research first to make sure we made something users would immediately love. Our research indicated we should focus on three key parts:",
-       "From our research, we decided the product should focus on three key parts:"
-      ]
-    },
-
-
-
-    {
-      "title": "Ready-to-Use Color Palettes",
-      "text": [
-        "These pre-made color palettes give users a head start when choosing colors. They can pick multiple color combos, save them, and tweak them later."
-      ]
-    },
-
-    {
-      "title": "Color Wheels",
-      "text": [
-        "There are ten color wheels to guide users when picking colors. Each wheel has a theme with the default being used to demonstrate color theory."
-      ]
-    },
-
-
-    {
-      "title": "Color Preview ",
-      "text": [
-        "When you click a palette, the shapes and icons change to those colors. This helps you picture what the colors would look like in your project.",
-        "All these features make choosing colors much quicker."
-      ]
-    },
-
-
-    {
-      "title": "Results",
-      "text": [
-        "We're now Color Supply's one-stop design partner and continue to improve their tool. The site is a big hit and has gathered tens of thousands of emails. It often goes viral on Twitter and is most popular in Japan."
-
-      ]
-    },
-
-
-
-
-    {
+ {
       "media": [
         {
           "name": "triad.mp4",
@@ -106,6 +47,26 @@
 
 
 
+
+
+
+
+
+    {
+      "title": "Design for Impact",
+      "text": [
+      "In general we like to design fast and get user feedback. But for this project, we had to do some research first to make sure we made something users would immediately love. Our research indicated we should focus on three key parts:",
+       "From our research, we decided the product should focus on three key parts:",
+        "<h4>Ready-to-Use Color Palettes</h4>",
+         "These pre-made color palettes give users a head start when choosing colors. They can pick multiple color combos, save them, and tweak them later.",
+         "<h4>Color Wheels</h4>",
+         "There are ten color wheels to guide users when picking colors. Each wheel has a theme with the default being used to demonstrate color theory.",
+         "<h4>Color Preview</h4>",
+         "When you click a palette, the shapes and icons change to those colors. This helps you picture what the colors would look like in your project.",
+         "All these features make choosing colors much quicker."
+     
+      ]
+    },
 
 
     {
@@ -121,6 +82,15 @@
 
 
 
+    {
+      "title": "Results",
+      "text": [
+        "We're now Color Supply's one-stop design partner and continue to improve their tool. The site is a big hit and has gathered tens of thousands of emails. It often goes viral on Twitter and is most popular in Japan."
+
+      ]
+    },
+
+
 
 
 
@@ -132,6 +102,14 @@
         }
       ]
     },
+
+
+   
+
+
+
+
+
 
 
 

@@ -6,7 +6,7 @@
     "title": "St. Jane",
     "categories": "Art Direction, Product Renderings"
   },
-  "backgroundColor": "#E7CBC4",
+  "backgroundColor": "#E2C1B7",
   "textColor": "#ffffff",
   "header": "Few things will improve your sales more than great images. This is particularly true in consumer e-commerce. St. Jane is a premium skincare brand who knows this well.",
   "seo_description": "",
@@ -15,8 +15,8 @@
       "media": [
         {
           "name": "jane_1.jpg",
-          "position": "center",
-          "title": "Francesca's"
+          "position": "center"
+         
         }
       ]
     },
@@ -79,20 +79,11 @@
           "position": "right"
         }
       ]
-    },
-
-
-
-
-
-    {
-      "text": [
-        "We put the editorial concept in front of users and it proved to be the most popular feature we tested. After getting validation, we designed a CMS that allowed the Francesca's editorial team to regularly update item pairings that worked well together.",
-        "In addition to the rebrand, we also made a concerted effort to optimize Francesca's checkout experience. We designed several checkout flows and did user testing to find which one worked best. The two winning designs were later A/B tested by the client to further optimize the site."
-
-
-      ]
     }
+
+
+
+
 
 
   ]
