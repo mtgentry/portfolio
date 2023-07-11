@@ -2,11 +2,11 @@
   "backgroundColor": "#222533",
   "textColor": "#ffffff",
   "seo_description": "",
-  "animation": "fade",
+  "animation": "disable",
   "layout": [
     {
       "size": "h1",
-      "animation": "fade",
+      "animation": "disable",
       "title": "How to Use Design to Grow Your Revenue",
       "text": [
         "If you work at a startup or run an online business, making your website pretty isn't the end goal. You want to grow. You want more clicks, more sign-ups, or more revenue.",
@@ -15,10 +15,10 @@
         "We did this for Tabs, a company that sells a lot of chocolate. Tabs is doing great, but we thought their site could perform better. Their product page was busy with excessive marketing touts, unclear product images, and functionality that new customers didn't need."
       ]
     },
-    
+
     {
       "size": "h2",
-      "animation": "fade",
+      "animation": "disable",
       "title": "What We Removed",
       "text": [
         "As we started the Design Detox, anything that distracted visitors from making a purchase was taken out. We removed all of these things:"
@@ -28,14 +28,14 @@
       "media": [
         {
           "name": "tabs.mp4",
-          "animation": "fade",
+          "animation": "disable",
           "position": "center",
           "width": "50%"
         }
       ]
     },
     {
-      "animation": "fade",
+      "animation": "disable",
       "title": "Gray Background",
       "text": [
         "Color can be distracting if not used well. The gray background here didn't add to the visual design. We changed it to white."
@@ -43,7 +43,7 @@
     },
     {
       "size": "h3",
-      "animation": "fade",
+      "animation": "disable",
       "title": "Account Login",
       "text": [
         "People don't log in to tabs often. We took out login button."
@@ -51,7 +51,7 @@
     },
     {
       "size": "h3",
-      "animation": "fade",
+      "animation": "disable",
       "title": "Marketing Touts",
       "text": [
         "The 100% satisfaction guarantee was fighting with the product image. We removed it."
@@ -59,7 +59,7 @@
     },
     {
       "size": "h2",
-      "animation": "fade",
+      "animation": "disable",
       "title": "What We Moved",
       "text": [
         "Some things didn't need to be taken out, just moved. Here's what we moved or changed:"
@@ -67,7 +67,7 @@
     },
     {
       "size": "h3",
-      "animation": "fade",
+      "animation": "disable",
       "title": "Phone Number",
       "text": [
         "A support phone is good for expensive items. But not for chocolate. We moved it to the order confirmation email and footer."
@@ -75,7 +75,7 @@
     },
     {
       "size": "h3",
-      "animation": "fade",
+      "animation": "disable",
       "title": "As seen on",
       "text": [
         "Social proof can help drive conversions, but we wanted to try it on the homepage instead. This can be A/B tested later."
@@ -83,7 +83,7 @@
     },
     {
       "size": "h3",
-      "animation": "fade",
+      "animation": "disable",
       "title": "Track your order",
       "text": [
         "People don't usually track their order from the product page. So, we put a link to track orders in the purchase email and footer instead."
@@ -91,7 +91,7 @@
     },
     {
       "size": "h3",
-      "animation": "fade",
+      "animation": "disable",
       "title": "Guarantees and benefits",
       "text": [
         "They were in the wrong place on the page. People look at a page from top to bottom, and the 30-day promise showed up before people knew what they were buying. We moved it below the product image."
@@ -99,7 +99,7 @@
     },
     {
       "size": "h3",
-      "animation": "fade",
+      "animation": "disable",
       "title": "Words Next to Product Rating",
       "text": [
         "The words near the product rating were confusing. The 4.4 out of 5 part was unnecessary because you could see that in the star rating. We changed it to '1,475 reviews' and underlined it so people know it's a link. Usually, I don't like leading people off the product page, but customer reviews can help someone who's unsure about the product."
@@ -107,7 +107,7 @@
     },
     {
       "size": "h3",
-      "animation": "fade",
+      "animation": "disable",
       "text": [
         "After making these changes, our product page looks like this:"
       ]
@@ -116,7 +116,7 @@
       "media": [
         {
           "name": "tabs_3.jpg",
-          "animation": "fade",
+          "animation": "disable",
           "position": "center",
           "width": "50%"
         }
@@ -126,12 +126,12 @@
 
 
  {
-      "animation": "fade",
+      "animation": "disable",
       "text": ["It's much cleaner, right? We're still A/B testing the old and new pages, but so far it's looking good. We'll share more data when we have it."]
     },
     {
       "size": "h2",
-      "animation": "fade",
+      "animation": "disable",
       "title": "Do Ugly Websites Convert Better?",
       "text": [
         "People who do marketing and branding sometimes often disagree. Marketers like to test everything and make changes based on results. If they find that orange buttons get more clicks, they'll put orange buttons everywhere.",
@@ -144,7 +144,7 @@
     },
     {
       "size": "h2",
-      "animation": "fade",
+      "animation": "disable",
       "title": "How I Work",
       "text": [
         "I make good-looking websites first, then test them. I think it's best to focus on the design, user experience, images, and copywriting. These things speak to people's emotions and increase sales.",
@@ -152,18 +152,18 @@
       ]
     },
     {
-      "animation": "fade",
+      "animation": "disable",
       "text": ["--"]
     },
     {
-      "animation": "fade",
+      "animation": "disable",
       "size": "h2",
       "title": "Want More Case Studies?",
       "text": ["Our client-approved case studies offer real-world insights. Subscribe below to receive them as they become available."]
     },
     {
       "form": 1,
-      "animation": "fade"
+      "animation": "disable"
     }
   ]
 }
