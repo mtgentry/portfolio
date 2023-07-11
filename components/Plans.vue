@@ -65,7 +65,7 @@ export default {
     return {
       url1: 'https://buy.stripe.com/28o5nvc5Y74W4YEbIK', 
        url2: 'https://buy.stripe.com/5kAdU1fiaexodva4gj',
-        url3: 'https://buy.stripe.com/bIYcPX9XQ3SK2Qw4gl'
+        url3: ''
     }
   }
 }
