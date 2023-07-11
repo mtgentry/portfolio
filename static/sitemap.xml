@@ -8,30 +8,39 @@
 
 
 <url>
-  <loc>https://portfolio-u6spf.ondigitalocean.app/</loc>
-  <lastmod>2023-03-30T08:07:25+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://hoopladesign.com/</loc>
+<lastmod>2023-07-11T20:19:04+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://portfolio-u6spf.ondigitalocean.app/work/francescas/</loc>
-  <lastmod>2023-03-30T08:07:25+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://hoopladesign.com/work</loc>
+<lastmod>2023-07-11T20:19:04+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://portfolio-u6spf.ondigitalocean.app/work/colorsupply/</loc>
-  <lastmod>2023-03-30T08:07:25+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://hoopladesign.com/plans</loc>
+<lastmod>2023-07-11T20:19:04+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://portfolio-u6spf.ondigitalocean.app/work/wilson/</loc>
-  <lastmod>2023-03-30T08:07:25+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://hoopladesign.com/faq</loc>
+<lastmod>2023-07-11T20:19:04+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://portfolio-u6spf.ondigitalocean.app/work/bedtime/</loc>
-  <lastmod>2023-03-30T08:07:25+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://hoopladesign.com/work/francescas</loc>
+<lastmod>2023-07-11T20:19:04+00:00</lastmod>
+<priority>0.64</priority>
 </url>
-
-
+<url>
+<loc>https://hoopladesign.com/work/colorsupply</loc>
+<lastmod>2023-07-11T20:19:04+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://hoopladesign.com/tabs_chocolate</loc>
+<lastmod>2023-07-11T20:19:04+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+</urlset>
 </urlset>
