@@ -29,10 +29,6 @@
 
 
 
-        {
-          "question": "In addition to pure design, how else can you help me?",
-          "answer": "I can help with strategy also. <a href='http://hoopladesign.com/tabs_chocolate' target='_blank'><u>Here</u></a> is a good example."
-        },
 
         {
           "question": "Why wouldn't I just hire an agency?",
@@ -82,8 +78,10 @@
           "question": "Can I pause the subscription?",
           "answer": "Yes! You can pause at any time in Stripe. Billing cycles are every 31 days. If you use the service for 15 days and then pause your subscription, you'll have 16 days to be used at any time in the future."
         },
-
-
+        {
+          "question": "In addition to pure design, how else can you help me?",
+          "answer": "I can help with strategy also. <a href='http://hoopladesign.com/tabs_chocolate' target='_blank'><u>Here</u></a> is a good example."
+        },
         {
           "question": "What if I don't like the design?",
           "answer": "You can send it back, and I can revise it or create another version."
