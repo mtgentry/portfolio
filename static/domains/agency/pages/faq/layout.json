@@ -27,7 +27,14 @@
     {"animation": "fade",
       "faq": [
 
-         {
+
+
+        {
+          "question": "In addition to pure design, how else can you help me?",
+          "answer": "I can help with strategy also. <a href='http://hoopladesign.com/tabs_chocolate' target='_blank'><u>Here</u></a> is a good example."
+        },
+
+        {
           "question": "Why wouldn't I just hire an agency?",
           "answer": "Agencies can be expensive as you're paying for overhead, as well as the salaries of account executives and project managers. Our model provides similar quality work at a fraction of the cost."
         },
