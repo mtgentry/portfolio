@@ -24,16 +24,17 @@
         "As we started the Design Detox, anything that distracted visitors from making a purchase was taken out. We removed all of these things:"
       ]
     },
-    {
+  {
       "media": [
         {
-          "name": "tabs.mp4",
+          "name": "tabs_removed.jpg",
           "animation": "disable",
           "position": "center",
           "width": "50%"
         }
       ]
     },
+
     {
       "animation": "disable",
       "title": "Gray Background",
