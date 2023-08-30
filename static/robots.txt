@@ -2,3 +2,4 @@ User-Agent: *
 Disallow: /work/stateofpostgres
 Disallow: /work/cliffwater
 Disallow: /work/stjane
+Disallow: /why_us
