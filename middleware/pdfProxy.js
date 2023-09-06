@@ -10,14 +10,18 @@ export default function (req, res, next) {
 
       // Create a proxy middleware
       const proxy = createProxyMiddleware({
-        target: 'http://localhost:3000',  // Your server URL
+        target: process.env.PROXY_TARGET || 'http://localhost:3000',  // Use environment variable or default to localhost
         pathRewrite: {
           '^/': '/domains/agency/pages/pitches/',  // Rewrite the URL path
         },
         changeOrigin: true,
         onError(err, req, res) {
           console.error('Proxy error:', err);  // Log any proxy errors
-          res.status(500).send('An error occurred while proxying the request.');
+          if (typeof res.status === 'function') {
+            res.status(500).send('An error occurred while proxying the request.');
+          } else {
+            console.error('Cannot set response status');
+          }
         },
       });
 
@@ -33,6 +37,10 @@ export default function (req, res, next) {
     next();
   } catch (error) {
     console.error('An error occurred in the middleware:', error);  // Log any unexpected errors
-    res.status(500).send('An unexpected error occurred.');
+    if (typeof res.status === 'function') {
+      res.status(500).send('An unexpected error occurred.');
+    } else {
+      console.error('Cannot set response status');
+    }
   }
 }
