@@ -43,7 +43,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
     'nuxt-compress'
@@ -51,6 +50,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // ...other modules you might already have
+  ],
+
+  // Server Middleware: Add this block to register your middleware
+  serverMiddleware: [
+    '~/middleware/pdfProxy',  // Add this line
   ],
 
   axios: {
