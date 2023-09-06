@@ -8,20 +8,19 @@ export default function (req, res, next) {
     if (/^\/.*\.pdf$/.test(req.url)) {
       console.log('PDF pattern matched, setting up proxy');  // Debug statement
 
+      // Use BASE_URL from environment variables, or default to 'http://localhost:3000'
+      const target = process.env.BASE_URL || 'http://localhost:3000';
+
       // Create a proxy middleware
       const proxy = createProxyMiddleware({
-        target: process.env.PROXY_TARGET || 'http://localhost:3000',  // Use environment variable or default to localhost
+        target,  // Your server URL
         pathRewrite: {
           '^/': '/domains/agency/pages/pitches/',  // Rewrite the URL path
         },
         changeOrigin: true,
         onError(err, req, res) {
           console.error('Proxy error:', err);  // Log any proxy errors
-          if (typeof res.status === 'function') {
-            res.status(500).send('An error occurred while proxying the request.');
-          } else {
-            console.error('Cannot set response status');
-          }
+          res.status(500).send('An error occurred while proxying the request.');
         },
       });
 
@@ -37,10 +36,6 @@ export default function (req, res, next) {
     next();
   } catch (error) {
     console.error('An error occurred in the middleware:', error);  // Log any unexpected errors
-    if (typeof res.status === 'function') {
-      res.status(500).send('An unexpected error occurred.');
-    } else {
-      console.error('Cannot set response status');
-    }
+    res.status(500).send('An unexpected error occurred.');
   }
 }
