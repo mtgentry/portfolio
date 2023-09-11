@@ -1,0 +1,85 @@
+{
+  "cover": {
+    "media": {
+      "name": "wilson_thumb.jpg"
+    },
+   "title": "Wilson",
+    "categories": "Visual Design",
+    "multiple": "true",
+    "position": "right",
+    "width": "70%",
+    "mobileInherit": true
+  },
+  "backgroundColor": "#2F79C9",
+  "textColor": "#ffffff",
+  "header": "Americans spend 11 billion dollars a year on bottled water. Much of this is driven by celebrity endorsements, advertising, and PR campaigns crafted to weaken people's perception of tap water. Faucet Face is a reusable bottle company I created to combat this.",
+  "seo_description": "",
+  "layout": [
+    
+
+{
+      "media": [
+        {
+          "name": "faucet_face_7.jpg",
+          "position": "center"
+
+        }
+      ]
+    },
+
+
+    {
+     
+      "text": [
+       
+        
+       "Faucet Face is a social enterprise I founded to reduce plastic bottle waste. I built the brand from the ground up, handling everything from finding manufacturers to sales, and bringing on artists to bring my ideas to life.",
+       "To date, the bottles have sold at Fab, Urban Outfitters, Modcloth, Paper Source, Trina Turk, and many other places."
+      ]
+    },
+
+
+    {
+      "media": [
+        {
+          "name": "faucet_face_6.jpg",
+          "position": "center"
+ 
+        }
+      ]
+    },
+    
+
+
+    {
+     
+      "text": [
+       
+        
+       "What sets Faucet Face apart is its heart. Every bottle sold helps a family in rural India get 100 liters of clean water, thanks to our biosand filter initiative. These simple concrete filters get rid of up to 99% of bacteria and viruses in the water.",
+      "I sold Faucet Face a few years ago, but the new owner is keeping our mission alive, making sure every sale still supports clean water for families in need."
+      ]
+    },
+
+
+
+
+    {
+      "media": [
+        {
+          "name": "faucet_face_5.jpg",
+          "position": "center"
+        }
+      ]
+    }
+    
+    
+    
+    
+   
+    
+  ]
+}
+
+
+
