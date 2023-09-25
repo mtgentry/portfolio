@@ -1,3 +1,5 @@
+   // This is code for creating "clean" URLS for pitches
+
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 export default function (req, res, next) {

@@ -5,7 +5,6 @@
         :section="section" :key="section.name" :style="{color: textColor}")
     v-col(cols="12")
       Footer
-
 </template>
 
 <script>
@@ -34,13 +33,18 @@ export default {
     }
   },
   async head() {
+    console.log('Fetching data for page:', this.page_name || this.$route.name); // Log the page being fetched
     this.project = await this.$axios.get(`/pages/${this.page_name || this.$route.name}/layout.json`)
-      .then((response) => response.data).catch((e) => {
-        console.log(e)
-        this.$nuxt.error({ statusCode: 404, message: 'Page not found' })
+      .then((response) => {
+        console.log('Fetched data:', response.data);  // Log the fetched data
+        return response.data;
       })
-    this.$store.commit('setBackgroundColor', this.$store.state.homeBackgroundColor)
-    this.$store.commit('setTextColor', this.$store.state.homeTextColor)
+      .catch((e) => {
+        console.error('Error fetching data:', e);  // Log any error that occurs while fetching the data
+        this.$nuxt.error({ statusCode: 404, message: 'Page not found' });
+      });
+    this.$store.commit('setBackgroundColor', this.$store.state.homeBackgroundColor);
+    this.$store.commit('setTextColor', this.$store.state.homeTextColor);
 
     return {
       meta: [
@@ -63,13 +67,8 @@ export default {
 #extra
   padding: 100px 0
 
-
 .col
   display: flex
   align-items: center
   flex-direction: column
-
-
-
-
 </style>

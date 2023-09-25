@@ -28,6 +28,11 @@
       Faq2
     v-col.w-100(v-else-if="section.planscta" :data-aos="section.animation ? section.animation : 'fade-up'")
       PlansCTA
+    v-col.w-100(v-else-if="section.calendly" :data-aos="section.animation ? section.animation : 'fade-up'")
+      calendly
+    v-col.w-100(v-else-if="section.audit" :data-aos="section.animation ? section.animation : 'fade-up'")
+      audit
+    v-col(v-else-if="section.media" :data-aos="media.animation === 'disable' ? null : (media.animation ? media.animation : 'fade-up')")
 
 
 

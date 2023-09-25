@@ -101,6 +101,8 @@ Be sure to have the json don't have errors. One typo can make the whole page cra
 
 H1,H2,H3 is defined in components/project/String.vue
 
+Paragraph text is defined in layouts/default.vue
+
 ## Deploy
 
 Once you are ready to update the website, be sure to have git installed, pushing a new commit will update the website.

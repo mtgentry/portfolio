@@ -54,9 +54,9 @@ export default {
   ],
 
   // Server Middleware: Add this block to register your middleware
-  serverMiddleware: [
-    '~/middleware/pdfProxy',  // Add this line
-  ],
+  // serverMiddleware: [
+  //  '~/middleware/pdfProxy',  // Add this line
+  // ],
 
   axios: {
     baseURL: `${process.env.BASE_URL}/domains/${process.env.IS_AGENCY === '1' ? 'agency' : 'portfolio'}`

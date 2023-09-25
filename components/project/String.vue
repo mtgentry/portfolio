@@ -37,6 +37,7 @@ h1
   font-size: 50px
   line-height: 120%
   padding-bottom: 10px
+  text-align: center
 h2
   font-size: 35px
   line-height: 120%

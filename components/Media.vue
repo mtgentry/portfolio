@@ -41,10 +41,14 @@ export default {
     is_video() {
       return this.media.name.includes('mp4')
     },
-    mediaPath() {
-      let domain = process.env.IS_AGENCY ? 'agency' : 'portfolio'
-      return `/domains/${domain}/${this.pageType}/${this.project_name_or_work}/media/${this.media.name}`
-    },
+  mediaPath() {
+  if (this.media.name.startsWith('http')) {
+    return this.media.name;
+  }
+  let domain = process.env.IS_AGENCY ? 'agency' : 'portfolio';
+  return `/domains/${domain}/${this.pageType}/${this.project_name_or_work}/media/${this.media.name}`;
+},
+
     pageType() {
       if (this.project_name) {
         return 'work'
