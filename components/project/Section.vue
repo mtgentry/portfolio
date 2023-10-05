@@ -32,6 +32,8 @@
       calendly
     v-col.w-100(v-else-if="section.audit" :data-aos="section.animation ? section.animation : 'fade-up'")
       audit
+    v-col.w-100(v-else-if="section.beforeafter" :data-aos="section.animation ? section.animation : 'fade-up'")
+      beforeafter
     v-col(v-else-if="section.media" :data-aos="media.animation === 'disable' ? null : (media.animation ? media.animation : 'fade-up')")
 
 
