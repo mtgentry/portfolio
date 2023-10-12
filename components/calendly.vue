@@ -12,9 +12,9 @@
 export default {
   data() {
     return {
-      url1: '', 
-       url2: '/work',
-        url3: 'http://yahoo.com'
+      url1: 'https://calendly.com/hoopladesign/30min'
+       
+        
     }
   }
 }

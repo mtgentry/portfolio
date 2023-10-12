@@ -2,17 +2,19 @@
   <main>
     <div class="container">
       <div class="image-container">
-        <img
-          class="image-before slider-image"
-          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-          alt="color photo"
-        />
-        <img
-          class="image-after slider-image"
-          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-          alt="black and white"
-        />
-      </div>
+      
+
+      <img
+  class="image-before slider-image"
+  src="/domains/agency/pages/test/media/seaholm_1.jpg"
+  alt="color photo"
+/>
+<img
+  class="image-after slider-image"
+  src="/domains/agency/pages/test/media/seaholm_2.jpg"
+  alt="After effect"
+/>
+</div>
       <input
         type="range"
         min="0"
@@ -27,9 +29,7 @@
         <!-- SVG content here... -->
       </div>
     </div>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/dzqDU9efnnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    
   </main>
 </template>
 
@@ -95,22 +95,24 @@ main {
 .image-container {
   max-width: 800px;
   max-height: 90vh;
-  aspect-ratio: 1/1;
+
 }
 
 .slider-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: left;
+  object-fit: contain; /* Change from 'cover' to 'contain' */
+  object-position: center;
 }
+
 
 .image-before {
   position: absolute;
   inset: 0;
-  width: var(--position);
-  filter: grayscale(100%)
+  width: 100%; 
+  clip-path: inset(0 0 0 var(--position)); /* Clip the image from the left side based on the slider's position */
 }
+
 
 .slider {
   position: absolute;
@@ -154,6 +156,10 @@ main {
   /* z-index: 100; */
   box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
 }
+
+
+
+
 
 
 
