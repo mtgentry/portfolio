@@ -3,7 +3,7 @@
     v-col(cols="12")
       p {{ audit.fullDescription }}
       .points
-        v-img(:src="auditImage" width="100%")
+        AuditImg(:imgSrc="auditImage" :points="audit.points")
 </template>
 
 <script>

@@ -102,6 +102,15 @@ export default {
   src: url('/fonts/resist-sans-text-medium.ttf')
   font-weight: 600
 
+@font-face
+  font-family: 'Inter'
+  src: url('/fonts/Inter-Regular.ttf')
+  font-weight: 300
+
+@font-face
+  font-family: 'Inter'
+  src: url('/fonts/Inter-Medium.ttf')
+  font-weight: 600
 .v-application
   font-family: 'Resist Sans', sans-serif
 
