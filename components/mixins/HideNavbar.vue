@@ -10,7 +10,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.commit('setBackgroundColor', this.backgroundColor)
+    this.$store.commit('updateState', {field: 'backgroundColor', value: this.backgroundColor})
     let vue = this
     window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
       let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
@@ -38,15 +38,15 @@ export default {
     },
     makeBackgroundWhite() {
       this.$refs.navbar.$el.classList.add('whiteBG')
-      this.$store.commit('setBackgroundColor', this.white.backgroundColor)
-      this.$store.commit('setTextColor', this.white.textColor)
+      this.$store.commit('updateState', {field: 'backgroundColor', value: this.white.backgroundColor})
+      this.$store.commit('updateState', {field: 'textColor', value: this.white.textColor})
     },
     makeBackgroundBColor() {
       let backgroundColor = this.$store.state.project ? this.$store.state.project.backgroundColor : this.$store.state.homeBackgroundColor
       let textColor = this.$store.state.project ? this.$store.state.project.textColor : this.$store.state.homeTextColor
       this.$refs.navbar.$el.classList.remove('whiteBG')
-      this.$store.commit('setBackgroundColor', backgroundColor)
-      this.$store.commit('setTextColor',  textColor)
+      this.$store.commit('updateState', {field: 'backgroundColor', value: backgroundColor})
+      this.$store.commit('updateState', {field: 'textColor', value: textColor})
     },
   },
 }

@@ -38,7 +38,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.commit('setBackgroundColor', "#282725")
+    this.$store.commit('updateState', {field: 'backgroundColor', value: "#282725"})
     setTimeout(() => {
       this.$AOS.refresh()
     }, 1000)
@@ -51,7 +51,7 @@ export default {
     let layout
     if (!this.$store.state.layout) {
       layout = await this.$axios.$get('/homepage.json').then((response) => response)
-      this.$store.commit('setLayout', layout)
+      this.$store.commit('updateState', {field: 'layout', value: layout})
     } else {
       layout = this.$store.state.layout
     }
@@ -63,7 +63,7 @@ export default {
       projects[project_name] = project
     }
     this.projects = projects
-    this.$store.commit('setProjects', projects)
+    this.$store.commit('updateState', {field: 'projects', value: projects})
   },
   computed: {
     ...mapState({

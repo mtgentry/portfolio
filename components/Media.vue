@@ -64,7 +64,7 @@ export default {
     load() {
       this.loaded = true
       if (this.project_name === 'francescas') {
-        this.$store.commit('setLoading', false)
+        this.$store.commit('updateState', {field: 'loading', value: false})
       }
       setTimeout(() => {
         this.$AOS.refresh()

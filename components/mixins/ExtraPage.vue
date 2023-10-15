@@ -43,8 +43,8 @@ export default {
         console.error('Error fetching data:', e);  // Log any error that occurs while fetching the data
         this.$nuxt.error({ statusCode: 404, message: 'Page not found' });
       });
-    this.$store.commit('setBackgroundColor', this.$store.state.homeBackgroundColor);
-    this.$store.commit('setTextColor', this.$store.state.homeTextColor);
+    this.$store.commit('updateState', {field: 'homeTextColor', value: this.$store.state.homeBackgroundColor})
+    this.$store.commit('updateState', {field: 'homeTextColor', value: this.$store.state.homeTextColor})
 
     return {
       meta: [

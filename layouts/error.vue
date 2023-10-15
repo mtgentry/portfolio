@@ -24,7 +24,7 @@ export default {
     }
   },
   head() {
-    this.$store.commit('setLoading', false)
+    this.$store.commit('updateState', {field: 'loading', value: false})
     const title =
       this.error.statusCode === 404 ? this.pageNotFound : this.otherError
     return {

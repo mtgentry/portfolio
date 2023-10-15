@@ -31,9 +31,9 @@ export default {
       this.project = await this.$axios.get(`/work/${this.$route.params.project}/layout.json`)
         .then((response) => response.data)
     }
-    this.$store.commit('setBackgroundColor', this.project.backgroundColor)
-    this.$store.commit('setTextColor', this.project.textColor)
-    this.$store.commit('setProject', this.project)
+    this.$store.commit('updateState', {field: 'backgroundColor', value: this.project.backgroundColor})
+    this.$store.commit('updateState', {field: 'textColor', value: this.project.textColor})
+    this.$store.commit('updateState', {field: 'project', value: this.project})
     return {
       title: this.project.cover.title,
       meta: [

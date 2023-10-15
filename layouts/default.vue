@@ -25,17 +25,17 @@ export default {
   async fetch() {
     if (!this.$store.state.layout) {
       let layout = await this.$axios.$get('/homepage.json').then((response) => response)
-      this.$store.commit('setLayout', layout)
+      this.$store.commit('updateState', {field: 'layout', value: layout})
     }
   },
   async mounted() {
-    this.$store.commit('setBackgroundColor', this.backgroundColor)
+    this.$store.commit('updateState', {field: 'backgroundColor', value: this.backgroundColor})
     setTimeout(() => {
       this.$AOS.refresh()
     }, 1000)
   },
   head() {
-    this.$store.commit('setLoading', false)
+    this.$store.commit('updateState', {field: 'loading', value: false})
   },
   methods:{
     formatUrl(s) {
