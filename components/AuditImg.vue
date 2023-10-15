@@ -3,7 +3,7 @@
     v-col(cols="12")
       div.d-flex.justify-center
         div.auditImg(v-show="imgLoaded")
-          img(:src="imgSrc" alt="" @load="handleLoad")
+          img.auditImage(:src="imgSrc" alt="" @load="handleLoad")
           AuditPoint(v-for="(point, i) in points" :key="i" :point="point" :i="i")
 </template>
 
@@ -26,4 +26,7 @@ export default {
 <style lang="sass" scoped>
 .auditImg
   position: relative
+.auditImage // Add this to your code
+  max-width: 100% // image will scale according to container width
+  height: auto // maintain the aspect ratio of the image
 </style>

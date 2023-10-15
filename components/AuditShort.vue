@@ -1,9 +1,9 @@
 <template lang="pug">
-  v-col
+  v-col(lg="4")
     router-link(:to="{ name: 'audits-audit', params: { audit: audit.name }}")
       v-img(:src="getLogoUrl")
-      p {{audit.name}}
-      p {{audit.description}}
+      p#name.mt-3.mb-1 {{audit.name}}
+      p#description {{audit.description}}
 </template>
 <script>
 export default {
@@ -15,3 +15,17 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+#name
+  font-size: 19px
+  font-style: normal
+  font-weight: 500
+  line-height: normal
+
+#description
+  font-size: 16px
+  font-style: normal
+  font-weight: 400
+  line-height: normal
+</style>

@@ -2,9 +2,15 @@
   "description": "Short description",
   "fullDescription": "Full description",
   "points": [
-    "big description",
-    "big description",
-    "big description",
-    "big description"
+    {
+      "x": 1000,
+      "y": 100,
+      "description": "Very long description"
+    },
+    {
+      "x": 2000,
+      "y": 200,
+      "description": "Very long description"
+    }
   ]
 }

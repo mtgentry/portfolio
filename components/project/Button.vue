@@ -22,4 +22,5 @@ export default {
   font-size: 23px
   line-height: 30px
   text-transform: capitalize
+  letter-spacing: unset
 </style>
