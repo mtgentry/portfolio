@@ -85,7 +85,7 @@
   color: white;
   border-radius: 30px;
   height: 60px;
-  width: 173px;
+  max-width: 173px;
   font-weight: 400;
   font-size: 23px;
   transition: all 0.01s ease-in-out 0s;
@@ -204,7 +204,7 @@
 }
 
 #mc_embed_signup form {
- width:334px;
+ max-width:334px;
 }
 
 

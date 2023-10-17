@@ -3,13 +3,13 @@
   "fullDescription": "Full description",
   "points": [
     {
-      "x": 1000,
-      "y": 100,
+      "x": 90,
+      "y": 15,
       "description": "Very long description"
     },
     {
-      "x": 2000,
-      "y": 200,
+      "x": 20,
+      "y": 25,
       "description": "Very long description"
     }
   ]
