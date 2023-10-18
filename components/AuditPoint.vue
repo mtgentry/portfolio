@@ -80,6 +80,7 @@ export default {
   border-radius: 0 100% 100% 100%
   font-size: 25px
   font-family: Resist Sans, serif
+  padding-bottom:4px
 
 .description
   background-color: #1F00DC
