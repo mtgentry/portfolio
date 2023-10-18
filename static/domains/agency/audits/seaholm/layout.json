@@ -1,16 +1,62 @@
 {
   "description": "Short description",
-  "fullDescription": "Full description",
+  "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue erat nec purus viverra tincidunt. Integer dapibus sit amet quam sit amet mollis. Proin ultrices turpis id rutrum auctor. Suspendisse venenatis felis a justo pretium bibendum. Ut vitae maximus enim.",
   "points": [
     {
-      "x": 90,
-      "y": 15,
-      "description": "Very long description"
+      "x": 18,
+      "y": 2.5,
+      "description": "People new to the brand might get confused by the different watches. Instead, consider grouping them all under one 'Shop' tab in the navigation. This lets everyone see all options side by side and choose their favorite."
     },
     {
-      "x": 20,
-      "y": 25,
-      "description": "Very long description"
+      "x": 60,
+      "y": 2.5,
+      "description": "The main menu's white text is blending with the cloudy background, making it less legible."
+    },
+    {
+      "x": 48,
+      "y": 9,
+      "description": "Your logo might hold significance for you, but most visitors probably don't feel the same. Consider scaling it down or removing it."
+    },
+    
+     {
+      "x": 75,
+      "y": 12,
+      "description": "I think transitioning to premium photography would offer a more elevated representation of your brand than the current video."
+    },
+    
+    {
+      "x": 55,
+      "y": 21.2,
+      "description": "This headline isn't needed. It doesn't reinforce the brand and it forces the user to scroll  down the page an extra 200px to see the watches."
+    },
+    {
+      "x": 62,
+      "y": 41.5,
+      "description": "The visual design of this section could be improved. When center aligned text is more than 15 words long, it becomes difficult to read."
+    },
+    {
+      "x": 40,
+      "y": 50,
+      "description": "This data about the product's durability is impressive. It could be a key differentiator. I would recommend adding a performance section to the main navigation."
+    },
+      {
+      "x": 50,
+      "y": 64.5,
+      "description": "These small logos aren't very effective as page breaks."
+    },
+    {
+      "x": 63,
+      "y": 83,
+      "description": "These reviews are great. But they're hidden in a carousel, where many people might miss them. Research indicates that carousels often see limited interaction, with the majority of users only noticing the first slide. Considering putting the reviews on the product pages where more people will see them."
     }
+
+
+
+
+
+
+
+
+
   ]
 }

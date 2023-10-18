@@ -71,23 +71,23 @@ export default {
   position: absolute
 
 .point
-  height: 60px
-  width: 60px
+  height: 50px
+  width: 50px
   display: flex
   justify-content: center
   align-items: center
   background-color: #1F00DC
   border-radius: 0 100% 100% 100%
-  font-size: 28.996px
-  font-family: Inter, serif
+  font-size: 25px
+  font-family: Resist Sans, serif
 
 .description
   background-color: #1F00DC
   padding: 15px
   width: 240px
   color: #FFF
-  font-family: Inter, serif
-  font-size: 17.573px
+  font-family: Resist Sans, serif
+  font-size: 15px
   transition: opacity 1s ease-in-out
   position: absolute
   top: 60px
