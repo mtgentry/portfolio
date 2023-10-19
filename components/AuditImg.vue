@@ -3,7 +3,7 @@
     v-col(cols="12")
       div.d-flex.justify-center
         div.auditImg(v-show="imgLoaded" ref="img")
-          img.auditImage(:src="imgSrc" :alt="imgAlt || ''")
+          img.auditImage(:src="imgSrc" :alt="imgAlt || ''" @mousedown="disableActivePoint")
           AuditPoint(v-for="(point, i) in points" :key="i" :point="point" :i="i+1" v-if="imgLoaded" :height="height" :width="width")
 </template>
 
@@ -41,6 +41,12 @@ export default {
         this.height = this.$refs.img.clientHeight || 0,
           this.width = this.$refs.img.clientWidth || 0
       }
+    },
+    disableActivePoint() {
+      this.$store.commit('updateState', {
+          field: 'auditClicked',
+          value: null
+        });
     },
   }
 }

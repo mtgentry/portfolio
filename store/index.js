@@ -1,4 +1,16 @@
-const STATE_FIELDS = ["backgroundColor", "textColor", "homeBackgroundColor", "homeTextColor", "projects", "loading", "project", "layout", "audits", "auditLayout"];
+const STATE_FIELDS = [
+  "backgroundColor",
+  "textColor",
+  "homeBackgroundColor",
+  "homeTextColor",
+  "projects",
+  "loading",
+  "project",
+  "layout",
+  "audits",
+  "auditLayout",
+  "auditClicked"
+];
 
 export const state = () => ({
   backgroundColor: "#282725",
@@ -11,6 +23,7 @@ export const state = () => ({
   layout: null,
   audits: null,
   auditLayout: null,
+  auditClicked: null
 })
 
 export const mutations = {
