@@ -75,15 +75,16 @@ export default {
   max-width: 650px
 
 #bottomHeader
-  font-size: 30px
+  font-size: 34px
   font-weight: 500
   line-height: 148.5%
+  font-weight: bold
 
 #bottomSubheader
-  font-size: 23px
+  font-size: 21px
   font-weight: 400
   line-height: 136.5%
-  padding-bottom: 30px
+  padding-bottom: 39px
 
 .line
   display: flex

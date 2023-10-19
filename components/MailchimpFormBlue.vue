@@ -69,7 +69,7 @@
 }
 
 #mc_embed_signup .mc-field-group input::placeholder {
-  color: #fff;
+  color: #878EE9;
 }
 
 
@@ -90,7 +90,7 @@
 }
 
 #mc_embed_signup .button:hover{
-  background-color: #1F00DC;
+  background-color: #E7E8F9;
 
 
 
@@ -125,7 +125,8 @@
 #mc_embed_signup #mce-success-response {
 
   color: #fff;
-
+  font-size: 24px;
+font-weight: normal;
 }
 
 
