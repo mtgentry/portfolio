@@ -9,7 +9,8 @@ const STATE_FIELDS = [
   "layout",
   "audits",
   "auditLayout",
-  "auditClicked"
+  "auditClicked",
+  "paddingLayout"
 ];
 
 export const state = () => ({
@@ -23,7 +24,8 @@ export const state = () => ({
   layout: null,
   audits: null,
   auditLayout: null,
-  auditClicked: null
+  auditClicked: null,
+  paddingLayout: true
 })
 
 export const mutations = {

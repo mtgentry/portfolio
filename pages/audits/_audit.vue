@@ -47,10 +47,16 @@ export default {
     },
   },
   async mounted() {
+    this.$store.commit('updateState', {field: 'paddingLayout', value: false})
     if (!this.audits) {
       await this.fetchAuditLayout()
     }
     await this.getAudit()
+  },
+  destroyed() {
+    setTimeout(() => {
+      this.$store.commit('updateState', {field: 'paddingLayout', value: true})
+    }, 1000)
   },
 }
 </script>
@@ -58,7 +64,7 @@ export default {
 <style lang="sass" scoped>
 .audit
   color: #FFFFFF
-  padding: 200px 0 0 0
+  padding: 0
 #fullDescription
   padding-bottom: 100px
 .container

@@ -1,5 +1,6 @@
 <template lang="pug">
-  v-app#app.display-animation(ref="app" :style=`{backgroundColor: bgColor, color: mainTextColor}` :class="{'loaded': !loading}")
+  v-app#app.display-animation(ref="app" :style=`{backgroundColor: bgColor, color: mainTextColor}`
+    :class="{'loaded': !loading, 'paddingLayout': paddingLayout}")
     v-app-bar(fixed app :style=`{backgroundColor: bgColor, color: txColor}` flat ref="navbar")
       nuxt-link(to="/")
         v-toolbar-title
@@ -85,7 +86,7 @@ export default {
     homePage() {
       return this.$route.path === "/" || this.$route.path === "/work"
     },
-    ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'loading', 'layout'])
+    ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'loading', 'layout', 'paddingLayout'])
   },
 
 }
@@ -129,7 +130,6 @@ p
 
 
 #app
-  padding: 0 34px
   transition: background-color 1s ease-in-out, opacity 1s ease-in-out, color 1s ease-in-out
 
   @media (max-width: 768px)
@@ -167,4 +167,7 @@ html, body
   transition: opacity 1s
 .fade-enter, .fade-leave-to
   opacity: 0
+
+.paddingLayout
+  padding: 0 34px
 </style>
