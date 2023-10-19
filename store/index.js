@@ -24,7 +24,7 @@ export const state = () => ({
   layout: null,
   audits: null,
   auditLayout: null,
-  auditClicked: null,
+  auditClicked: 1,
   paddingLayout: true
 })
 

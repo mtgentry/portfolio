@@ -56,6 +56,7 @@ export default {
 .auditImg
   position: relative
 .auditImage
-  max-width: 100%
+  max-width: 900px
+  width: 100%
   height: auto
 </style>

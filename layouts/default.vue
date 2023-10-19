@@ -127,13 +127,8 @@ export default {
 p
   font-size: 20px
 
-
-
 #app
   transition: background-color 1s ease-in-out, opacity 1s ease-in-out, color 1s ease-in-out
-
-  @media (max-width: 768px)
-    padding: 0 10px
 
   a
     color: inherit
@@ -144,11 +139,6 @@ p
 
   main
     min-height: 100vh
-
-
-
-
-
 
 .theme--dark.v-footer
   color: inherit
@@ -170,4 +160,7 @@ html, body
 
 .paddingLayout
   padding: 0 34px
+
+  @media (max-width: 768px)
+    padding: 0 10px
 </style>

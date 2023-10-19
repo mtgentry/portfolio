@@ -1,26 +1,30 @@
 <template lang="pug">
   v-row.audit(justify="center" align="center" v-if="audit")
+    v-col.layoutPadding.d-flex.justify-center.align-center(cols="12")
+      Top(:text="audit.fullDescription")
     v-col(cols="12")
-      p#fullDescription {{ audit.fullDescription }}
       .points
         AuditImg(:imgSrc="auditImage" :points="audit.points")
-    v-col(cols="12")
+    v-col.layoutPadding(cols="12")
       div.line
-    v-col.d-flex.align-center.flex-column(cols="12")
-      div.container
-        h1#bottomHeader Want more case studies?
-        h2#bottomSubheader Our client-approved case studies offer real-world insights. Subscribe below to receive them as they become available.
-    v-col.d-flex.justify-center.align-center.flex-column.py-5(cols="12")
-      MailchimpForm.container
-    v-col(cols="12")
+    v-col#formBlue(cols="12")
+      v-row
+        v-col.d-flex.align-center.flex-column(cols="12")
+          div.px-5.formText
+            h1#bottomHeader Want more case studies?
+            h2#bottomSubheader Our client-approved case studies offer real-world insights. <br> Subscribe below to receive them as they become available.
+            MailchimpFormBlue
+    v-col#footer(cols="12")
       Footer
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import Top from "@/components/project/Top.vue";
 
 export default {
   name: 'auditDetail',
+  components: {Top},
   data() {
     return {
       audit: null,
@@ -79,6 +83,7 @@ export default {
   font-size: 23px
   font-weight: 400
   line-height: 136.5%
+  padding-bottom: 30px
 
 .line
   display: flex
@@ -94,4 +99,20 @@ export default {
 
 .py-5
   padding-bottom: 100px
+
+#formBlue
+  background-color: #1F00DC
+  padding: 100px 0 180px 0
+
+  @media (max-width: 600px)
+    padding: 15px 0
+
+  .formText
+    max-width: 730px
+
+.layoutPadding
+  padding: 12px 46px
+
+#footer
+  padding: 0 46px
 </style>
