@@ -7,7 +7,7 @@
           Logo(:color="txColor")
       v-spacer
       span.pr-3(v-for="url in getUrls" :key="url")
-        //NuxtLink(:to="url") {{ formatUrl(url) }}
+        NuxtLink(:to="url") {{ formatUrl(url) }}
     v-main.pa-0
       v-container(fluid)
         Nuxt

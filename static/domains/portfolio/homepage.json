@@ -9,5 +9,8 @@
     "bedtime",
     "mojave",
     "cliffwater"
+  ],
+  "navBar": [
+    "articles"
   ]
 }
