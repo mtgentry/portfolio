@@ -11,3 +11,27 @@ export default {
   },
 };
 </script>
+
+
+<style lang="sass" >
+.agency
+  h1
+    padding-bottom: 50px!important
+
+    &:nth-child(2)
+      margin-bottom: 138px!important
+    &:nth-child(3)
+      margin-bottom: 88px!important
+    &:nth-child(4)
+      padding-bottom: 38px!important
+      top: 138px!important
+    p
+      margin: 0!important
+      padding-bottom: 38px!important
+  #button
+    margin-bottom: 138px!important
+  #video
+    margin-bottom: 138px!important
+  hr
+    margin-bottom: 138px!important
+</style>

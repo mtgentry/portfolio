@@ -1,11 +1,15 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   v-row.section(:class="{ slim: !section.media, 'slim-padding': slim_padding }")
-    v-col(v-if="section.text" :data-aos="section.animation ? section.animation : 'fade-up'")
-      String(:texts="section.text" :size="section.size" :title="section.title")
+    v-col(v-if="section.text || section.title" :data-aos="section.animation ? section.animation : 'fade-up'")
+      String(:texts="section.text" :size="section.size" :title="section.title" :align="section.align")
+    v-col(v-if="section.textBox" :data-aos="section.animation ? section.animation : 'fade-up'")
+      TextBox(:textBox="section.textBox")
     v-col(v-else-if="section.media" :data-aos="media.animation ? media.animation : 'fade-up'"
       v-for="media in section.media" :cols="media.cols ? media.cols : 12 / media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
+    v-col(v-else-if="section.line")
+      hr
     v-col(v-else-if="section.quote" :data-aos="section.animation ? section.animation : 'fade-up'")
       Quote(:quote="section.quote")
     v-col.w-100(v-else-if="section.credits" :data-aos="section.animation ? section.animation : 'fade-up'")
@@ -51,6 +55,7 @@ import CTA from "@/components/CTA.vue";
 import Pricing from "@/components/Pricing.vue";
 import Faq2 from "@/components/Faq2.vue";
 import PlansCTA from "@/components/PlansCTA.vue";
+import TextBox from "@/components/project/TextBox.vue";
 
 export default {
   props: {
@@ -64,6 +69,7 @@ export default {
     }
   },
   components: {
+    TextBox,
     String,
     Quote,
     Media,
@@ -108,4 +114,6 @@ export default {
   [data-aos=fade-up]
     transform: translate3d(0, 30px, 0)
 
+hr
+  border-color: #83807C
 </style>

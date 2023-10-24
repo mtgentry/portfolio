@@ -7,44 +7,104 @@
       "size": "h1",
       "title": "Let’s build a landing page to help you 2-3x your sales",
       "animation": "disable",
-      "text": ["...without wasting thousands of dollars on marketing and years of testing poor quality designs that don't work."
+      "text": ["Without wasting thousands of dollars on marketing and years of testing poor quality designs that don't work."
       ]
     },
-
-
-
-
     {
-  "calendly": 1,
-  "animation": "fade"
-},
-
-{
-  "media": [
+      "button": {
+        "text": "BOOK A FREE CALL",
+        "link": "https://calendly.com/hoopladesign/30min",
+        "target": "_blank",
+        "align": "center",
+        "smaller": 1,
+        "icon": " mdi-chevron-right"
+      },
+      "animation": "disable"
+    },
     {
-      "name": "http://localhost:3000/domains/agency/pages/unlimited_design/media/reel.mp4",
-      "position": "center",
+      "media": [
+        {
+          "name": "reel.mp4",
+          "position": "center",
+          "animation": "disable"
+        }
+      ]
+    },
+    {
+      "video": 1,
+      "animation": "disable"
+    },
+    {
+      "button": {
+        "text": "BOOK A FREE CALL",
+        "link": "https://calendly.com/hoopladesign/30min",
+        "target": "_blank",
+        "align": "center",
+        "smaller": 1,
+        "icon": " mdi-chevron-right"
+      },
+      "animation": "disable"
+    },
+    {
+      "line": 1
+    },
+    {
+      "title": "What Clients Say",
+      "size": "h1",
+      "align": "center"
+    },
+    {
+      "quote": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis ligula sapien, sed ornare sapien fermentum.",
+        "author": "Sam Smith, Acme Corp"
+      }
+    },
+    {
+      "line": 1
+    },
+    {
+      "title": "What You Get",
+      "size": "h1",
+      "align": "center"
+    },
+    {
+      "textBox": {
+        "title": "PREMIUM DESIGN",
+        "text": "First impressions matter. Our team ensures your website looks great and performs flawlessly on any device, helping you reach your audience wherever they are."
+      }
+    },
+    {
+      "textBox": {
+        "title": "INNOVATIVE UI/UX",
+        "text": "We make sure the look and feel of your site or app is fresh and user-friendly by focusing on modern trends, animation, and bold typography. This helps you stand out from the crowd and creates a design that people will love."
+      }
+    },
+    {
+      "textBox": {
+        "title": "WORK THAT CONVERTS",
+        "text": "We make sure the look and feel of your site or app is fresh and user-friendly by focusing on modern trends, animation, and bold typography. This helps you stand out from the crowd and creates a design that people will love."
+      }
+    },
+    {
+      "title": "Book a Call",
+      "size": "h1",
+      "align": "center"
+    },
+    {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum consectetur enim, elementum suscipit mi scelerisque in.",
+      "size": "h5"
+    },
+    {
+      "button": {
+        "text": "BOOK A FREE CALL",
+        "link": "https://calendly.com/hoopladesign/30min",
+        "target": "_blank",
+        "align": "center",
+        "smaller": 1,
+        "icon": " mdi-chevron-right"
+      },
       "animation": "disable"
     }
-  ]
-},
-
-
-
-
-
-{
-  "video": 1,
-  "animation": "disable"
-}
-
-
-
-
-
-
-
-   
   ]
 }
 

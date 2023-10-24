@@ -1,12 +1,12 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  v-row
-    v-col
+  v-row#string
+    v-col(:class="`text-${align || 'left'}`")
       h1.font-weight-bold(v-if="size === 'h1'" v-html="title")
       h2.font-weight-bold(v-else-if="size === 'h2'" v-html="title")
       h3.font-weight-bold(v-else-if="size === 'h3'" v-html="title")
       h4.font-weight-bold(v-else-if="size === 'h4'" v-html="title")
-      h5.font-weight-bold(v-else-if="size === 'h5'" v-html="title")
+      h5(v-else-if="size === 'h5'" v-html="title")
       h6.font-weight-bold(v-else-if="size === 'h6'" v-html="title")
       p(v-for="text in texts" v-html="text")
 
@@ -17,7 +17,7 @@ export default {
   props: {
     texts: {
       type: Array,
-      required: true
+      required: false
     },
     size: {
       type: String,
@@ -25,7 +25,10 @@ export default {
     },
     title: {
       type: String,
-
+    },
+    align: {
+      type: String,
+      default: 'left'
     }
   },
 }
@@ -50,6 +53,13 @@ h3
 h4
   font-weight: 500
   font-size: 33px !important
+
+h5
+  font-family: Resist Sans
+  font-size: 30px
+  font-style: normal
+  font-weight: 200
+  line-height: 120%
 
  
 

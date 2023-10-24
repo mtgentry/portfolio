@@ -1,8 +1,10 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   v-row
-    v-col
-      v-btn#button(:href="button.link") {{ button.text }}
+    v-col(:class="`text-${button.align || 'left'}`")
+      v-btn#button(:href="button.link" :class="{smaller: button.smaller}" :target="button.target || '_self'")
+        | {{ button.text }}
+        v-icon(v-if="button.icon") {{ button.icon }}
 </template>
 
 <script>
@@ -23,4 +25,14 @@ export default {
   line-height: 30px
   text-transform: capitalize
   letter-spacing: unset
+
+.smaller
+  font-family: Work Sans, serif!important
+  font-size: 13px!important
+  font-style: normal!important
+  font-weight: 400!important
+  line-height: 100%!important
+  letter-spacing: 0.26px!important
+  height: 40px!important
+
 </style>

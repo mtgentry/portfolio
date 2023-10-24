@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  div.d-flex(v-if="is_video" :style=`{'justify-content': media.position || ''}`)
+  div#video.d-flex(v-if="is_video" :style=`{'justify-content': media.position || ''}`)
     video.item(muted playsinline loop ref="video" :style=`{"width": media.width || "100%"}`)
       source(:src="mediaPath" type="video/mp4")
       span Your browser does not support the video tag.
