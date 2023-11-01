@@ -11,9 +11,9 @@
     "cliffwater"
   ],
   "navBar": [
-    "work",
-    "articles",
     "IGNORED: book",
+    "IGNORED: articles",
+    "IGNORED: work",
     "IGNORED: contact"
   ]
 }
