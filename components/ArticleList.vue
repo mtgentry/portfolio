@@ -9,6 +9,9 @@ export default {
   data() {
     return {
       articles: {
+        'one_big_thing': 'Only be Creative with One Big Thing',
+        'the_art_of_hanging_christmas_lights': 'The Art of Hanging Christmas Lights',
+        'estimating_crowd_size': 'Estimating Crowd Size',
         'dont_use_pure_black': 'Dont use pure black',
         'dont_combine_illustrations_and_photos': 'Dont combine illustrations and photos',
         'how_to_use_line_height': 'How to use line-height',
@@ -17,6 +20,8 @@ export default {
         'how_to_use_a_concept_in_design': 'How to use a concept in design',
         'button_design_best_practices': 'Button design best practices',
         'the_attention_rule': 'The Attention Rule',
+
+
       }
     }
   },

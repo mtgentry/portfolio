@@ -18,7 +18,7 @@ export default {
       if (this.$route.path.includes('work')) {
         color = "#282725"
       } else {
-        color = "#FFFFFF"
+        color = "#948F8B"
       }
       return color
     },
@@ -35,6 +35,6 @@ export default {
   display: flex
   align-items: center
   height: 100px
-  border-top: #FFFFFF 1px solid
+  border-top: #948F8B 1px solid
   transition: border-top-color 1s ease-in-out, opacity 1s
 </style>

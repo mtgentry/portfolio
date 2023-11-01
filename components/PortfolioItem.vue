@@ -31,6 +31,7 @@ export default {
 
 .categories
   font-size: 16px
+  color: #948F8B
 
 
 .item
