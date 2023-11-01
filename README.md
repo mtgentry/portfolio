@@ -103,6 +103,8 @@ H1,H2,H3 is defined in components/project/String.vue
 
 Paragraph text is defined in layouts/default.vue
 
+Homepage category text styles defined in components/PortfolioItem
+
 ## Deploy
 
 Once you are ready to update the website, be sure to have git installed, pushing a new commit will update the website.

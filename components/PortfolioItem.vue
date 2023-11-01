@@ -23,13 +23,19 @@ export default {
 
 
 .title
-
-  font-size: 19px
-  padding-top: 4px
+  
+  font-family: 'Resist Sans', sans-serif
+  font-weight: 700
+  font-size: 4px
+  padding-top: 12px ! important
   line-height: 110%
+ 
+
 
 
 .categories
+
+  font-family: 'Resist Sans', sans-serif
   font-size: 16px
   color: #948F8B
 
