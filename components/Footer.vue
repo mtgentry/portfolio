@@ -1,4 +1,4 @@
-<!-- Please remove this file from your project -->
+<!-- Please remove this file from your project  -->
 <template lang="pug">
   v-footer#footer(absolute app :style=`{borderTopColor: mainTextColor, color: mainTextColor}` v-if="layout")
     span &copy; #{new Date().getFullYear()}
