@@ -26,7 +26,7 @@ export default {
   
   font-family: 'Resist Sans', sans-serif
   font-weight: 700
-  font-size: 4px
+  font-size: 49px
   padding-top: 12px ! important
   line-height: 110%
  
