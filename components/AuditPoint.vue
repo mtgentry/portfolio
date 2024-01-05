@@ -1,9 +1,9 @@
 <template lang="pug">
-  div
-    div.overlay(ref="scroll" :style="mirrorStyle" @mousedown="onPointClick")
-      div.point(:class="{'mirror': overflow }") {{ i }}
-    div.overlay(ref="scroll" :style="primaryStyle" @mousedown="disablePoint")
-      div.description(:class="{isMiddleViewport: isMiddleViewport, isActive: auditClicked === this.i}") {{ point.description }}
+ // div
+ //   div.overlay(ref="scroll" :style="mirrorStyle" @mousedown="onPointClick")
+ //     div.point(:class="{'mirror': overflow }") {{ i }}
+ //   div.overlay(ref="scroll" :style="primaryStyle" @mousedown="disablePoint")
+   //   div.description(:class="{isMiddleViewport: isMiddleViewport, isActive: auditClicked === this.i}") {{ point.description }}
 </template>
 
 <script>

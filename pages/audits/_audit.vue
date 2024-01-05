@@ -3,7 +3,6 @@
     v-col.layoutPadding.d-flex.justify-center.align-center(cols="12")
       Top(:text="audit.fullDescription")
 
-    
     // Section for the hero images with headings
     v-row
       v-col(cols="6")
@@ -15,14 +14,17 @@
            img.right-hero(:src="getImagePath(audit.layout[0].media[1].name)" alt="audit.layout[0].media[1].title")
            div.overlay-heading After
 
-
-
     // New section for title and text
-    v-col(cols="12" v-if="audit.layout && audit.layout[1].title")
+    v-col(v-for="(section, index) in audit.layout" :key="index")
       .centered-section
-        h2 {{ audit.layout[1].title }}
-        div(v-for="paragraph in audit.layout[1].text" :key="paragraph")
+        h2 {{ section.title }}
+        div(v-for="paragraph in section.text" :key="paragraph")
+         
+
           p {{ paragraph }}
+         
+        
+        
 
     v-col(cols="12")
       .points
@@ -44,9 +46,9 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 import Top from "@/components/project/Top.vue";
-import AuditImg from "@/components/AuditImg.vue"; // Assuming you have this component
-import MailchimpFormBlue from "@/components/MailchimpFormBlue.vue"; // Assuming you have this component
-import Footer from "@/components/Footer.vue"; // Assuming you have this component
+import AuditImg from "@/components/AuditImg.vue";
+import MailchimpFormBlue from "@/components/MailchimpFormBlue.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: 'auditDetail',
@@ -70,34 +72,37 @@ export default {
   methods: {
     ...mapActions(['fetchAuditLayout']),
     async getAudit() {
-      const auditName = this.$route.params.audit
-      let audit = this.audits?.find(a => a.name === auditName)
+      const auditName = this.$route.params.audit;
+      let audit = this.audits?.find(a => a.name === auditName);
       if (!audit) {
         audit = {
           name: auditName,
           auditHeader: 'Audit not found',
-        }
+        };
       }
-      this.audit = audit
+      this.audit = audit;
     },
     getImagePath(imageName) {
       return `/domains/agency/audits/${this.audit.name}/media/${imageName}`;
     },
+   
   },
   async mounted() {
-    this.$store.commit('updateState', {field: 'paddingLayout', value: false})
+    this.$store.commit('updateState', {field: 'paddingLayout', value: false});
     if (!this.audits) {
-      await this.fetchAuditLayout()
+      await this.fetchAuditLayout();
     }
-    await this.getAudit()
+    await this.getAudit();
+    console.log('Audit data:', this.audit);
   },
   destroyed() {
     setTimeout(() => {
-      this.$store.commit('updateState', {field: 'paddingLayout', value: true})
-    }, 1000)
+      this.$store.commit('updateState', {field: 'paddingLayout', value: true});
+    }, 1000);
   },
 }
 </script>
+
 
 
 <style lang="sass" scoped>
