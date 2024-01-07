@@ -93,6 +93,15 @@ export default {
 </script>
 
 <style lang="sass">
+
+
+resist-sans-text-medium.ttf
+
+@font-face
+  font-family: 'Resist Sans'
+  src: url('/fonts/resist-sans-text-light.ttf')
+  font-weight: 100
+
 @font-face
   font-family: 'Resist Sans'
   src: url('/fonts/resist-sans-text-regular.ttf')

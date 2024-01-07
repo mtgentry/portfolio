@@ -64,6 +64,13 @@ h5
   line-height: 120%
 
  
+p
+  font-family: Resist Sans
+  font-size: 30px
+  text-align: center
+  margin-top: -25px
+  font-weight: 100
+  line-height: 120%
 
 
 

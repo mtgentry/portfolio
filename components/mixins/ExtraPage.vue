@@ -70,8 +70,15 @@ export default {
 #extra
   padding: 100px 0
 
+p
+  font-size: 30px
+
 .col
   display: flex
   align-items: center
   flex-direction: column
+
+
+
+
 </style>

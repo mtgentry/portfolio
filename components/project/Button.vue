@@ -18,21 +18,29 @@ export default {
   background-color: #2805FF
   color: white
   border-radius: 30px
-  height: 60px
-  width: 260px
+  height: 50px
+  width: 270px
   font-weight: 400
   font-size: 23px
   line-height: 30px
   text-transform: capitalize
   letter-spacing: unset
+  padding-top: 7px
+  padding-bottom: 8px
+  padding-right: 20px
+  padding-left: 26px
 
 .smaller
-  font-family: Work Sans, serif!important
-  font-size: 13px!important
-  font-style: normal!important
-  font-weight: 400!important
-  line-height: 100%!important
-  letter-spacing: 0.26px!important
-  height: 40px!important
+  font-family: Resist Sans
+  font-size: 15px!important
+  font-weight: 100!important
+  letter-spacing: 0.75px!important
+
+.v-icon
+  font-size: 17px!important
+  padding-left:5px
+  align-items: center
+
+ 
 
 </style>

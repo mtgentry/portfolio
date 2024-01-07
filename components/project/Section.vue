@@ -116,4 +116,5 @@ export default {
 
 hr
   border-color: #83807C
+  border: .5px solid  #83807C
 </style>
