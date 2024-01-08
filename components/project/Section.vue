@@ -12,12 +12,16 @@
       hr
     v-col(v-else-if="section.quote" :data-aos="section.animation ? section.animation : 'fade-up'")
       Quote(:quote="section.quote")
+  
+
+
     v-col.w-100(v-else-if="section.credits" :data-aos="section.animation ? section.animation : 'fade-up'")
       Credits(:credits="section.credits")
     v-col.w-100(v-else-if="section.faq" :data-aos="section.animation ? section.animation : 'fade-up'")
       Faq(:faqs="section.faq")
     v-col.w-100(v-else-if="section.button" :data-aos="section.animation ? section.animation : 'fade-up'")
       Button(:button="section.button")
+  
     v-col.w-100(v-else-if="section.form" :data-aos="section.animation ? section.animation : 'fade-up'")
       MailchimpForm
     v-col.w-100(v-else-if="section.svgs" :data-aos="section.animation ? section.animation : 'fade-up'")
@@ -37,6 +41,7 @@
     v-col.w-100(v-else-if="section.beforeafter" :data-aos="section.animation ? section.animation : 'fade-up'")
       beforeafter
     v-col(v-else-if="section.media" :data-aos="media.animation === 'disable' ? null : (media.animation ? media.animation : 'fade-up')")
+
 
 
 
@@ -86,11 +91,22 @@ export default {
 <style lang="sass" scoped>
 
 .section
-  padding-bottom: 140px
+  padding-top: 10px
   min-width: 50%
+  
 
   &.slim-padding
-    padding-bottom: 0px
+    padding-top: 10px
+
+
+  // rule line
+  &:nth-child(7).slim-padding 
+    
+    height: 100px
+
+  // what you get
+  &:nth-child(8).slim-padding 
+    
 
   p:last-child
     margin-bottom: 0
@@ -114,7 +130,10 @@ export default {
   [data-aos=fade-up]
     transform: translate3d(0, 30px, 0)
 
+// rule line 
 hr
   border-color: #83807C
-  border: .5px solid  #83807C
+  border: .5px solid #83807C
+
 </style>
+

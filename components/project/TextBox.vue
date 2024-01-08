@@ -18,22 +18,24 @@ export default {
 .textBox
   padding: 50px
   background-color: unset
-  border: 1px solid #ffffff
+  border: .5px solid  #83807C
+  font-family: 'Resist Sans'
 
   .textBoxTitle
     color: #ffffff
-    font-family: Work Sans, serif
+    font-family: 'Resist Sans'
     font-size: 25px
     font-style: normal
-    font-weight: 600
+    font-weight: 700
     line-height: 120%
 
   .textBoxText
-    font-family: Work Sans, serif
+    font-family: 'Resist Sans'
     font-size: 20px
     font-style: normal
-    font-weight: 300
-    line-height: 124.5%
+    font-weight: 100
+    line-height: 130%
+    color: #ffffff
 
 .col
   padding: 0 0 50px 0 !important

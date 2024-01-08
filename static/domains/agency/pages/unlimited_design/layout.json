@@ -12,7 +12,7 @@
     },
     {
       "button": {
-        "text": "BOOK A FREE CALL",
+        "text": "SCHEDULE A FREE CALL",
         "link": "https://calendly.com/hoopladesign/30min",
         "target": "_blank",
         "align": "center",
@@ -34,38 +34,33 @@
       "video": 1,
       "animation": "disable"
     },
-    {
-      "button": {
-        "text": "BOOK A FREE CALL",
-        "link": "https://calendly.com/hoopladesign/30min",
-        "target": "_blank",
-        "align": "center",
-        "smaller": 1,
-        "icon": " mdi-chevron-right"
-      },
-      "animation": "disable"
-    },
-    {
-      "line": 1
-    },
+    
+
     {
       "title": "What Clients Say",
       "size": "h1",
-      "align": "center"
+      "align": "center",
+      "animation": "disable"
     },
     {
       "quote": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis ligula sapien, sed ornare sapien fermentum.",
-        "author": "Sam Smith, Acme Corp"
+        "text": "Initially, the potential in our website seemed fully tapped — or so we thought. But Mason he helped us see what we couldn't. Not only did the site redesign redefine our aesthetic appeal, but it also catapulted our conversion rates. We couldn't be happier.",
+        "animation": "disable",
+        "author": "Sara M"
+        
       }
     },
+
+   
     {
-      "line": 1
+      "line": 1,
+      "animation": "disable"
     },
     {
       "title": "What You Get",
       "size": "h1",
-      "align": "center"
+      "align": "center",
+      "animation": "disable"
     },
     {
       "textBox": {
@@ -85,18 +80,14 @@
         "text": "We make sure the look and feel of your site or app is fresh and user-friendly by focusing on modern trends, animation, and bold typography. This helps you stand out from the crowd and creates a design that people will love."
       }
     },
+    
     {
-      "title": "Book a Call",
-      "size": "h1",
-      "align": "center"
-    },
-    {
-      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum consectetur enim, elementum suscipit mi scelerisque in.",
+      "title": "Ready to double your conversions? Let's chat.",
       "size": "h5"
     },
     {
       "button": {
-        "text": "BOOK A FREE CALL",
+        "text": "SCHEDULE A FREE CALL",
         "link": "https://calendly.com/hoopladesign/30min",
         "target": "_blank",
         "align": "center",

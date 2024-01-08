@@ -29,8 +29,7 @@ export default {
   @media (max-width: 768px)
     padding-top: 80px
     padding-bottom: 80px
-p
-  font-size: 300px
+
 
 
 

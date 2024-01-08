@@ -38,11 +38,7 @@ export default {
 
 
 h1
-  font-weight: 500
-  font-size: 50px
-  line-height: 120%
-  padding-bottom: 10px
-  text-align: center
+
 h2
   font-size: 35px
   line-height: 120%
@@ -62,15 +58,18 @@ h5
   font-style: normal
   font-weight: 200
   line-height: 120%
+  text-align: center
+  margin-top: 50px
+  padding-bottom: 50px
 
  
 p
   font-family: Resist Sans
   font-size: 30px
   text-align: center
-  margin-top: -25px
   font-weight: 100
   line-height: 120%
+  margin-bottom: 50px
 
 
 
