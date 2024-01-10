@@ -33,7 +33,7 @@ export default {
 .smaller
   font-family: Resist Sans
   font-size: 15px!important
-  font-weight: 100!important
+  font-weight: 300!important
   letter-spacing: 0.75px!important
 
 .v-icon
