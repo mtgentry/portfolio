@@ -21,7 +21,6 @@
       Faq(:faqs="section.faq")
     v-col.w-100(v-else-if="section.button" :data-aos="section.animation ? section.animation : 'fade-up'")
       Button(:button="section.button")
-  
     v-col.w-100(v-else-if="section.form" :data-aos="section.animation ? section.animation : 'fade-up'")
       MailchimpForm
     v-col.w-100(v-else-if="section.svgs" :data-aos="section.animation ? section.animation : 'fade-up'")

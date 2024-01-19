@@ -1,0 +1,46 @@
+{
+  "description": "Short description",
+  "fullDescription": "Ana Luisa crafts sustainable jewelry with timeless elegance. We redesigned their website to match their ethos, focusing on visual appeal and user-friendly design. This transformation brings their commitment to quality and eco-friendliness to the forefront, offering an online experience that truly reflects the essence of the brand.",
+    "layout": [
+    {
+      "media": [
+        {
+          "name": "left_hero.png",
+          "title": "Left Hero Image"
+        },
+        {
+          "name": "right_hero.png",
+          "title": "Right Hero Image"
+        }
+      ]
+    },
+
+
+    {
+      "title": "What's Your One Big Thing? ",
+      "text": [
+        "Your ecommerce business has an endless supply of things that can be worked on.B ut usually, there's One Big Thing that, if you get it right, can really help your business grow. This is often something you already have a hunch about. The companies that grow the fastest are the ones that identify the most impactful roadblocks.",
+        "Your website probably has one or two things like this too. Fixing these will improve your conversions more than anything else. We call this your \"One Big Thing.\" For some, it might be streamlining the checkout flow. For others, it could be using better product photos."
+      ]
+    }
+
+
+
+    
+  ],
+
+
+
+  "points": [
+    {
+      "x": 12,
+      "y": 2.5,
+      "description": "Visitors new to the brand might get confused by the different watches in this navigation. Instead, consider grouping them all under one 'Shop' tab in the navigation. This will let them see all options side by side."
+    },
+    {
+      "x": 63,
+      "y": 83,
+      "description": "These reviews are great but they're hidden in a carousel, where many people might miss them. Research indicates that carousels often see limited interaction, with the majority of users only noticing the first slide. Considering putting the reviews on the product pages where more people will see them."
+    }
+  ]
+}
