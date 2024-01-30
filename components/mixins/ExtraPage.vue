@@ -3,8 +3,7 @@
     v-col(cols="12")
       Section(v-for="(section, i) in project.layout" slim_padding
         :section="section" :key="section.name" :style="{color: textColor}")
-    v-col(cols="12")
-      Footer
+    Footer
 </template>
 
 <script>
@@ -68,7 +67,7 @@ export default {
 
 <style lang="sass" scoped>
 #extra
-  padding: 100px 0
+  padding-top: 100px
 
 p
   font-size: 30px
@@ -77,8 +76,4 @@ p
   display: flex
   align-items: center
   flex-direction: column
-
-
-
-
 </style>

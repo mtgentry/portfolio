@@ -3,8 +3,7 @@
     v-col(cols="12")
       Header(:text="layout.header")
     PortfolioGroup(v-if="projects !== {}" v-for="project_name in Object.keys(projects)" :project="projects[project_name]" :key="project_name")
-    v-col(cols="12")
-      Footer
+    Footer
 </template>
 
 <script>

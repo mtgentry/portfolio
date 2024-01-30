@@ -4,8 +4,7 @@
       Top(:text="project.header")
     v-col(cols="12")
       Section(v-for="section in project.layout" :section="section" :key="section.name")
-    v-col(cols="12")
-      Footer
+    Footer
 
 </template>
 

@@ -16,8 +16,7 @@
     )
     v-col(cols="12")
       BookCall
-    v-col(cols="12")
-      Footer
+    Footer
 </template>
 
 <script>

@@ -4,8 +4,7 @@
       ArticleList
     v-col#article(cols="8")
       slot
-    v-col(cols="12")
-      Footer
+    Footer
 
 </template>
 

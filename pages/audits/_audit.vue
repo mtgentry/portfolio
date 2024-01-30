@@ -38,8 +38,7 @@
             h1#bottomHeader Want more case studies?
             h2#bottomSubheader Our client-approved case studies offer real-world insights. Subscribe below to receive them as they become available.
             MailchimpFormBlue
-    v-col#footer(cols="12")
-      Footer
+    Footer
 </template>
 
 <script>
