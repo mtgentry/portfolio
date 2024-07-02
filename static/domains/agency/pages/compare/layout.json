@@ -1,0 +1,44 @@
+{
+  "backgroundColor": "#222533",
+  "textColor": "#ffffff",
+  "seo_description": "How to Use Design to Grow Your Revenue – A Tabs case study",
+  "animation": "disable",
+  "layout": [
+   
+    {
+      "size": "h2",
+      "animation": "disable",
+      "title": "Before & After",
+      "text": [
+        "We created this photorealistic 3D product image (right) for Saint Jane. When we tested it in a Facebook ad against the original photo, our image performed 5.3% better."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "comparison.jpg",
+          "animation": "disable",
+          "position": "center",
+          "width": "80%"
+        }
+      ]
+    },
+    
+    
+    
+    {
+      "animation": "disable",
+      "text": ["--"]
+    },
+    {
+      "animation": "disable",
+      "size": "h2",
+      "title": "Want More Case Studies?",
+      "text": ["Our client-approved case studies offer real-world insights. Subscribe below to receive them as they become available."]
+    },
+    {
+      "form": 1,
+      "animation": "disable"
+    }
+  ]
+}
