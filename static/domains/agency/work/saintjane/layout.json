@@ -1,0 +1,93 @@
+{
+  "cover": {
+    "media": {
+      "name": "stjane_thumb.jpg"
+    },
+    "title": "St. Jane",
+    "categories": "Art Direction, Product Renderings"
+  },
+  "backgroundColor": "#E2C1B7",
+  "textColor": "#ffffff",
+  "header": "Few things will improve your sales more than great images. St. Jane is a premium skincare brand who knows this well. We partnered with them to create a series of stunning visuals that capture the essence of their brand. The result? A cohesive and compelling visual identity that resonates with discerning consumers, elevates the brand, and drives sales.",
+  "seo_description": "",
+  "layout": [
+    {
+      "media": [
+        {
+          "name": "jane_1.jpg",
+          "position": "center"
+         
+        }
+      ]
+    },
+    {
+      "title": "Stunning Product Photos Without a Studio",
+      "text": [
+        "All the images you see here were made with 3D software. Our process provides greater control and saves money. It is often faster than traditional photography – after your initial 3D models are created you can insert them in any environment."
+ 
+      ]
+    },
+
+
+    {
+
+
+      "media": [
+        {
+          "name": "jane_2.jpg",
+          "position": "left",
+          "width": "100%",
+          "cols": 8
+        },
+        {
+          "name": "jane_3.jpg",
+          "position": "left",
+          "width": "100%"
+        }
+      ]
+    },
+
+    {
+      "title": "Images Better Than Real Life",
+      "text": [
+
+        "In addition to creating images from scratch, we've also improved St. Janes existing catalog of images. Take a look at this photo from their collection below. Their original picture was okay, but we made it ten times better.",
+        "We first worked with St. Jane on product pictures, and now we also do lifestyle images (like the ones on this page). If you're an e-commerce store the need for high quality images never stops. That's why our unlimited design services might be a great fit."
+
+      ]
+    },
+
+
+
+    {
+
+
+      "media": [
+        {
+          "name": "jane_4.jpg",
+          "position": "left"
+        }
+      ]
+    },
+
+    {
+
+
+      "media": [
+        {
+          "name": "jane_5.jpg",
+          "position": "right"
+        }
+      ]
+    }
+
+
+
+
+
+
+  ]
+}
+
+
+

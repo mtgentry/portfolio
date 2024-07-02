@@ -143,7 +143,13 @@ export default {
   user-select: none
 
 p
+  font-family: Resist Sans
   font-size: 20px
+  text-align: left
+  font-weight: 300
+  line-height: 140%
+  margin-bottom: 50px
+
 
 #app
   transition: background-color 1s ease-in-out, opacity 1s ease-in-out, color 1s ease-in-out

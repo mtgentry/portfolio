@@ -44,10 +44,11 @@ h2
   line-height: 120%
   padding-bottom: 5px
 h3
-  font-weight: 500
-  font-size: 24px
+  font-weight: 100
+  font-size: 27px
   line-height: 100%
-  padding-bottom: 10px
+  padding-bottom: 20px
+  margin-top: 100px
 h4
   font-weight: 500
   font-size: 33px !important
@@ -62,14 +63,7 @@ h5
   margin-top: 50px
   padding-bottom: 50px
 
- 
-p
-  font-family: Resist Sans
-  font-size: 30px
-  text-align: center
-  font-weight: 100
-  line-height: 120%
-  margin-bottom: 50px
+
 
 
 

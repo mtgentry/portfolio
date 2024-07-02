@@ -19,12 +19,13 @@ export default {
 <style lang="sass" scoped>
 
 .top
+
   padding-top: 130px
   padding-bottom: 130px
   max-width: 80%
-  font-size: 24px
-  line-height: 160%
-  font-weight: 500
+  font-size: 40px
+  line-height: 130%
+  font-weight: 300
 
   @media (max-width: 768px)
     padding-top: 80px

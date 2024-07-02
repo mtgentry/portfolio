@@ -64,7 +64,7 @@ The structure of [layout.json](./static/work/francescas/layout.json) is:
     "position": "right", // left or center
     "width": "60%"
   },
-  "backgroundColor": "#6CAF82", // Project page backgaround color
+  "backgroundColor": "#6CAF82", // Project page background color
   "textColor": "#ffffff", // Project page header text color
   "header": "", // Project page header text
   "seo_description": "This is what google will show",
@@ -102,6 +102,9 @@ Be sure to have the json don't have errors. One typo can make the whole page cra
 H1,H2,H3 is defined in components/project/String.vue
 
 Paragraph text is defined in layouts/default.vue
+
+Intro text for individual project pages is in components/project/Top.vue
+
 
 Homepage category text styles defined in components/PortfolioItem
 
