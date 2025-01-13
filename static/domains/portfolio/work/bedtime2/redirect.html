@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Start Page</title>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the current timestamp in milliseconds
+      const now = new Date().getTime();
+      const twoHoursInMillis = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+
+      // Retrieve the last session timestamp from localStorage
+      const lastSessionTimestamp = localStorage.getItem("lastSessionTimestamp");
+
+      // Check if the session should reset
+      if (!lastSessionTimestamp || now - lastSessionTimestamp > twoHoursInMillis) {
+        // Start a new session by updating the timestamp
+        localStorage.setItem("lastSessionTimestamp", now);
+        // Redirect to NYTimes
+        window.location.href = "https://trello.com/b/apWjOXh0/personal";
+      } else {
+        // Within the 2-hour window, redirect to Google
+        window.location.href = "https://www.google.com";
+      }
+    });
+  </script>
+</head>
+<body>
+ <!-- 
+    This page acts as a custom start page in Safari for my work sessions. It regualary loads a to-do list to keep me on track. 
+  -->
+</body>
+</html>
