@@ -1,7 +1,8 @@
 <template>
   <div>
-    <!-- Empty div as we're just handling redirects -->
-  </div>
+     <!-- 
+    This page acts as a custom start page in Safari for my work sessions. It regualary loads a to-do list to keep me on track. 
+  -->
 </template>
 
 <script>
