@@ -10,13 +10,10 @@
   },
   "backgroundColor": "#F8F080",
   "textColor": "#282725",
-"header": "Choosing colors for a design project can be daunting. I created a tool to make it easy. Color Supply helps designers, illustrators, and developers pick colors for their projects.",
+  "header": "Color Supply is changing the way designers work with color. Experimentation brings color theory to life, helping designers build palettes with confidence.",
   "seo_description": "",
   "layout": [
-
-
-
-{
+    {
       "media": [
         {
           "name": "color_supply_wheel.jpg",
@@ -24,23 +21,17 @@
         }
       ]
     },
-
-
-
-{
-"title": "The Problem with Color Pickers",
+    {
+      "title": "The Problem with Color Pickers",
       "text": [
-        "Some tools like <a href='https://color.adobe.com' target='_blank'>Adobe Kuler </a> enable users to create colors at an atomic level. They're like a sniper rifle – they provide precise control but it comes at the expense of speed. That control is helpful if you have a color palette already in mind that you want to modify. But my research indicated most people picked colors from scratch.",
-        "Color Supply works differently by showing users premade color palettes. They can select multiple color palettes for their project and refine them later.",
-        "First you select one of ten color wheels. Each wheel has a theme with the default being used to demonstrate color theory."
 
-        
+        "Some tools, like Adobe Kuler, give users complete control over individual colors. They’re highly precise but not always intuitive or fast. That level of detail is useful when refining an existing palette, but my research showed that most designers start from scratch.",
+        "Color Supply takes a different approach. Instead of starting with endless options, users explore premade color palettes—selecting and refining them as they go. Start with a base, then customize as needed. The result? A faster, more creative workflow."
       ]
     },
 
-
-
-{
+     
+    {
       "media": [
         {
           "name": "color_wheels.jpg",
@@ -48,22 +39,14 @@
         }
       ]
     },
-
-
-{
-
+    {
+      "title": "Discover Color Theory Through Exploration",
       "text": [
-        "After selecting a wheel you can explore color palettes within that theme. The color you click will be the dominant color in the palettes shown."
-        
-
-        
+        "The core color selection tool is the basic color wheel, built on fundamental color theory. It includes standard options like complementary, analogous, and triadic schemes. Users click around, experiment with different combinations, and instantly see the results of their choices."
+     
       ]
     },
-
-
-
-
-{
+    {
       "media": [
         {
           "name": "triad.mp4",
@@ -71,60 +54,293 @@
         }
       ]
     },
-
-
-
-{
-
-      "text": [
-        "When you click a palette, SVG illustrations change to the selected colors. This helps you imagine what the colors would look like on your project."
-      ]
-    },
-   
-
-
-{
-      "media": [
-        {
-          "name": "svgs_all.mp4",
-          "position": "center"
-        }
-      ]
-    },
-     
-   
-    
-    {
-      "text": [
-        "The site can also help you find palettes based on an \"anchor\" color you want to use. For example if your brand guidelines for a project specify red as a dominant color,  the HEX picker will suggest palettes that go with that particular shade of red.",
-        "All of these features speed up the color picking process.",
-        "Version 2 of the site is currently being designed. There will be more functionality and a lightweight Chrome extension.",
-        "The site is popular. It regularly goes viral on Twitter and is most used in Japan."
-       
-      ]
-    },
-
-
  
 
 
-
-{
+    {
+      "title": "A Fresh Approach to Color, Used by Thousands",
+      "text": [
+        "What started as a personal project quickly gained traction, proving that designers needed a better way to select colors. Tens of thousands of designers, illustrators, and developers now rely on Color Supply to work faster, experiment more freely, and create with confidence. Since launch, the tool has been retweeted tens of thousands of times."
+        
+     
+      ]
+    },
+    {
       "media": [
         {
-          "name": "tweets.jpg",
-          "position": "center"
+          "type": "tweet-collection",
+          "position": "center",
+          "columns": {
+            "default": 3,
+            "tablet": 2,
+            "mobile": 1
+          },
+          "tweets": [
+            {
+              "profileImage": "paamp.jpg",
+              "displayName": "BEAR 🧸🍊 CMS OPEN !",
+              "displayBadges": [],
+              "content": "This website is for anyone looking for a tool to help choose colors for their design work. It even provides examples of how the colors look together and makes them pop—check it out, buddy ( 👉🏻)",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 20000,
+                "retweets": 25000
+              }
+            },
+            {
+              "profileImage": "jerry.jpg",
+              "displayName": "JJK³⁹ 🌸 #UNFORGIVEN",
+              "displayBadges": [],
+              "content": "For anyone struggling to choose the right color combinations, I always rely on this website. It offers a wide variety of options to choose from.",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 14000,
+                "retweets": 14900
+              }
+            },
+            {
+              "profileImage": "appmarkelabo.jpg",
+              "displayName": "アプリマーケティング研究所",
+              "displayBadges": [
+                { "type": "verified" }
+              ],
+              "content": "This website lets you spin a color chart to discover attractive color combinations. It automatically applies the colors to sample shapes, making it easy to visualize the result.",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 20700,
+                "retweets": 10200
+              }
+            },
+            {
+              "profileImage": "sleepy.jpg",
+              "displayName": "lin",
+              "displayBadges": [],
+              "content": "I recommend this website for pairing colors for work—there are tons of combinations available. Give it a try! (ˊ˘ˋ)☆ﾟ°",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 11000,
+                "retweets": 9300
+              }
+            },
+            {
+              "profileImage": "yamino.jpg",
+              "displayName": "Yamino💙💛🌻",
+              "displayBadges": [],
+              "content": "This in-browser color palette designer is like p*rn for artists: I found the link for this!",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 14700,
+                "retweets": 7489
+              }
+            },
+            {
+              "profileImage": "hiiar.jpg",
+              "displayName": "hiiarbonlang",
+              "displayBadges": [
+                { "type": "verified" }
+              ],
+              "content": "This website is fantastic for those who struggle to choose colors when designing. You can spin the wheel as much as you want, and every combination it generates is usable.",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 2400,
+                "retweets": 3100
+              }
+            },
+            {
+              "profileImage": "satake.jpg",
+              "displayName": "サタケシュンスケ | Shunsuke Sa...",
+              "displayBadges": [],
+              "content": "Color Supply is a service that lets you create 2–4 color combinations in an incredibly simple yet appealing way. Even the free demo version is more than enough to get by...! Designed for designers and illustrators.",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 4890,
+                "retweets": 1454
+              }
+            },
+            {
+              "profileImage": "pandesaii.jpg",
+              "displayName": "SAI",
+              "displayBadges": [
+                { "type": "rainbow" },
+                { "type": "text", "content": "komiket pride" },
+                { "type": "emoji", "content": "🌷" }
+              ],
+              "content": "the way this color picker site saved my ass through college",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 1918,
+                "retweets": 484
+              }
+            },
+            {
+              "profileImage": "css.jpg",
+              "displayName": "CSS-Tricks",
+              "displayBadges": [],
+              "content": "Pretty cool color picker :: (In that it shows you how the colors sit next to each in kinda \"real world\" ways.)",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 465,
+                "retweets": 177
+              }
+            },
+            {
+              "profileImage": "smashing.jpg",
+              "displayName": "Smashing Magazine",
+              "displayBadges": [
+                { "type": "flag", "content": "🇺🇦" },
+                { "type": "rainbow" },
+                { "type": "verified" }
+              ],
+              "content": "That's an interesting color picker, with previews and color schemes preselected by featured artists.",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 244,
+                "retweets": 73
+              }
+            },
+            {
+              "profileImage": "present.jpg",
+              "displayName": "Present & Correct",
+              "displayBadges": [
+                { "type": "verified" }
+              ],
+              "content": "Neat palette selector.",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 158,
+                "retweets": 50
+              }
+            },
+            {
+              "profileImage": "ryan.jpg",
+              "displayName": "Ryan Layer",
+              "displayBadges": [],
+              "content": "Great color picker tool for designers and developers",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 16,
+                "retweets": 8
+              }
+            },
+            {
+              "profileImage": "ux_passion.png",
+              "displayName": "UX Passion",
+              "displayBadges": [],
+              "content": "Color supply is a beautiful, user-friendly web tool any web designer will love to use!",
+              "link": "colorsupplyyy.com?ref=webde...",
+              "linkUrl": "https://colorsupplyyy.com?ref=webdesignernews.com",
+              "stats": {
+                "likes": 12,
+                "retweets": 7
+              }
+            },
+            {
+              "profileImage": "marion.jpg",
+              "displayName": "Marion Esquian",
+              "displayBadges": [],
+              "content": "Someone at work shared this really cool app for color >>",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 26,
+                "retweets": 4
+              }
+            },
+            {
+              "profileImage": "web_designer_mag.jpg",
+              "displayName": "WebDesignerMag",
+              "displayBadges": [],
+              "content": "Plenty of options to choose from in this this intuitive colour picker",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 11,
+                "retweets": 5
+              }
+            },
+            {
+              "profileImage": "nice.png",
+              "displayName": "Nicely Done",
+              "displayBadges": [],
+              "content": "Really interesting color theme tool by @mgentry81",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 3,
+                "retweets": 3
+              }
+            },
+            {
+              "profileImage": "ruby_boy.jpg",
+              "displayName": "Rubyboy",
+              "displayBadges": [],
+              "content": "Beautiful free color palettes from amazing designers",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 6,
+                "retweets": 1
+              }
+            },
+            {
+              "profileImage": "icon_finder.jpg",
+              "displayName": "Iconfinder",
+              "displayBadges": [
+                { "type": "verified" }
+              ],
+              "content": "Awesome little tool for #color pairing",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 8,
+                "retweets": 1
+              }
+            },
+            {
+              "profileImage": "canni.jpg",
+              "displayName": "🌿 donita 🌿",
+              "displayBadges": [],
+              "content": "@ ARTIST/DESIGNER FRIENDS this is neato",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 7,
+                "retweets": 1
+              }
+            },
+            {
+              "profileImage": "marion.jpg",
+              "displayName": "Lucia Soto",
+              "displayBadges": [],
+              "content": "This is cool -",
+              "link": "colorsupplyyy.com",
+              "linkUrl": "https://colorsupplyyy.com",
+              "stats": {
+                "likes": 1,
+                "retweets": 0
+              }
+            }
+          ]
         }
       ]
+    },
+    {
+      "text": [
+        "Beyond engagement, Color Supply has also proven to be a strong financial success, generating consistent revenue through premium features and licensing deals, including an exclusive license to a Japanese design firm.",
+        "But it's not done yet. With ongoing refinements driven by user feedback and analytics tracking in Amplitude, Color Supply continues to evolve—getting better all the time."
+      ]
     }
-
-
-
-    
-    
   ]
 }
-
-
-
-

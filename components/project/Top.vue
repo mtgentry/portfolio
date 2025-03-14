@@ -1,7 +1,6 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  div.top(:style="{color: textColor}")
-    div(v-html="text" )
+  div.top(:style="{color: textColor}" v-html="text")
 
 </template>
 

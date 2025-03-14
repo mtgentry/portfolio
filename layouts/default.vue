@@ -1,7 +1,7 @@
 <template lang="pug">
   v-app#app.display-animation(ref="app" :style=`{backgroundColor: bgColor, color: mainTextColor}`
     :class="{'loaded': !loading, 'paddingLayout': paddingLayout}")
-    v-app-bar(fixed app :style=`{backgroundColor: bgColor, color: txColor}` flat ref="navbar")
+    v-app-bar.display-animation(:class="{'loaded': !loading}" fixed app :style=`{backgroundColor: bgColor, color: txColor}` flat ref="navbar")
       nuxt-link(to="/")
         v-toolbar-title
           Logo(:color="txColor")

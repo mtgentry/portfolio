@@ -1,7 +1,8 @@
 <template lang="pug">
   v-row(justify="center" align="center" v-if="project")
-    v-col(cols="12")
-      Top(:text="project.header")
+    div.project-header-container(:style="{height: '75vh', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: '5vh'}")
+      div.project-header(v-html="project.header" 
+        :style="{color: textColor, maxWidth: '80%', fontSize: '40px', lineHeight: '130%', fontWeight: '300'}")
     v-col(cols="12")
       Section(v-for="section in project.layout" :section="section" :key="section.name")
     Footer
@@ -9,14 +10,13 @@
 </template>
 
 <script>
-import Top from '~/components/project/Top.vue'
 import Section from "@/components/project/Section.vue";
 import Footer from "@/components/Footer.vue";
+import { mapState } from 'vuex';
 
 export default {
   components: {
     Section,
-    Top,
     Footer
   },
   fetchOnServer: true,
@@ -50,7 +50,9 @@ export default {
       project: null,
     }
   },
-
+  computed: {
+    ...mapState(['textColor']),
+  }
 }
 </script>
 

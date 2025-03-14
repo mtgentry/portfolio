@@ -3,6 +3,7 @@
      <!-- 
     This page acts as a custom start page in Safari for my work sessions. It regualary loads a to-do list to keep me on track. 
   -->
+  </div>
 </template>
 
 <script>
