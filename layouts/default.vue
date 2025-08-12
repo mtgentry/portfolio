@@ -7,7 +7,9 @@
           Logo(:color="txColor")
       v-spacer
       span.pr-3(v-for="url in getUrls" :key="url")
-        NuxtLink(:to="url") {{ formatUrl(url) }}
+        .nav-link-wrapper(@mouseenter="animateLineIn($event)" @mouseleave="animateLineOut($event)")
+          NuxtLink(:to="url") {{ formatUrl(url) }}
+          .underline
     v-main.pa-0
       v-container(fluid)
         Nuxt
@@ -15,6 +17,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import { gsap } from 'gsap'
 import HideNavbar from "@/components/mixins/HideNavbar.vue";
 import Logo from "@/components/Logo.vue";
 export default {
@@ -34,6 +37,9 @@ export default {
     setTimeout(() => {
       this.$AOS.refresh()
     }, 1000)
+    
+    // Animate logo and nav on page load
+    this.animateHeaderElements()
   },
   head() {
     this.$store.commit('updateState', {field: 'loading', value: false})
@@ -45,7 +51,85 @@ export default {
     sortArray(array, sortArray) {
       return [...array].sort(
         (a, b) => sortArray.indexOf(a.replace('/', '')) - sortArray.indexOf(b.replace('/', ''))
-      )},
+      )
+    },
+    animateLineIn(event) {
+      const underline = event.currentTarget.querySelector('.underline')
+      gsap.killTweensOf(underline) // Kill any existing animations
+      gsap.fromTo(underline, 
+        { width: '0%', left: '0%' },
+        { width: '100%', duration: 0.55, ease: "power4.out" }
+      )
+    },
+    animateLineOut(event) {
+      const underline = event.currentTarget.querySelector('.underline')
+      gsap.killTweensOf(underline) // Kill any existing animations
+      gsap.to(underline, {
+        left: '100%',
+        width: '0%', 
+        duration: 0.55,
+        ease: "power4.out"
+      })
+    },
+    animateHeaderElements() {
+      // Wait for DOM to be ready
+      this.$nextTick(() => {
+        try {
+          // Access the actual DOM element from the Vue component
+          const navbarElement = this.$refs.navbar.$el
+          
+          // Try multiple selectors to find the logo
+          let logo = navbarElement?.querySelector('.v-toolbar-title')
+          if (!logo) logo = navbarElement?.querySelector('a[href="/"]')
+          if (!logo) logo = navbarElement?.querySelector('nuxt-link')
+          
+          const navLinks = navbarElement?.querySelectorAll('.nav-link-wrapper')
+          
+          console.log('Navbar element:', navbarElement)
+          console.log('Logo attempts:', {
+            toolbarTitle: navbarElement?.querySelector('.v-toolbar-title'),
+            homeLink: navbarElement?.querySelector('a[href="/"]'),
+            nuxtLink: navbarElement?.querySelector('nuxt-link')
+          })
+          console.log('Nav links:', navLinks.length)
+          
+          if (!logo) {
+            console.warn('Logo element not found with any selector')
+            // Just animate nav links if logo not found
+            if (navLinks.length > 0) {
+              gsap.set(navLinks, { opacity: 0 })
+              gsap.to(navLinks, {
+                opacity: 1,
+                duration: 0.6,
+                ease: "power2.out",
+                stagger: 0.05,
+                delay: 0.25 // Same initial delay
+              })
+            }
+            return
+          }
+          
+          console.log('Found logo:', logo)
+          
+          gsap.set([logo, ...navLinks], { opacity: 0 })
+          
+          // Create timeline with initial delay, then both elements together
+          const tl = gsap.timeline()
+          
+          // Wait 0.25 seconds after page load
+          tl.to({}, { duration: 0.25 })
+          // Logo and nav links fade in together
+          .to([logo, ...navLinks], {
+            opacity: 1,
+            duration: 0.6,
+            ease: "power2.out",
+            stagger: 0.05 // Tiny stagger for subtle effect
+          })
+        } catch (error) {
+          console.error('Header animation error:', error)
+        }
+      })
+    }
   },
   computed: {
     bgColor() {
@@ -187,4 +271,17 @@ html, body
 
   @media (max-width: 768px)
     padding: 0 10px
+
+.nav-link-wrapper
+  position: relative
+  display: inline-block
+
+  .underline
+    position: absolute
+    bottom: 0px
+    left: 0
+    height: 1px
+    width: 0%
+    background-color: currentColor
+    transition: none
 </style>

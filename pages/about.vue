@@ -3,42 +3,37 @@ v-row#main.flex-column(justify="center" align="center")
   v-col(cols="12")
     img(src="/images/mason.png" alt="Mason" class="mason-image")
     
-    h4 Mason Gentry
-    p Mason is the creator of Design by Numbers, a newsletter aimed at simplifying web design education for designers and developers.
+    p Hi, I'm Mason.
 
-    p As a senior art director, he has worked with notable clients such as Disney, Coke, Wilson, Nissan, and Gatorade. His career also spans roles at companies like 
+    p Over the years, I've worked with brands like Disney, Coke, Wilson, Nissan, and Gatorade, and spent time at agencies including 
       span.link-wrapper(@mouseover="onMouseOver(1, $event)" @mouseleave="onMouseLeave" @mousemove="onMouseMove($event)")
-        a.link-area(href="#") TBWA\CHIAT\DAY
+        a.link-area(@click.prevent) TBWA\CHIAT\DAY
         img.hover-image(:class="{ 'visible': hover === 1 }" src="/images/chiat.gif" :style="{ top: imageTop + 'px', left: imageLeft + 'px' }")
-      | , Motion Theory, BCG, Phenomenon, RPA, and Deutsch.
+      | , Motion Theory, Boston Consulting Group, Phenomenon, RPA, and Deutsch.
 
-    p In addition to his corporate work, Mason started 
+    p I also founded 
       span.link-wrapper(@mouseover="onMouseOver(2, $event)" @mouseleave="onMouseLeave" @mousemove="onMouseMove($event)")
-        a.link-area(href="#") Faucet Face
+        a.link-area(@click.prevent) Faucet Face
         img.hover-image(:class="{ 'visible': hover === 2 }" src="/images/faucetface.jpg" :style="{ top: imageTop + 'px', left: imageLeft + 'px' }")
-      | , a premium reusable water bottle company, which he later sold. The bottles were available at  
+      | , a premium reusable water bottle company that made its way into Paper Source, Fab, Modcloth, 
       span.link-wrapper(@mouseover="onMouseOver(5, $event)" @mouseleave="onMouseLeave" @mousemove="onMouseMove($event)")
-        a.link-area(href="#") Urban Outfitters
+        a.link-area(@click.prevent) Urban Outfitters
         img.hover-image(:class="{ 'visible': hover === 5 }" src="/images/urbanoutfitters.jpg" :style="{ top: imageTop + 'px', left: imageLeft + 'px' }")
-      | , Fab, Modcloth, 
-      span.link-wrapper(@mouseover="onMouseOver(6, $event)" @mouseleave="onMouseLeave" @mousemove="onMouseMove($event)")
-        a.link-area(href="#") Paper Source
-        img.hover-image(:class="{ 'visible': hover === 6 }" src="/images/papersource.jpg" :style="{ top: imageTop + 'px', left: imageLeft + 'px' }")
-      | , and more.
+      | , and more before I sold it.
 
-    p He's currently rebuilding 
+    p These days, I'm rebuilding 
       span.link-wrapper(@mouseover="onMouseOver(3, $event)" @mouseleave="onMouseLeave" @mousemove="onMouseMove($event)")
-        a.link-area(href="#") Color Supply
+        a.link-area(@click.prevent) Color Supply
         img.hover-image(:class="{ 'visible': hover === 3 }" src="/images/colorsupply.jpg" :style="{ top: imageTop + 'px', left: imageLeft + 'px' }")
-      | , a popular color picking tool used by designers, illustrators, and developers. 
+      | , a color-picking tool used by designers, illustrators, and developers all over the world. I also publish Design by Numbers, a newsletter that makes web design feel a lot less overwhelming for designers and developers.
       
-    p In his spare time, he's 
+    p In my spare time, I'm 
       span.link-wrapper(@mouseover="onMouseOver(7, $event)" @mouseleave="onMouseLeave" @mousemove="onMouseMove($event)")
-        a.link-area(href="#") renovating
+        a.link-area(@click.prevent) renovating
         img.hover-image(:class="{ 'visible': hover === 7 }" src="/images/house_before.gif" :style="{ top: imageTop + 'px', left: imageLeft + 'px' }")
       |  and 
       span.link-wrapper(@mouseover="onMouseOver(8, $event)" @mouseleave="onMouseLeave" @mousemove="onMouseMove($event)")
-        a.link-area(href="#") restoring
+        a.link-area(@click.prevent) restoring
         img.hover-image(:class="{ 'visible': hover === 8 }" src="/images/house_after.gif" :style="{ top: imageTop + 'px', left: imageLeft + 'px' }")
       |  a 1908 Craftsman. The project is definitely on schedule and expected to be completed by 2050.
 </template>
