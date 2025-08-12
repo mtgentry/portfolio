@@ -5,7 +5,8 @@
       String(:texts="section.text" :size="section.size" :title="section.title" :align="section.align")
     v-col(v-if="section.textBox" :data-aos="section.animation ? section.animation : 'fade-up'")
       TextBox(:textBox="section.textBox")
-    v-col(v-else-if="section.media" :data-aos="media.animation ? media.animation : 'fade-up'"
+    v-col(v-else-if="section.media" :data-aos="shouldUseAOS(media) ? (media.animation ? media.animation : 'fade-up') : null"
+      :class="{ 'hero-fade-in': !shouldUseAOS(media) }"
       v-for="media in section.media" :cols="media.cols ? media.cols : 12 / media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
     v-col(v-else-if="section.line")
@@ -83,6 +84,17 @@ export default {
     SVGs,
     Pricing,
     CTA
+  },
+  methods: {
+    shouldUseAOS(media) {
+      // Check if this is the first section with media (hero image)
+      // Get all sections from parent component
+      const sections = this.$parent.project?.layout || []
+      const currentSectionIndex = sections.findIndex(s => s === this.section)
+      
+      // If this is the first section, don't use AOS (return false)
+      return currentSectionIndex !== 0
+    }
   }
 }
 </script>
@@ -133,6 +145,19 @@ export default {
 hr
   border-color: #83807C
   border: .5px solid #83807C
+
+// Hero image fade-in animation (no scroll trigger)
+.hero-fade-in
+  opacity: 0
+  animation: heroFadeIn 1s ease-out 0.5s forwards
+
+@keyframes heroFadeIn
+  from
+    opacity: 0
+    transform: translateY(30px)
+  to
+    opacity: 1
+    transform: translateY(0)
 
 </style>
 

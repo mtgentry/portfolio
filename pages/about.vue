@@ -25,7 +25,7 @@ v-row#main.flex-column(justify="center" align="center")
       span.link-wrapper(@mouseover="onMouseOver(3, $event)" @mouseleave="onMouseLeave" @mousemove="onMouseMove($event)")
         a.link-area(@click.prevent) Color Supply
         img.hover-image(:class="{ 'visible': hover === 3 }" src="/images/colorsupply.jpg" :style="{ top: imageTop + 'px', left: imageLeft + 'px' }")
-      | , a color-picking tool used by designers, illustrators, and developers all over the world. I also publish Design by Numbers, a newsletter that makes web design feel a lot less overwhelming for designers and developers.
+      | , a color-picking tool used by designers, illustrators, and developers all over the world. I also publish Design by Numbers, a newsletter with over 9,000 subscribers that makes web design feel a lot less overwhelming for designers and developers.
       
     p In my spare time, I'm 
       span.link-wrapper(@mouseover="onMouseOver(7, $event)" @mouseleave="onMouseLeave" @mousemove="onMouseMove($event)")
@@ -42,6 +42,11 @@ v-row#main.flex-column(justify="center" align="center")
 export default {
   name: 'AboutPage',
   layout: 'default',
+  mounted() {
+    // Set the same background color as homepage
+    this.$store.commit('updateState', {field: 'backgroundColor', value: '#282725'})
+    this.$store.commit('updateState', {field: 'textColor', value: '#FFFFFF'})
+  },
   head() {
     return {
       title: 'About'
@@ -105,7 +110,7 @@ a.link-area
   position: relative
   display: inline-block
   margin: 0
-  padding: 2px
+  padding: 2px 3px 5px 3px
   line-height: 1
   background-color: #2805FF
 
