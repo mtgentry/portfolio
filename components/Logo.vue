@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div>
+  <div class="logo-container">
     <svg v-if="is_agency" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path :style="{'fill': color}" d="M0 0H6.33663V7.68056H13.5644V0H20V21H13.5644V13.0278H10.495H6.33663V21H0V0Z"/>
     </svg>
@@ -28,6 +28,9 @@ export default {
 </script>
 
 <style scoped lang="sass">
+.logo-container
+  padding: 10px
+  
 path
   transition: fill 1s ease-in-out
 </style>

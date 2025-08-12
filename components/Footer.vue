@@ -54,4 +54,10 @@ export default {
 #footerCol
   height: 100px
   width: 100%
+
+@keyframes footerFadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
 </style>

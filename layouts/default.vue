@@ -7,7 +7,7 @@
           Logo(:color="txColor")
       v-spacer
       span.pr-3(v-for="url in getUrls" :key="url")
-        .nav-link-wrapper(@mouseenter="animateLineIn($event)" @mouseleave="animateLineOut($event)")
+        .nav-link-wrapper(@mouseenter="animateLineIn($event)" @mouseleave="animateLineOut($event)" :class="{ 'about-link': formatUrl(url) === 'About' }")
           NuxtLink(:to="url") {{ formatUrl(url) }}
           .underline
     v-main.pa-0
@@ -275,6 +275,9 @@ html, body
 .nav-link-wrapper
   position: relative
   display: inline-block
+
+  &.about-link
+    font-size: calc(1em + 2px)
 
   .underline
     position: absolute
