@@ -13,13 +13,31 @@ export default {
       default: ''
     }
   },
+  data() {
+    return {
+      hasAnimated: false
+    }
+  },
   mounted() {
     // Use nextTick to ensure DOM is fully rendered before GSAP
     this.$nextTick(() => {
       setTimeout(() => {
-        this.animateText()
+        if (!this.hasAnimated) {
+          this.animateText()
+          this.hasAnimated = true
+        }
       }, 100)
     })
+  },
+  beforeDestroy() {
+    // Use GSAP to handle the fade out instead of CSS transitions
+    if (this.$refs.textContainer) {
+      gsap.to(this.$refs.textContainer, {
+        opacity: 0,
+        duration: 0.3,
+        ease: "power1.out"
+      })
+    }
   },
   methods: {
     animateText() {
