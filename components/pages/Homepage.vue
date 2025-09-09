@@ -38,9 +38,13 @@ export default {
   },
   mounted() {
     this.$store.commit('updateState', {field: 'backgroundColor', value: "#282725"})
+    // Check if text animation is playing to determine delay
+    const isTextAnimating = sessionStorage.getItem('textAnimationPlaying') === 'true'
+    const delay = isTextAnimating ? 1200 : 100
+    
     setTimeout(() => {
       this.$AOS.refresh()
-    }, 1000)
+    }, delay)
   },
   async fetch() {
     if (this.projectStore) {

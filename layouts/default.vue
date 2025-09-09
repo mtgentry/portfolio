@@ -72,6 +72,10 @@ export default {
       })
     },
     animateHeaderElements() {
+      // Check if text animation is playing to determine delay
+      const isTextAnimating = sessionStorage.getItem('textAnimationPlaying') === 'true'
+      const delay = isTextAnimating ? 1.2 : 0.1
+      
       // Wait for DOM to be ready
       this.$nextTick(() => {
         try {
@@ -103,7 +107,7 @@ export default {
                 duration: 0.6,
                 ease: "power2.out",
                 stagger: 0.05,
-                delay: 0.25 // Same initial delay
+                delay: delay // Match image timing
               })
             }
             return
@@ -116,8 +120,8 @@ export default {
           // Create timeline with initial delay, then both elements together
           const tl = gsap.timeline()
           
-          // Wait 0.25 seconds after page load
-          tl.to({}, { duration: 0.25 })
+          // Wait for text animation if needed
+          tl.to({}, { duration: delay })
           // Logo and nav links fade in together
           .to([logo, ...navLinks], {
             opacity: 1,

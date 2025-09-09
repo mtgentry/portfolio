@@ -77,13 +77,22 @@ export default {
   },
   methods: {
     load() {
-      this.loaded = true
+      // Check if text animation is playing to determine delay
+      const isTextAnimating = sessionStorage.getItem('textAnimationPlaying') === 'true'
+      const delay = isTextAnimating ? 1200 : 100
+      
       if (this.project_name === 'francescas') {
+        // Delay the loaded state for francescas based on text animation
+        setTimeout(() => {
+          this.loaded = true
+        }, delay)
         this.$store.commit('updateState', {field: 'loading', value: false})
+      } else {
+        this.loaded = true
       }
       setTimeout(() => {
         this.$AOS.refresh()
-      }, 1000)
+      }, delay)
     },
     playVisibleVideos() {
       if (this.elementIsVisible(this.$refs.video)) {

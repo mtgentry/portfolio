@@ -22,12 +22,31 @@ export default {
     }
   },
   mounted() {
+    // Clear animation flag on page refresh
+    window.addEventListener('beforeunload', () => {
+      sessionStorage.removeItem('headerAnimationPlayed')
+    })
+    
+    // Check if animation has already played this session
+    const hasPlayedThisSession = sessionStorage.getItem('headerAnimationPlayed')
+    
+    // Set animation flag immediately (before other components check it)
+    if (!hasPlayedThisSession) {
+      sessionStorage.setItem('textAnimationPlaying', 'true')
+    } else {
+      sessionStorage.setItem('textAnimationPlaying', 'false')
+    }
+    
     // Use nextTick to ensure DOM is fully rendered before GSAP
     this.$nextTick(() => {
       setTimeout(() => {
-        if (!this.hasAnimated) {
+        if (!hasPlayedThisSession && !this.hasAnimated) {
           this.animateText()
           this.hasAnimated = true
+          sessionStorage.setItem('headerAnimationPlayed', 'true')
+        } else {
+          // If animation was skipped, ensure text is visible
+          gsap.set(this.$refs.textContainer, { opacity: 1 })
         }
       }, 100)
     })
@@ -46,30 +65,35 @@ export default {
     animateText() {
       if (!this.text) return
       
-      // Use GSAP SplitText to split the text into characters and words
-      const split = new SplitText(this.$refs.textContainer, {
-        type: "chars, words"
-      })
+      // Set initial opacity to 10%
+      gsap.set(this.$refs.textContainer, { opacity: 0.1 })
       
-      // Animate from initial state to final state
-      gsap.fromTo(split.chars, 
-        {
-          opacity: 0,
-          y: 30
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power1.out",
-          stagger: {
-            amount: 0.9,
-            from: "start",
-            ease: "power1.in"
-          },
-          delay: 0.3
+      // Use GSAP SplitText with mask for character reveals
+      SplitText.create(this.$refs.textContainer, {
+        type: "chars, words, lines",
+        linesClass: "line",
+        mask: "lines",
+        onSplit: (self) => {
+          // Animate the container to full opacity and characters from below
+          gsap.to(this.$refs.textContainer, {
+            opacity: 1,
+            duration: 1.5,
+            ease: "power1.out",
+            delay: 0.4
+          })
+          
+          gsap.from(self.chars, {
+            duration: 0.8,
+            yPercent: 100,
+            stagger: {
+              amount: 0.4,
+              from: "start"
+            },
+            ease: "power1.out",
+            delay: 0.4
+          })
         }
-      )
+      })
     }
   }
 }
