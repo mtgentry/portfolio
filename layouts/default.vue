@@ -227,6 +227,9 @@ export default {
   @media (max-width: 768px)
     padding: 0 10px
 
+.v-toolbar__content
+  padding: 0 5px !important
+
 .v-toolbar__title
   user-select: none
 

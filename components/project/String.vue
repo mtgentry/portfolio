@@ -57,6 +57,14 @@ h3
   line-height: 100%
   padding-bottom: 20px
   margin-top: 20px // Further reduced from 30px (was originally 100px)
+  
+  // DEBUG: Add border and reduce spacing on mobile (COMMENTED OUT)
+  // border: 3px solid purple !important
+  
+  @media (max-width: 768px)
+    margin-top: 0
+    padding-bottom: 20px
+    margin-bottom: 0
 
 h4
   font-weight: 500

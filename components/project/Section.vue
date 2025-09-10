@@ -102,8 +102,24 @@ export default {
 <style lang="sass" scoped>
 
 .section
-  padding-top: 10px
+  padding-top: 50px
   min-width: 50%
+  
+  &:first-child
+    padding-top: 80px
+    
+  @media (max-width: 768px)
+    padding-top: 10px
+    
+    &:first-child
+      padding-top: 20px
+      
+    // For sections with only media, use minimal padding
+    &:not(.slim)
+      padding-top: 0px
+      
+      &:first-child
+        padding-top: 10px
   
 
   &.slim-padding
@@ -123,7 +139,11 @@ export default {
     margin-bottom: 0
 
   @media (max-width: 768px)
-    padding-bottom: 90px
+    padding-bottom: 5px
+    
+    // Reduce spacing for sections with media (not slim class)
+    &:not(.slim)
+      padding-bottom: 0px
 
 .slim
   max-width: 659px
@@ -158,6 +178,34 @@ hr
   to
     opacity: 1
     transform: translateY(0)
+
+// Reduce column padding on mobile - target all variations
+@media (max-width: 768px)
+  .col, .v-col, [class*="col-"]
+    padding-top: 0 !important
+    padding-bottom: 0 !important
+    margin-top: 0 !important
+    margin-bottom: 0 !important
+    
+  // Target AOS elements specifically  
+  .aos-init, .aos-animate
+    padding-top: 0 !important
+    padding-bottom: 0 !important
+    margin-top: 0 !important
+    margin-bottom: 0 !important
+    
+  // DEBUG: Add colored borders to specific selectors (COMMENTED OUT)
+  // h3
+  //   border: 2px solid red !important
+  //   
+  // .text-left
+  //   border: 2px solid blue !important
+  //   
+  // .slim
+  //   border: 2px solid green !important
+  //   
+  // .section:not(.slim)
+  //   border: 2px solid orange !important
 
 </style>
 

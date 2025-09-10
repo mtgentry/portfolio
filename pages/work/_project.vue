@@ -1,8 +1,8 @@
 <template lang="pug">
   v-row(justify="center" align="center" v-if="project")
-    div.project-header-container(:style="{height: '75vh', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: '5vh'}")
+    div.project-header-container
       div.project-header(v-html="project.header" 
-        :style="{color: textColor, maxWidth: '80%', fontSize: '40px', lineHeight: '130%', fontWeight: '300'}")
+        :style="{color: textColor, maxWidth: '80%', fontWeight: '300'}")
     v-col(cols="12")
       Section(v-for="section in project.layout" :section="section" :key="section.name")
     Footer
@@ -61,4 +61,28 @@ export default {
   display: flex
   align-items: center
   flex-direction: column
+
+.project-header-container
+  min-height: 65vh
+  display: flex
+  align-items: center
+  justify-content: center
+  padding-top: 120px
+  padding-bottom: 10px
+  
+  @media (max-width: 768px)
+    min-height: auto
+    height: auto
+    padding-top: 120px
+    padding-bottom: 10px
+
+.project-header
+  font-size: 40px
+  line-height: 130%
+  // border: 1px solid cyan !important
+  margin-bottom: 30px
+  
+  @media (max-width: 768px)
+    font-size: 32px
+    line-height: 140%
 </style>

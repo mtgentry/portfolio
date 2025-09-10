@@ -1,6 +1,7 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  div.text(ref="textContainer") {{ text }}
+  div.text-wrapper
+    div.text(ref="textContainer") {{ text }}
 </template>
 
 <script>
@@ -37,18 +38,18 @@ export default {
       sessionStorage.setItem('textAnimationPlaying', 'false')
     }
     
-    // Use nextTick to ensure DOM is fully rendered before GSAP
+    // Wait for fonts to load before running SplitText
     this.$nextTick(() => {
-      setTimeout(() => {
-        if (!hasPlayedThisSession && !this.hasAnimated) {
-          this.animateText()
-          this.hasAnimated = true
-          sessionStorage.setItem('headerAnimationPlayed', 'true')
-        } else {
-          // If animation was skipped, ensure text is visible
-          gsap.set(this.$refs.textContainer, { opacity: 1 })
-        }
-      }, 100)
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => {
+          this.initializeAnimation(hasPlayedThisSession)
+        })
+      } else {
+        // Fallback for browsers without font loading API
+        setTimeout(() => {
+          this.initializeAnimation(hasPlayedThisSession)
+        }, 500)
+      }
     })
   },
   beforeDestroy() {
@@ -62,6 +63,16 @@ export default {
     }
   },
   methods: {
+    initializeAnimation(hasPlayedThisSession) {
+      if (!hasPlayedThisSession && !this.hasAnimated) {
+        this.animateText()
+        this.hasAnimated = true
+        sessionStorage.setItem('headerAnimationPlayed', 'true')
+      } else {
+        // If animation was skipped, ensure text is visible
+        gsap.set(this.$refs.textContainer, { opacity: 1 })
+      }
+    },
     animateText() {
       if (!this.text) return
       
@@ -100,12 +111,33 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  .text
-    font-size: 50px
-    line-height: 66px
+  .text-wrapper
     padding-top: 200px
     padding-bottom: 160px
     min-height: 300px
+    
+    @media (max-width: 768px)
+      height: 80vh
+      padding-top: 0
+      padding-bottom: 0
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      padding-top: 5vh
+
+  .text
+    font-size: 50px
+    line-height: 66px
     overflow: visible
     text-align: left
+    max-width: 90vw
+    word-spacing: 0.1em
+    
+    // Prevent initial flash before animation
+    opacity: 0
+    
+    // Improve text wrapping for better phrase breaks
+    hyphens: none
+    word-break: keep-all
+    overflow-wrap: break-word
 </style>
