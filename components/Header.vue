@@ -117,13 +117,11 @@ export default {
     min-height: 300px
     
     @media (max-width: 768px)
-      height: 80vh
-      padding-top: 0
-      padding-bottom: 0
+      padding-top: 70px
+      padding-bottom: 50px
       display: flex
       align-items: center
       justify-content: flex-start
-      padding-top: 5vh
 
   .text
     font-size: 50px
@@ -140,4 +138,8 @@ export default {
     hyphens: none
     word-break: keep-all
     overflow-wrap: break-word
+    
+    @media (max-width: 768px)
+      font-size: 42px
+      line-height: 120%
 </style>
