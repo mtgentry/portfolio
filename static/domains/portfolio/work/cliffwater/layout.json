@@ -11,12 +11,11 @@
   },
   "backgroundColor": "#2F74B2",
   "textColor": "#ffffff",
-  "header": "Cliffwater wrote the book on private debt. Literally.",
+  "header": "Cliffwater wrote the book on private debt. Literally. We designed the site with a clear brand voice in mind, knowing the identity work would follow. As the site took shape, its visual language became the foundation for the broader brand system—built from the inside out and shaped by real use.",
   "seo_description": "",
   "layout": [
 
-
-{
+    {
       "media": [
         {
           "name": "cliffwater_homepage.jpg",
@@ -25,17 +24,15 @@
       ]
     },
 
-
- {
-
-      "text": ["Cliffwater is an alternative investment adviser and fund manager. When I first met with them I realized they are well respected in their field. They needed a new brand and website to match. ",
-        "When a new brand and website are needed usually the brand gets defined first. However after our initial meeting it was clear the website was a more urgent priority.",
-         "So I proposed an \"agile\" version of a rebrand that took place while we redesigned the site. It worked suprisingly well."
+    {
+      "text": [
+        "Cliffwater is a leading adviser and fund manager in alternative investments. Known for their rigor and deep expertise, they needed a digital presence that matched their reputation. A full rebrand was on the table, but urgency demanded we start with the site.",
+        "Typically, brand leads. But after our first meeting, it was clear the website had to come first.",
+        "We proposed an agile rebrand that unfolded alongside the site design. It allowed brand and product to evolve in sync—and it worked."
       ]
     },
 
-
-{
+    {
       "media": [
         {
           "name": "square_in_pool.jpg",
@@ -44,16 +41,14 @@
       ]
     },
 
-
-{
-
-      "text": ["Private debt is an asset class most people are unfamiliar with. I worked with illustrator Birgit Palma to visualize and make accessible much of the institutional knowledge Cliffwater had accrued over the years.",
-              "The ultimate goal was to make the opaque world of private debt more understandable to potential customers." ]
+    {
+      "text": [
+        "Private debt is complex by nature. To make it more accessible, we partnered with illustrator Birgit Palma to distill Cliffwater’s institutional knowledge into clear, visual moments.",
+        "The goal was to bring clarity to an opaque asset class and build trust with new audiences."
+      ]
     },
 
-
-
-{
+    {
       "media": [
         {
           "name": "data_stacks.jpg",
@@ -62,33 +57,20 @@
       ]
     },
 
-
-{
-
-      "text": ["Our agile method of branding proved to work better than expected. I will consider doing it on future projects as well."]
+    {
+      "text": [
+        "The agile approach to branding proved more effective than anticipated. It’s a model we will carry forward into future work."
+      ]
     },
 
-
-
-{
+    {
       "media": [
         {
           "name": "upward_arrows.jpg",
           "position": "center"
         }
       ]
-    },
-
-    {
-
-      "text": ["- -",
-        "Agency: Hampar Productions"]
     }
-
 
   ]
 }
-
-
-
-

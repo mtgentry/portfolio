@@ -235,10 +235,10 @@ export default {
 
 p
   font-family: Resist Sans
-  font-size: 20px
+  font-size: 21px
   text-align: left
   font-weight: 300
-  line-height: 140%
+  line-height: 150%
   margin-bottom: 50px
 
 
