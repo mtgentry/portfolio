@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  v-row.section(:class="{ slim: !section.media, 'slim-padding': slim_padding }")
+  v-row.section(:class="{ slim: !section.media, 'slim-padding': slim_padding, 'line-section': section.line }")
     v-col(v-if="section.text || section.title" :data-aos="section.animation ? section.animation : 'fade-up'")
       String(:texts="section.text" :size="section.size" :title="section.title" :align="section.align")
     v-col(v-if="section.textBox" :data-aos="section.animation ? section.animation : 'fade-up'")
@@ -99,7 +99,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 
 .section
   padding-top: 50px
@@ -125,11 +125,20 @@ export default {
   &.slim-padding
     padding-top: 10px
 
+  &.line-section
+    padding-top: 0
+    padding-bottom: 0
+    margin-top: 15px
+
+    + .section
+      padding-top: 5px
+
+      p
+        margin-top: 0 !important
 
   // rule line
-  &:nth-child(7).slim-padding 
-    
-    height: 100px
+  &:nth-child(7).slim-padding
+    // Removed height: 100px to fix excessive spacing
 
   // what you get
   &:nth-child(8).slim-padding 
@@ -161,10 +170,7 @@ export default {
   [data-aos=fade-up]
     transform: translate3d(0, 30px, 0)
 
-// rule line 
-hr
-  border-color: #83807C
-  border: .5px solid #83807C
+// rule line styling moved to global styles in layouts/default.vue
 
 // Hero image fade-in animation (no scroll trigger)
 .hero-fade-in

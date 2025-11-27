@@ -8,7 +8,7 @@
   },
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",
-  "header": "Fashion moves fast for young girls. They try on new clothes and discard old identities. At this age they're open to new style suggestions but you can't be too forceful. With this in mind, we worked with Francesca's to re-imagine their brand as a helpful big sister to help their young customers navigate the early years of adolescence.",
+  "header": "Francesca’s came to us at a moment of transition. Their audience, girls navigating early adolescence, was changing fast. What they needed was not just a visual update but a shift in tone. Together, we reimagined the brand as a trusted older sister. Someone stylish, confident, and just gentle enough to guide without pushing.",
   "seo_description": "",
   "layout": [
     {
@@ -23,18 +23,11 @@
     {
       "title": "Time for a change",
       "text": [
-        "When Francesca's came to us, their brand was stale. Their 11-15 year old female customers had grown more sophisticated than when the company was first founded in 2006. Girls now preferred hipper brands like Madewell and Asos.",
-        "Francecas needed a refresh.",
-        "But at the same time, the company didn't want to alienate the parents of these young women. We came up with a brand direction which tested very well with everyone. It was hipper, but not too hip."
-
+        "Francesca’s was ready for change. Originally built for younger girls, the brand no longer resonated with its growing audience. Their customers, girls aged eleven to fifteen, had become more style aware and were gravitating toward brands like Madewell and Asos. Francesca’s needed a refresh that could evolve with them without leaving their parents behind.",
+        "We developed a new direction that balanced trend forward design with approachability. It tested well across audiences. Stylish but not intimidating. Fresh but still familiar."
       ]
     },
-
-
-
     {
-
-
       "media": [
         {
           "name": "francescas_2.mp4",
@@ -42,20 +35,15 @@
         }
       ]
     },
-
     {
       "title": "The Strategy",
       "text": [
-
-        "Since these young women were still figuring out their sense of style, we wanted to hold their hand a bit – much like a big sister.",
-        "To deliver on this we came up with the idea of  an \"editorial\" browsing experience to subtly reveal style suggestions. The experience would be the online equivalent to flipping through a fashion magazine. Like how browsing Teen Vogue might reveal new fashion trends."
+        "To bring that balance to life, we rethought the entire experience. Inspired by fashion magazines, we introduced an editorial layer to the shopping journey. Product pairings were surfaced through moments of suggestion rather than promotion. It felt curated, not prescriptive. Like getting advice from someone just a step ahead.",
+        "We validated the concept with users and it quickly became the most popular feature in testing. From there, we built a custom content system that gave the Francesca’s team full control over editorial updates and pairings."
       ]
     },
-
-
     {
       "media": [
-
         {
           "name": "francescas_3.jpg"
         }
@@ -63,16 +51,17 @@
     },
     {
       "text": [
-        "We put the editorial concept in front of users and it proved to be the most popular feature we tested. After getting validation, we designed a CMS that allowed the Francesca's editorial team to regularly update item pairings that worked well together.",
-        "In addition to the rebrand, we also made a concerted effort to optimize Francesca's checkout experience. We designed several checkout flows and did user testing to find which one worked best. The two winning designs were later A/B tested by the client to further optimize the site.",
-        "- -",
+        "Beyond the rebrand, we also optimized the checkout experience. We tested multiple flows with users, then partnered with the Francesca's team to A B test the top performers.",
+        "This work gave Francesca's more than just a new look. It repositioned the brand for a new generation while respecting the one that came before. What began as a rebrand became a more thoughtful way to connect. Style advice delivered with care, confidence, and just the right amount of influence."
+      ]
+    },
+    {
+      "line": true
+    },
+    {
+      "text": [
         "Agency: Phenomenon"
       ]
     }
-
-
   ]
 }
-
-
-

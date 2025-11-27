@@ -11,10 +11,10 @@
   },
   "backgroundColor": "#222533",
   "textColor": "#ffffff",
-  "header": "Bedtime is an mobile app I created to spread kindness across the internet. Use the app to send and receive goodnight messages from strangers all around the world.",
+  "header": "Bedtime is a mobile app rooted in a universal ritual. It invites strangers from around the world to exchange goodnight messages. Quiet. Gentle. Intentional. In a space defined by performance, Bedtime creates a pause. A reminder that even the smallest moments of connection still matter.",
   "seo_description": "",
   "layout": [
-   
+
     {
       "media": [
         {
@@ -23,29 +23,35 @@
         }
       ]
     },
-    
-    {
 
-      "text": ["From our earliest years, we’re conditioned to say kind things to our loved ones before going to sleep. With Bedtime I wanted to leverage that behavior to create a safe place for strangers to say goodnight to one another. Why strangers? Because it’s weird. And oddly comforting in a restoring-faith-in-humanity kind of way.",
-        "To welcome a stranger into your room and whisper goodnight to them is a powerful thing. "]
-    },
     {
-     "media": [
+      "text": [
+        "When the creators of Bedtime came to me, I loved the idea. A simple way to connect strangers through something we all understand. What began as an experiment turned into a true collaboration. The result is a product that trades noise for calm and performance for presence. A small app with a quietly ambitious goal to make the internet feel a little more human."
+      ]
+    },
+
+    {
+      "media": [
         {
           "name": "bedtime_2.jpg",
           "position": "center"
         }
       ]
+    },
+
+    {
+      "text": [
+        "Bedtime does not promise transformation. It offers something quieter. A pause, a gesture, a moment of care exchanged between strangers. It is a small product with a clear intent. And in a world that often rewards the loudest voice, that quiet feels like progress."
+      ]
+    },
+    {
+      "line": true
+    },
+    {
+      "text": [
+        "Client: Bedtime"
+      ]
     }
-    
-    
-    
-    
+
   ]
 }
-
-
-
-
-
-

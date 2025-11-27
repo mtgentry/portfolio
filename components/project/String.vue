@@ -9,7 +9,7 @@
         h4.font-weight-bold(v-else-if="size === 'h4'" v-html="title")
         h5(v-else-if="size === 'h5'" v-html="title")
         h6.font-weight-bold(v-else-if="size === 'h6'" v-html="title")
-      p(v-for="text in texts" v-html="text")
+      p(v-for="text in texts" :class="{ 'agency-credit': text.includes('Agency:') || text.includes('Client:') || text.includes('Personal Project') }" v-html="text")
 </template>
 <script>
 export default {
@@ -82,4 +82,9 @@ h5
 
 p
   // Normal paragraph styling
+
+.agency-credit
+  font-size: 16px !important
+  color: #888888 !important
+  font-weight: 500 !important
 </style>

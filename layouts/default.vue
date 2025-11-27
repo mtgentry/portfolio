@@ -221,6 +221,19 @@ export default {
 .v-application
   font-family: 'Resist Sans', sans-serif
 
+  p
+    font-family: Resist Sans !important
+    font-size: 21px !important
+    text-align: left
+    font-weight: 300
+    line-height: 150% !important
+    margin-bottom: 50px
+
+  hr
+    border: .5px solid currentColor
+    border-top: none
+    margin: 10px 0
+
 .theme--dark.v-app-bar.v-toolbar.v-sheet
   padding: 0 34px
 
@@ -232,14 +245,6 @@ export default {
 
 .v-toolbar__title
   user-select: none
-
-p
-  font-family: Resist Sans
-  font-size: 21px
-  text-align: left
-  font-weight: 300
-  line-height: 150%
-  margin-bottom: 50px
 
 
 #app
