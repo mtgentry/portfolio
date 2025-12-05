@@ -1,0 +1,86 @@
+{
+  "cover": {
+    "media": {
+      "name": "stjane_thumb.jpg"
+    },
+    "title": "Saint Jane",
+    "categories": "Art Direction, Product Renderings"
+  },
+  "backgroundColor": "#E6D6D5",
+  "textColor": "#3C3B3B",
+  "header": "The founder of Saint Jane had been running ads for a while and had tested different headlines, layouts, and offers. But performance was still flat. I suggested trying something less conventional: replace photos in the ads with 3D renders. It was a small change that led to a 23% lift and a new way of thinking about how images shape performance.",
+  "seo_description": "",
+  "layout": [
+    {
+      "media": [
+        {
+          "name": "jane_wide.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+{
+      "title": "The Challenge",
+      "text": [
+        "Saint Jane is a premium skincare brand with a clear identity and strong positioning. The ads communicated the right things, but the visuals did not quite hold up. The images were ok. But they did not elevate the product, not in the way a premium offering demands."
+
+      ]
+    },
+
+
+    {
+      "text": [
+        "After dozens of tests, results had leveled out. The usual tweaks were no longer moving the needle. I suggested a different approach: rebuild the images entirely in 3D. It would allow for higher quality, greater control, and more variations to test. The founder was skeptical, and understandably so. Swapping a photo for a 3D render was not the obvious next step. So I ran a test to answer a simple question: could a 3D image actually perform better?"
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "jane_before.jpg",
+          "position": "left",
+          "width": "100%",
+          "title": "Original photo"
+        },
+        {
+          "name": "jane_after.jpg",
+          "position": "left",
+          "width": "100%",
+          "title": "3D render"
+        }
+      ]
+    },
+
+{
+      "title": "The Test",
+      "text": [
+        "The setup was simple. The copy stayed the same. So did the layout and the audience. We tested their original image against my 3D render. The only thing I changed was the image. The results told the story. The CTR rose from 1.34% to 1.64%. CPC dropped from 44 cents to 38. This one change made a measurable difference, with no increase in spend or change in targeting."
+
+      ]
+    },
+
+
+    {
+      "media": [
+        {
+          "name": "a_b_test_results.jpg",
+          "position": "center",
+          "title": "Test results"
+        }
+      ]
+    },
+    {
+      "text": [
+        "For Saint Jane, the results were energizing. The founder immediately saw the potential and wanted to explore what else this kind of image making could unlock. What began as an experiment quickly turned into a bigger conversation, and she greenlit a broader rollout of 3D imagery across the brand."
+      ]
+    },
+    {
+      "line": true
+    },
+    {
+      "text": [
+        "Agency: Ghost Collective"
+      ]
+    }
+  ]
+}

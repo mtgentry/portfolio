@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  v-row.section(:class="{ slim: !section.media, 'slim-padding': slim_padding, 'line-section': section.line }")
-    v-col(v-if="section.text || section.title" :data-aos="section.animation ? section.animation : 'fade-up'")
+  v-row.section(:class="{ slim: !section.media && !section.imageReveal, 'slim-padding': slim_padding, 'line-section': section.line }")
+    v-col(v-if="section.text || section.title" :data-aos="shouldSkipAnimation(section) ? null : (section.animation ? section.animation : 'fade-up')")
       String(:texts="section.text" :size="section.size" :title="section.title" :align="section.align")
     v-col(v-if="section.textBox" :data-aos="section.animation ? section.animation : 'fade-up'")
       TextBox(:textBox="section.textBox")
@@ -40,6 +40,8 @@
       audit
     v-col.w-100(v-else-if="section.beforeafter" :data-aos="section.animation ? section.animation : 'fade-up'")
       beforeafter
+    v-col(v-else-if="section.imageReveal" :data-aos="section.animation ? section.animation : 'fade-up'")
+      ImageReveal(:imageName="section.imageReveal.imageName" :width="section.imageReveal.width" :project_name="$route.params.project")
     v-col(v-else-if="section.media" :data-aos="media.animation === 'disable' ? null : (media.animation ? media.animation : 'fade-up')")
 
 
@@ -61,6 +63,7 @@ import Pricing from "@/components/Pricing.vue";
 import Faq2 from "@/components/Faq2.vue";
 import PlansCTA from "@/components/PlansCTA.vue";
 import TextBox from "@/components/project/TextBox.vue";
+import ImageReveal from "@/components/ImageReveal.vue";
 
 export default {
   props: {
@@ -83,7 +86,8 @@ export default {
     Button,
     SVGs,
     Pricing,
-    CTA
+    CTA,
+    ImageReveal
   },
   methods: {
     shouldUseAOS(media) {
@@ -91,9 +95,20 @@ export default {
       // Get all sections from parent component
       const sections = this.$parent.project?.layout || []
       const currentSectionIndex = sections.findIndex(s => s === this.section)
-      
+
       // If this is the first section, don't use AOS (return false)
       return currentSectionIndex !== 0
+    },
+    shouldSkipAnimation(section) {
+      // Skip animation for agency credits, client credits, etc.
+      if (section.text && Array.isArray(section.text)) {
+        return section.text.some(text =>
+          text.includes('Agency:') ||
+          text.includes('Client:') ||
+          text.includes('Personal Project')
+        )
+      }
+      return false
     }
   }
 }
@@ -102,22 +117,28 @@ export default {
 <style lang="sass">
 
 .section
-  padding-top: 50px
+  // padding-top: 15px  // Commented out to reduce spacing
   min-width: 50%
-  
+
   &:first-child
     padding-top: 80px
-    
+
+  // Sections with media (images, videos, etc.)
+  &:not(.slim)
+    padding-top: 65px  // Increased from 50px
+    padding-bottom: 65px  // Increased from 50px
+    // border: 1px solid black !important  // DEBUG: Visualize media section boundary
+
   @media (max-width: 768px)
     padding-top: 10px
-    
+
     &:first-child
       padding-top: 20px
-      
+
     // For sections with only media, use minimal padding
     &:not(.slim)
       padding-top: 0px
-      
+
       &:first-child
         padding-top: 10px
   
@@ -132,6 +153,7 @@ export default {
 
     + .section
       padding-top: 5px
+      margin-top: -5px  // Pull section closer to rule above
 
       p
         margin-top: 0 !important
@@ -157,6 +179,14 @@ export default {
 .slim
   max-width: 659px
   width: 100%
+  // border: 2px solid orange !important  // DEBUG: Visualize section boundary
+
+  // Only add space when followed by another slim section
+  + .slim
+    margin-top: 80px
+
+  .col, .v-col
+    padding: 0 12px  // Keep horizontal padding, remove vertical
 
 .images
   display: flex

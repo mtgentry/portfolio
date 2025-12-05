@@ -1,0 +1,89 @@
+{
+  "cover": {
+    "media": {
+      "name": "cliffwater_thumb.jpg"
+    },
+    "title": "Cliffwater",
+    "categories": "Branding, Visual Design, UI, UX",
+    "position": "left",
+    "width": "70%",
+    "forbidIndex": true
+  },
+  "backgroundColor": "#2F74B2",
+  "textColor": "#ffffff",
+  "header": "Cliffwater wrote the book on private debt. Literally. With decades of experience and deep institutional knowledge, they are trusted advisers in a complex space. But their digital presence had not kept pace.",
+  "seo_description": "",
+  "layout": [
+
+    {
+      "media": [
+        {
+          "name": "cliffwater_homepage.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "They came to us with an urgent need. A new website that could match their expertise and meet the expectations of modern clients. A full rebrand was in consideration, but timing made the site the clear place to begin."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "square_in_pool.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "We led with the website, building with a clear brand voice in mind. As the experience took shape, the visual system emerged alongside it. Identity and interface evolved together, shaped by use rather than theory."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "data_stacks.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "Private debt is complex by nature. Cliffwater’s goal was to make the category more accessible and build trust with new audiences. The design needed to reflect that ambition with clarity and precision."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "upward_arrows.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "What began as a digital update became something broader. A brand system built from the inside out. Confident, quiet, and designed to earn trust through substance."
+      ]
+    },
+
+    {
+      "line": true
+    },
+
+    {
+      "text": [
+        "Agency: Ghost Collective"
+      ]
+    }
+
+  ]
+}

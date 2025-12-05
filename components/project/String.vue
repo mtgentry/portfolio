@@ -38,8 +38,9 @@ export default {
 </script>
 <style lang="sass" scoped>
 .string-component
-  margin-top: 2vh
-  margin-bottom: 2vh
+  // margin-top: 0      // Removed
+  // margin-bottom: 2vh  // Commented out to reduce spacing
+  // border: 1px solid red !important  // DEBUG: Visualize component boundary
 
 
 .adjacent-string
@@ -55,15 +56,16 @@ h3
   font-weight: 100
   font-size: 27px
   line-height: 100%
-  padding-bottom: 20px
-  margin-top: 20px // Further reduced from 30px (was originally 100px)
-  
+  padding-bottom: 12px  // Increased from 8px
+  margin-top: 0  // Removed margin-top
+  // border: 1px solid blue !important  // DEBUG: Visualize heading boundary
+
   // DEBUG: Add border and reduce spacing on mobile (COMMENTED OUT)
   // border: 3px solid purple !important
-  
+
   @media (max-width: 768px)
     margin-top: 0
-    padding-bottom: 20px
+    padding-bottom: 8px  // Reduced from 20px
     margin-bottom: 0
 
 h4
@@ -81,10 +83,11 @@ h5
   padding-bottom: 50px
 
 p
-  // Normal paragraph styling
+  margin-top: 0  // Remove default top margin
+  // border: 1px solid green !important  // DEBUG: Visualize paragraph boundary
 
 .agency-credit
   font-size: 16px !important
-  color: #888888 !important
+  color: #AAAAAA !important
   font-weight: 500 !important
 </style>

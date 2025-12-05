@@ -54,6 +54,7 @@ export default {
 #footerCol
   height: 100px
   width: 100%
+  margin-top: 50px  // Minimum space above footer
 
 @keyframes footerFadeIn
   from

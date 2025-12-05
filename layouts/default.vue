@@ -226,13 +226,14 @@ export default {
     font-size: 21px !important
     text-align: left
     font-weight: 300
-    line-height: 150% !important
-    margin-bottom: 50px
+    line-height: 140% !important
+    margin-bottom: 30px
 
   hr
     border: .5px solid currentColor
     border-top: none
-    margin: 10px 0
+    margin-top: 1px
+    margin-bottom: 30px
 
 .theme--dark.v-app-bar.v-toolbar.v-sheet
   padding: 0 34px

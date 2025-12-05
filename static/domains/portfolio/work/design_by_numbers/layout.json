@@ -1,0 +1,65 @@
+{
+  "cover": {
+    "media": {
+      "name": "stjane_thumb.jpg"
+    },
+    "title": "Design by Numbers",
+    "categories": "Newsletter, Design Education"
+  },
+  "backgroundColor": "#F3EBE3",
+  "textColor": "#3C3B3B",
+  "header": "Design education is full of friction. Too technical, too fragmented, too dull to stick. I created Design by Numbers to change that by simplifying, not reinventing. It is a newsletter that teaches web design the way people actually learn, with real examples, clear thinking, and a voice that respects the reader. It now reaches thousands of subscribers and holds steady with open rates over 35 percent.",
+  "seo_description": "",
+  "layout": [
+    {
+      "media": [
+        {
+          "name": "open_rates.jpg",
+          "position": "center",
+          "title": "Email open rates consistently above 35%"
+        }
+      ]
+    },
+    {
+      "title": "Finding Momentum",
+      "text": [
+        "What started as a small experiment quickly gained traction. With average open rates above 35 percent and a growing list of loyal subscribers, each issue delivers one focused idea. It is framed with just enough context to be practical, and just enough personality to be memorable."
+        
+      ]
+    },
+    {
+      "text": [
+        "Rather than overwhelming readers with choices, Design by Numbers offers clarity—showing when design is essential, and when it’s not. It avoids jargon. It favors metaphor. And it builds understanding, one lesson at a time."
+      ]
+    },
+    {
+      "title": "More Than Metrics",
+      "text": [
+        "Beyond the numbers, feedback plays a deeper role. One signal we pay close attention to: if more than three people reply to an issue unprompted, something clicked. Those moments shape the content moving forward—providing a qualitative compass alongside the quantitative."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "reader_feedback.jpg",
+          "position": "center",
+          "title": "Reader Feedback"
+        }
+      ]
+    },
+    {
+      "text": [
+        "Teaching design challenges my own assumptions. It forces clarity. It invites better questions. And in the process, it makes me a better designer.",
+        "Writing it each week keeps me sharp. It refines how I think, how I teach, and how I design. On the page and in client work alike."
+      ]
+    },
+    {
+      "line": true
+    },
+    {
+      "text": [
+        "Client: Personl Initiative"
+      ]
+    }
+  ]
+}
