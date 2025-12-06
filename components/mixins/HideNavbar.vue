@@ -38,8 +38,10 @@ export default {
     },
     makeBackgroundWhite() {
       this.$refs.navbar.$el.classList.add('whiteBG')
-      this.$store.commit('updateState', {field: 'backgroundColor', value: this.white.backgroundColor})
-      this.$store.commit('updateState', {field: 'textColor', value: this.white.textColor})
+      const bgColor = this.$store.state.pageBackgroundColor || this.white.backgroundColor
+      const txtColor = this.$store.state.pageTextColor || this.white.textColor
+      this.$store.commit('updateState', {field: 'backgroundColor', value: bgColor})
+      this.$store.commit('updateState', {field: 'textColor', value: txtColor})
     },
     makeBackgroundBColor() {
       let backgroundColor = this.$store.state.project ? this.$store.state.project.backgroundColor : this.$store.state.homeBackgroundColor

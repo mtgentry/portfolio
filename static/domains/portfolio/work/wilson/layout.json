@@ -12,6 +12,8 @@
   },
   "backgroundColor": "#B72B35",
   "textColor": "#ffffff",
+  "pageBackgroundColor": "#302626", 
+  "pageTextColor": "#ffffff",        
   "header": "Wilson is a 100 year old sports company with a long legacy of sponsoring top athletes. We helped them update their brand and website to appeal to modern athletes.",
   "seo_description": "",
   "layout": [

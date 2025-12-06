@@ -1,7 +1,7 @@
 <template lang="pug">
   v-app#app.display-animation(ref="app" :style=`{backgroundColor: bgColor, color: mainTextColor}`
     :class="{'loaded': !loading, 'paddingLayout': paddingLayout}")
-    v-app-bar.display-animation(:class="{'loaded': !loading}" fixed app :style=`{backgroundColor: bgColor, color: txColor}` flat ref="navbar")
+    v-app-bar.display-animation(:class="{'loaded': !loading}" fixed app :style=`{color: txColor}` flat ref="navbar")
       nuxt-link(to="/")
         v-toolbar-title
           Logo(:color="txColor")
@@ -37,7 +37,7 @@ export default {
     setTimeout(() => {
       this.$AOS.refresh()
     }, 1000)
-    
+
     // Animate logo and nav on page load
     this.animateHeaderElements()
   },
@@ -159,7 +159,7 @@ export default {
       if (this.homePage) {
         color = "#FFFFFF"
       } else {
-        color = "#282725"
+        color = this.textColor || "#282725"
       }
       return color
     },
@@ -174,7 +174,7 @@ export default {
     homePage() {
       return this.$route.path === "/" || this.$route.path === "/work"
     },
-    ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'loading', 'layout', 'paddingLayout'])
+    ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'pageBackgroundColor', 'pageTextColor', 'loading', 'layout', 'paddingLayout'])
   },
 
 }
@@ -237,6 +237,7 @@ export default {
 
 .theme--dark.v-app-bar.v-toolbar.v-sheet
   padding: 0 34px
+  background-color: transparent !important
 
   @media (max-width: 768px)
     padding: 0 10px

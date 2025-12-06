@@ -32,6 +32,8 @@ export default {
     }
     this.$store.commit('updateState', {field: 'backgroundColor', value: this.project.backgroundColor})
     this.$store.commit('updateState', {field: 'textColor', value: this.project.textColor})
+    this.$store.commit('updateState', {field: 'pageBackgroundColor', value: this.project.pageBackgroundColor || null})
+    this.$store.commit('updateState', {field: 'pageTextColor', value: this.project.pageTextColor || null})
     this.$store.commit('updateState', {field: 'project', value: this.project})
     return {
       title: this.project.cover.title,
