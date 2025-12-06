@@ -19,7 +19,8 @@ export default {
     mainTextColor() {
       let color;
       if (this.$route.path.includes('work')) {
-        color = "#282725"
+        // Use pageTextColor from JSON if defined, otherwise default to dark
+        color = this.$store.state.pageTextColor || this.$store.state.textColor || "#282725"
       } else {
         color = "#948F8B"
       }
