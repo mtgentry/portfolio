@@ -128,13 +128,14 @@ export default {
     line-height: 66px
     overflow: visible
     text-align: left
-    max-width: 90vw
-    word-spacing: 0.1em
-    
+    max-width: min(1600px, 90vw)
+    word-spacing: 0
+
     // Prevent initial flash before animation
     opacity: 0
-    
+
     // Improve text wrapping for better phrase breaks
+    text-wrap: balance
     hyphens: none
     word-break: keep-all
     overflow-wrap: break-word
