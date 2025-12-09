@@ -1,0 +1,30 @@
+{
+  "cover": {
+    "media": {
+      "name": "stjane_thumb.jpg"
+    },
+    "title": "Saint Jane",
+    "categories": "Art Direction, Product Renderings"
+  },
+  "backgroundColor": "#ffffff",
+  "textColor": "#333333",
+  "header": "I helped launch the Nissan Leaf in North America by creating visuals that made a groundbreaking electric car feel aspirational and familiar.",
+  "seo_description": "",
+  "layout": [
+    {
+      "media": [
+        {
+          "name": "nissan.jpg",
+          "position": "center"
+        }
+      ]
+    },
+    {
+
+      "text": [
+        "These were some banner ads I designed for the launch."
+      ]
+    }
+  
+  ]
+}
