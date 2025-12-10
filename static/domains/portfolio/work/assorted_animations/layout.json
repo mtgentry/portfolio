@@ -9,23 +9,17 @@
     "width": "70%",
     "forbidIndex": true
   },
-  "backgroundColor": "#142042",
-  "textColor": "#ffffff",
+  "backgroundColor": "#ffffff",
+  "textColor": "#333333",
   "header": "Cliffwater wrote the book on private debt. With decades of experience and deep institutional knowledge, they are trusted advisers in a complex space. Yet the way their story was being told was holding their marketing back.",
   "seo_description": "",
   "layout": [
-    
-
-
-
-
- {
+    {
       "media": [
         {
           "name": "3.mp4",
           "position": "left",
           "width": "100%"
-
         },
         {
           "name": "4.mp4",
@@ -34,9 +28,6 @@
         }
       ]
     },
-
-
-
     {
       "media": [
         {
@@ -46,21 +37,6 @@
         }
       ]
     },
-
-
-
-
-
-    {
-      "media": [
-        {
-          "name": "5.mp4",
-          "position": "left",
-          "width": "50%"
-        }
-      ]
-    },
-
     {
       "media": [
         {
@@ -70,7 +46,6 @@
         }
       ]
     },
-    
     {
       "media": [
         {
@@ -80,24 +55,33 @@
         }
       ]
     },
-
- {
+    {
       "media": [
         {
-          "name": "rig_7_left.mp4",
-          "position": "left",
-          "width": "30"
-
-        },
-        {
-          "name": "stairs_right.mp4",
-          "position": "right",
-          "width": "70%"
+          "name": "tusk_done.mp4",
+          "position": "center",
+          "width": "80%"
         }
       ]
     },
 
 
+  {
+    "media": [
+      {
+        "name": "rig_7_left.mp4",
+        "position": "left",
+        "width": "100%",
+        "cols": 6
+      },
+      {
+        "name": "stairs_right.mp4",
+        "position": "right",
+        "width": "100%",
+        "cols": 6
+      }
+    ]
+  },
 
 
     {
@@ -108,13 +92,12 @@
         }
       ]
     },
-
     {
       "media": [
         {
           "name": "colors_japan.mp4",
           "position": "center",
-           "width": "80%"
+          "width": "70%"
         }
       ]
     },
@@ -136,7 +119,6 @@
         }
       ]
     },
-
     {
       "media": [
         {
@@ -150,17 +132,17 @@
       "media": [
         {
           "name": "expand_demo.mp4",
-          "position": "center"
+          "position": "center",
+          "width": "70%"
         }
       ]
     },
-    
     {
       "media": [
         {
           "name": "homepage_demo.mp4",
-          "position": "center",
-            "width": "80%"
+          "position": "left",
+          "width": "80%"
         }
       ]
     },
@@ -168,17 +150,8 @@
       "media": [
         {
           "name": "monitor.mp4",
-          "position": "center",
-           "width": "80%"
-        }
-      ]
-    },
-    {
-      "media": [
-        {
-          "name": "tusk_done.mp4",
-          "position": "center",
-          "width": "80%"
+          "position": "right",
+          "width": "40%"
         }
       ]
     }

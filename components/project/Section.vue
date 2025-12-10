@@ -7,7 +7,7 @@
       TextBox(:textBox="section.textBox")
     v-col(v-else-if="section.media" :data-aos="shouldUseAOS(media) ? (media.animation ? media.animation : 'fade-up') : null"
       :class="{ 'hero-fade-in': !shouldUseAOS(media) }"
-      v-for="media in section.media" :cols="media.cols ? media.cols : 12 / media.length" :key="media.name")
+      v-for="media in section.media" :cols="media.cols ? media.cols : 12 / section.media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
     v-col(v-else-if="section.line")
       hr
