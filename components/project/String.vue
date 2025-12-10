@@ -64,7 +64,7 @@ h3
   // border: 3px solid purple !important
 
   @media (max-width: 768px)
-    font-size: 24px
+    font-size: 22px
     margin-top: 0
     padding-bottom: 8px  // Reduced from 20px
     margin-bottom: 0
@@ -91,4 +91,7 @@ p
   font-size: 16px !important
   color: #AAAAAA !important
   font-weight: 500 !important
+
+  @media (max-width: 768px)
+    margin-bottom: 60px !important
 </style>

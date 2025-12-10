@@ -31,7 +31,7 @@ export default {
   line-height: 110%
 
   @media (max-width: 768px)
-    font-size: 18px
+    font-size: 16px
     margin-bottom: -3px
  
 

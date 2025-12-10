@@ -3,10 +3,7 @@
   v-col.pa-0#footerCol(cols="12")
     v-footer#footer(:style=`{borderTopColor: mainTextColor, color: mainTextColor}` v-if="layout")
       v-row.pa-0
-        v-col(cols="12" sm="6")
-          span &copy; #{new Date().getFullYear()}
-          span.pl-5(v-html="layout.name")
-        v-col.contact(cols="12" sm="6")
+        v-col.contact(cols="12")
           a(:href="`mailto:${layout.email}`") {{ layout.email }}
 </template>
 

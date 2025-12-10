@@ -229,11 +229,17 @@ export default {
     line-height: 140% !important
     margin-bottom: 30px
 
+    @media (max-width: 768px)
+      font-size: 19px !important
+
   hr
     border: .5px solid currentColor
     border-top: none
     margin-top: 1px
     margin-bottom: 30px
+
+    @media (max-width: 768px)
+      margin-bottom: 60px
 
 .theme--dark.v-app-bar.v-toolbar.v-sheet
   padding: 0 34px
