@@ -87,6 +87,18 @@
     {
       "media": [
         {
+          "name": "chiat_hover.mp4",
+          "position": "center",
+          "width": "60%"
+        }
+      ]
+    },
+
+
+
+    {
+      "media": [
+        {
           "name": "monitor.mp4",
           "position": "center",
           "width": "100%"
