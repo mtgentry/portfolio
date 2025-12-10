@@ -21,17 +21,16 @@ export default {
 
 <style lang="sass" scoped>
 
-
 .title
-
-  font-family: 'Resist Sans', sans-serif
+  font-family: 'Resist Sans', sans-serif !important
   font-weight: 700
-  font-size: 49px
-  padding-top: 7px ! important
+  font-size: 22px !important
+  padding-top: 7px !important
   line-height: 110%
 
-  @media (max-width: 768px)
-    font-size: 16px
+@media (max-width: 768px)
+  .title
+    font-size: 18px !important
     margin-bottom: -3px
  
 
