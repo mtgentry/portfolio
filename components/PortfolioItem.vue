@@ -23,12 +23,16 @@ export default {
 
 
 .title
-  
+
   font-family: 'Resist Sans', sans-serif
   font-weight: 700
   font-size: 49px
-  padding-top: 12px ! important
+  padding-top: 7px ! important
   line-height: 110%
+
+  @media (max-width: 768px)
+    font-size: 18px
+    margin-bottom: -3px
  
 
 
@@ -38,6 +42,7 @@ export default {
   font-family: 'Resist Sans', sans-serif
   font-size: 16px
   color: #948F8B
+  padding-bottom: 18px
 
 
 .item

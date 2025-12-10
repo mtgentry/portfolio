@@ -139,7 +139,7 @@ export default {
     hyphens: none
     word-break: keep-all
     overflow-wrap: break-word
-    
+
     @media (max-width: 768px)
       font-size: 42px
       line-height: 120%

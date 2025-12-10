@@ -135,12 +135,12 @@ export default {
     &:first-child
       padding-top: 20px
 
-    // For sections with only media, use minimal padding
+    // For sections with only media, add breathing room
     &:not(.slim)
-      padding-top: 0px
+      padding-top: 40px
 
       &:first-child
-        padding-top: 10px
+        padding-top: 40px
   
 
   &.slim-padding
@@ -172,9 +172,9 @@ export default {
   @media (max-width: 768px)
     padding-bottom: 5px
     
-    // Reduce spacing for sections with media (not slim class)
+    // Add spacing for sections with media (not slim class)
     &:not(.slim)
-      padding-bottom: 0px
+      padding-bottom: 40px
 
 .slim
   max-width: 659px
