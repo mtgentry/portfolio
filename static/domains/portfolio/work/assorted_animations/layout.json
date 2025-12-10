@@ -87,6 +87,16 @@
     {
       "media": [
         {
+          "name": "monitor.mp4",
+          "position": "center",
+          "width": "100%"
+        }
+      ]
+    },
+
+    {
+      "media": [
+        {
           "name": "ruler.mp4",
           "position": "center"
         }
@@ -137,21 +147,13 @@
         }
       ]
     },
+
     {
       "media": [
         {
           "name": "homepage_demo.mp4",
-          "position": "left",
+          "position": "center",
           "width": "80%"
-        }
-      ]
-    },
-    {
-      "media": [
-        {
-          "name": "monitor.mp4",
-          "position": "right",
-          "width": "40%"
         }
       ]
     }
