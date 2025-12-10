@@ -1,7 +1,7 @@
 <template lang="pug">
-  div#video.d-flex(v-if="is_video" :style=`{'justify-content': media.position || ''}`)
+  div#video.d-flex(v-if="is_video" :style=`{'justify-content': justifyContent}`)
     video.item(muted playsinline loop ref="video" :style=`{"width": media.width || "100%"}`)
-      source(:src="mediaPath" type="video/mp4")
+      source(:src="mediaPath" :type="videoType")
       span Your browser does not support the video tag.
   div#tweet.d-flex(v-else-if="is_tweet" :style=`{'justify-content': media.position || ''}`)
     Tweet(:tweet-data="media.data" :width="media.width" :project_name="project_name")
@@ -49,13 +49,27 @@ export default {
   },
   computed: {
     is_video() {
-      return this.media.name && this.media.name.includes('mp4')
+      return this.media.name && (this.media.name.includes('mp4') || this.media.name.includes('mov'))
     },
     is_tweet() {
       return this.media.type === 'tweet'
     },
     is_tweet_collection() {
       return this.media.type === 'tweet-collection'
+    },
+    videoType() {
+      if (this.media.name && this.media.name.includes('mov')) {
+        return 'video/quicktime'
+      }
+      return 'video/mp4'
+    },
+    justifyContent() {
+      if (this.media.position === 'left') {
+        return 'flex-start'
+      } else if (this.media.position === 'right') {
+        return 'flex-end'
+      }
+      return this.media.position || 'center'
     },
     mediaPath() {
       if (this.media.name && this.media.name.startsWith('http')) {
