@@ -1,6 +1,6 @@
 <template lang="pug">
   div#video.d-flex(v-if="is_video" :style=`{'justify-content': justifyContent}`)
-    video.item(muted playsinline loop ref="video" :style=`{"width": media.width || "100%"}`)
+    video.item(muted playsinline :loop="media.loop !== false" :autoplay="media.loop === false" ref="video" :style=`{"width": media.width || "100%"}`)
       source(:src="mediaPath" :type="videoType")
       span Your browser does not support the video tag.
   div#tweet.d-flex(v-else-if="is_tweet" :style=`{'justify-content': media.position || ''}`)
@@ -39,12 +39,15 @@ export default {
     if (!this.$refs.video) {
       return
     }
-    window.addEventListener("scroll", () => {
-      clearTimeout(this.playVisibleVideosTimeout);
-      this.playVisibleVideosTimeout = setTimeout(this.playVisibleVideos, 100);
-    }, {passive: true});
-    window.addEventListener("resize", this.playVisibleVideos);
-    window.addEventListener("DOMContentLoaded", this.playVisibleVideos);
+    // Only add scroll listeners for looping videos
+    if (this.media.loop !== false) {
+      window.addEventListener("scroll", () => {
+        clearTimeout(this.playVisibleVideosTimeout);
+        this.playVisibleVideosTimeout = setTimeout(this.playVisibleVideos, 100);
+      }, {passive: true});
+      window.addEventListener("resize", this.playVisibleVideos);
+      window.addEventListener("DOMContentLoaded", this.playVisibleVideos);
+    }
     this.$refs.video.controls = this.isIos()
   },
   computed: {
