@@ -1,8 +1,12 @@
 <template lang="pug">
-  div#video.d-flex(v-if="is_video" :style=`{'justify-content': justifyContent}`)
-    video.item(muted playsinline :loop="media.loop !== false" :autoplay="media.loop === false" ref="video" :style=`{"width": media.width || "100%"}`)
-      source(:src="mediaPath" :type="videoType")
-      span Your browser does not support the video tag.
+  div(v-if="is_video")
+    div#video.d-flex(:style=`{'justify-content': justifyContent}`)
+      video.item(muted playsinline :loop="media.loop !== false" :autoplay="media.loop === false" ref="video" :style=`{"width": media.width || "100%"}`)
+        source(:src="mediaPath" :type="videoType")
+        span Your browser does not support the video tag.
+    div.text-center.pt-1(v-if="media.title" v-html="media.title")
+  div#pdf.d-flex(v-else-if="is_pdf" :style=`{'justify-content': justifyContent}`)
+    embed.pdf-viewer(:src="mediaPath" type="application/pdf" :style=`{"width": media.width || "80%", "height": "800px"}`)
   div#tweet.d-flex(v-else-if="is_tweet" :style=`{'justify-content': media.position || ''}`)
     Tweet(:tweet-data="media.data" :width="media.width" :project_name="project_name")
   div#tweet-collection(v-else-if="is_tweet_collection")
@@ -53,6 +57,9 @@ export default {
   computed: {
     is_video() {
       return this.media.name && (this.media.name.includes('mp4') || this.media.name.includes('mov'))
+    },
+    is_pdf() {
+      return this.media.name && this.media.name.includes('pdf')
     },
     is_tweet() {
       return this.media.type === 'tweet'
@@ -166,4 +173,9 @@ export default {
 .aspect-container
   overflow: hidden
   display: flex
+.pdf-viewer
+  border: none
+  @media (max-width: 768px)
+    width: 100%!important
+    max-width: 100%!important
 </style>

@@ -17,11 +17,9 @@
 
       "media": [
         {
-          "name": "motion_sample.mp4",
+          "name": "roundtable_cover_letter.pdf",
           "position": "center",
-          "width": "80%",
-          "loop": false,
-          "title": "Web & Motion Work"
+          "width": "80%"
         }
       ]
     }
