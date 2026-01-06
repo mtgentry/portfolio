@@ -1,0 +1,173 @@
+{
+  "cover": {
+    "media": {
+      "name": "cliffwater_thumb.jpg"
+    },
+    "title": "Cliffwater",
+    "categories": "Branding, Visual Design, UI, UX",
+    "position": "left",
+    "width": "70%",
+    "forbidIndex": true
+  },
+  "backgroundColor": "#ffffff",
+  "textColor": "#333333",
+  "header": "I love creating motion in video and on the web. Here are a few snippets of things I've done.",
+  "seo_description": "",
+  "layout": [
+    {
+      "media": [
+        {
+          "name": "3.mp4",
+          "position": "left",
+          "width": "100%"
+        },
+        {
+          "name": "4.mp4",
+          "position": "right",
+          "width": "100%"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "1.mp4",
+          "position": "center",
+          "width": "100%"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "francescas.mp4",
+          "position": "center",
+          "width": "70%"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "mojave_cloud.mp4",
+          "position": "center",
+          "width": "70%"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "tusk_done.mp4",
+          "position": "center",
+          "width": "80%"
+        }
+      ]
+    },
+
+
+  {
+    "media": [
+      {
+        "name": "rig_7_left.mp4",
+        "position": "left",
+        "width": "100%",
+        "cols": 6
+      },
+      {
+        "name": "stairs_right.mp4",
+        "position": "right",
+        "width": "100%",
+        "cols": 6
+      }
+    ]
+  },
+
+
+    {
+      "media": [
+        {
+          "name": "chiat_hover.mp4",
+          "position": "center",
+          "width": "60%"
+        }
+      ]
+    },
+
+
+
+    {
+      "media": [
+        {
+          "name": "monitor.mp4",
+          "position": "center",
+          "width": "100%"
+        }
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "ruler.mp4",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "colors_japan.mp4",
+          "position": "center",
+          "width": "70%"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "arm_extend_right.mp4",
+          "position": "right",
+          "width": "70%"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "elephant_loop_left.mp4",
+          "position": "left",
+          "width": "40%"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "flowers_right.mp4",
+          "position": "right",
+          "width": "50%"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "expand_demo.mp4",
+          "position": "center",
+          "width": "70%"
+        }
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "homepage_demo.mp4",
+          "position": "center",
+          "width": "80%"
+        }
+      ]
+    }
+  ]
+}

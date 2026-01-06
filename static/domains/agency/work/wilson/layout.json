@@ -3,7 +3,7 @@
     "media": {
       "name": "wilson_thumb.jpg"
     },
-   "title": "Wilson",
+    "title": "Wilson",
     "categories": "Visual Design",
     "multiple": "true",
     "position": "right",
@@ -12,12 +12,20 @@
   },
   "backgroundColor": "#B72B35",
   "textColor": "#ffffff",
-  "header": "Wilson is a 100 year old sports company with a long legacy of sponsoring top athletes. We helped them update their brand and website to appeal to modern athletes.",
+  "pageBackgroundColor": "#302626",
+  "pageTextColor": "#ffffff",
+  "header": "For over 100 years, Wilson has defined what it means to compete. As the brand looked to connect with a new generation of athletes, we helped shape a digital experience built for relevance, reach, and results.",
   "seo_description": "",
   "layout": [
-    
+   
+    {
+      "text": [
+        "This project was part of a complete rebrand for Wilson with a renewed focus on digital. We were brought in to rethink the site from the inside out, starting with two of the brand’s core pillars — golf and tennis."
+      ]
+    },
+   
 
-{
+ {
       "media": [
         {
           "name": "wilson_golf_homepage.jpg",
@@ -27,14 +35,18 @@
     },
 
 
-    {
-     
+ {
       "text": [
-       
-        
-       "This site redesign was part of a brand overhaul. I was tasked with designing several key parts of the site including the golf and tennis divisions. A key part of the brief was to highlight their all-star roster of athletes."
+        "At the heart of the rebrand was the athlete. We created space to celebrate Wilson’s roster of sports icons and emerging talent. Not just as faces of the brand, but as proof of what Wilson makes possible. Their stories bring energy and credibility to the entire experience."
       ]
     },
+
+    {
+      "text": [
+        "We also restructured the site to drive performance. That meant simplifying navigation, sharpening product discovery, and removing blockers along the path to checkout. We infused key moments with social content to build energy, drive validation, and connect product to real athletes."
+      ]
+    },
+    
     {
       "media": [
         {
@@ -42,15 +54,21 @@
           "position": "center"
         }
       ]
+    },
+
+        {
+      "text": [
+        "The new Wilson digital experience honors a century of sport while making space for what comes next. It speaks with more clarity. Moves with more purpose. And connects with the next generation of athletes in a way that feels both personal and powerful."
+      ]
+    },
+    
+    {
+      "line": true
+    },
+    {
+      "text": [
+        "Agency: Phenomenon"
+      ]
     }
-    
-    
-    
-    
-   
-    
   ]
 }
-
-
-

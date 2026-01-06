@@ -1,0 +1,29 @@
+{
+  "cover": {
+    "media": {
+      "name": "cliffwater_thumb.jpg"
+    },
+    "title": "Cliffwater",
+    "categories": "Branding, Visual Design, UI, UX",
+    "position": "left",
+    "width": "70%",
+    "forbidIndex": true
+  },
+  "backgroundColor": "#ffffff",
+  "textColor": "#333333",
+  "seo_description": "",
+  "layout": [
+    {
+
+      "media": [
+        {
+          "name": "motion_sample.mp4",
+          "position": "center",
+          "width": "80%",
+          "loop": false,
+          "title": "Web & Motion Work"
+        }
+      ]
+    }
+  ]
+}

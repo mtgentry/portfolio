@@ -1,0 +1,100 @@
+{
+  "cover": {
+    "media": {
+      "name": "cliffwater_thumb.jpg"
+    },
+    "title": "Cliffwater",
+    "categories": "Branding, Visual Design, UI, UX",
+    "position": "left",
+    "width": "70%",
+    "forbidIndex": true
+  },
+  "backgroundColor": "#142042",
+  "textColor": "#ffffff",
+  "header": "Cliffwater wrote the book on private debt. With decades of experience and deep institutional knowledge, they are trusted advisers in a complex space. Yet the way their story was being told was holding their marketing back.",
+  "seo_description": "",
+  "layout": [
+
+    {
+      "media": [
+        {
+          "name": "1.mp4",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "They came to me with a clear challenge. How do you explain private debt to a broader audience in a way that feels human, confident, and easy to grasp, without losing the nuance that institutional investors expect."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "2.mp4",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "I art directed, edited, and animated this two minute video that became the centerpiece of that effort. The video translates the moving parts of private debt into simple metaphors, guiding viewers from first principles to a clear understanding of the category and Cliffwater’s role within it."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "3.mp4",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "Instead of leaning on jargon, I built the narrative around plain language, thoughtful pacing, and a clean visual system. Abstract concepts are grounded in relatable motion, typography, and framing, so the information lands without feeling simplified or watered down."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "4.mp4",
+          "position": "center"
+        }
+      ]
+    },
+
+{
+      "text": [
+        "What began as an educational piece became something larger. The film now acts as a living expression of the brand a clear, confident system of language and visuals that makes private debt approachable while reinforcing Cliffwater’s depth of expertise."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "5.mp4",
+          "position": "center"
+        }
+      ]
+    },
+
+    
+
+    {
+      "line": true
+    },
+
+    {
+      "text": [
+        "Agency: Ghost Collective"
+      ]
+    }
+
+  ]
+}

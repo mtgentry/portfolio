@@ -1,0 +1,98 @@
+{
+  "cover": {
+    "media": {
+      "name": "mojave_thumb.jpg"
+    },
+    "title": "Mojave",
+    "categories": "Product Design, Visual Design",
+    "position": "right",
+    "width": "50%"
+  },
+  "backgroundColor": "#3BA076",
+  "textColor": "#fff",
+  "header": "Mojave is a browser extension that makes saving bookmarks simple again. Instead of pushing links into a black box that you never see again, Mojave turns your browser into a place where your saved web is always visible, organized, and ready to use.",
+  "seo_description": "",
+  "layout": [
+    
+  
+
+
+
+{
+      "media": [
+        {
+          "name": "drag_and_drop.mp4",
+          "position": "center"
+        }
+      ]
+    },
+
+
+    {
+      
+      "text": [
+        "Most bookmarking tools focus on tags, filters, and abstract information management. Pinboard, Pocket, Delicious and others are optimized for storage, not for seeing everything you have at a glance. Mojave takes the opposite approach. It gives you a single page that shows all your folders and links in one clear, spatial layout. You can scan your entire collection, drop new links into place, and rearrange things the way your brain already thinks about them."
+      ]
+    },
+
+ 
+
+ {
+      "media": [
+        {
+          "name": "menus.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+   {
+      
+      "text": [
+        "When you can see all of your bookmarks in one view, saving becomes almost automatic. You drag a link into the right spot instead of pausing to invent the perfect tag. Decisions get lighter, flows get faster, and the cognitive load on the user goes down. Mojave turns bookmarking from a chore into a quick gesture that fits the rhythm of everyday browsing."
+      ]
+    },
+
+
+
+
+
+
+
+
+
+    {
+      "media": [
+        {
+          "name": "mojave_extension.mp4",
+          "position": "center"
+        }
+      ]
+    },
+
+{
+      
+      "text": [
+        "I was the design lead for Mojave, responsible for product vision, interaction design, and the overall look and feel of the extension. The product developed a small but devoted base of users who trusted it with tens of thousands of bookmarks, and it remains a favorite example of how a simple, clear interface can completely change the way people work with information online."
+      
+       
+      ]
+    },
+
+
+
+    
+    {
+      "line": true
+    },
+    {
+      "text": [
+        "Client: Mojave"
+      ]
+    }
+
+  ]
+}
+
+
+

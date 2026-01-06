@@ -1,0 +1,27 @@
+{
+  "cover": {
+    "media": {
+      "name": "cliffwater_thumb.jpg"
+    },
+    "title": "Cliffwater",
+    "categories": "Branding, Visual Design, UI, UX",
+    "position": "left",
+    "width": "70%",
+    "forbidIndex": true
+  },
+  "backgroundColor": "#ffffff",
+  "textColor": "#333333",
+  "seo_description": "",
+  "layout": [
+    {
+
+      "media": [
+        {
+          "name": "roundtable_cover_letter.pdf",
+          "position": "center",
+          "width": "80%"
+        }
+      ]
+    }
+  ]
+}

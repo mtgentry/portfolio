@@ -1,0 +1,57 @@
+{
+  "cover": {
+    "media": {
+      "name": "bedtime_thumb.jpg"
+    },
+    "title": "Bedtime",
+    "categories": "Product Design, Visual Design, UI, UX",
+    "multiple": "true",
+    "position": "right",
+    "width": "60%"
+  },
+  "backgroundColor": "#222533",
+  "textColor": "#ffffff",
+  "header": "Bedtime is a mobile app rooted in a universal ritual. It invites strangers from around the world to exchange goodnight messages. Quiet. Gentle. Intentional. In a space defined by performance, Bedtime creates a pause. A reminder that even the smallest moments of connection still matter.",
+  "seo_description": "",
+  "layout": [
+
+    {
+      "media": [
+        {
+          "name": "bedtime_1.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "When the creators of Bedtime came to me, I loved the idea. A simple way to connect strangers through something we all understand. What began as an experiment turned into a true collaboration. The result is a product that trades noise for calm and performance for presence. A small app with a quietly ambitious goal to make the internet feel a little more human."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "bedtime_2.jpg",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "Bedtime does not promise transformation. It offers something quieter. A pause, a gesture, a moment of care exchanged between strangers. It is a small product with a clear intent. And in a world that often rewards the loudest voice, that quiet feels like progress."
+      ]
+    },
+    {
+      "line": true
+    },
+    {
+      "text": [
+        "Client: Bedtime"
+      ]
+    }
+
+  ]
+}

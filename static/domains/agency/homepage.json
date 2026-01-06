@@ -1,13 +1,16 @@
 {
-  "header": "We make persuasive, emotional design, that converts browsers into buyers.",
-  "name": "Hoopla Design",
-  "email": "mason@hoopladesign.com",
+  "header": "Designer of intuitive, beautiful digital products with a focus on thoughtful, performance minded design.",
+  "name": "Mason Gentry",
+  "email": "mgentry@masongentry.com",
   "order": [
     "francescas",
-    "stjane",
-    "colorsupply"
+    "colorsupply",
+    "wilson",
+    "bedtime",
+    "mojave",
+    "cliffwater"
   ],
   "navBar": [
-   
+    "about"
   ]
 }

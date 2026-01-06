@@ -8,7 +8,7 @@
   },
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",
-  "header": "Fashion moves fast for young girls. They try on new clothes and discard old identities. They are eager to try new styles, but you can't be too forceful. With this in mind, we re-imagined the Francesca's website as a cool big sister to help these young shoppers navigate their early teen years.",
+  "header": "Francesca’s came to us at a moment of transition. Their core customers, girls navigating early adolescence, were changing fast. What they needed was not just a visual update but a shift in tone. Together, we reimagined the brand as a trusted older sister. Someone stylish, confident, and just gentle enough to guide without pushing.",
   "seo_description": "",
   "layout": [
     {
@@ -16,25 +16,18 @@
         {
           "name": "francescas_1.jpg",
           "position": "center",
-          "animation": "fade"
+          "title": "Francesca's"
         }
       ]
     },
     {
-      "title": "Time for a Refresh",
+      "title": "Time for a change",
       "text": [
-        "When Francesca's came to us, their brand was stale. Their customers, mainly girls aged 11-15, had grown more sophisticated than when the company started in 2006. These girls now liked hipper brands like Madewell and ASOS. At the same time, we needed to make sure their parents didn't feel left out.",
-        "Francesca's wanted their website to to be cool, but not too edgy."
-
-
+        "Francesca’s was ready for change. Originally built for younger girls, the brand no longer resonated with its growing audience. Their customers, girls aged eleven to fifteen, had become more style aware and were gravitating toward hipper brands like Madewell and Asos. Francesca’s needed a refresh that could evolve with them without making parents feel alienated.",
+        "I designed a new direction that balanced trend forward design with approachability, and it tested well across audiences. Stylish but not intimidating. Fresh but still familiar."
       ]
     },
-
-
-
     {
-
-
       "media": [
         {
           "name": "francescas_2.mp4",
@@ -42,20 +35,15 @@
         }
       ]
     },
-
     {
       "title": "The Strategy",
       "text": [
-
-        "Since these girls are still figuring out their fashion sense, we wanted to guide them, like an older sister would.",
-        "To do this, we created a way to browse that showed style ideas subtly, like flipping through a fashion magazine. When we shared this idea with our users, they loved it. So we designed a CMS for Francesca's editorial team to regularly update item pairings that worked well together."
+        "To bring that balance to life, I collaborated with our in-house strategists to rethink the entire experience. Inspired by fashion magazines, we introduced an editorial layer to the shopping journey. Product pairings were surfaced through moments of suggestion rather than promotion. It felt curated, not prescriptive. Like getting fashion advice from an older sister.",
+        "We validated the concept with users and it was one of their favorite things in the new site. From there, we built a custom CMS that gave the Francesca’s team full control over editorial updates and pairings."
       ]
     },
-
-
     {
       "media": [
-
         {
           "name": "francescas_3.jpg"
         }
@@ -63,16 +51,17 @@
     },
     {
       "text": [
-        "Along with the site redesign, we worked hard to make Francesca's checkout process better. We came up with different designs for this and had users try them out. This helped us see which design worked best."
-
-       
-    
+        "Beyond the rebrand, we also optimized the checkout experience. We tested multiple flows with users and partnered with the Francesca’s team to A/B test the top performers.",
+        "This work gave Francesca’s more than a new look. It repositioned the brand for a new generation while staying grounded in what made it matter. What started as a rebrand became something more. A trusted voice. A guiding presence. Style advice just like a big sister would give it."
+      ]
+    },
+    {
+      "line": true
+    },
+    {
+      "text": [
+        "Agency: Phenomenon"
       ]
     }
-
-
   ]
 }
-
-
-

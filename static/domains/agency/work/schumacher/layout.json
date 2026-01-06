@@ -1,0 +1,71 @@
+{
+  "cover": {
+    "media": {
+      "name": "stjane_thumb.jpg"
+    },
+    "title": "Schumacher Homes",
+    "categories": "Web Design, Email Campaign"
+  },
+  "backgroundColor": "#ffffff",
+  "textColor": "#3C3B3B",
+  "header": "Schumacher Homes needed a clearer path from digital engagement to in-person visits. I redesigned the website to elevate the brand and improve lead capture, then extended that work into a geo-personalized email campaign that surfaced the nearest showroom automatically. Visits to showrooms increased by 7 percent.",
+  "seo_description": "",
+  "layout": [
+    {
+      "imageReveal": {
+        "imageName": "website.jpg"
+      }
+    },
+    {
+      "title": "The Challenge",
+      "text": [
+        "Create a consistent digital experience that could drive real-world showroom visits across dozens of locations.",
+        "I started by rethinking the website, the foundation for everything that followed. Working alongside UX designers and strategists, we set two core goals: elevate the brand and capture more emails. I rebuilt the design system to feel more modern and premium, refining the layout, type, and tone to reflect the quality of the product. At the same time, we simplified the content structure and optimized every key flow for conversion. Subtle shifts in hierarchy and copy helped guide users more confidently through the site, while lead capture points like an interactive inspiration board created more meaningful entry into the funnel."
+      ]
+    },
+
+ {
+      "text": [
+        "But capturing interest was only half the story. The next challenge was turning that interest into foot traffic."
+        
+        
+      ]
+    },
+
+{
+      "title": "From Generic to Geographic",
+      "text": [
+      "The client had a standard email cadence, one to two sends per week, but the messaging lacked specificity. Subject lines and incentives had been tested, but none had driven a meaningful lift. I saw an opportunity to go deeper.",
+        "One of the most effective shifts was IP-based geolocation.",
+        "Schumacher has dozens of showrooms located throughout the Southwest. And during the site design, I became aware that there was a lot of friction in asking users to enter their address to find a showroom near them. This insight stayed with me while we worked to improve the newsletter. ”",
+        "I designed a test that used the user’s IP at signup to assign a default showroom. Every email after that dynamically populated with local info: address, hours, a map, and a clear invitation to visit. “Find a location near you” became “Come see us in Beaumont, Texas.”"
+      ]
+    },
+
+
+    {
+      "media": [
+        {
+          "name": "showrooms.jpg",
+          "position": "left",
+          "title": "Schumacher showrooms span across the Southwest"
+        }
+      ]
+    },
+    {
+      "text": [
+        "It worked very well.",
+        "That single shift led to a 7 percent increase in showroom visits, confirmed by local sales teams tracking in store conversations tied to email leads. Together, the work established a foundation that can evolve with the business, connecting digital intent to real world action in more thoughtful and scalable ways."
+
+      ]
+    },
+     {
+      "line": true
+    },
+    {
+      "text": [
+        "Agency: Phenomenon"
+      ]
+    }
+  ]
+}
