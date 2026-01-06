@@ -1,0 +1,30 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+domains:
+- domain: ghostcollective.co
+  type: PRIMARY
+- domain: www.ghostcollective.co
+  type: ALIAS
+name: ghostcollective
+region: sfo
+static_sites:
+- build_command: npm run generate
+  environment_slug: node-js
+  envs:
+  - key: BASE_URL
+    scope: BUILD_TIME
+    value: https://ghostcollective.co
+  - key: NODE_ENV
+    scope: BUILD_TIME
+    value: production
+  - key: IS_AGENCY
+    scope: BUILD_TIME
+    value: "1"
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: mtgentry/portfolio
+  name: ghostcollective
+  output_dir: dist
+  source_dir: /

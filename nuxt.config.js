@@ -11,7 +11,7 @@ export default {
   ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
+  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -98,5 +98,41 @@ export default {
     //     config.devtool = 'source-map'
     //   }
     // }
+  },
+
+  // Generate configuration for static site generation
+  generate: {
+    routes() {
+      const fs = require('fs')
+      const path = require('path')
+      const routes = []
+
+      // Determine which domain to use based on IS_AGENCY env var
+      const domain = process.env.IS_AGENCY === '1' ? 'agency' : 'portfolio'
+      const workDir = path.resolve(__dirname, `static/domains/${domain}/work`)
+      const auditsDir = path.resolve(__dirname, `static/domains/${domain}/audits`)
+
+      // Generate routes for work projects
+      if (fs.existsSync(workDir)) {
+        const projects = fs.readdirSync(workDir).filter(file => {
+          return fs.statSync(path.join(workDir, file)).isDirectory()
+        })
+        projects.forEach(project => {
+          routes.push(`/work/${project}`)
+        })
+      }
+
+      // Generate routes for audits
+      if (fs.existsSync(auditsDir)) {
+        const audits = fs.readdirSync(auditsDir).filter(file => {
+          return fs.statSync(path.join(auditsDir, file)).isDirectory()
+        })
+        audits.forEach(audit => {
+          routes.push(`/audits/${audit}`)
+        })
+      }
+
+      return routes
+    }
   }
 }
