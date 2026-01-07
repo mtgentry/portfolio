@@ -4,32 +4,24 @@ alerts:
 domains:
 - domain: masongentry.com
   type: PRIMARY
-envs:
-- key: BASE_URL
-  scope: RUN_AND_BUILD_TIME
-  value: ${APP_URL}
-- key: NODE_ENV
-  scope: RUN_AND_BUILD_TIME
-  value: production
-ingress:
-  rules:
-  - component:
-      name: portfolio
-    match:
-      path:
-        prefix: /
+- domain: www.masongentry.com
+  type: ALIAS
 name: portfolio
 region: sfo
-services:
-- build_command: yarn build
+static_sites:
+- build_command: npm run generate
   environment_slug: node-js
+  envs:
+  - key: BASE_URL
+    scope: BUILD_TIME
+    value: https://masongentry.com
+  - key: NODE_ENV
+    scope: BUILD_TIME
+    value: production
   github:
     branch: master
     deploy_on_push: true
     repo: mtgentry/portfolio
-  http_port: 8080
-  instance_count: 1
-  instance_size_slug: basic-xxs
   name: portfolio
-  run_command: yarn start --hostname 0.0.0.0 --port 8080
+  output_dir: dist
   source_dir: /
