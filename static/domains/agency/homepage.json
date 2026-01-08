@@ -1,14 +1,15 @@
 {
-  "header": "Designer of intuitive, beautiful digital products with a focus on thoughtful, performance minded design.",
+  "header": "Not the loudest. Not the flashiest. Just a small team of Ghosts doing work that helps good brands launch without falling on their face.",
   "name": "Mason Gentry",
   "email": "mgentry@masongentry.com",
   "order": [
+    "cliffwater",
+    "bedtime",
     "francescas",
     "colorsupply",
     "wilson",
-    "bedtime",
-    "mojave",
-    "cliffwater"
+
+    "mojave"
   ],
   "navBar": [
     "about"
