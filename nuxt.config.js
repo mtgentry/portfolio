@@ -11,7 +11,7 @@ export default {
   ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -65,7 +65,9 @@ export default {
   // ],
 
   axios: {
-    baseURL: `/domains/${process.env.IS_AGENCY === '1' ? 'agency' : 'portfolio'}`
+    baseURL: process.server
+      ? `http://localhost:8127/domains/${process.env.IS_AGENCY === '1' ? 'agency' : 'portfolio'}`
+      : `/domains/${process.env.IS_AGENCY === '1' ? 'agency' : 'portfolio'}`
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
