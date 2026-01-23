@@ -15,7 +15,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: process.env.IS_AGENCY === '1' ? 'Hoopla Design' : 'Mason Gentry',
+    titleTemplate: process.env.IS_AGENCY === '1' ? 'Ghost Collective' : 'Mason Gentry',
     htmlAttrs: {
       lang: 'en'
     },
