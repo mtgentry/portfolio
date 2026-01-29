@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
   div.text-wrapper
-    div.text(ref="textContainer") {{ text }}
+    div.text(ref="textContainer" :class="{ 'agency-header': isAgency }") {{ text }}
 </template>
 
 <script>
@@ -20,6 +20,11 @@ export default {
   data() {
     return {
       hasAnimated: false
+    }
+  },
+  computed: {
+    isAgency() {
+      return process.env.IS_AGENCY
     }
   },
   mounted() {
@@ -115,7 +120,7 @@ export default {
     padding-top: 200px
     padding-bottom: 160px
     min-height: 300px
-    
+
     @media (max-width: 768px)
       padding-top: 70px
       padding-bottom: 50px
@@ -127,7 +132,6 @@ export default {
     font-size: 50px
     line-height: 66px
     overflow: visible
-    text-align: left
     max-width: min(1600px, 90vw)
     word-spacing: 0
 
@@ -140,7 +144,14 @@ export default {
     word-break: keep-all
     overflow-wrap: break-word
 
+    // Default to left alignment for portfolio
+    text-align: left
+
     @media (max-width: 768px)
       font-size: 42px
       line-height: 120%
+
+  // Agency-specific styles
+  .text.agency-header
+    text-align: center
 </style>

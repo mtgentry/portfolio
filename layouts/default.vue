@@ -4,7 +4,8 @@
     v-app-bar.display-animation(:class="{'loaded': !loading}" fixed app :style=`{color: txColor}` flat ref="navbar")
       nuxt-link(to="/")
         v-toolbar-title
-          Logo(:color="txColor")
+          AgencyLogo(v-if="isAgency" :color="txColor")
+          PortfolioLogo(v-else :color="txColor")
       v-spacer
       span.pr-3(v-for="url in getUrls" :key="url")
         .nav-link-wrapper(@mouseenter="animateLineIn($event)" @mouseleave="animateLineOut($event)" :class="{ 'about-link': formatUrl(url) === 'About' }")
@@ -19,12 +20,14 @@
 import { mapState } from 'vuex'
 import { gsap } from 'gsap'
 import HideNavbar from "@/components/mixins/HideNavbar.vue";
-import Logo from "@/components/Logo.vue";
+import AgencyLogo from "@/components/AgencyLogo.vue";
+import PortfolioLogo from "@/components/PortfolioLogo.vue";
 export default {
   name: 'DefaultLayout',
   mixins: [HideNavbar],
   components: {
-    Logo,
+    AgencyLogo,
+    PortfolioLogo,
   },
   async fetch() {
     if (!this.$store.state.layout) {
@@ -174,6 +177,9 @@ export default {
     homePage() {
       return this.$route.path === "/" || this.$route.path === "/work"
     },
+    isAgency() {
+      return process.env.IS_AGENCY
+    },
     ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'pageBackgroundColor', 'pageTextColor', 'loading', 'layout', 'paddingLayout'])
   },
 
@@ -242,14 +248,16 @@ export default {
       margin-bottom: 60px
 
 .theme--dark.v-app-bar.v-toolbar.v-sheet
-  padding: 0 34px
+  padding: 0
   background-color: transparent !important
 
   @media (max-width: 768px)
-    padding: 0 10px
+    padding: 0
 
 .v-toolbar__content
-  padding: 0 5px !important
+  padding: 0 !important
+  width: 100% !important
+  max-width: 100% !important
 
 .v-toolbar__title
   user-select: none
