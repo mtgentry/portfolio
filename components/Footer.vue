@@ -4,7 +4,7 @@
     v-footer#footer(:style=`{borderTopColor: mainTextColor, color: mainTextColor}` v-if="layout")
       v-row.pa-0
         v-col.contact(cols="12")
-          a(:href="`mailto:${layout.email}`") {{ layout.email }}
+          //- a(:href="`mailto:${layout.email}`") {{ layout.email }}
 </template>
 
 <script>

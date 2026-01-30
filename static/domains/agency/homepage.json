@@ -2,15 +2,7 @@
   "header": "World-class design. No Agency Bloat. We help 0-to-1 founders punch above their weight by building the visual and functional foundations that make an early-stage brand look like a category leader. You take the credit; we take care of the launch.",
   "name": "Mason Gentry",
   "email": "mgentry@masongentry.com",
-  "order": [
-    "cliffwater",
-    "bedtime",
-    "francescas",
-    "colorsupply",
-    "wilson",
-
-    "mojave"
-  ],
+  "order": [],
   "navBar": [
     "about"
   ]
