@@ -132,7 +132,7 @@ export default {
     font-size: 50px
     line-height: 66px
     overflow: visible
-    max-width: min(1600px, 90vw)
+    max-width: min(1200px, 85vw)
     word-spacing: 0
 
     // Prevent initial flash before animation
