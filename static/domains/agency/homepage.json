@@ -3,7 +3,5 @@
   "name": "Mason Gentry",
   "email": "mgentry@masongentry.com",
   "order": [],
-  "navBar": [
-    "about"
-  ]
+  "navBar": []
 }
