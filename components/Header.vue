@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  div.text-wrapper
+  div.text-wrapper(:class="{ 'agency-wrapper': isAgency }")
     div.text(ref="textContainer" :class="{ 'agency-header': isAgency }") {{ text }}
 </template>
 
@@ -127,6 +127,15 @@ export default {
       display: flex
       align-items: center
       justify-content: flex-start
+
+  // Agency-specific vertical centering
+  .text-wrapper.agency-wrapper
+    min-height: calc(100vh - 100px)
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-top: 0
+    padding-bottom: 0
 
   .text
     font-size: 50px

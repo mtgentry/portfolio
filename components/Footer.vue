@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project  -->
 <template lang="pug">
   v-col.pa-0#footerCol(cols="12")
-    v-footer#footer(:style=`{borderTopColor: mainTextColor, color: mainTextColor}` v-if="layout")
+    v-footer#footer(:style=`{borderTopColor: mainTextColor, color: mainTextColor}` :class="{ 'agency-footer': isAgency }" v-if="layout")
       v-row.pa-0
         v-col.contact(cols="12")
           //- a(:href="`mailto:${layout.email}`") {{ layout.email }}
@@ -23,6 +23,9 @@ export default {
       }
       return color
     },
+    isAgency() {
+      return process.env.IS_AGENCY
+    },
     ...mapState(['layout'])
   }
 }
@@ -42,6 +45,12 @@ export default {
 
   @media (max-width: 768px)
     text-align: center!important
+
+  // &.agency-footer
+  //   border-top: none
+
+#footer.agency-footer
+  border-top: none
 
 .contact
   text-align: right!important
