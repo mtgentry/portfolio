@@ -266,16 +266,16 @@ export default {
     padding: 60px 20px 80px 20px
 
   .content p.text
-    font-size: 24px
-    line-height: 1.6
+    font-size: 28px !important
+    line-height: 1.7 !important
 
 @media (max-width: 480px)
   .portfolio-homepage
     padding: 40px 20px 60px 20px
 
   .content p.text
-    font-size: 20px
-    line-height: 1.5
+    font-size: 28px !important
+    line-height: 1.7 !important
 </style>
 
 <style lang="sass">
