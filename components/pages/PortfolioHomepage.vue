@@ -145,70 +145,90 @@ export default {
       const imageWrappers = document.querySelectorAll('.image-wrapper')
       const textContent = document.querySelectorAll('.text-content')
 
+      // Check which images are in viewport
+      const visibleImageCount = Array.from(imageWrappers).filter(wrapper => {
+        const rect = wrapper.getBoundingClientRect()
+        return rect.top < window.innerHeight && rect.bottom > 0
+      }).length
+
       // Set initial states - mask reveals from 44px wide, all 52px tall
       gsap.set(imageWrappers, { width: 44, height: 52, opacity: 0 })
+      gsap.set(imageWrappers[3], { width: 40, height: 52, opacity: 0 }) // 4th image starts narrower
       gsap.set(textContent, { opacity: 0 })
 
       // Create timeline with 1s delay
       const tl = gsap.timeline({ delay: .2 })
 
-      // Fade in image quickly first
-      tl.to(imageWrappers, {
-        opacity: 1,
-        duration: 0.3,
-        stagger: 0.3, // Each image animates 0.3s after the previous (2nd at 0.3s, 3rd at 0.6s, 4th at 0.9s, 5th at 1.2s, 6th at 1.5s, 7th at 1.8s)
-        ease: "power2.out"
+      // Individual stagger delays for each image (in seconds from start)
+      const staggerDelays = [0, 0.2, 0.4, 0.6, 1.0, 1.2, 1.4] // 5th image delayed more
+
+      // Fade in each image with custom timing
+      staggerDelays.forEach((delay, index) => {
+        if (imageWrappers[index]) {
+          tl.to(imageWrappers[index], {
+            opacity: 1,
+            duration: 0.4,
+            ease: "power2.out"
+          }, delay)
+        }
       })
+
       // Animate each wrapper to its unique final dimensions
-      .to(imageWrappers[0], {
+      tl.to(imageWrappers[0], {
         width: 70,
         height: 52,
         duration: 0.4,
         ease: "power2.out"
-      }, "<0.15") // First image (after Mason)
+      }, staggerDelays[0] + 0.15) // First image (after Mason)
       .to(imageWrappers[1], {
         width: 100,
         height: 52,
         duration: 0.4,
         ease: "power2.out"
-      }, "<0.2") // Second image (after TBWA\Chiat\Day)
+      }, staggerDelays[1] + 0.15) // Second image (after TBWA\Chiat\Day)
       .to(imageWrappers[2], {
         width: 55,
         height: 52,
         duration: 0.4,
         ease: "power2.out"
-      }, "<0.2") // Third image (after glass)
+      }, staggerDelays[2] + 0.15) // Third image (after glass)
       .to(imageWrappers[3], {
         width: 109,
         height: 52,
         duration: 0.4,
         ease: "power2.out"
-      }, "<0.2") // Fourth image (after Color Supply)
+      }, staggerDelays[3] + 0.15) // Fourth image (after Color Supply)
       .to(imageWrappers[4], {
         width: 60,
         height: 52,
         duration: 0.4,
         ease: "power2.out"
-      }, "<0.2") // Fifth image (after popular)
+      }, staggerDelays[4] + 0.15) // Fifth image (after popular)
       .to(imageWrappers[5], {
         width: 77,
         height: 52,
         duration: 0.4,
         ease: "power2.out"
-      }, "<0.2") // Sixth image (after renovating)
+      }, staggerDelays[5] + 0.15) // Sixth image (after renovating)
       .to(imageWrappers[6], {
         width: 80,
         height: 52,
         duration: 0.4,
         ease: "power2.out"
-      }, "<0.2") // Seventh image (after restoring)
+      }, staggerDelays[6] + 0.15) // Seventh image (after restoring)
 
-      // Then fade in text after images complete
-      .to(textContent, {
+      // Calculate when the last visible image completes
+      // Get the stagger delay for the last visible image
+      const lastVisibleImageDelay = staggerDelays[visibleImageCount - 1] || 0
+      // Last visible image completes at: its stagger delay + 0.15 (width delay) + 0.4 (width duration)
+      const lastVisibleImageTime = lastVisibleImageDelay + 0.15 + 0.4
+
+      // Fade in text after last visible image completes
+      tl.to(textContent, {
         opacity: 1,
         duration: 0.5,
         ease: "power2.out"
-      }, "+=0.3")
+      }, lastVisibleImageTime + 0.01)
     }
   }
 }
