@@ -287,7 +287,6 @@ export default {
 
 html, body
   scrollbar-color: #C1C1C1 #F1F1F1
-  background-color: #282725 //safari settings
 
 .fade-enter-active, .fade-leave-active
   transition: opacity 1.5s

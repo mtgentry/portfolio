@@ -16,10 +16,10 @@ const STATE_FIELDS = [
 ];
 
 export const state = () => ({
-  backgroundColor: "#282725",
-  textColor: "#ffffff",
-  homeBackgroundColor: "#282725",
-  homeTextColor: "#ffffff",
+  backgroundColor: process.env.IS_AGENCY ? "#282725" : "#F8F7F4",
+  textColor: process.env.IS_AGENCY ? "#ffffff" : "#000000",
+  homeBackgroundColor: process.env.IS_AGENCY ? "#282725" : "#F8F7F4",
+  homeTextColor: process.env.IS_AGENCY ? "#ffffff" : "#000000",
   pageBackgroundColor: null,
   pageTextColor: null,
   projects: null,

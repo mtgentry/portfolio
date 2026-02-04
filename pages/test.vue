@@ -1,129 +1,215 @@
 <template lang="pug">
   div.test-page
     div.container
-      div.text(ref="textContainer") Designer of intuitive, beautiful, and useful digital products. I like building things that make people's lives easier.
+      div.content
+        p.text
+          | Hi, I'm Mason
+          HoverImage(
+            :id="1"
+            icon-src="/images/hover_icon_1.png"
+            hover-src="/images/hover_big_1.jpg"
+            :use-mirroring="true"
+            :show-connector-line="true"
+            top-color="#769EF4"
+            right-color="#477AF0"
+            bottom-color="#164EED"
+            left-color="#477AF0"
+            border-color="#477AF0"
+          )
+          | . I'm a designer and founder based in Los Angeles. My experience spans high-growth startups and global firms including Boston Consulting Group and TBWA\Chiat\Day
+          HoverImage(
+            :id="2"
+            icon-src="/images/hover_icon_2.png"
+            hover-src="/images/hover_big_2.gif"
+            :use-mirroring="true"
+            :show-connector-line="true"
+            top-color="#84DCB8"
+            right-color="#6CB697"
+            bottom-color="#4A7E68"
+            left-color="#6CB697"
+            border-color="#6CB697"
+          )
+          | . Along the way, I've shipped work for brands like Disney, Coke, and Nissan.
+
+        p.text
+          | I previously built and sold Faucet Face a glass
+          HoverImage(
+            :id="3"
+            icon-src="/images/hover_icon_3.png"
+            hover-src="/images/hover_big_3.jpg"
+            :use-mirroring="true"
+            :show-connector-line="true"
+            top-color="#F8EBEB"
+            right-color="#F1D5D5"
+            bottom-color="#E5A9AA"
+            left-color="#F1D5D5"
+            border-color="#F1D5D5"
+          )
+          |  bottle brand carried by retailers like Urban Outfitters and Fab. I also created Color Supply,
+          HoverImage(
+            :id="4"
+            icon-src="/images/hover_icon_4.png"
+            hover-src="/images/hover_big_4.jpg"
+            :use-mirroring="true"
+            :show-connector-line="true"
+            top-color="#F9A58E"
+            right-color="#F6633A"
+            bottom-color="#BF411C"
+            left-color="#F6633A"
+            border-color="#F6633A"
+          )
+          |  a tool used by thousands of designers worldwide, and write Design by Numbers, a popular
+          HoverImage(
+            :id="5"
+            icon-src="/images/hover_icon_5.png"
+            hover-src="/images/hover_big_5.gif"
+            :image-width="350"
+            :image-height="250"
+            :use-mirroring="true"
+            :show-connector-line="true"
+            top-color="#F8D9AE"
+            right-color="#F1B456"
+            bottom-color="#C79445"
+            left-color="#F1B456"
+            border-color="#F1B456"
+          )
+          |  newsletter for 9,000+ designers and developers.
+
+        p.text
+          | In my spare time, I'm renovating
+          HoverImage(
+            :id="6"
+            icon-src="/images/hover_icon_6.png"
+            hover-src="/images/hover_big_6.gif"
+            :use-mirroring="true"
+            :show-connector-line="true"
+            top-color="#616368"
+            right-color="#2C2E31"
+            bottom-color="#1D1E20"
+            left-color="#2C2E31"
+            border-color="#2C2E31"
+          )
+          |  and restoring
+          HoverImage(
+            :id="7"
+            icon-src="/images/hover_icon_7.png"
+            hover-src="/images/hover_big_7.gif"
+            :use-mirroring="true"
+            :show-connector-line="true"
+            top-color="#769EF4"
+            right-color="#477AF0"
+            bottom-color="#164EED"
+            left-color="#477AF0"
+            border-color="#477AF0"
+          )
+          |  this 1908 Craftsman. The project is definitely on schedule and expected to be completed by 2050.
 </template>
 
 <script>
 import { gsap } from 'gsap'
+import HoverImage from '@/components/HoverImage.vue'
 
 export default {
   name: 'TestPage',
   layout: 'default',
+  components: {
+    HoverImage
+  },
   head() {
     return {
       title: 'Animation Test'
     }
   },
   mounted() {
-    // Use nextTick to ensure DOM is fully rendered before GSAP
     this.$nextTick(() => {
-      setTimeout(() => {
-        this.animateText()
-      }, 100)
+      this.wrapTextNodes()
+      this.animatePageLoad()
     })
   },
   methods: {
-    animateText() {
-      const textContainer = this.$refs.textContainer
-      const originalText = textContainer.textContent
-      
-      if (!originalText) return
-      
-      // Split text into words first, then wrap each word and split into letters
-      const words = originalText.split(' ')
-      let htmlContent = ''
-      let characterIndex = 0
-      
-      words.forEach((word, wordIndex) => {
-        // Wrap each word in a span with nowrap to prevent breaking
-        htmlContent += '<span class="word-wrapper">'
-        
-        for (let i = 0; i < word.length; i++) {
-          const char = word[i]
-          htmlContent += `<span class="letter" data-char="${characterIndex}">${char}</span>`
-          characterIndex++
-        }
-        
-        htmlContent += '</span>'
-        
-        // Add space between words (not wrapped) 
-        if (wordIndex < words.length - 1) {
-          htmlContent += ' '  // Regular space allows line breaks between words
-        }
-      })
-      
-      textContainer.innerHTML = htmlContent
-      
-      // Get all letter elements
-      const letterElements = textContainer.querySelectorAll('.letter')
-      
-      // Group letters by their Y position (line)
-      const lettersByLine = {}
-      
-      letterElements.forEach((letter, index) => {
-        const rect = letter.getBoundingClientRect()
-        const lineY = Math.round(rect.top) // Round to handle small variations
-        
-        if (!lettersByLine[lineY]) {
-          lettersByLine[lineY] = []
-        }
-        
-        lettersByLine[lineY].push({
-          element: letter,
-          x: rect.left,
-          index: index
+    wrapTextNodes() {
+      // Wrap text nodes in spans so we can animate them separately from images
+      const paragraphs = document.querySelectorAll('p.text')
+      paragraphs.forEach(p => {
+        const nodes = Array.from(p.childNodes)
+        nodes.forEach(node => {
+          if (node.nodeType === 3 && node.textContent.trim()) { // Text node
+            const span = document.createElement('span')
+            span.className = 'text-content'
+            span.textContent = node.textContent
+            p.replaceChild(span, node)
+          }
         })
       })
-      
-      // Sort letters within each line by their X position (left to right)
-      Object.keys(lettersByLine).forEach(lineY => {
-        lettersByLine[lineY].sort((a, b) => a.x - b.x)
+    },
+    animatePageLoad() {
+      const imageWrappers = document.querySelectorAll('.image-wrapper')
+      const textContent = document.querySelectorAll('.text-content')
+
+      // Set initial states - mask reveals from 44px wide, all 52px tall
+      gsap.set(imageWrappers, { width: 44, height: 52, opacity: 0 })
+      gsap.set(textContent, { opacity: 0 })
+
+      // Create timeline with 1s delay
+      const tl = gsap.timeline({ delay: .2 })
+
+      // Fade in image quickly first
+      tl.to(imageWrappers, {
+        opacity: 1,
+        duration: 0.3,
+        stagger: 0.3, // Each image animates 0.3s after the previous (2nd at 0.3s, 3rd at 0.6s, 4th at 0.9s, 5th at 1.2s, 6th at 1.5s, 7th at 1.8s)
+        ease: "power2.out"
       })
-      
-      // Sort lines by their Y position (top to bottom)
-      const sortedLines = Object.keys(lettersByLine).sort((a, b) => parseFloat(a) - parseFloat(b))
-      
-      // ENSURE LETTERS START HIDDEN - Direct CSS without !important
-      letterElements.forEach((letter, index) => {
-        // Set initial state - match typetest exactly
-        gsap.set(letter, {
-          opacity: 0.0,
-          y: -20
-        })
-        
-        // Also set positioning CSS
-        letter.style.position = 'relative'
-        letter.style.display = 'inline-block'
-        
-        // Ensure parent word-wrapper has proper CSS
-        const wordWrapper = letter.parentNode
-        if (wordWrapper && wordWrapper.classList.contains('word-wrapper')) {
-          wordWrapper.style.display = 'inline-block'
-          wordWrapper.style.whiteSpace = 'nowrap'
-        }
-        
-        // Force a reflow to ensure styles are applied
-        letter.offsetHeight
-      })
-      
-      // Animate each line from left to right
-      sortedLines.forEach((lineY, lineIndex) => {
-        const lettersInLine = lettersByLine[lineY]
-        
-        lettersInLine.forEach((letterData, positionInLine) => {
-          const baseDelay = 0.3 + (lineIndex * 0.25) // Each line starts after previous
-          const letterDelay = baseDelay + (positionInLine * 0.015) // Letters animate left-to-right
-          
-          gsap.to(letterData.element, {
-            opacity: 1,
-            y: 0,
-            duration: 0.4,
-            ease: "power1.out",
-            delay: letterDelay
-          })
-        })
-      })
+      // Animate each wrapper to its unique final dimensions
+      .to(imageWrappers[0], {
+        width: 70,
+        height: 52,
+        duration: 0.4,
+        ease: "power2.out"
+      }, "<0.15") // First image (after Mason)
+      .to(imageWrappers[1], {
+        width: 100,
+        height: 52,
+        duration: 0.4,
+        ease: "power2.out"
+      }, "<0.2") // Second image (after TBWA\Chiat\Day)
+      .to(imageWrappers[2], {
+        width: 55,
+        height: 52,
+        duration: 0.4,
+        ease: "power2.out"
+      }, "<0.2") // Third image (after glass)
+      .to(imageWrappers[3], {
+        width: 109,
+        height: 52,
+        duration: 0.4,
+        ease: "power2.out"
+      }, "<0.2") // Fourth image (after Color Supply)
+      .to(imageWrappers[4], {
+        width: 60,
+        height: 52,
+        duration: 0.4,
+        ease: "power2.out"
+      }, "<0.2") // Fifth image (after popular)
+      .to(imageWrappers[5], {
+        width: 77,
+        height: 52,
+        duration: 0.4,
+        ease: "power2.out"
+      }, "<0.2") // Sixth image (after renovating)
+      .to(imageWrappers[6], {
+        width: 80,
+        height: 52,
+        duration: 0.4,
+        ease: "power2.out"
+      }, "<0.2") // Seventh image (after restoring)
+
+      // Then fade in text after images complete
+      .to(textContent, {
+        opacity: 1,
+        duration: 0.5,
+        ease: "power2.out"
+      }, "+=0.3")
     }
   }
 }
@@ -131,45 +217,55 @@ export default {
 
 <style lang="sass" scoped>
 .test-page
-  background-color: #282725
-  color: #FFFFFF
+  background-color: #F8F7F4
+  color: #000000
   min-height: 100vh
   display: flex
   align-items: center
   justify-content: flex-start
-  padding-left: 40px
+  padding: 80px 40px 100px 40px
 
 .container
-  max-width: 800px
-  padding: 0
+  max-width: 650px
 
-.text
-  font-size: 50px
-  line-height: 66px
-  font-weight: 400
-  overflow: visible
-  text-align: left
+.content
+  p.text
+    margin-bottom: 24px
+    line-height: 1.7
+    color: #000000
+    font-size: 32px !important
+    width: 650px
 
-.word-wrapper
-  display: inline-block
-  white-space: nowrap
-
-.letter
-  display: inline-block
-  position: relative
-  will-change: transform, opacity
+  .text-content
+    display: inline
+    opacity: 0
 
 // Responsive design
 @media (max-width: 768px)
-  .text
-    font-size: 36px
-    line-height: 48px
-  
-  .container
-    padding: 20px
+  .test-page
+    padding: 60px 20px 80px 20px
+
+  .content p.text
+    font-size: 16px
 
 @media (max-width: 480px)
-  .text
-    font-size: 28px
-    line-height: 38px
+  .test-page
+    padding: 40px 20px 60px 20px
+
+  .content p.text
+    font-size: 14px
+</style>
+
+<style lang="sass">
+// Global styles needed for GSAP animations to target HoverImage components
+.image-wrapper
+  position: relative
+  display: inline-block
+  margin: 0 5px 0 8px
+  padding: 0
+  line-height: 0
+  vertical-align: middle
+  overflow: hidden
+  border-radius: 15px
+  opacity: 0
 </style>
