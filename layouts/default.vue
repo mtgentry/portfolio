@@ -2,7 +2,7 @@
   v-app#app.display-animation(ref="app" :style=`{backgroundColor: bgColor, color: mainTextColor}`
     :class="{'loaded': !loading, 'paddingLayout': paddingLayout}")
     v-app-bar.display-animation(:class="{'loaded': !loading}" fixed app :style=`{color: txColor}` flat ref="navbar")
-      nuxt-link(to="/")
+      nuxt-link(to="/" v-if="!homePage || isAgency")
         v-toolbar-title
           AgencyLogo(v-if="isAgency" :color="txColor")
           PortfolioLogo(v-else :color="txColor")

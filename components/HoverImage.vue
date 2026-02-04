@@ -190,4 +190,12 @@ img.hover-image
 
 img.visible
   opacity: 1
+
+// Disable hover images on touch devices
+@media (hover: none) and (pointer: coarse)
+  img.hover-image
+    display: none !important
+
+  svg.connector-shape
+    display: none !important
 </style>

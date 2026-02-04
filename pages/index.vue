@@ -1,8 +1,9 @@
 <script>
-import Homepage from "@/components/pages/Homepage.vue";
+import AgencyHomepage from "@/components/pages/AgencyHomepage.vue";
+import PortfolioHomepage from "@/components/pages/PortfolioHomepage.vue";
 
 export default {
-  extends: Homepage
+  extends: process.env.IS_AGENCY ? AgencyHomepage : PortfolioHomepage
 };
 </script>
 

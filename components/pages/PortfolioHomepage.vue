@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.test-page
+  div.portfolio-homepage
     div.container
       div.content
         p.text
@@ -110,14 +110,13 @@ import { gsap } from 'gsap'
 import HoverImage from '@/components/HoverImage.vue'
 
 export default {
-  name: 'TestPage',
-  layout: 'default',
+  name: 'PortfolioHomepage',
   components: {
     HoverImage
   },
   head() {
     return {
-      title: 'Animation Test'
+      title: 'Mason Gentry'
     }
   },
   mounted() {
@@ -216,7 +215,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.test-page
+.portfolio-homepage
   background-color: #F8F7F4
   color: #000000
   min-height: 100vh
@@ -243,7 +242,7 @@ export default {
 
 // Responsive design
 @media (max-width: 768px)
-  .test-page
+  .portfolio-homepage
     padding: 60px 20px 80px 20px
 
   .content p.text
@@ -251,7 +250,7 @@ export default {
     line-height: 1.6
 
 @media (max-width: 480px)
-  .test-page
+  .portfolio-homepage
     padding: 40px 20px 60px 20px
 
   .content p.text
