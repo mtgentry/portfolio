@@ -11,10 +11,9 @@
   },
   "backgroundColor": "#3F8B62",
   "textColor": "#ffffff",
-  "header": "Luxury skincare deserves more than templates and stock photography. Saint Jane needed a visual identity that could hold its own against heritage beauty brands while feeling distinctly modern. We built a design system rooted in craft, control, and an obsessive attention to detail.",
+  "header": "Luxury skincare deserves more than templates and stock photography. Saint Jane required a design system that rivals heritage beauty brands while remaining distinctly modern. We built a framework rooted in craft, control, and obsessive attention to detail.",
   "seo_description": "",
   "layout": [
-
     {
       "media": [
         {
@@ -23,13 +22,12 @@
         }
       ]
     },
-
     {
+      "title": "Defining Modern Luxury",
       "text": [
-        "The challenge was clear: create a brand that looks and feels expensive without relying on tired luxury tropes. No marble. No gold foil for the sake of gold foil. Instead, we focused on precision. Every element needed to earn its place. The metallic label plaques became the signature detail, a physical marker of quality that translates across every touchpoint."
+        "The challenge: create a brand that feels expensive without relying on tired luxury tropes. No marble. No gold foil for the sake of gold foil. We focused on precision. Every element earns its place. The metallic label plaques became the signature detail: a physical marker of quality that translates across every touchpoint."
       ]
     },
-
     {
       "media": [
         {
@@ -38,13 +36,12 @@
         }
       ]
     },
-
     {
+      "title": "Color and Efficacy",
       "text": [
-        "The color system balances restraint with personality. Sage green anchors the brand in natural efficacy. Vibrant pink and yellow provide energy without compromising sophistication. The extended scales and neutral palette give the system range, from packaging to digital experiences to editorial applications."
+        "The color system balances restraint and personality. Sage green anchors the brand in natural efficacy. Vibrant pink and yellow provide energy without sacrificing sophistication. The extended scales and neutral palette give the system range from packaging to digital experiences and editorial applications."
       ]
     },
-
     {
       "media": [
         {
@@ -53,13 +50,12 @@
         }
       ]
     },
-
     {
+      "title": "Digital Rigor",
       "text": [
-        "UI components were designed with the same rigor as the product packaging. Form states, toggles, and inputs all reflect the brand's commitment to thoughtful design. Nothing feels like an afterthought. The interface is as polished as the brand itself."
+        "We designed UI components with the same rigor as the product packaging. Form states, toggles, and inputs reflect a commitment to thoughtful design. Nothing feels like an afterthought. The interface is as polished as the brand itself."
       ]
     },
-
     {
       "media": [
         {
@@ -68,13 +64,12 @@
         }
       ]
     },
-
     {
+      "title": "Elevated Perspective",
       "text": [
-        "We rendered every product shot in 3D. This gave us complete control over lighting, composition, and context. More importantly, it let us create imagery that felt both real and elevated. The lemon shot exists in that space between photography and illustration, which is exactly where luxury beauty lives."
+        "We rendered every product shot in 3D to maintain complete control over lighting, composition, and context. This process creates imagery that feels both real and elevated."
       ]
     },
-
     {
       "media": [
         {
@@ -83,13 +78,12 @@
         }
       ]
     },
-
     {
+      "title": "Precision Typography",
       "text": [
-        "The typography system pairs PP Eiko's refined elegance with Basis Grotesque's clean functionality. Display treatments are intentionally restrained. The hierarchy does the work without shouting. Every size, weight, and spacing decision reinforces the brand's premium positioning."
+        "The typography system pairs the refined elegance of PP Eiko with the clean functionality of Basis Grotesque. Display treatments remain intentionally restrained. The hierarchy works without shouting. Every size, weight, and spacing decision reinforces the premium positioning."
       ]
     },
-
     {
       "media": [
         {
@@ -98,16 +92,14 @@
         }
       ]
     },
-
     {
-      "line": true
+      "line": false
     },
-
     {
+      "title": "The Result",
       "text": [
-        "The result is a design system that works as hard as the products inside the bottles. Flexible enough to grow with the brand. Rigorous enough to maintain quality at every scale. Built for a beauty brand that refuses to cut corners."
+        "The result is a design system that works as hard as the products themselves. It scales with the brand. It maintains quality at every touchpoint. We built this for a beauty brand that refuses to cut corners."
       ]
     }
-
   ]
 }
