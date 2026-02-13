@@ -263,9 +263,31 @@ export default {
 .theme--dark.v-app-bar.v-toolbar.v-sheet
   padding: 0
   background-color: transparent !important
+  border: none !important
 
   @media (max-width: 768px)
     padding: 0
+
+.v-app-bar
+  border: none !important
+  border-bottom: none !important
+  border-top: none !important
+  box-shadow: none !important
+  outline: none !important
+
+.v-main
+  border: none !important
+  outline: none !important
+
+#main
+  border: none !important
+  border-top: none !important
+
+.v-container
+  border: none !important
+
+.v-row
+  border: none !important
 
 .v-toolbar__content
   padding: 20px 0 !important
@@ -278,6 +300,8 @@ export default {
 
 #app
   transition: background-color 1s ease-in-out, opacity 1s ease-in-out, color 1s ease-in-out
+  border: none !important
+  outline: none !important
 
   a
     color: inherit
@@ -300,6 +324,10 @@ export default {
 
 html, body
   scrollbar-color: #C1C1C1 #F1F1F1
+  margin: 0
+  padding: 0
+  border: none
+  outline: none
 
 .fade-enter-active, .fade-leave-active
   transition: opacity 1.5s
