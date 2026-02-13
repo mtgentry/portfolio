@@ -69,6 +69,9 @@ export default {
     this.$store.commit('updateState', {field: 'projects', value: projects})
   },
   computed: {
+    isAgency() {
+      return process.env.IS_AGENCY
+    },
     ...mapState({
       projectStore: state => state.projects,
       layout: state => state.layout
@@ -76,3 +79,8 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+.work-page-spacing
+  padding-top: 40px
+</style>

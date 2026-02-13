@@ -2,13 +2,13 @@
   v-app#app.display-animation(ref="app" :style=`{backgroundColor: bgColor, color: mainTextColor}`
     :class="{'loaded': !loading, 'paddingLayout': paddingLayout}")
     v-app-bar.display-animation(:class="{'loaded': !loading}" fixed app :style=`{color: txColor}` flat ref="navbar")
-      nuxt-link(to="/" v-if="!homePage || isAgency")
+      nuxt-link(:to="logoLink" v-if="(isWorkPage && !isAgency) || isAgency")
         v-toolbar-title
           AgencyLogo(v-if="isAgency" :color="txColor")
           PortfolioLogo(v-else :color="txColor")
       v-spacer
       span.pr-3(v-for="url in getUrls" :key="url")
-        .nav-link-wrapper(@mouseenter="animateLineIn($event)" @mouseleave="animateLineOut($event)" :class="{ 'about-link': formatUrl(url) === 'About' }")
+        .nav-link-wrapper(@mouseenter="animateLineIn($event)" @mouseleave="animateLineOut($event)" :class="{ 'about-link': formatUrl(url) === 'About' }" v-if="!(isWorkPage && url === '/about' && !isAgency)")
           NuxtLink(:to="url") {{ formatUrl(url) }}
           .underline
     v-main.pa-0
@@ -150,7 +150,10 @@ export default {
     },
     txColor() {
       let textColor;
-      if (this.homePage) {
+      // Portfolio /work page gets dark color
+      if (this.$route.path === "/work" && !this.isAgency) {
+        textColor = "#1D1E20"
+      } else if (this.homePage) {
         textColor = this.homeTextColor
       } else {
         textColor = this.textColor
@@ -177,8 +180,18 @@ export default {
     homePage() {
       return this.$route.path === "/" || this.$route.path === "/work"
     },
+    isProjectPage() {
+      return this.$route.path.startsWith("/work/") && this.$route.path !== "/work/"
+    },
+    isWorkPage() {
+      return this.$route.path.startsWith("/work")
+    },
     isAgency() {
       return process.env.IS_AGENCY
+    },
+    logoLink() {
+      // Portfolio logo links to /work, agency logo links to homepage
+      return this.isAgency ? "/" : "/work"
     },
     ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'pageBackgroundColor', 'pageTextColor', 'loading', 'layout', 'paddingLayout'])
   },
@@ -255,7 +268,7 @@ export default {
     padding: 0
 
 .v-toolbar__content
-  padding: 0 !important
+  padding: 20px 0 !important
   width: 100% !important
   max-width: 100% !important
 

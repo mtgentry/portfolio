@@ -143,6 +143,7 @@ export default {
     overflow: visible
     max-width: min(1200px, 85vw)
     word-spacing: 0
+    color: #1D1E20
 
     // Prevent initial flash before animation
     opacity: 0

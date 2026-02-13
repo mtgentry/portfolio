@@ -1,0 +1,113 @@
+{
+  "cover": {
+    "media": {
+      "name": "jane_brand_1.png"
+    },
+    "title": "Saint Jane",
+    "categories": "Brand Identity, Design System, Art Direction",
+    "position": "left",
+    "width": "70%",
+    "forbidIndex": true
+  },
+  "backgroundColor": "#3F8B62",
+  "textColor": "#ffffff",
+  "header": "Luxury skincare deserves more than templates and stock photography. Saint Jane needed a visual identity that could hold its own against heritage beauty brands while feeling distinctly modern. We built a design system rooted in craft, control, and an obsessive attention to detail.",
+  "seo_description": "",
+  "layout": [
+
+    {
+      "media": [
+        {
+          "name": "jane_brand_1.png",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "The challenge was clear: create a brand that looks and feels expensive without relying on tired luxury tropes. No marble. No gold foil for the sake of gold foil. Instead, we focused on precision. Every element needed to earn its place. The metallic label plaques became the signature detail, a physical marker of quality that translates across every touchpoint."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "jane_brand_3.png",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "The color system balances restraint with personality. Sage green anchors the brand in natural efficacy. Vibrant pink and yellow provide energy without compromising sophistication. The extended scales and neutral palette give the system range, from packaging to digital experiences to editorial applications."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "jane_brand_2.png",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "UI components were designed with the same rigor as the product packaging. Form states, toggles, and inputs all reflect the brand's commitment to thoughtful design. Nothing feels like an afterthought. The interface is as polished as the brand itself."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "jane_brand_4.png",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "We rendered every product shot in 3D. This gave us complete control over lighting, composition, and context. More importantly, it let us create imagery that felt both real and elevated. The lemon shot exists in that space between photography and illustration, which is exactly where luxury beauty lives."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "jane_brand_5.png",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "The typography system pairs PP Eiko's refined elegance with Basis Grotesque's clean functionality. Display treatments are intentionally restrained. The hierarchy does the work without shouting. Every size, weight, and spacing decision reinforces the brand's premium positioning."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "jane_brand_6.png",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "line": true
+    },
+
+    {
+      "text": [
+        "The result is a design system that works as hard as the products inside the bottles. Flexible enough to grow with the brand. Rigorous enough to maintain quality at every scale. Built for a beauty brand that refuses to cut corners."
+      ]
+    }
+
+  ]
+}

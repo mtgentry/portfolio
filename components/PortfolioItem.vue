@@ -27,6 +27,7 @@ export default {
   font-size: 22px !important
   padding-top: 7px !important
   line-height: 110%
+  color: #1D1E20
 
 @media (max-width: 768px)
   .title

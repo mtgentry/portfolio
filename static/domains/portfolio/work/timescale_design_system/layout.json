@@ -1,0 +1,118 @@
+{
+  "cover": {
+    "media": {
+      "name": "cliffwater_thumb.jpg"
+    },
+    "title": "TimescaleDB Design System",
+    "categories": "Design System, Visual Design, UI, UX",
+    "position": "left",
+    "width": "70%",
+    "forbidIndex": true
+  },
+  "backgroundColor": "#FDB515",
+  "textColor": "#00004A",
+  "header": "Building a visual language for developers who think in data. TimescaleDB is an open-source time-series database built on PostgreSQL. But developers don't choose databases because they're pretty. They choose them because they work. Our challenge was to create a design system that respected the technical rigor of the product while making complex data concepts immediately legible.",
+  "seo_description": "",
+  "layout": [
+
+    {
+      "media": [
+        {
+          "name": "timescale_1.png",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "Developer tools live in a visual paradox: they need to feel powerful without being intimidating, technical without being sterile. We started by studying how developers actually interact with database documentation, dashboards, and interfaces. They don't want decoration. They want clarity. The design system needed to do three things: visualize abstract data concepts, maintain credibility with a technical audience, and scale across product, marketing, and documentation."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "timescale_2.png",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "We built the color palette around high-contrast accessibility and data visualization needs. The primary gold grounds the brand in warmth without sacrificing professionalism. Banner blue and navy provide the technical backbone, while the extended color scales give the system flexibility for complex data visualizations and UI states."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "timescale_3.png",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "The illustration style uses isometric perspective and technical line work to bridge the gap between abstract database concepts and tangible understanding. Hypertables, data retention, and time-series architecture become visual narratives instead of documentation hurdles."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "timescale_4.png",
+          "position": "center"
+        }
+      ]
+    },
+
+    {
+      "text": [
+        "Every UI element was designed with developer workflows in mind. Form fields, buttons, and interactive states follow familiar patterns while maintaining the system's distinct point of view. Spacing is precise, states are comprehensive, and nothing is decorative."
+      ]
+    },
+
+    {
+      "media": [
+        {
+          "name": "timescale_5.png",
+          "position": "center"
+        }
+      ]
+    },
+
+
+
+    {
+      "text": [
+        "Avatars and spot illustrations extend the visual system across touchpoints, maintaining consistency while adapting to different contexts and use cases throughout the product experience."
+      ]
+    },
+
+
+    {
+      "media": [
+        {
+          "name": "timescale_6.png",
+          "position": "center"
+        }
+      ]
+    },
+
+
+
+    {
+      "line": true
+    },
+
+    {
+      "text": [
+        "The result is a design system that feels like it was built by people who actually use databases. Because it was."
+      ]
+    }
+
+  ]
+}
