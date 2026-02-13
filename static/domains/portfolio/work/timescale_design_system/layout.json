@@ -15,12 +15,6 @@
   "seo_description": "Senior Product Design Case Study: Translating complex database architecture into human-centered design systems and real-time visual narratives.",
   "layout": [
     {
-      "title": "The Design Philosophy",
-      "text": [
-        "Developer tools existed in a visual paradox: they had to feel powerful without being intimidating, and technical without being sterile. We started by studying how developers interacted with documentation and dashboards. They don’t want decoration; they want clarity. We built this system to achieve three goals: visualize abstract data, maintain technical credibility, and scale across every touchpoint."
-      ]
-    },
-    {
       "media": [
         {
           "name": "timescale_1.png",
@@ -29,9 +23,10 @@
       ]
     },
     {
-      "title": "Color & Accessibility",
+      "title": "Design Philosophy & Foundations",
       "text": [
-        "We built the color palette around high-contrast accessibility and the specific needs of data visualization. A primary gold grounded the brand in warmth while staying professional. Banner blue and navy provided a technical backbone, while extended scales offered the flexibility needed for complex UI states and dense data."
+        "Developer tools existed in a visual paradox: they had to feel powerful without being intimidating, and technical without being sterile. We started by studying how developers interacted with documentation and dashboards. They didn’t want decoration; they want clarity. We built this system to achieve three goals: visualize abstract data, maintain technical credibility, and scale across every touchpoint.",
+        "We grounded these goals in a color palette built around high-contrast accessibility and the specific needs of data visualization. A primary gold anchored the brand in warmth while staying professional. Banner blue and navy provided a technical backbone, while extended scales offered the flexibility needed for complex UI states and dense data."
       ]
     },
     {
