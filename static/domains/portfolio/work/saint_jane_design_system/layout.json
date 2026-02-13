@@ -51,7 +51,7 @@
       ]
     },
     {
-      "title": "Digital Rigor",
+      "title": "System Components",
       "text": [
         "We designed UI components with the same rigor as the product packaging. Form states, toggles, and inputs reflect a commitment to thoughtful design. Nothing feels like an afterthought. The interface is as polished as the brand itself."
       ]
@@ -65,9 +65,9 @@
       ]
     },
     {
-      "title": "Elevated Perspective",
+      "title": "3D Strategy & Testing",
       "text": [
-        "We rendered every product shot in 3D to maintain complete control over lighting, composition, and context. This process creates imagery that feels both real and elevated."
+        "We rendered every product shot in 3D to maintain complete control over lighting, composition, and context. Beyond the aesthetic, this was a strategic choice for iterative experimentation. By building these assets in a 3D environment, we were able to rapidly test and deploy dozens of visual variations for digital ads. This '<a href='https://masongentry.com/work/saint_jane_ad_boost' target='_blank'><u>data-driven design</u></a>' approach allowed us to identify which compositions drove the highest engagement, directly increasing ad effectiveness without the cost of a traditional reshoot."
       ]
     },
     {
@@ -99,6 +99,14 @@
       "title": "The Result",
       "text": [
         "The result is a design system that works as hard as the products themselves. It scales with the brand. It maintains quality at every touchpoint. We built this for a beauty brand that refuses to cut corners."
+      ]
+    },
+    {
+      "line": true
+    },
+    {
+      "text": [
+        "Agency: Ghost Collective"
       ]
     }
   ]
