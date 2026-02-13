@@ -37,8 +37,7 @@ export default {
     }
   },
   mounted() {
-    // Use the default light background color from store instead of hardcoding dark
-    // this.$store.commit('updateState', {field: 'backgroundColor', value: "#282725"})
+    this.$store.commit('updateState', {field: 'backgroundColor', value: "#282725"})
     // Check if text animation is playing to determine delay
     const isTextAnimating = sessionStorage.getItem('textAnimationPlaying') === 'true'
     const delay = isTextAnimating ? 1200 : 100
