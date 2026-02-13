@@ -12,9 +12,14 @@
   "backgroundColor": "#FDB515",
   "textColor": "#00004A",
   "header": "TimescaleDB brings the power of PostgreSQL to time-series data. Our design system matches that technical strength. We built a clear, structured framework that respects deep technical work while making complex ideas easy to see. This visual system signals to every developer: this is for you.",
-  "seo_description": "",
+  "seo_description": "Senior Product Design Case Study: Translating complex database architecture into human-centered design systems and real-time visual narratives.",
   "layout": [
-
+    {
+      "title": "The Design Philosophy",
+      "text": [
+        "Developer tools existed in a visual paradox: they had to feel powerful without being intimidating, and technical without being sterile. We started by studying how developers interacted with documentation and dashboards. They don’t want decoration; they want clarity. We built this system to achieve three goals: visualize abstract data, maintain technical credibility, and scale across every touchpoint."
+      ]
+    },
     {
       "media": [
         {
@@ -23,14 +28,12 @@
         }
       ]
     },
-
     {
-      "title": "The Design Philosophy",
+      "title": "Color & Accessibility",
       "text": [
-        "Developer tools exist in a visual paradox: they must feel powerful without being intimidating, and technical without being sterile. We started by studying how developers interact with documentation and dashboards. They don’t want decoration; they want clarity. We built this system to achieve three goals: visualize abstract data, maintain technical credibility, and scale across every touchpoint."
+        "We built the color palette around high-contrast accessibility and the specific needs of data visualization. A primary gold grounded the brand in warmth while staying professional. Banner blue and navy provided a technical backbone, while extended scales offered the flexibility needed for complex UI states and dense data."
       ]
     },
-
     {
       "media": [
         {
@@ -39,15 +42,12 @@
         }
       ]
     },
-
     {
-
-     "title": "Color & Accessibility",
+      "title": "Interface & Workflow",
       "text": [
-        "We built the color palette around high-contrast accessibility and the specific needs of data visualization. A primary gold grounds the brand in warmth while staying professional. Banner blue and navy provide a technical backbone, while extended scales offer the flexibility needed for complex UI states and dense data."
+        "Every UI element supported the developer workflow. Form fields, buttons, and interactive states followed familiar patterns while maintaining a distinct point of view. We prioritized high-density layouts and clear feedback loops, ensuring that even as data complexity scaled, the interface remained predictable. Spacing was precise, states were comprehensive, and nothing was decorative. Every pixel served a functional purpose."
       ]
     },
-
     {
       "media": [
         {
@@ -56,14 +56,12 @@
         }
       ]
     },
-
     {
-     "title": "Visual Narrative",
+      "title": "Consistency Across the Experience",
       "text": [
-        "Our illustration style uses isometric perspective and technical line work to turn abstract concepts into tangible ideas. We transformed hypertables, data retention, and time-series architecture into visual narratives rather than documentation hurdles. This approach bridges the gap between deep code and quick understanding."
+        "Avatars and spot illustrations extended this system across the entire journey. They maintained a consistent voice while adapting to different contexts, from the deep product experience to high-level marketing."
       ]
     },
-
     {
       "media": [
         {
@@ -72,15 +70,12 @@
         }
       ]
     },
-
     {
-
-     "title": "Interface & Workflow",
+      "title": "Visual Narrative: Bringing Technical Flow to Life",
       "text": [
-        "Every UI element supports the developer workflow. Form fields, buttons, and interactive states follow familiar patterns while maintaining a distinct point of view. Spacing is precise, states are comprehensive, and nothing is decorative. Every pixel serves a functional purpose."
+        "Our illustration style used isometric perspective and technical line work to turn abstract concepts into tangible ideas. We moved beyond static slides by connecting these diagrams to live APIs for IRL presentations, which allowed the audience to actually feel the velocity and scale of the data moving through the system in real time. We transformed hypertables, data retention, and time-series architecture into dynamic visual narratives rather than documentation hurdles. This approach bridged the gap between deep code and instant human understanding, making the invisible mechanics of the database visible and intuitive."
       ]
     },
-
     {
       "media": [
         {
@@ -89,17 +84,6 @@
         }
       ]
     },
-
-
-
-    {
-     "title": "Consistency Across the Experience",
-      "text": [
-        "Avatars and spot illustrations extend this system across the entire journey. They maintain a consistent voice while adapting to different contexts, from the deep product experience to high-level marketing."
-      ]
-    },
-
-
     {
       "media": [
         {
@@ -108,18 +92,13 @@
         }
       ]
     },
-
-
-
     {
       "line": false
     },
-
     {
       "text": [
-        "The result is a design system that feels like it was built by people who actually use databases. Because it was."
+        "The result was a design system that felt like it was built by people who actually used databases. Because it was."
       ]
     }
-
   ]
 }
