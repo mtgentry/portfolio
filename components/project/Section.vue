@@ -105,7 +105,8 @@ export default {
         return section.text.some(text =>
           text.includes('Agency:') ||
           text.includes('Client:') ||
-          text.includes('Personal Project')
+          text.includes('Personal Project') ||
+          text.includes('Project Type:')
         )
       }
       return false

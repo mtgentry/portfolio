@@ -9,7 +9,7 @@
         h4.font-weight-bold(v-else-if="size === 'h4'" v-html="title")
         h5(v-else-if="size === 'h5'" v-html="title")
         h6.font-weight-bold(v-else-if="size === 'h6'" v-html="title")
-      p(v-for="text in texts" :class="{ 'agency-credit': text.includes('Agency:') || text.includes('Client:') || text.includes('Personal Project') }" v-html="text")
+      p(v-for="text in texts" :class="{ 'agency-credit': text.includes('Agency:') || text.includes('Client:') || text.includes('Personal Project') || text.includes('Project Type:') }" v-html="text")
 </template>
 <script>
 export default {
