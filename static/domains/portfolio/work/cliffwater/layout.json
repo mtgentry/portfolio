@@ -11,79 +11,70 @@
   },
   "backgroundColor": "#2F74B2",
   "textColor": "#ffffff",
-  "header": "Cliffwater wrote the book on private debt. Literally. With decades of experience and deep institutional knowledge, they are trusted advisers in a complex space. But their digital presence had not kept pace.",
+  "pageBackgroundColor": "#F6F6F6",
+  "pageTextColor": "#282725",
+  "header": "Cliffwater is the institutional authority on private debt with over $100B in assets. Their digital presence had not kept pace with their expertise. We partnered with their team to translate deep institutional knowledge into a high performance platform. By leading with the interface, we built a scalable visual system from the inside out. The result turns complex data into a clear experience designed to earn trust through substance.",
   "seo_description": "",
   "layout": [
-
     {
       "media": [
         {
-          "name": "cliffwater_homepage.jpg",
+          "name": "cliffwater_1.png",
           "position": "center"
         }
       ]
     },
-
     {
       "text": [
-        "They came to us with an urgent need. A new website that could match their expertise and meet the expectations of modern clients. A full rebrand was in consideration, but timing made the site the clear place to begin."
+        "We led with the website because the complexity of the data required a functional solution first. Private debt is dense, so the design needed to prioritize clarity and precision to build trust. As the experience took shape, the visual identity grew out of the interface itself. By building from the inside out, we ensured the system was shaped by how people actually use the data rather than abstract theory."
       ]
     },
-
     {
       "media": [
         {
-          "name": "square_in_pool.jpg",
+          "name": "cliffwater_2.png",
           "position": "center"
         }
       ]
     },
-
     {
       "text": [
-        "We led with the website, building with a clear brand voice in mind. As the experience took shape, the visual system emerged alongside it. Identity and interface evolved together, shaped by use rather than theory."
+        "Private debt is dense and difficult to navigate. Our goal was to make the data more accessible to new users without losing the detail that institutional clients expect. We focused on clear layouts and modular components to help users parse large amounts of information. What started as a website update became a broader system that earns trust through technical accuracy and clear design."
       ]
     },
-
     {
       "media": [
         {
-          "name": "data_stacks.jpg",
+          "name": "cliffwater_4.png",
           "position": "center"
         }
       ]
     },
-
     {
       "text": [
-        "Private debt is complex by nature. Cliffwater’s goal was to make the category more accessible and build trust with new audiences. The design needed to reflect that ambition with clarity and precision."
+        "We developed a visual language to represent the layered nature of private debt. Rather than using standard icons, we created a set of geometric illustrations that mirror how assets are structured and managed. This approach provides a consistent way to visualize abstract concepts across the platform, from high level fund overviews to granular performance metrics. It turns technical data into something visual and intuitive without losing its professional tone."
       ]
     },
-
     {
       "media": [
         {
-          "name": "upward_arrows.jpg",
+          "name": "cliffwater_5.png",
           "position": "center"
         }
       ]
     },
-
     {
       "text": [
-        "What began as a digital update became something broader. A brand system built from the inside out. Confident, quiet, and designed to earn trust through substance."
+        "What began as a digital update evolved into a broader brand system. By building from the inside out, we created a set of modular components that could scale with the company. The final result is a confident and quiet identity that earns trust through technical accuracy rather than visual trends."
       ]
     },
-
     {
       "line": true
     },
-
     {
       "text": [
         "Agency: Ghost Collective"
       ]
     }
-
   ]
 }
