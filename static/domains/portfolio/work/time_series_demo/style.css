@@ -410,10 +410,11 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-left: 20px;
 }
 
 .gauge {
-    width: 110px;
+    width: 158.125px;
     flex-shrink: 0;
 }
 
@@ -422,6 +423,8 @@ body {
     flex-direction: column;
     gap: 8px;
     flex: 1;
+    padding-left: 20px;
+    padding-top: 30px;
 }
 
 .ov-row {
@@ -457,6 +460,8 @@ body {
     font-weight: 500;
     cursor: pointer;
     transition: opacity 0.15s;
+    margin-top: -30px;
+    margin-left: 46px;
 }
 
 .reload-btn:hover { opacity: 0.85; }
