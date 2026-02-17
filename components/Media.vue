@@ -11,11 +11,14 @@
     Tweet(:tweet-data="media.data" :width="media.width" :project_name="project_name")
   div#tweet-collection(v-else-if="is_tweet_collection")
     TweetCollection(
-      :tweets="media.tweets" 
-      :columns="media.columns || {}" 
-      :position="media.position" 
+      :tweets="media.tweets"
+      :columns="media.columns || {}"
+      :position="media.position"
       :project_name="project_name"
     )
+  div#iframe.d-flex(v-else-if="is_iframe" :class="{ 'full-width-iframe': media.fullWidth }" :style=`{'justify-content': justifyContent}`)
+    iframe.iframe-viewer(:src="mediaPath" :style=`{"width": media.width || "100%", "height": media.height || "800px", "border": "none"}` frameborder="0" allowfullscreen)
+    div.text-center.pt-1(v-if="media.title" v-html="media.title")
   div(v-else)
     div.aspect-container(:style=`{'justify-content': media.position || ''}`)
       img.item( :src="mediaPath" :style=`{'width': media.width || '100%'}`
@@ -67,6 +70,9 @@ export default {
     is_tweet_collection() {
       return this.media.type === 'tweet-collection'
     },
+    is_iframe() {
+      return this.media.type === 'iframe'
+    },
     videoType() {
       if (this.media.name && this.media.name.includes('mov')) {
         return 'video/quicktime'
@@ -86,6 +92,10 @@ export default {
         return this.media.name;
       }
       let domain = process.env.IS_AGENCY ? 'agency' : 'portfolio';
+      // For iframes, check if the file should be in the root project folder instead of media/
+      if (this.is_iframe && !this.media.name.includes('/')) {
+        return `/domains/${domain}/${this.pageType}/${this.project_name_or_work}/${this.media.name}`;
+      }
       return `/domains/${domain}/${this.pageType}/${this.project_name_or_work}/media/${this.media.name}`;
     },
     pageType() {
@@ -178,4 +188,20 @@ export default {
   @media (max-width: 768px)
     width: 100%!important
     max-width: 100%!important
+.iframe-viewer
+  border: none
+  border-radius: 8px
+  @media (max-width: 768px)
+    width: 100%!important
+    max-width: 100%!important
+    height: auto!important
+    min-height: 600px
+.full-width-iframe
+  width: 100vw
+  max-width: 100vw
+  position: relative
+  left: 50%
+  right: 50%
+  margin-left: -50vw
+  margin-right: -50vw
 </style>

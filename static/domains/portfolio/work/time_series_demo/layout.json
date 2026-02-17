@@ -9,98 +9,31 @@
     "width": "70%",
     "forbidIndex": true
   },
-  "backgroundColor": "#FDB515",
+  "backgroundColor": "#FFFFFF",
   "textColor": "#00004A",
-  "header": "TimescaleDB brought the power of PostgreSQL to time series data. Our design system matched that technical strength. We built a clear, structured framework that respected deep technical work while making complex ideas easy to see. This visual system signaled to every developer: this is for you.",
+  "header": "In high stakes industries like oil refining, a single sensor anomaly can lead to environmental disaster or mechanical failure. But using time series data can reveal patterns and predict failures before they happen. It provides the clarity needed to monitor infrastructure and prevent a crisis before it starts.",
   "seo_description": "Senior Product Design Case Study: Translating complex database architecture into human centered design systems and real time visual narratives.",
   "layout": [
+   
+   
     {
       "media": [
         {
-          "name": "timescale_1.png",
-          "position": "center"
+          "type": "iframe",
+          "name": "index.html",
+          "position": "center",
+          "width": "100%",
+          "height": "1150px",
+          "fullWidth": true
         }
       ]
     },
+   
     {
-      "title": "Design Philosophy & Foundations",
+
       "text": [
-        "Developer tools existed in a visual paradox: they had to feel powerful without being intimidating, and technical without being sterile. We started by studying how developers interacted with documentation and dashboards. They did not want decoration; they wanted clarity. We built this system to achieve three goals: visualize abstract data, maintain technical credibility, and scale across every touchpoint.",
-        "We grounded these goals in a color palette built around high contrast accessibility and the specific needs of data visualization. A primary gold anchored the brand in warmth while staying professional. Banner blue and navy provided a technical backbone, while extended scales offered the flexibility needed for complex UI states and dense data."
-      ]
-    },
-    {
-      "media": [
-        {
-          "name": "timescale_2.png",
-          "position": "center"
-        }
-      ]
-    },
-    {
-      "title": "Interface & Workflow",
-      "text": [
-        "Every UI element supported the developer workflow. Form fields, buttons, and interactive states followed familiar patterns while maintaining a distinct point of view. We prioritized high density layouts and clear feedback loops, ensuring that even as data complexity scaled, the interface remained predictable. Spacing was precise, states were comprehensive, and nothing was decorative. Every pixel served a functional purpose."
-      ]
-    },
-    {
-      "media": [
-        {
-          "name": "timescale_3.png",
-          "position": "center"
-        }
-      ]
-    },
-    {
-      "title": "Consistency Across the Experience",
-      "text": [
-        "Avatars and spot illustrations extended this system across the entire journey. They maintained a consistent voice while adapting to different contexts, from the deep product experience to high level marketing."
-      ]
-    },
-    {
-      "media": [
-        {
-          "name": "timescale_4.png",
-          "position": "center"
-        }
-      ]
-    },
-    {
-      "title": "Visual Narrative: Bringing Technical Flow to Life",
-      "text": [
-        "Our illustration style used isometric perspective and technical line work to turn abstract concepts into tangible ideas. We moved beyond static slides by connecting these diagrams to live APIs for IRL presentations, which allowed the audience to actually feel the velocity and scale of the data moving through the system in real time. We transformed hypertables, data retention, and time series architecture into dynamic visual narratives rather than documentation hurdles. This approach helped make the invisible mechanics of the database visible and intuitive."
-      ]
-    },
-    {
-      "media": [
-        {
-          "name": "timescale_5.png",
-          "position": "center"
-        }
-      ]
-    },
-    {
-      "title": "Visualizing the Stack",
-      "text": [
-        "To support the technical content strategy, we created a suite of Editorial Illustrations designed specifically for engineering and product blog posts. These assets translated complex backend concepts like time series data, cloud partitioning, and distributed nodes into a cohesive isometric visual language that guided the reader through deep dive articles."
-      ]
-    },
-    {
-      "media": [
-        {
-          "name": "timescale_6.png",
-          "position": "center"
-        }
-      ]
-    },
-    {
-      "line": false
-    },
-    {
-      "title": "Results",
-      "text": [
-        "The comprehensive design system successfully moved the brand away from generic stock imagery toward a custom visual identity. By establishing a modular framework across all touchpoints, we improved technical clarity for the audience and created a scalable library of assets that unified the product experience and reinforced the reliability of the platform.",
-        "The result was a design system that felt like it was built by people who actually used databases. Because it was."
+        "This demo was built to highlight the power of time series data in a professional setting. By pulling a live feed from real world sensors into a dedicated database I created an interface that simplifies complexity. It turns a wall of technical readings into a clear view that a person can read at a glance while making dense information feel clear and intuitive."
+
       ]
     }
   ]

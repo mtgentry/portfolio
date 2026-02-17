@@ -6,7 +6,7 @@
     v-col(v-if="section.textBox" :data-aos="section.animation ? section.animation : 'fade-up'")
       TextBox(:textBox="section.textBox")
     v-col(v-else-if="section.media" :data-aos="shouldUseAOS(media) ? (media.animation ? media.animation : 'fade-up') : null"
-      :class="{ 'hero-fade-in': !shouldUseAOS(media) }"
+      :class="{ 'hero-fade-in': !shouldUseAOS(media), 'full-width-media': media.fullWidth }"
       v-for="media in section.media" :cols="media.cols ? media.cols : 12 / section.media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
     v-col(v-else-if="section.line")
@@ -215,6 +215,12 @@ export default {
   to
     opacity: 1
     transform: translateY(0)
+
+// Full width media (for iframes, etc)
+.full-width-media
+  max-width: 100vw !important
+  padding: 0 !important
+  margin: 0 !important
 
 // Reduce column padding on mobile - target all variations
 @media (max-width: 768px)

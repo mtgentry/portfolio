@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windpo — Energy Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+    <video autoplay muted loop playsinline class="app-bg-video">
+        <source src="riggg.mp4" type="video/mp4">
+    </video>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="shell.svg" alt="Shell" class="logo-icon">
+        </div>
+        <!-- <div class="nav-links">
+            <a class="nav-link active">Home</a>
+            <a class="nav-link">Warning</a>
+            <a class="nav-link">Management</a>
+            <a class="nav-link">Data detection</a>
+            <a class="nav-link">Fan management</a>
+        </div> -->
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-left">
+            <h1 class="hero-title">Sandstone Ridge <span style="font-weight: 400; font-size: 34px;">Well #7</span></h1>
+            <p class="hero-sub">Oil well operations use advanced sensor technology to optimize extraction efficiency, minimizing environmental impact through real-time monitoring.</p>
+            <div class="progress-track">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-value">25,000 <em>bbl</em></span>
+                    <span class="stat-label">Target</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-value">21,898 <em>bbl</em></span>
+                    <span class="stat-label">Total Production</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-value">87.59 <em>%</em></span>
+                    <span class="stat-label">Degree of completion</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="turbine-visual"></div>
+
+            <!-- Environmental Info Card -->
+            <!--
+            <div class="env-card">
+                <div class="env-card-section">
+                    <div class="env-section-header">
+                        <span>Environmental information</span>
+                        <span class="chevron">▲</span>
+                    </div>
+                    <div class="env-rows">
+                        <div class="env-row">
+                            <span class="env-label">Ambient Temperature</span>
+                            <span class="env-value">13.9°</span>
+                        </div>
+                        <div class="env-row">
+                            <span class="env-label">H2S Levels</span>
+                            <span class="env-value">0.0 <small>ppm</small></span>
+                        </div>
+                        <div class="env-row">
+                            <span class="env-label">Air quality index <span class="badge red">Normal</span></span>
+                            <span class="env-value">&lt;50</span>
+                        </div>
+                        <div class="env-row">
+                            <span class="env-label">Humidity <span class="badge blue">↑</span></span>
+                            <span class="env-value">65.0%</span>
+                        </div>
+                        <div class="env-row">
+                            <span class="env-label">Precipitation</span>
+                            <span class="env-value">20 <small>mm</small></span>
+                        </div>
+                        <div class="env-row">
+                            <span class="env-label">Atmospheric pressure</span>
+                            <span class="env-value">998.9 <small>hPa</small></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="env-section-header env-footer">
+                    <span>Operation information</span>
+                    <span class="chevron">▼</span>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+
+    <!-- BOTTOM CARDS — Row 1: Flow Rates, Well Pressure, Power -->
+    <div class="cards-row">
+
+        <!-- Card 1: Flow Rates -->
+        <div class="card" id="card-wind-energy">
+            <div class="card-header">
+                <span>Flow Rates</span>
+                <span class="flow-unit">bbl/day</span>
+            </div>
+            <div class="flow-chart-wrap">
+                <svg viewBox="0 0 520 310" width="100%" preserveAspectRatio="xMidYMid meet">
+                    <!-- horizontal grid lines: 1000 → y=40, 100 → y=260, step ≈24.4 -->
+                    <line x1="48" y1="40"  x2="438" y2="40"  class="svg-stroke-9" stroke-width="1"/>
+                    <line x1="48" y1="64"  x2="438" y2="64"  class="svg-stroke-9" stroke-width="1"/>
+                    <line x1="48" y1="89"  x2="438" y2="89"  class="svg-stroke-9" stroke-width="1"/>
+                    <line x1="48" y1="113"  x2="438" y2="113"  class="svg-stroke-9" stroke-width="1"/>
+                    <line x1="48" y1="138" x2="438" y2="138" class="svg-stroke-9" stroke-width="1"/>
+                    <line x1="48" y1="162" x2="438" y2="162" class="svg-stroke-9" stroke-width="1"/>
+                    <line x1="48" y1="187" x2="438" y2="187" class="svg-stroke-9" stroke-width="1"/>
+                    <line x1="48" y1="211" x2="438" y2="211" class="svg-stroke-9" stroke-width="1"/>
+                    <line x1="48" y1="236" x2="438" y2="236" class="svg-stroke-9" stroke-width="1"/>
+                    <!-- y-axis labels -->
+                    <text x="43" y="46"  text-anchor="end" class="svg-fill-7" font-size="16">1000</text>
+                    <text x="43" y="95"  text-anchor="end" class="svg-fill-7" font-size="16">800</text>
+                    <text x="43" y="144"  text-anchor="end" class="svg-fill-7" font-size="16">600</text>
+                    <text x="43" y="193" text-anchor="end" class="svg-fill-7" font-size="16">400</text>
+                    <text x="43" y="242" text-anchor="end" class="svg-fill-7" font-size="16">200</text>
+                    <!-- x-axis baseline -->
+                    <line x1="48" y1="260" x2="438" y2="260" class="svg-stroke-8" stroke-width="1"/>
+                    <!-- x-axis labels -->
+                    <text x="48"  y="280" text-anchor="middle" class="svg-sm svg-fill-7">Jan</text>
+                    <text x="146" y="280" text-anchor="middle" class="svg-sm svg-fill-7">Feb</text>
+                    <text x="243" y="280" text-anchor="middle" class="svg-sm svg-fill-7">Mar</text>
+                    <text x="341" y="280" text-anchor="middle" class="svg-sm svg-fill-7">Apr</text>
+                    <text x="438" y="280" text-anchor="middle" class="svg-sm svg-fill-7">May</text>
+
+                    <!-- W4 — lightest gray, declining -->
+                    <polyline points="48,113 146,162 243,211 341,187 438,204"
+                              fill="none" class="svg-stroke-chart-1" stroke-width="1.8" stroke-linejoin="round"/>
+                    <circle cx="48"  cy="113"  r="3.5" class="svg-fill-chart-1"/>
+                    <circle cx="146" cy="162" r="3.5" class="svg-fill-chart-1"/>
+                    <circle cx="243" cy="211" r="3.5" class="svg-fill-chart-1"/>
+                    <circle cx="341" cy="187" r="3.5" class="svg-fill-chart-1"/>
+                    <circle cx="438" cy="204" r="3.5" class="svg-fill-chart-1"/>
+
+                    <!-- W1 — medium gray -->
+                    <polyline points="48,138 146,162 243,223 341,204 438,162"
+                              fill="none" class="svg-stroke-chart-2" stroke-width="1.8" stroke-linejoin="round"/>
+                    <circle cx="48"  cy="138"  r="3.5" class="svg-fill-chart-2"/>
+                    <circle cx="146" cy="162" r="3.5" class="svg-fill-chart-2"/>
+                    <circle cx="243" cy="223" r="3.5" class="svg-fill-chart-2"/>
+                    <circle cx="341" cy="204" r="3.5" class="svg-fill-chart-2"/>
+                    <circle cx="438" cy="162" r="3.5" class="svg-fill-chart-2"/>
+
+                    <!-- W2 — darker gray -->
+                    <polyline points="48,89 146,113 243,138 341,126 438,77"
+                              fill="none" class="svg-stroke-chart-3" stroke-width="1.8" stroke-linejoin="round"/>
+                    <circle cx="48"  cy="89" r="3.5" class="svg-fill-chart-3"/>
+                    <circle cx="146" cy="113" r="3.5" class="svg-fill-chart-3"/>
+                    <circle cx="243" cy="138" r="3.5" class="svg-fill-chart-3"/>
+                    <circle cx="341" cy="126" r="3.5" class="svg-fill-chart-3"/>
+                    <circle cx="438" cy="77" r="3.5" class="svg-fill-chart-3"/>
+
+                    <!-- W3 — accent, best performer, drawn last (on top) -->
+                    <polyline points="48,174 146,77 243,113 341,53 438,28"
+                              fill="none" class="svg-stroke-2" stroke-width="2.2" stroke-linejoin="round"/>
+                    <circle cx="48"  cy="174" r="4" class="svg-fill-2"/>
+                    <circle cx="146" cy="77"  r="4" class="svg-fill-2"/>
+                    <circle cx="243" cy="113"  r="4" class="svg-fill-2"/>
+                    <circle cx="341" cy="53"  r="4" class="svg-fill-2"/>
+                    <!-- last point: open ring -->
+                    <circle cx="438" cy="28" r="5.5" class="svg-fill-10 svg-stroke-2" stroke-width="2.5"/>
+
+                    <!-- right-side delta labels -->
+                    <text x="450" y="34"  class="svg-base-bold svg-fill-2">+38% (W3)</text>
+                    <text x="450" y="81"  class="svg-base svg-fill-7">+2% (W2)</text>
+                    <text x="450" y="166" class="svg-base svg-fill-7">-4% (W1)</text>
+                    <text x="450" y="208" class="svg-base svg-fill-7">-19% (W4)</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Card 2: Well Pressure -->
+        <div class="card" id="card-overview">
+            <div class="card-header">
+                <span>Well Pressure</span>
+                <span class="card-arrow">↗</span>
+            </div>
+            <div class="overview-body">
+                <svg class="gauge" viewBox="0 0 120 72">
+                    <path d="M14 66 A 46 46 0 0 1 106 66" class="svg-stroke-8" stroke-width="9" fill="none" stroke-linecap="round"/>
+                    <path d="M14 66 A 46 46 0 0 1 106 66" class="svg-stroke-2" stroke-width="9" fill="none" stroke-linecap="round"
+                          stroke-dasharray="120 145" stroke-dashoffset="0"/>
+                    <text x="60" y="60" text-anchor="middle" class="svg-lg-bold svg-fill-1">2,450</text>
+                    <text x="60" y="71" text-anchor="middle" class="svg-xs svg-fill-7">psi</text>
+                    <text x="12" y="75" class="svg-xs svg-fill-7">0</text>
+                    <text x="105" y="75" class="svg-xs svg-fill-7">30</text>
+                </svg>
+                <div class="ov-stats">
+                    <div class="ov-row">
+                        <span class="ov-val">2,450 <small>psi</small></span>
+                        <span class="ov-lbl">Tubing Pressure</span>
+                    </div>
+                    <div class="ov-row">
+                        <span class="ov-val">89.5 <small>%</small></span>
+                        <span class="ov-lbl">Motor Load</span>
+                    </div>
+                    <div class="ov-row">
+                        <span class="ov-val">24 <small>hr</small></span>
+                        <span class="ov-lbl">Operational Hours</span>
+                    </div>
+                </div>
+            </div>
+            <button class="reload-btn">Reset Sensors</button>
+        </div>
+
+        <!-- Card 3: Power -->
+        <div class="card" id="card-power-history">
+            <div class="card-header">
+                <span>Energy Demand</span>
+                <div class="history-meta">
+                    <span class="history-total">14,200 <small>kWh this week</small></span>
+                    <span class="card-arrow">↗</span>
+                </div>
+            </div>
+            <div class="history-chart">
+                <div class="history-y-labels">
+                    <span>4k</span>
+                    <span>3k</span>
+                    <span>2k</span>
+                    <span>1k</span>
+                    <span>0</span>
+                </div>
+                <div class="history-graph">
+                    <svg viewBox="0 0 420 100" preserveAspectRatio="xMidYMid meet" class="line-chart-svg">
+                        <defs>
+                            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" style="stop-color: var(--color-1); stop-opacity: 0.15;"/>
+                                <stop offset="100%" style="stop-color: var(--color-1); stop-opacity: 0.02;"/>
+                            </linearGradient>
+                        </defs>
+                        <polygon
+                            points="0,100 0,72 60,58 120,40 180,52 240,25 300,38 360,18 420,30 420,100"
+                            fill="url(#areaGrad)"/>
+                        <polyline
+                            points="0,72 60,58 120,40 180,52 240,25 300,38 360,18 420,30"
+                            fill="none" class="svg-stroke-1" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+                        <circle cx="0"   cy="72" r="3.5" class="svg-fill-1"/>
+                        <circle cx="60"  cy="58" r="3.5" class="svg-fill-1"/>
+                        <circle cx="120" cy="40" r="3.5" class="svg-fill-1"/>
+                        <circle cx="180" cy="52" r="3.5" class="svg-fill-1"/>
+                        <circle cx="240" cy="25" r="3.5" class="svg-fill-1"/>
+                        <circle cx="300" cy="38" r="3.5" class="svg-fill-1"/>
+                        <circle cx="360" cy="18" r="3.5" class="svg-fill-1"/>
+                        <circle cx="420" cy="30" r="3.5" class="svg-fill-10 svg-stroke-1" stroke-width="2.5"/>
+                    </svg>
+                    <div class="history-x-labels">
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                        <span>Sun</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- SECOND ROW — Well Pressure Trends + Flow Rate Trends -->
+    <div class="cards-row cards-row-3">
+        <div class="card" id="card-well-pressure-trends">
+            <div class="card-header">
+                <span>Well Pressure Trends</span>
+                <div class="pressure-header-meta">
+                    <span class="pressure-badge">↑ 12.4% vs last week</span>
+                    <span class="card-arrow">↗</span>
+                </div>
+            </div>
+            <div class="lollipop-wrap">
+                <div class="lollipop-y-labels">
+                    <span>4500</span>
+                    <span>3500</span>
+                    <span>2500</span>
+                    <span>1500</span>
+                </div>
+                <div class="lollipop-chart">
+                    <svg width="580" height="105" class="lollipop-svg">
+                        <!-- safe threshold -->
+                        <line x1="0" y1="-37" x2="580" y2="-37" class="svg-stroke-threshold" stroke-width="1" stroke-dasharray="4 4"/>
+                        <text x="4" y="-40" class="svg-xs svg-fill-threshold-text">threshold</text>
+
+                        <!-- W1 -->
+                        <line x1="42"  y1="105" x2="42"  y2="8" class="svg-stroke-1" stroke-width="1.5"/>
+                        <line x1="42"  y1="8"   x2="42"  y2="-8" class="svg-stroke-1" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="42"  cy="8" r="4.5" class="svg-fill-1"/>
+
+                        <!-- W2 -->
+                        <line x1="83"  y1="105" x2="83"  y2="12" class="svg-stroke-1" stroke-width="1.5"/>
+                        <line x1="83"  y1="12"  x2="83"  y2="-5" class="svg-stroke-1" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="83"  cy="12" r="4.5" class="svg-fill-1"/>
+
+                        <!-- W3 -->
+                        <line x1="122" y1="105" x2="122" y2="-10" class="svg-stroke-1" stroke-width="1.5"/>
+                        <line x1="122" y1="-10" x2="122" y2="-28" class="svg-stroke-1" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="122" cy="-10" r="4.5" class="svg-fill-1"/>
+
+                        <!-- W4 -->
+                        <line x1="160" y1="105" x2="160" y2="-24" class="svg-stroke-1" stroke-width="1.5"/>
+                        <line x1="160" y1="-24" x2="160" y2="-42" class="svg-stroke-1" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="160" cy="-24" r="4.5" class="svg-fill-1"/>
+
+                        <!-- W5 -->
+                        <line x1="196" y1="105" x2="196" y2="0" class="svg-stroke-1" stroke-width="1.5"/>
+                        <line x1="196" y1="0"   x2="196" y2="-17" class="svg-stroke-1" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="196" cy="0" r="4.5" class="svg-fill-1"/>
+
+                        <!-- W6 -->
+                        <line x1="230" y1="105" x2="230" y2="-14" class="svg-stroke-1" stroke-width="1.5"/>
+                        <line x1="230" y1="-14" x2="230" y2="-32" class="svg-stroke-1" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="230" cy="-14" r="4.5" class="svg-fill-1"/>
+
+                        <!-- W7 -->
+                        <line x1="263" y1="105" x2="263" y2="-6" class="svg-stroke-1" stroke-width="1.5"/>
+                        <line x1="263" y1="-6"  x2="263" y2="-23" class="svg-stroke-1" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="263" cy="-6" r="4.5" class="svg-fill-1"/>
+
+                        <!-- W8 -->
+                        <line x1="296" y1="105" x2="296" y2="2" class="svg-stroke-1" stroke-width="1.5"/>
+                        <line x1="296" y1="2"   x2="296" y2="-16" class="svg-stroke-1" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="296" cy="2" r="4.5" class="svg-fill-1"/>
+
+                        <!-- W9 -->
+                        <line x1="330" y1="105" x2="330" y2="-18" class="svg-stroke-1" stroke-width="1.5"/>
+                        <line x1="330" y1="-18" x2="330" y2="-36" class="svg-stroke-1" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="330" cy="-18" r="4.5" class="svg-fill-1"/>
+
+                        <!-- W10 — trending high, accent -->
+                        <line x1="366" y1="105" x2="366" y2="-34" class="svg-stroke-2" stroke-width="1.5"/>
+                        <line x1="366" y1="-34" x2="366" y2="-52" class="svg-stroke-2" stroke-width="1.5" opacity="0.35"/>
+                        <circle cx="366" cy="-34" r="4.5" class="svg-fill-2"/>
+
+                        <!-- W11 -->
+                        <line x1="402" y1="105" x2="402" y2="-46" stroke="#e53935" stroke-width="1.5"/>
+                        <line x1="402" y1="-46" x2="402" y2="-64" stroke="#e53935" stroke-width="1.5" opacity="0.35"/>
+                        <circle cx="402" cy="-46" r="4.5" fill="#e53935"/>
+
+                        <!-- W12 -->
+                        <line x1="438" y1="105" x2="438" y2="-56" stroke="#e53935" stroke-width="1.5"/>
+                        <line x1="438" y1="-56" x2="438" y2="-72" stroke="#e53935" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="438" cy="-56" r="4.5" fill="#e53935"/>
+
+                        <!-- W13 — current, highlighted ring -->
+                        <line x1="474" y1="105" x2="474" y2="-66" stroke="#e53935" stroke-width="1.5"/>
+                        <line x1="474" y1="-66" x2="474" y2="-76" stroke="#e53935" stroke-width="1.5" opacity="0.25"/>
+                        <circle cx="474" cy="-66" r="6" fill="#ffffff" stroke="#e53935" stroke-width="2.5"/>
+                    </svg>
+                    <div class="lollipop-baseline"></div>
+                    <div class="lollipop-x-labels">
+                        <span style="left:42px">W1</span>
+                        <span style="left:83px">W2</span>
+                        <span style="left:122px">W3</span>
+                        <span style="left:160px">W4</span>
+                        <span style="left:196px">W5</span>
+                        <span style="left:230px">W6</span>
+                        <span class="w-current" style="left:263px">W7</span>
+                        <span style="left:296px">W8</span>
+                        <span style="left:330px">W9</span>
+                        <span style="left:366px">W10</span>
+                        <span style="left:402px">W11</span>
+                        <span style="left:438px">W12</span>
+                        <span style="left:474px">W13</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pressure-stats-row">
+                <div class="ps-stat">
+                    <span class="ps-val">2,450 <em>psi</em></span>
+                    <span class="ps-lbl">Current Max</span>
+                </div>
+                <div class="ps-stat">
+                    <span class="ps-val">1,940 <em>psi</em></span>
+                    <span class="ps-lbl">Fleet Average</span>
+                </div>
+                <div class="ps-stat">
+                    <span class="ps-val">13</span>
+                    <span class="ps-lbl">Active Wells</span>
+                </div>
+                <div class="ps-stat">
+                    <span class="ps-val warn">3 <em>near limit</em></span>
+                    <span class="ps-lbl">W11, W12, W13</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 8: Flow Rate Trends -->
+        <div class="card" id="card-flow-rate-trends">
+            <div class="card-header">
+                <span>Flow Rate Trends</span>
+                <span class="card-arrow">↗</span>
+            </div>
+            <div class="frt-rows">
+
+                <!-- 24 hrs -->
+                <div class="frt-row">
+                    <div class="frt-period">
+                        <span class="nac-val">24</span>
+                        <span class="nac-lbl">hrs</span>
+                    </div>
+                    <div class="frt-spark-wrap">
+                        <span class="frt-start-label frt-start-1">720 bpd</span>
+                        <svg class="frt-spark" width="340" height="52">
+                            <polyline points="10,36 45,28 80,33 120,25 160,30 200,22 250,17 310,14 330,13"
+                                fill="none" class="svg-stroke-1" stroke-width="1.5"
+                                stroke-linejoin="round" stroke-linecap="round"/>
+                            <circle cx="10"  cy="36" r="6" class="svg-fill-1"/>
+                            <circle cx="330" cy="13" r="6" class="svg-fill-1"/>
+                        </svg>
+                        <span class="frt-end-label">735 bpd</span>
+                    </div>
+                </div>
+
+                <!-- 7 Days -->
+                <div class="frt-row">
+                    <div class="frt-period">
+                        <span class="nac-val">7</span>
+                        <span class="nac-lbl">Days</span>
+                    </div>
+                    <div class="frt-spark-wrap">
+                        <span class="frt-start-label frt-start-2">680 bpd</span>
+                        <svg class="frt-spark" width="340" height="52">
+                            <polyline points="10,40 55,31 95,36 135,27 175,32 215,23 255,20 310,16 330,13"
+                                fill="none" class="svg-stroke-1" stroke-width="1.5"
+                                stroke-linejoin="round" stroke-linecap="round"/>
+                            <circle cx="10"  cy="40" r="6" class="svg-fill-1"/>
+                            <circle cx="330" cy="13" r="6" class="svg-fill-1"/>
+                        </svg>
+                        <span class="frt-end-label">735 bpd</span>
+                    </div>
+                </div>
+
+                <!-- 1 Month -->
+                <div class="frt-row">
+                    <div class="frt-period">
+                        <span class="nac-val">1</span>
+                        <span class="nac-lbl">Month</span>
+                    </div>
+                    <div class="frt-spark-wrap">
+                        <span class="frt-start-label frt-start-3">625 bpd</span>
+                        <svg class="frt-spark" width="340" height="52">
+                            <polyline points="10,46 60,38 110,33 155,37 195,28 240,31 280,21 325,15 330,13"
+                                fill="none" class="svg-stroke-1" stroke-width="1.5"
+                                stroke-linejoin="round" stroke-linecap="round"/>
+                            <circle cx="10"  cy="46" r="6" class="svg-fill-1"/>
+                            <circle cx="330" cy="13" r="6" class="svg-fill-1"/>
+                        </svg>
+                        <span class="frt-end-label">735 bpd</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="pressure-stats-row">
+                <div class="ps-stat">
+                    <span class="ps-val">735 bbl/d</span>
+                    <span class="ps-lbl">Current</span>
+                </div>
+                <div class="ps-stat">
+                    <span class="ps-val">+110 bbl/d</span>
+                    <span class="ps-lbl">30-Day Change</span>
+                </div>
+                <div class="ps-stat">
+                    <span class="ps-val">715 bbl/d</span>
+                    <span class="ps-lbl">Fleet Avg</span>
+                </div>
+                <div class="ps-stat">
+                    <span class="ps-val">#1 of 13</span>
+                    <span class="ps-lbl">Well Rank</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+    <!-- THIRD CARDS ROW — Temperature, Vibration Levels, Gas Detection -->
+    <!--
+    <div class="cards-row cards-row-2">
+        <div class="card" id="card-alerts">
+            <div class="card-header">
+                <span>Temperature</span>
+                <span class="alert-count">4</span>
+            </div>
+            <div class="alert-list">
+                <div class="alert-item alert-critical">
+                    <span class="alert-dot"></span>
+                    <div class="alert-body">
+                        <span class="alert-msg">Turbine #3 — Vibration exceeds threshold</span>
+                        <span class="alert-time">2 min ago</span>
+                    </div>
+                    <span class="alert-tag">Critical</span>
+                </div>
+                <div class="alert-item alert-warning">
+                    <span class="alert-dot"></span>
+                    <div class="alert-body">
+                        <span class="alert-msg">Rotor bearing temperature elevated</span>
+                        <span class="alert-time">14 min ago</span>
+                    </div>
+                    <span class="alert-tag">Warning</span>
+                </div>
+                <div class="alert-item alert-warning">
+                    <span class="alert-dot"></span>
+                    <div class="alert-body">
+                        <span class="alert-msg">Wind speed approaching cut-out limit</span>
+                        <span class="alert-time">31 min ago</span>
+                    </div>
+                    <span class="alert-tag">Warning</span>
+                </div>
+                <div class="alert-item alert-info">
+                    <span class="alert-dot"></span>
+                    <div class="alert-body">
+                        <span class="alert-msg">Scheduled maintenance due — Turbine #7</span>
+                        <span class="alert-time">2 hr ago</span>
+                    </div>
+                    <span class="alert-tag">Info</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="card-wind-nacelle">
+            <div class="card-header">
+                <span>Vibration Levels</span>
+                <span class="card-arrow">↗</span>
+            </div>
+            <div class="nacelle-body">
+                <div class="nac-stats">
+                    <div class="nac-row">
+                        <span class="nac-val">125 <small>m/s</small></span>
+                        <span class="nac-lbl">Avg. Wind Speed</span>
+                    </div>
+                    <div class="nac-row">
+                        <span class="nac-val">15.9 <small>m/s</small></span>
+                        <span class="nac-lbl">Velocity</span>
+                    </div>
+                    <div class="nac-row">
+                        <span class="nac-val">248°</span>
+                        <span class="nac-lbl">Wind Direction</span>
+                    </div>
+                </div>
+                <svg class="compass" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="44" class="svg-fill-compass-bg svg-stroke-compass-ring" stroke-width="1"/>
+                    <circle cx="50" cy="50" r="32" fill="none" class="svg-stroke-compass-ring" stroke-width="0.6"/>
+                    <circle cx="50" cy="50" r="20" fill="none" class="svg-stroke-compass-ring" stroke-width="0.6"/>
+                    <text x="50" y="10" text-anchor="middle" class="svg-xs-bold svg-fill-6">N</text>
+                    <text x="93" y="53" text-anchor="middle" class="svg-xs-bold svg-fill-6">E</text>
+                    <text x="50" y="96" text-anchor="middle" class="svg-xs-bold svg-fill-6">S</text>
+                    <text x="7"  y="53" text-anchor="middle" class="svg-xs-bold svg-fill-6">W</text>
+                    <line x1="50" y1="50" x2="30" y2="70" class="svg-stroke-1" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="50" y1="50" x2="67" y2="32" class="svg-stroke-7" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="50" cy="50" r="3.5" class="svg-fill-1"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="card" id="card-temperatures">
+            <div class="card-header">
+                <span>Gas Detection</span>
+                <span class="card-arrow">↗</span>
+            </div>
+            <div class="temp-values-row">
+                <span>69°C</span>
+                <span>98°C</span>
+                <span>85°C</span>
+                <span>37°C</span>
+                <span>73°C</span>
+            </div>
+            <div class="temp-bars">
+                <div class="temp-col">
+                    <div class="temp-bar bar-blue" style="height:62%;"></div>
+                    <span>Bearing</span>
+                </div>
+                <div class="temp-col">
+                    <div class="temp-bar bar-accent" style="height:90%;"></div>
+                    <span>Ambient</span>
+                </div>
+                <div class="temp-col">
+                    <div class="temp-bar bar-tan" style="height:78%;"></div>
+                    <span>Rotor</span>
+                </div>
+                <div class="temp-col">
+                    <div class="temp-bar bar-green" style="height:33%;"></div>
+                    <span>Stator</span>
+                </div>
+                <div class="temp-col">
+                    <div class="temp-bar bar-blue" style="height:67%;"></div>
+                    <span>Bearing</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    -->
+
