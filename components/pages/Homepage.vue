@@ -37,7 +37,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.commit('updateState', {field: 'backgroundColor', value: "#282725"})
+    this.$store.commit('updateState', {field: 'backgroundColor', value: "#F8F7F4"})
     // Check if text animation is playing to determine delay
     const isTextAnimating = sessionStorage.getItem('textAnimationPlaying') === 'true'
     const delay = isTextAnimating ? 1200 : 100
