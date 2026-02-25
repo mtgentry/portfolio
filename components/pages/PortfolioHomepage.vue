@@ -103,6 +103,10 @@
             border-color="#477AF0"
           )
           |  this 1908 Craftsman. The project is definitely on schedule and expected to be completed by 2050.
+
+        p.email-contact
+          | Say hello:
+          span.email-text {{ reversedEmail }}
 </template>
 
 <script>
@@ -117,6 +121,16 @@ export default {
   head() {
     return {
       title: 'Mason Gentry'
+    }
+  },
+  data() {
+    return {
+      emailParts: ['mgentry', '@', 'masongentry', '.', 'com']
+    }
+  },
+  computed: {
+    reversedEmail() {
+      return this.emailParts.join('')
     }
   },
   mounted() {
@@ -242,7 +256,7 @@ export default {
   display: flex
   align-items: center
   justify-content: flex-start
-  padding: 80px 40px 100px 40px
+  padding: 80px 40px 10px 40px
 
 .container
   max-width: 650px
@@ -260,10 +274,21 @@ export default {
     display: inline
     opacity: 0
 
+  p.email-contact
+    margin-top: 60px
+    margin-bottom: 10px
+    font-size: 14px
+    color: #999
+    opacity: 0.6
+
+    .email-text
+      margin-left: 4px
+      user-select: all
+
 // Responsive design
 @media (max-width: 768px)
   .portfolio-homepage
-    padding: 60px 20px 80px 20px
+    padding: 60px 20px 10px 20px
 
   .content p.text
     font-size: 28px !important
@@ -271,7 +296,7 @@ export default {
 
 @media (max-width: 480px)
   .portfolio-homepage
-    padding: 40px 20px 60px 20px
+    padding: 40px 20px 10px 20px
 
   .content p.text
     font-size: 28px !important
