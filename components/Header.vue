@@ -164,4 +164,5 @@ export default {
   // Agency-specific styles
   .text.agency-header
     text-align: center
+    color: #FFFFFF
 </style>
