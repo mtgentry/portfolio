@@ -6,6 +6,18 @@ domains:
   type: PRIMARY
 - domain: www.masongentry.com
   type: ALIAS
+ingress:
+  rules:
+  - component:
+      name: api
+    match:
+      path:
+        prefix: /api
+  - component:
+      name: portfolio
+    match:
+      path:
+        prefix: /
 name: portfolio
 region: sfo
 static_sites:
@@ -25,3 +37,18 @@ static_sites:
   name: portfolio
   output_dir: dist
   source_dir: /
+functions:
+- name: api
+  source_dir: /functions
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: mtgentry/portfolio
+  envs:
+  - key: BEEHIIV_API_KEY
+    scope: RUN_AND_BUILD_TIME
+    type: SECRET
+    value: YOUR_API_KEY
+  - key: BEEHIIV_PUBLICATION_ID
+    scope: RUN_AND_BUILD_TIME
+    value: pub_431e94a8-c596-4ec4-afe1-7b1a1fd61aba
