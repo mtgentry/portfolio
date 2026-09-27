@@ -251,7 +251,7 @@ export default {
 <style lang="sass" scoped>
 .portfolio-homepage
   background-color: #F8F7F4
-  color: #000000
+  color: #1D1E20
   min-height: 100vh
   display: flex
   align-items: center
@@ -265,7 +265,7 @@ export default {
   p.text
     margin-bottom: 24px
     line-height: 1.7
-    color: #000000
+    color: #1D1E20
     font-size: 32px !important
     width: 650px
     max-width: 100%
