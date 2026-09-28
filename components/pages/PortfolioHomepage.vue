@@ -16,7 +16,7 @@
             left-color="#477AF0"
             border-color="#477AF0"
           )
-          | . I'm a designer and founder based in Los Angeles. My experience spans high-growth startups and global firms including Boston Consulting Group and TBWA\Chiat\Day
+          | . I'm a designer and founder based in Los Angeles. My experience spans high-growth startups and global firms, including Boston Consulting Group and TBWA\Chiat\Day
           HoverImage(
             :id="2"
             icon-src="/images/hover_icon_2.png"
@@ -32,7 +32,7 @@
           | . Along the way, I've shipped work for brands like Disney, Coke, and Nissan.
 
         p.text
-          | I previously built and sold Faucet Face a glass
+          | I previously built and sold Faucet Face, a glass
           HoverImage(
             :id="3"
             icon-src="/images/hover_icon_3.png"
@@ -58,7 +58,7 @@
             left-color="#F6633A"
             border-color="#F6633A"
           )
-          |  a tool used by thousands of designers worldwide, and write Design by Numbers, a popular
+          |  a tool used by thousands of designers worldwide, and I write Design by Numbers, a popular
           HoverImage(
             :id="5"
             icon-src="/images/hover_icon_5.png"

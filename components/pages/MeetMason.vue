@@ -14,9 +14,14 @@
             right-color="#477AF0"
             bottom-color="#164EED"
             left-color="#477AF0"
-            border-color="#477AF0"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
           )
-          | . I'm a designer and founder based in Los Angeles. My experience spans high-growth startups and global firms including Boston Consulting Group and TBWA\Chiat\Day
+          | . I'm a design engineer based in Los Angeles. My experience spans high-growth startups and global firms, including Boston Consulting Group and TBWA\Chiat\Day
           HoverImage(
             :id="2"
             icon-src="/images/hover_icon_2.png"
@@ -27,12 +32,17 @@
             right-color="#6CB697"
             bottom-color="#4A7E68"
             left-color="#6CB697"
-            border-color="#6CB697"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
           )
           | . Along the way, I've shipped work for brands like Disney, Coke, and Nissan.
 
         p.text
-          | I previously built and sold Faucet Face a glass
+          | I previously built and sold Faucet Face, a glass
           HoverImage(
             :id="3"
             icon-src="/images/hover_icon_3.png"
@@ -43,7 +53,12 @@
             right-color="#F1D5D5"
             bottom-color="#E5A9AA"
             left-color="#F1D5D5"
-            border-color="#F1D5D5"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
           )
           |  bottle brand carried by retailers like Urban Outfitters and Fab. I also created Color Supply,
           HoverImage(
@@ -56,9 +71,14 @@
             right-color="#F6633A"
             bottom-color="#BF411C"
             left-color="#F6633A"
-            border-color="#F6633A"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
           )
-          |  a tool used by thousands of designers worldwide, and write Design by Numbers, a popular
+          |  a tool used by thousands of designers worldwide, and I write Design by Numbers, a popular
           HoverImage(
             :id="5"
             icon-src="/images/hover_icon_5.png"
@@ -71,7 +91,12 @@
             right-color="#F1B456"
             bottom-color="#C79445"
             left-color="#F1B456"
-            border-color="#F1B456"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
           )
           |  newsletter for 9,000+ designers and developers.
 
@@ -81,38 +106,31 @@
           p Now I'm looking for my next great role. I'm not in a hurry, I want to find something that's the right fit for both of us. And that's where you come in.
           p The best way I know to test fit is to work together. So I'm taking on small, scoped design projects with a few startups. If it goes well, we continue the conversation. If it doesn't you'll have a design asset that you can use for your business.
           p You can pick what we work on, or tell me what you're building and I'll suggest something.
-          h3 Roles I'm looking for
-          p I'm LA based on not looking to relocate, but I am open to visiting SF on-site as needed.
-          ul
-            li Whip-smart team
-            li Building something unique or impressive
-            li You believe can move the needle of your business (if done correctly)
-            li Remote / Los Angeles / San Francisco (on-site as needed)
-          p If you'd like to work together on a short term project, or just want to follow along, enter your email below:
+          p If you'd like to see how I think about using design to drive outsized results, sign up below. If you like what you read, maybe we can do a test project together.
 
         form.signup-form(v-if="!isSubscribed" @submit.prevent="handleSubscribe")
-          input.signup-input(
-            v-model="firstName"
-            type="text"
-            placeholder="First name"
-            required
-            :disabled="isSubmitting"
-          )
-          input.signup-input(
-            v-model="email"
-            type="email"
-            placeholder="Email"
-            required
-            :disabled="isSubmitting"
-          )
-          button.signup-submit(type="submit" :disabled="isSubmitting")
-            | {{ isSubmitting ? 'One moment...' : 'Count me in' }}
+          div.signup-row
+            label.signup-field
+              span.signup-label Name
+              input.signup-input(
+                ref="firstNameInput"
+                v-model="firstName"
+                type="text"
+                required
+                :disabled="isSubmitting"
+              )
+            label.signup-field
+              span.signup-label Work email
+              input.signup-input(
+                v-model="email"
+                type="email"
+                required
+                :disabled="isSubmitting"
+              )
+            button.signup-submit(type="submit" :disabled="isSubmitting")
+              | {{ isSubmitting ? 'One moment...' : 'Submit' }}
           p.signup-error(v-if="subscribeError") {{ subscribeError }}
-        p.signup-success(v-else) Thanks, {{ firstName }}. I'll be in touch.
-
-        p.email-contact
-          | Say hello:
-          span.email-text {{ reversedEmail }}
+        p.signup-success(v-else) Thanks, {{ firstName }}! You'll hear from me soon.
 </template>
 
 <script>
@@ -131,7 +149,6 @@ export default {
   },
   data() {
     return {
-      emailParts: ['mgentry', '@', 'masongentry', '.', 'com'],
       // DigitalOcean Function that adds the signup to beehiiv (see functions/)
       formEndpoint: '/api/signup/subscribe',
       firstName: '',
@@ -141,18 +158,30 @@ export default {
       subscribeError: ''
     }
   },
-  computed: {
-    reversedEmail() {
-      return this.emailParts.join('')
-    }
-  },
   mounted() {
     this.$nextTick(() => {
       this.wrapTextNodes()
       this.animatePageLoad()
+      this.focusNameWhenVisible()
     })
   },
+  beforeDestroy() {
+    this.formObserver?.disconnect()
+  },
   methods: {
+    focusNameWhenVisible() {
+      // Put the blinking cursor in the name field once the form scrolls into
+      // view. Focusing on load made Safari jump the page down to the form.
+      const input = this.$refs.firstNameInput
+      if (!input || !('IntersectionObserver' in window)) return
+
+      this.formObserver = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return
+        input.focus({ preventScroll: true })
+        this.formObserver.disconnect()
+      }, { threshold: 1 })
+      this.formObserver.observe(input)
+    },
     async handleSubscribe() {
       if (!this.email || this.isSubmitting) return
 
@@ -288,7 +317,7 @@ export default {
 .content
   p.text
     margin-bottom: 24px
-    line-height: 1.7
+    line-height: 2.5
     color: #1D1E20
     font-size: 32px !important
     width: 650px
@@ -297,6 +326,13 @@ export default {
   .text-content
     display: inline
     opacity: 0
+
+  // Negative vertical margins let the images spill past their line instead
+  // of pushing it taller, so every line is spaced evenly
+  .image-wrapper
+    margin-top: -12px
+    margin-bottom: -12px
+    border-radius: 12px
 
   .body-copy
     margin-top: 48px
@@ -307,36 +343,37 @@ export default {
       line-height: 1.6
       color: #1D1E20
 
-    h3
-      margin-top: 48px
-      margin-bottom: 16px
-      font-size: 24px
-      font-weight: 700
-      line-height: 1.3
-      color: #1D1E20
-
-    ul
-      margin-bottom: 20px
-      padding-left: 24px
-
-      li
-        margin-bottom: 8px
-        font-size: 20px
-        line-height: 1.6
-        color: #1D1E20
-
   .signup-form
     display: flex
     flex-direction: column
     gap: 18px
-    max-width: 400px
-    margin-top: 24px
+    margin-top: 74px
+    margin-bottom: 80px
+
+  .signup-row
+    display: flex
+    align-items: flex-end
+    gap: 16px
+
+  .signup-field
+    display: flex
+    flex: 1
+    flex-direction: column
+    min-width: 0
+
+  .signup-label
+    margin-bottom: 4px
+    font-size: 11px
+    letter-spacing: 0.06em
+    text-transform: uppercase
+    color: #948F8B
 
   .signup-input
+    width: 100%
     font-family: inherit
-    font-size: 30px
+    font-size: 18px
     line-height: 1
-    padding: 0 0 2px 0
+    padding: 0 0 8px 0
     border: none
     border-bottom: 1px solid #D6D3CE
     border-radius: 0
@@ -353,11 +390,12 @@ export default {
       color: #B5B1AC
 
   .signup-submit
-    margin-top: 18px
+    flex: none
+    white-space: nowrap
     font-family: inherit
-    font-size: 18px
+    font-size: 14px
     font-weight: 500
-    padding: 14px 24px
+    padding: 8px 16px
     background: #1D1E20
     color: #FFFFFF
     border: none
@@ -378,20 +416,10 @@ export default {
     color: #B91C1C
 
   .signup-success
-    margin-top: 24px
+    margin-top: 44px
+    margin-bottom: 80px
     font-size: 20px
     color: #1D1E20
-
-  p.email-contact
-    margin-top: 60px
-    margin-bottom: 10px
-    font-size: 14px
-    color: #999
-    opacity: 0.6
-
-    .email-text
-      margin-left: 4px
-      user-select: all
 
 // Responsive design
 @media (max-width: 768px)
@@ -402,15 +430,20 @@ export default {
     font-size: 28px !important
     line-height: 1.7 !important
 
-  .content .body-copy p, .content .body-copy li
+  .content .body-copy p
     font-size: 18px
-
-  .content .signup-input
-    font-size: 22px
 
 @media (max-width: 480px)
   .portfolio-homepage
     padding: 40px 20px 10px 20px
+
+  .content .signup-row
+    flex-direction: column
+    align-items: stretch
+    gap: 18px
+
+  .content .signup-submit
+    margin-top: 18px
 
   .content p.text
     font-size: 28px !important

@@ -1,0 +1,67 @@
+{
+  "cover": {
+    "media": {
+      "name": "francescas_thumb.jpg"
+    },
+    "title": "Francesca's",
+    "categories": "Branding, Visual Design"
+  },
+  "backgroundColor": "#6CAF82",
+  "textColor": "#ffffff",
+  "header": "Francesca’s came to us at a moment of transition. Their core customers, girls navigating early adolescence, were changing fast. What they needed was not just a visual update but a shift in tone. Together, we reimagined the brand as a trusted older sister. Someone stylish, confident, and just gentle enough to guide without pushing.",
+  "seo_description": "",
+  "layout": [
+    {
+      "media": [
+        {
+          "name": "francescas_1.jpg",
+          "position": "center",
+          "title": "Francesca's"
+        }
+      ]
+    },
+    {
+      "title": "Time for a change",
+      "text": [
+        "Francesca’s was ready for change. Originally built for younger girls, the brand no longer resonated with its growing audience. Their customers, girls aged eleven to fifteen, had become more style aware and were gravitating toward hipper brands like Madewell and Asos. Francesca’s needed a refresh that could evolve with them without making parents feel alienated.",
+        "I designed a new direction that balanced trend forward design with approachability, and it tested well across audiences. Stylish but not intimidating. Fresh but still familiar."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "francescas_2.mp4",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "The Strategy",
+      "text": [
+        "To bring that balance to life, I collaborated with our in-house strategists to rethink the entire experience. Inspired by fashion magazines, we introduced an editorial layer to the shopping journey. Product pairings were surfaced through moments of suggestion rather than promotion. It felt curated, not prescriptive. Like getting fashion advice from an older sister.",
+        "We validated the concept with users and it was one of their favorite things in the new site. From there, we built a custom CMS that gave the Francesca’s team full control over editorial updates and pairings."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "francescas_3.jpg"
+        }
+      ]
+    },
+    {
+      "text": [
+        "Beyond the rebrand, we also optimized the checkout experience. We tested multiple flows with users and partnered with the Francesca’s team to A/B test the top performers.",
+        "This work gave Francesca’s more than a new look. It repositioned the brand for a new generation while staying grounded in what made it matter. What started as a rebrand became something more. A trusted voice. A guiding presence. Style advice just like a big sister would give it."
+      ]
+    },
+    {
+      "line": true
+    },
+    {
+      "text": [
+        "Agency: Phenomenon"
+      ]
+    }
+  ]
+}
