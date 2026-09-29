@@ -85,6 +85,15 @@ h5
 
 p
   margin-top: 0  // Remove default top margin
+
+// Project body copy: Resist Sans Light, 1px under the site-wide 21px/19px
+// paragraph size set in layouts/default.vue. Credit lines keep their own size.
+.string-component p:not(.agency-credit)
+  font-weight: 100
+  font-size: 20px !important
+
+  @media (max-width: 768px)
+    font-size: 18px !important
   // border: 1px solid green !important  // DEBUG: Visualize paragraph boundary
 
 .agency-credit

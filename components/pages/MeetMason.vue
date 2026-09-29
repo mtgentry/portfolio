@@ -6,6 +6,7 @@
           | Hi, I'm Mason
           HoverImage(
             :id="1"
+            :style="{ width: '70px' }"
             icon-src="/images/hover_icon_1.png"
             hover-src="/images/hover_big_1.jpg"
             :use-mirroring="true"
@@ -21,9 +22,10 @@
             :mid-frame-count="3"
             :telescope="true"
           )
-          | . I'm a design engineer based in Los Angeles. My experience spans high-growth startups and global firms, including Boston Consulting Group and TBWA\Chiat\Day
+          | , a design engineer based in Los Angeles. My experience spans high-growth startups like Timescale, and world-class agencies like TBWA\Chiat\Day
           HoverImage(
             :id="2"
+            :style="{ width: '100px' }"
             icon-src="/images/hover_icon_2.png"
             hover-src="/images/hover_big_2.gif"
             :use-mirroring="true"
@@ -42,9 +44,10 @@
           | . Along the way, I've shipped work for brands like Disney, Coke, and Nissan.
 
         p.text
-          | I previously built and sold Faucet Face, a glass
+          | I previously built and sold Faucet Face
           HoverImage(
             :id="3"
+            :style="{ width: '55px' }"
             icon-src="/images/hover_icon_3.png"
             hover-src="/images/hover_big_3.jpg"
             :use-mirroring="true"
@@ -60,9 +63,10 @@
             :mid-frame-count="3"
             :telescope="true"
           )
-          |  bottle brand carried by retailers like Urban Outfitters and Fab. I also created Color Supply,
+          |  a glass bottle brand carried by retailers like Urban Outfitters. I also created Color Supply,
           HoverImage(
             :id="4"
+            :style="{ width: '109px' }"
             icon-src="/images/hover_icon_4.png"
             hover-src="/images/hover_big_4.jpg"
             :use-mirroring="true"
@@ -78,9 +82,10 @@
             :mid-frame-count="3"
             :telescope="true"
           )
-          |  a tool used by thousands of designers worldwide, and I write Design by Numbers, a popular
+          |  a tool used by thousands of designers worldwide, and write Design by Numbers, a popular
           HoverImage(
             :id="5"
+            :style="{ width: '60px' }"
             icon-src="/images/hover_icon_5.png"
             hover-src="/images/hover_big_5.gif"
             :image-width="350"
@@ -101,12 +106,10 @@
           |  newsletter for 9,000+ designers and developers.
 
         div.body-copy
-          p Over the past two years, AI has enabled me to do even more. I've built micro-sites, custom tooling, prototypes and brought my designs to life in ways I never could before.
-          p I'm collaborating with developers and committing production code to Github.
+          p Over the past two years, AI has enabled me to do even more. I've built micro-sites, custom tooling, prototypes, and shipped designs myself instead of handing them off. I also work alongside developers, committing production code to GitHub.
           p Now I'm looking for my next great role. I'm not in a hurry, I want to find something that's the right fit for both of us. And that's where you come in.
-          p The best way I know to test fit is to work together. So I'm taking on small, scoped design projects with a few startups. If it goes well, we continue the conversation. If it doesn't you'll have a design asset that you can use for your business.
-          p You can pick what we work on, or tell me what you're building and I'll suggest something.
-          p If you'd like to see how I think about using design to drive outsized results, sign up below. If you like what you read, maybe we can do a test project together.
+          p I'm taking on small, scoped design projects with a few startups. If it goes well, we continue the conversation. If it doesn't you'll have a design asset that you can use for your business.
+          p If you'd like to see how I think about using design to drive outsized results for startups, sign up below.
 
         form.signup-form(v-if="!isSubscribed" @submit.prevent="handleSubscribe")
           div.signup-row
@@ -230,9 +233,24 @@ export default {
         return rect.top < window.innerHeight && rect.bottom > 0
       }).length
 
-      // Set initial states - mask reveals from 44px wide, all 52px tall
-      gsap.set(imageWrappers, { width: 44, height: 52, opacity: 0 })
-      gsap.set(imageWrappers[3], { width: 40, height: 52, opacity: 0 }) // 4th image starts narrower
+      // Final width of each image, and how wide its reveal starts
+      const finalWidths = [70, 100, 55, 109, 60]
+      const startWidths = [44, 44, 44, 40, 44] // 4th image starts narrower
+
+      // Each wrapper takes its final width up front so lines break where they
+      // will end up; the reveal is a clip mask opening from startWidth instead
+      // of a width change, which used to push icons onto the next line. The
+      // same widths are set inline on each HoverImage in the template, so the
+      // server-rendered layout already matches before this code runs.
+      const clipFor = (hidden) => `inset(0px ${hidden}px 0px 0px round 12px)`
+      imageWrappers.forEach((wrapper, index) => {
+        gsap.set(wrapper, {
+          width: finalWidths[index],
+          height: 52,
+          opacity: 0,
+          clipPath: clipFor(finalWidths[index] - startWidths[index])
+        })
+      })
       gsap.set(textContent, { opacity: 0 })
 
       // Create timeline with 1s delay
@@ -241,48 +259,25 @@ export default {
       // Individual stagger delays for each image (in seconds from start)
       const staggerDelays = [0, 0.2, 0.4, 0.6, 1.0] // 5th image delayed more
 
-      // Fade in each image with custom timing
       staggerDelays.forEach((delay, index) => {
-        if (imageWrappers[index]) {
-          tl.to(imageWrappers[index], {
-            opacity: 1,
-            duration: 0.4,
-            ease: "power2.out"
-          }, delay)
-        }
-      })
+        if (!imageWrappers[index]) return
 
-      // Animate each wrapper to its unique final dimensions
-      tl.to(imageWrappers[0], {
-        width: 70,
-        height: 52,
-        duration: 0.4,
-        ease: "power2.out"
-      }, staggerDelays[0] + 0.15) // First image (after Mason)
-      .to(imageWrappers[1], {
-        width: 100,
-        height: 52,
-        duration: 0.4,
-        ease: "power2.out"
-      }, staggerDelays[1] + 0.15) // Second image (after TBWA\Chiat\Day)
-      .to(imageWrappers[2], {
-        width: 55,
-        height: 52,
-        duration: 0.4,
-        ease: "power2.out"
-      }, staggerDelays[2] + 0.15) // Third image (after glass)
-      .to(imageWrappers[3], {
-        width: 109,
-        height: 52,
-        duration: 0.4,
-        ease: "power2.out"
-      }, staggerDelays[3] + 0.15) // Fourth image (after Color Supply)
-      .to(imageWrappers[4], {
-        width: 60,
-        height: 52,
-        duration: 0.4,
-        ease: "power2.out"
-      }, staggerDelays[4] + 0.15) // Fifth image (after popular)
+        // Fade in each image with custom timing
+        tl.to(imageWrappers[index], {
+          opacity: 1,
+          duration: 0.4,
+          ease: "power2.out"
+        }, delay)
+
+        // Then open the mask to the full width. The mask is removed once open,
+        // since it would also clip the hover overlay that lives inside the wrapper
+        tl.to(imageWrappers[index], {
+          clipPath: clipFor(0),
+          duration: 0.4,
+          ease: "power2.out",
+          onComplete: () => gsap.set(imageWrappers[index], { clearProps: 'clipPath' })
+        }, delay + 0.15)
+      })
 
       // Calculate when the last visible image completes
       // Get the stagger delay for the last visible image
@@ -353,7 +348,7 @@ export default {
   .signup-row
     display: flex
     align-items: flex-end
-    gap: 16px
+    gap: 26px
 
   .signup-field
     display: flex
@@ -423,19 +418,25 @@ export default {
 
 // Responsive design
 @media (max-width: 768px)
+  // 15px total per side: the layout's v-container adds 12px, this adds 3px,
+  // and the inner .container's own Vuetify padding is removed
   .portfolio-homepage
-    padding: 60px 20px 10px 20px
+    padding: 60px 3px 10px 3px
+
+  .container
+    padding-left: 0
+    padding-right: 0
 
   .content p.text
     font-size: 28px !important
-    line-height: 1.7 !important
+    line-height: 1.6 !important
 
   .content .body-copy p
     font-size: 18px
 
 @media (max-width: 480px)
   .portfolio-homepage
-    padding: 40px 20px 10px 20px
+    padding: 40px 3px 10px 3px
 
   .content .signup-row
     flex-direction: column
@@ -447,7 +448,7 @@ export default {
 
   .content p.text
     font-size: 28px !important
-    line-height: 1.7 !important
+    line-height: 1.6 !important
 </style>
 
 <style lang="sass">
