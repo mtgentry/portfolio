@@ -1,14 +1,16 @@
 <template lang="pug">
   span.image-wrapper(
+    :class="{ 'tap-enabled': tapToReveal }"
     @mouseover="onMouseOver($event)"
     @mouseleave="onMouseLeave"
     @mousemove="onMouseMove($event)"
+    @click="onTap($event)"
   )
     img.inline-image(:src="iconSrc" alt="icon")
     img.hover-image(
       :class="{ 'visible': isHovered, [`hover-image-${id}`]: true }"
       :src="hoverSrc"
-      :style="{ transform: `translate3d(${shapeLeft}px, ${shapeTop}px, 0) scale(${grow})`, width: imageWidth + 'px', height: imageHeight + 'px', borderColor: borderColor, outline: edgeColor ? `1px solid ${edgeColor}` : 'none' }"
+      :style="{ transform: `translate3d(${shapeLeft}px, ${shapeTop}px, 0) scale(${grow})`, width: drawWidth + 'px', height: drawHeight + 'px', borderColor: borderColor, outline: edgeColor ? `1px solid ${edgeColor}` : 'none' }"
     )
     svg.connector-shape(
       v-if="showConnectorLine && isHovered"
@@ -68,6 +70,10 @@
 </template>
 
 <script>
+// How far, in px, a tapped-open overlay drifts from its resting spot
+const DRIFT_X = 24
+const DRIFT_Y = 16
+
 export default {
   name: 'HoverImage',
   props: {
@@ -142,6 +148,12 @@ export default {
     telescope: {
       type: Boolean,
       default: false
+    },
+    // On touch screens, which have no hover, tap the thumbnail to open the
+    // overlay and tap anywhere or scroll to close it
+    tapToReveal: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -154,11 +166,18 @@ export default {
     shapeTop() {
       return this.thumbCenterY + (this.imageTop - this.thumbCenterY) * this.grow
     },
+    // Image size after shrinking to fit a small screen (fitScale is 1 on desktop)
+    drawWidth() {
+      return this.imageWidth * this.fitScale
+    },
+    drawHeight() {
+      return this.imageHeight * this.fitScale
+    },
     shapeWidth() {
-      return this.imageWidth * this.grow
+      return this.drawWidth * this.grow
     },
     shapeHeight() {
-      return this.imageHeight * this.grow
+      return this.drawHeight * this.grow
     },
     midFrameFractions() {
       // e.g. 3 frames sit at 1/4, 2/4 and 3/4 of the way to the image
@@ -176,6 +195,10 @@ export default {
       frameId: null,
       grow: 1,
       growStart: null,
+      fitScale: 1,
+      restLeft: null,
+      restTop: null,
+      driftStart: null,
       cursorX: 0,
       cursorY: 0,
       thumbCenterX: 0,
@@ -184,9 +207,97 @@ export default {
   },
   beforeDestroy() {
     cancelAnimationFrame(this.frameId)
+    this.removeTapListeners()
   },
   methods: {
+    // Touch screens fire emulated mouse events on tap; tap mode ignores them.
+    // Checked on each event rather than once on load, so it stays right if the
+    // device mode changes (e.g. toggling the phone view in browser dev tools).
+    usesTapMode() {
+      return this.tapToReveal && window.matchMedia('(hover: none) and (pointer: coarse)').matches
+    },
+    onTap(event) {
+      if (!this.usesTapMode()) return
+      if (this.isHovered) {
+        this.closeTap()
+      } else {
+        this.openTap(event.currentTarget)
+      }
+    },
+    openTap(wrapper) {
+      const rect = wrapper.getBoundingClientRect()
+      this.thumbCenterX = rect.left + (rect.width / 2)
+      this.thumbCenterY = rect.top + (rect.height / 2)
+
+      const viewportWidth = window.innerWidth
+      const viewportHeight = window.innerHeight
+      const gap = 24
+      // Screen edge margin plus room for the drift, so the image never leaves the screen
+      const marginX = 16 + DRIFT_X
+      const marginY = 16 + DRIFT_Y
+
+      // Shrink the image if it would not fit beside the thumbnail on screen
+      this.fitScale = Math.min(
+        1,
+        (viewportWidth - marginX * 2) / this.imageWidth,
+        (viewportHeight / 2 - rect.height / 2 - gap - marginY) / this.imageHeight
+      )
+
+      // Open toward the roomier side: below a thumbnail in the top half of the
+      // screen, above one in the bottom half, and away from its horizontal side
+      if (this.thumbCenterY < viewportHeight / 2) {
+        this.targetTop = Math.min(rect.bottom + gap + DRIFT_Y, viewportHeight - this.drawHeight - marginY)
+      } else {
+        this.targetTop = Math.max(rect.top - gap - DRIFT_Y - this.drawHeight, marginY)
+      }
+      if (this.thumbCenterX < viewportWidth / 2) {
+        this.targetLeft = viewportWidth - this.drawWidth - marginX
+      } else {
+        this.targetLeft = marginX
+      }
+
+      // Where the image rests; it drifts around this point while open
+      this.restLeft = this.targetLeft
+      this.restTop = this.targetTop
+      this.driftStart = null
+
+      this.imageLeft = this.targetLeft
+      this.imageTop = this.targetTop
+      if (this.telescope) {
+        this.grow = 0
+        this.growStart = null
+      }
+      this.isHovered = true
+      this.startEasing()
+
+      // Close on the next tap anywhere or on scroll. Added after this tap has
+      // finished so the same tap does not immediately close it.
+      setTimeout(() => {
+        if (!this.isHovered) return
+        this.onDocumentTap = (e) => {
+          if (!this.$el.contains(e.target)) this.closeTap()
+        }
+        this.onScroll = () => this.closeTap()
+        document.addEventListener('click', this.onDocumentTap, true)
+        window.addEventListener('scroll', this.onScroll, { passive: true })
+      })
+    },
+    closeTap() {
+      this.restLeft = null
+      this.restTop = null
+      this.isHovered = false
+      cancelAnimationFrame(this.frameId)
+      this.frameId = null
+      this.removeTapListeners()
+    },
+    removeTapListeners() {
+      if (this.onDocumentTap) document.removeEventListener('click', this.onDocumentTap, true)
+      if (this.onScroll) window.removeEventListener('scroll', this.onScroll)
+      this.onDocumentTap = null
+      this.onScroll = null
+    },
     onMouseOver(event) {
+      if (this.usesTapMode()) return
       const wasHovered = this.isHovered
       this.isHovered = true
       this.updateThumbCenter(event)
@@ -204,6 +315,7 @@ export default {
       }
     },
     onMouseLeave() {
+      if (this.usesTapMode()) return
       this.isHovered = false
       cancelAnimationFrame(this.frameId)
       this.frameId = null
@@ -212,6 +324,15 @@ export default {
       if (this.frameId) return
 
       const step = (now) => {
+        // With no cursor to follow in tap mode, drift slowly in a figure-eight
+        // around the resting spot so the overlay moves like it does on desktop
+        if (this.restLeft !== null && this.usesTapMode()) {
+          if (this.driftStart === null) this.driftStart = now
+          const t = (now - this.driftStart) / 6000 * Math.PI * 2
+          this.targetLeft = this.restLeft + Math.sin(t) * DRIFT_X
+          this.targetTop = this.restTop + Math.sin(t * 2) * DRIFT_Y
+        }
+
         // Close a fraction of the gap each frame so the mirrored movement,
         // which jumps 10px per pixel of cursor travel, glides instead of stepping
         const ease = 0.25
@@ -231,6 +352,7 @@ export default {
       this.frameId = requestAnimationFrame(step)
     },
     onMouseMove(event) {
+      if (this.usesTapMode()) return
       this.updateThumbCenter(event)
       this.updateImagePosition(event)
     },
@@ -308,11 +430,16 @@ img.hover-image
 img.visible
   opacity: 1
 
-// Disable hover images on touch devices
+// Disable hover images on touch devices, unless tap-to-reveal is on
 @media (hover: none) and (pointer: coarse)
-  img.hover-image
-    display: none !important
+  .image-wrapper:not(.tap-enabled)
+    img.hover-image
+      display: none !important
 
-  svg.connector-shape
-    display: none !important
+    svg.connector-shape
+      display: none !important
+
+  .tap-enabled
+    cursor: pointer
+    -webkit-tap-highlight-color: transparent
 </style>

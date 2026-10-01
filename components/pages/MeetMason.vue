@@ -21,6 +21,7 @@
             mid-frame-color="#1D1E20"
             :mid-frame-count="3"
             :telescope="true"
+            :tap-to-reveal="true"
           )
           | , a design engineer based in Los Angeles. My experience spans high-growth startups like Timescale, and world-class agencies like TBWA\Chiat\Day
           HoverImage(
@@ -40,6 +41,7 @@
             mid-frame-color="#1D1E20"
             :mid-frame-count="3"
             :telescope="true"
+            :tap-to-reveal="true"
           )
           | . Along the way, I've shipped work for brands like Disney, Coke, and Nissan.
 
@@ -62,6 +64,7 @@
             mid-frame-color="#1D1E20"
             :mid-frame-count="3"
             :telescope="true"
+            :tap-to-reveal="true"
           )
           |  a glass bottle brand carried by retailers like Urban Outfitters. I also created Color Supply,
           HoverImage(
@@ -81,6 +84,7 @@
             mid-frame-color="#1D1E20"
             :mid-frame-count="3"
             :telescope="true"
+            :tap-to-reveal="true"
           )
           |  a tool used by thousands of designers worldwide, and write Design by Numbers, a popular
           HoverImage(
@@ -102,6 +106,7 @@
             mid-frame-color="#1D1E20"
             :mid-frame-count="3"
             :telescope="true"
+            :tap-to-reveal="true"
           )
           |  newsletter for 9,000+ designers and developers.
 
