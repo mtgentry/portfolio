@@ -151,8 +151,27 @@ export default {
     HoverImage
   },
   head() {
+    // Link preview for when /meet_mason is shared on X, iMessage, Slack, etc.
+    const title = 'Mason Gentry, design engineer'
+    const description = 'Design engineer in Los Angeles. Taking on small, scoped design projects with a few early-stage startups.'
+    const url = 'https://masongentry.com/meet_mason'
+    const image = 'https://masongentry.com/images/meet_mason_preview.jpg'
     return {
-      title: 'Mason Gentry'
+      title: 'Mason Gentry',
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: url },
+        { hid: 'og:title', property: 'og:title', content: title },
+        { hid: 'og:description', property: 'og:description', content: description },
+        { hid: 'og:image', property: 'og:image', content: image },
+        { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
+        { hid: 'og:image:height', property: 'og:image:height', content: '628' },
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        { hid: 'twitter:description', name: 'twitter:description', content: description },
+        { hid: 'twitter:image', name: 'twitter:image', content: image }
+      ]
     }
   },
   data() {
@@ -177,6 +196,16 @@ export default {
     this.formObserver?.disconnect()
   },
   methods: {
+    // Which ad or link brought this visitor, from the UTM tags on the URL
+    // (e.g. ?utm_source=x&utm_campaign=founder_keywords), so beehiiv can show it
+    adSource() {
+      const params = new URLSearchParams(window.location.search)
+      const source = {}
+      for (const key of ['utm_source', 'utm_medium', 'utm_campaign']) {
+        if (params.get(key)) source[key] = params.get(key)
+      }
+      return source
+    },
     focusNameWhenVisible() {
       // Put the blinking cursor in the name field once the form scrolls into
       // view. Focusing on load made Safari jump the page down to the form.
@@ -203,7 +232,7 @@ export default {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify({ firstName: this.firstName, email: this.email })
+          body: JSON.stringify({ firstName: this.firstName, email: this.email, ...this.adSource() })
         })
         if (!response.ok) throw new Error(response.statusText)
         this.isSubscribed = true

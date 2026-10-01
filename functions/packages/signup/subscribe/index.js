@@ -15,6 +15,11 @@ async function main(args) {
 
   const { firstName, email } = args
 
+  // UTM tags from the ad link the visitor arrived through. Visitors without
+  // them (direct traffic) are attributed to the page itself.
+  const utm = (key) => (typeof args[key] === 'string' ? args[key].slice(0, 100) : '')
+  const utmSource = utm('utm_source') || 'meet_mason'
+
   if (!email) {
     return reply(400, { error: 'Email is required' })
   }
@@ -38,7 +43,10 @@ async function main(args) {
       },
       body: JSON.stringify({
         email,
-        utm_source: 'meet_mason',
+        utm_source: utmSource,
+        utm_medium: utm('utm_medium'),
+        utm_campaign: utm('utm_campaign'),
+        referring_site: 'masongentry.com/meet_mason',
         custom_fields: customFields
       })
     }

@@ -101,12 +101,12 @@ export default {
     // }
   },
 
-  // /the_experiment is a work project served at the top level instead of /work/
+  // /experiment is a work project served at the top level instead of /work/
   router: {
     extendRoutes(routes, resolve) {
       routes.push({
-        name: 'the_experiment',
-        path: '/:project(the_experiment)',
+        name: 'experiment',
+        path: '/:project(experiment)',
         component: resolve(__dirname, 'pages/work/_project.vue')
       })
     }
@@ -144,7 +144,7 @@ export default {
         })
       }
 
-      routes.push('/the_experiment')
+      routes.push('/experiment')
 
       return routes
     }
