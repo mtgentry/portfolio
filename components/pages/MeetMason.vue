@@ -66,7 +66,7 @@
             :telescope="true"
             :tap-to-reveal="true"
           )
-          |  a glass bottle brand carried by retailers like Urban Outfitters. I also created Color Supply,
+          |  a reusable bottle brand carried by retailers like Urban Outfitters. I also created Color Supply,
           HoverImage(
             :id="4"
             :style="{ width: '109px' }"
@@ -108,13 +108,13 @@
             :telescope="true"
             :tap-to-reveal="true"
           )
-          |  newsletter for 9,000+ designers and developers.
+          |  newsletter read by 9,000+ designers and&nbsp;developers.
 
         div.body-copy
-          p Over the past two years, AI has enabled me to do even more. I've built micro-sites, custom tooling, prototypes, and shipped designs myself instead of handing them off. I also work alongside developers, committing production code to GitHub.
-          p Now I'm looking for my next great role. I'm not in a hurry, I want to find something that's the right fit for both of us. And that's where you come in.
-          p I'm taking on small, scoped design projects with a few startups. If it goes well, we continue the conversation. If it doesn't you'll have a design asset that you can use for your business.
-          p If you'd like to see how I think about using design to drive outsized results for startups, sign up below.
+          p Over the past two years, AI has enabled me to do even more. I've built micro-sites, prototypes, custom tooling, and shipped designs myself instead of handing them off. I also work alongside developers, committing production code to GitHub.
+          p Now I'm looking for my next great role. I'm not in a hurry. I want to find the right fit. And that's where you come in.
+          p I'm taking on small, scoped design projects with a few startups. If it goes well, we continue the conversation. If it doesn't, you'll still have a design asset you can use for your business.
+          p If you'd like to see how I use design to drive outsized results for early-stage startups, sign up below.
 
         form.signup-form(v-if="!isSubscribed" @submit.prevent="handleSubscribe")
           div.signup-row
@@ -317,7 +317,9 @@ export default {
 .content
   p.text
     margin-bottom: 24px
-    line-height: 2.5
+    // Rebalance the last lines so a paragraph never ends on a single word
+    text-wrap: pretty
+    line-height: 1.6 !important  // !important to beat the site-wide 140% in layouts/default.vue
     color: #1D1E20
     font-size: 32px !important
     width: 650px
