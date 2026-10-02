@@ -3,7 +3,8 @@
     div.container
       div.content
         p.text
-          | Hi, I'm Mason
+          span.text-content
+            | Hi, I'm Mason
           HoverImage(
             :id="1"
             :style="{ width: '70px' }"
@@ -23,7 +24,8 @@
             :telescope="true"
             :tap-to-reveal="true"
           )
-          | , a design engineer based in Los Angeles. My experience spans high-growth startups like Timescale, and world-class agencies like TBWA\Chiat\Day
+          span.text-content
+            | , a design engineer based in Los Angeles. My experience spans high-growth startups like Timescale, and world-class agencies like TBWA\Chiat\Day
           HoverImage(
             :id="2"
             :style="{ width: '100px' }"
@@ -43,10 +45,12 @@
             :telescope="true"
             :tap-to-reveal="true"
           )
-          | . Along the way, I've shipped work for brands like Disney, Coke, and Nissan.
+          span.text-content
+            | . Along the way, I've shipped work for brands like Disney, Coke, and Nissan.
 
         p.text
-          | I previously built and sold Faucet Face
+          span.text-content
+            | I previously built and sold Faucet Face
           HoverImage(
             :id="3"
             :style="{ width: '55px' }"
@@ -66,7 +70,8 @@
             :telescope="true"
             :tap-to-reveal="true"
           )
-          |  a reusable bottle brand carried by retailers like Urban Outfitters. I also created Color Supply,
+          span.text-content
+            |  a reusable bottle brand carried by retailers like Urban Outfitters. I also created Color Supply,
           HoverImage(
             :id="4"
             :style="{ width: '109px' }"
@@ -86,7 +91,8 @@
             :telescope="true"
             :tap-to-reveal="true"
           )
-          |  a tool used by thousands of designers worldwide, and write Design by Numbers, a popular
+          span.text-content
+            |  a tool used by thousands of designers worldwide, and write Design by Numbers, a popular
           HoverImage(
             :id="5"
             :style="{ width: '60px' }"
@@ -108,7 +114,8 @@
             :telescope="true"
             :tap-to-reveal="true"
           )
-          |  newsletter read by 9,000+ designers and&nbsp;developers.
+          span.text-content
+            |  newsletter read by 9,000+ designers and&nbsp;developers.
 
         div.body-copy
           p Over the past two years, AI has enabled me to do even more. I've built micro-sites, prototypes, custom tooling, and shipped designs myself instead of handing them off. I also work alongside developers, committing production code to GitHub.
@@ -158,6 +165,9 @@ export default {
     const image = 'https://masongentry.com/images/meet_mason_preview.jpg'
     return {
       title: 'Mason Gentry',
+      // The intro text and icons start hidden for the fade-in; show them if JS never runs
+      noscript: [{ hid: 'show-intro', innerHTML: '<style>.text-content, .image-wrapper { opacity: 1 !important }</style>' }],
+      __dangerouslyDisableSanitizersByTagID: { 'show-intro': ['innerHTML'] },
       meta: [
         { hid: 'description', name: 'description', content: description },
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -188,7 +198,6 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      this.wrapTextNodes()
       this.animatePageLoad()
       this.focusNameWhenVisible()
     })
@@ -242,21 +251,6 @@ export default {
       } finally {
         this.isSubmitting = false
       }
-    },
-    wrapTextNodes() {
-      // Wrap text nodes in spans so we can animate them separately from images
-      const paragraphs = document.querySelectorAll('p.text')
-      paragraphs.forEach(p => {
-        const nodes = Array.from(p.childNodes)
-        nodes.forEach(node => {
-          if (node.nodeType === 3 && node.textContent.trim()) { // Text node
-            const span = document.createElement('span')
-            span.className = 'text-content'
-            span.textContent = node.textContent
-            p.replaceChild(span, node)
-          }
-        })
-      })
     },
     animatePageLoad() {
       const imageWrappers = document.querySelectorAll('.image-wrapper')
