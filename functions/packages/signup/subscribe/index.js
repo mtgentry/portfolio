@@ -1,4 +1,4 @@
-// Adds a /meet_mason signup to beehiiv. Runs as a DigitalOcean Function so the
+// Adds a /founders signup to beehiiv. Runs as a DigitalOcean Function so the
 // API key stays on the server; the static site only ever sees this endpoint.
 function reply(statusCode, body) {
   return {
@@ -18,7 +18,7 @@ async function main(args) {
   // UTM tags from the ad link the visitor arrived through. Visitors without
   // them (direct traffic) are attributed to the page itself.
   const utm = (key) => (typeof args[key] === 'string' ? args[key].slice(0, 100) : '')
-  const utmSource = utm('utm_source') || 'meet_mason'
+  const utmSource = utm('utm_source') || 'founders'
 
   if (!email) {
     return reply(400, { error: 'Email is required' })
@@ -46,7 +46,7 @@ async function main(args) {
         utm_source: utmSource,
         utm_medium: utm('utm_medium'),
         utm_campaign: utm('utm_campaign'),
-        referring_site: 'masongentry.com/meet_mason',
+        referring_site: 'masongentry.com/founders',
         custom_fields: customFields
       })
     }

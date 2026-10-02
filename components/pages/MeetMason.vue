@@ -151,16 +151,17 @@ export default {
     HoverImage
   },
   head() {
-    // Link preview for when /meet_mason is shared on X, iMessage, Slack, etc.
+    // Link preview for when /founders is shared on X, iMessage, Slack, etc.
     const title = 'Mason Gentry, design engineer'
     const description = 'Design engineer in Los Angeles. Taking on small, scoped design projects with a few early-stage startups.'
-    const url = 'https://masongentry.com/meet_mason'
+    const url = 'https://masongentry.com/founders'
     const image = 'https://masongentry.com/images/meet_mason_preview.jpg'
     return {
       title: 'Mason Gentry',
       meta: [
         { hid: 'description', name: 'description', content: description },
         { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:site_name', property: 'og:site_name', content: 'Mason Gentry' },
         { hid: 'og:url', property: 'og:url', content: url },
         { hid: 'og:title', property: 'og:title', content: title },
         { hid: 'og:description', property: 'og:description', content: description },
