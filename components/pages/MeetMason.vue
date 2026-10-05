@@ -252,6 +252,7 @@ export default {
         })
         if (!response.ok) throw new Error(response.statusText)
         this.isSubscribed = true
+        this.$trackSignup?.()
       } catch (error) {
         this.subscribeError = 'Something went wrong. Please try again.'
       } finally {
