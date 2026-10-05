@@ -485,6 +485,17 @@ export default {
   .content .signup-submit
     margin-top: 18px
 
+  // Half the space below the form on phones: 35px + the page's 10px bottom
+  // padding = 45px, down from 90px
+  .content .signup-form,
+  .content .signup-success
+    margin-bottom: 35px
+
+  // Keep "sign up below" tied to the form: more than the 20px paragraph gap,
+  // less than the 48px section gap
+  .content .signup-form
+    margin-top: 44px
+
   .content p.text
     font-size: 28px !important
     line-height: 1.6 !important
