@@ -197,6 +197,12 @@ export default {
     }
   },
   mounted() {
+    // The layout's background is shared store state, so reset it here; otherwise
+    // arriving from a case study keeps that project's (sometimes dark) colors
+    this.$store.commit('updateState', {field: 'backgroundColor', value: '#F8F7F4'})
+    this.$store.commit('updateState', {field: 'textColor', value: '#1D1E20'})
+    this.$store.commit('updateState', {field: 'pageBackgroundColor', value: null})
+    this.$store.commit('updateState', {field: 'pageTextColor', value: null})
     this.$nextTick(() => {
       this.animatePageLoad()
       this.focusNameWhenVisible()

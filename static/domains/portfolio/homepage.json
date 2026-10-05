@@ -10,7 +10,5 @@
     "mojave",
     "cliffwater"
   ],
-  "navBar": [
-    "about"
-  ]
+  "navBar": []
 }
