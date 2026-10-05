@@ -237,6 +237,19 @@ export default {
   src: url('/fonts/WorkSans-Medium.ttf')
   font-weight: 600
 
+
+// Fluid spacing scale, like a modular type scale: one base step ("s") that
+// grows from 16px on a 360px screen to 32px at 1920px, and every other step is
+// a fixed multiple of it. Pick a step by how two elements relate, not by
+// element type. Each value is clamp(min, linear growth between 360-1920px, max).
+:root
+  --space-2xs: clamp(4px, 3.077px + 0.2564vw, 8px)
+  --space-xs: clamp(8px, 6.154px + 0.5128vw, 16px)
+  --space-s: clamp(16px, 12.308px + 1.0256vw, 32px)
+  --space-m: clamp(24px, 18.462px + 1.5385vw, 48px)
+  --space-l: clamp(48px, 36.923px + 3.0769vw, 96px)
+  --space-xl: clamp(96px, 73.846px + 6.1538vw, 192px)
+
 .v-application
   font-family: 'Resist Sans', sans-serif
 

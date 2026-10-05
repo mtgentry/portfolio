@@ -4,7 +4,7 @@
       video.item(muted playsinline :loop="media.loop !== false" :autoplay="media.loop === false" ref="video" :style=`{"width": media.width || "100%"}`)
         source(:src="mediaPath" :type="videoType")
         span Your browser does not support the video tag.
-    div.text-center.pt-1(v-if="media.title" v-html="media.title")
+    div.media-caption.text-center.pt-1(v-if="media.title" v-html="media.title")
   div#pdf.d-flex(v-else-if="is_pdf" :style=`{'justify-content': justifyContent}`)
     embed.pdf-viewer(:src="mediaPath" type="application/pdf" :style=`{"width": media.width || "80%", "height": "800px"}`)
   div#tweet.d-flex(v-else-if="is_tweet" :style=`{'justify-content': media.position || ''}`)
@@ -18,12 +18,12 @@
     )
   div#iframe.d-flex(v-else-if="is_iframe" :class="{ 'full-width-iframe': media.fullWidth }" :style=`{'justify-content': justifyContent}`)
     iframe.iframe-viewer(:src="mediaPath" :style=`{"width": media.width || "100%", "height": media.height || "800px", "border": "none"}` frameborder="0" allowfullscreen)
-    div.text-center.pt-1(v-if="media.title" v-html="media.title")
+    div.media-caption.text-center.pt-1(v-if="media.title" v-html="media.title")
   div(v-else)
     div.aspect-container(:style=`{'justify-content': media.position || ''}`)
       img.item( :src="mediaPath" :style=`{'width': media.width || '100%'}`
         @load="load" :class="{'custom-fade-in': this.project_name === 'francescas', 'loaded': loaded}")
-    div.text-center.pt-1(v-if="media.title" v-html="media.title")
+    div.media-caption.text-center.pt-1(v-if="media.title" v-html="media.title")
 </template>
 
 <script>

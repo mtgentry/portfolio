@@ -1,11 +1,12 @@
 <!-- Please remove this file from your project -->
 <template lang="pug">
-  v-row.section(:class="{ slim: !section.media && !section.imageReveal, 'slim-padding': slim_padding, 'line-section': section.line }")
-    v-col(v-if="section.text || section.title" :data-aos="shouldSkipAnimation(section) ? null : (section.animation ? section.animation : 'fade-up')")
+  v-row.section(:class="{ slim: !section.media && !section.imageReveal, 'slim-padding': slim_padding, 'line-section': section.line, untitled: section.text && !section.title }")
+    //- Body copy and media fade in place (opacity only, no upward slide)
+    v-col(v-if="section.text || section.title" :data-aos="shouldSkipAnimation(section) ? null : (section.animation ? section.animation : 'fade')")
       String(:texts="section.text" :size="section.size" :title="section.title" :align="section.align")
     v-col(v-if="section.textBox" :data-aos="section.animation ? section.animation : 'fade-up'")
       TextBox(:textBox="section.textBox")
-    v-col(v-else-if="section.media" :data-aos="shouldUseAOS(media) ? (media.animation ? media.animation : 'fade-up') : null"
+    v-col(v-else-if="section.media" :data-aos="shouldUseAOS(media) ? (media.animation ? media.animation : 'fade') : null"
       :class="{ 'hero-fade-in': !shouldUseAOS(media), 'full-width-media': media.fullWidth }"
       v-for="media in section.media" :cols="media.cols ? media.cols : 12 / section.media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
@@ -40,9 +41,9 @@
       audit
     v-col.w-100(v-else-if="section.beforeafter" :data-aos="section.animation ? section.animation : 'fade-up'")
       beforeafter
-    v-col(v-else-if="section.imageReveal" :data-aos="section.animation ? section.animation : 'fade-up'")
+    v-col(v-else-if="section.imageReveal" :data-aos="section.animation ? section.animation : 'fade'")
       ImageReveal(:imageName="section.imageReveal.imageName" :width="section.imageReveal.width" :project_name="$route.params.project")
-    v-col(v-else-if="section.media" :data-aos="media.animation === 'disable' ? null : (media.animation ? media.animation : 'fade-up')")
+    v-col(v-else-if="section.media" :data-aos="media.animation === 'disable' ? null : (media.animation ? media.animation : 'fade')")
 
 
 
@@ -192,6 +193,53 @@ $section-space: clamp(64px, 4vw + 32px, 160px)
   .col, .v-col
     padding: 0 12px  // Keep horizontal padding, remove vertical
 
+// Case-study spacing, built only from the --space-* scale in layouts/default.vue.
+// Every gap is the margin above a section, chosen by how it relates to the
+// section before it. (Agency pages that share this component keep the older
+// padding rules above.)
+.project-body > .row.section
+  padding-top: 0
+  padding-bottom: 0
+  margin-bottom: 0
+  // Same section: media to media, or media to text that continues the section
+  margin-top: var(--space-l)
+
+  &:first-child
+    margin-top: 0
+
+  // A heading starts a new section
+  &.slim:not(.untitled):not(.line-section)
+    margin-top: var(--space-xl)
+
+  // Media columns carry Vuetify's 12px vertical padding; the scale owns the gaps
+  &:not(.slim) > [class*="col"]
+    padding-top: 0
+    padding-bottom: 0
+
+  // Paragraphs inside a text block
+  p
+    margin-bottom: var(--space-s)
+
+    &:last-child
+      margin-bottom: 0
+
+  // Heading to its own text
+  h1, h2, h3, h4, h6
+    padding-bottom: var(--space-xs)
+
+  // The text block (String.vue) is its own Vuetify row with -12px margins
+  .string-component
+    margin-top: 0
+    margin-bottom: 0
+
+// Headed copy gets the same space below as above, so it's framed evenly
+.project-body > .row.section.slim:not(.untitled):not(.line-section) + .row.section:not(.slim)
+  margin-top: var(--space-xl)
+
+// A text block without a heading that follows another text block continues it
+.project-body > .row.section.slim + .row.section.slim.untitled
+  margin-top: var(--space-m)
+
 .images
   display: flex
   align-items: center
@@ -214,10 +262,8 @@ $section-space: clamp(64px, 4vw + 32px, 160px)
 @keyframes heroFadeIn
   from
     opacity: 0
-    transform: translateY(30px)
   to
     opacity: 1
-    transform: translateY(0)
 
 // Full width media (for iframes, etc)
 .full-width-media

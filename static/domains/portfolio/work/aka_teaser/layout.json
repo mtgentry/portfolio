@@ -16,7 +16,7 @@
     "team": "[TBD: aka team, collaborators]",
     "built": "React, Three.js (WebGPU), shaders, Rapier",
     "shipped": "[TBD: what went live, when]",
-    "outcome": "300% increase in sign-ups"
+    "outcome": "Hundreds of waitlist signups"
   },
   "seo_description": "",
   "layout": [
@@ -25,7 +25,7 @@
         {
           "name": "wild_render.mp4",
           "position": "center",
-          "title": "The new aka.com teaser site"
+          "title": "The final aka.com site"
         }
       ]
     },
@@ -69,8 +69,8 @@
     {
       "title": "Result",
       "text": [
-        "After launch, sign-ups increased almost 300% from their baseline.",
-        "Building my own tools made it possible to move quickly without lowering the bar. Every cord was tuned by hand, and every detail got the same attention it would have on a longer timeline."
+        "The relaunch went great. Within a couple of weeks, hundreds of people had joined aka's waitlist.",
+        "Before AI, a site like this meant an agency team, or weeks of feedback rounds with a developer. Now I could design directly in code. And the overlay I built let me adjust the cords, physics, and camera right in the browser and see every change instantly."
       ]
     },
     {
