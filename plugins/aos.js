@@ -1,5 +1,6 @@
 import AOS from "aos";
-import "aos/dist/aos.css";
+// aos.css is loaded globally in nuxt.config.js so server-rendered pages
+// start with animated sections hidden instead of blinking when JS loads
 
 export default ({ app }, inject) => {
   app.AOS = new AOS.init({

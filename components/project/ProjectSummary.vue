@@ -1,5 +1,8 @@
 <template lang="pug">
-  dl.project-summary
+  //- Fades in like the rest of the page. It sits near the bottom, where you may
+  //- not be able to scroll far enough for the default bottom-anchored trigger,
+  //- so it triggers as soon as its top enters the window.
+  dl.project-summary(data-aos="fade" data-aos-anchor-placement="top-bottom" data-aos-offset="0")
     div.summary-row(v-for="row in rows" :key="row.label")
       dt {{ row.label }}
       dd {{ row.value }}

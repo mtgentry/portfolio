@@ -133,7 +133,8 @@ export default {
     },
     playVisibleVideos() {
       if (this.elementIsVisible(this.$refs.video)) {
-        this.$refs.video.play()
+        // play() rejects if a pause() lands first (e.g. a fast scroll past); that's fine
+        this.$refs.video.play()?.catch(() => {})
       } else {
         this.$refs.video.pause()
       }

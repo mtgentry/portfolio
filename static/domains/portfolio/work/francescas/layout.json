@@ -11,6 +11,12 @@
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",
   "header": "Francesca’s came to us at a moment of transition. Their core customers, girls navigating early adolescence, were changing fast. What they needed was not just a visual update but a shift in tone. Together, we reimagined the brand as a trusted older sister. Someone stylish, confident, and just gentle enough to guide without pushing.",
+  "summary": {
+    "role": "Design direction, visual design",
+    "team": "Phenomenon (agency), with Francesca's team",
+    "shipped": "Rebrand, new site, editorial CMS",
+    "outcome": "Concept tested well with users"
+  },
   "seo_description": "",
   "layout": [
     {
@@ -59,11 +65,6 @@
     },
     {
       "line": true
-    },
-    {
-      "text": [
-        "Agency: Phenomenon"
-      ]
     }
   ]
 }

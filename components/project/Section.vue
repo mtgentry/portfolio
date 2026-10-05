@@ -10,7 +10,7 @@
       :class="{ 'hero-fade-in': !shouldUseAOS(media), 'full-width-media': media.fullWidth }"
       v-for="media in section.media" :cols="media.cols ? media.cols : 12 / section.media.length" :key="media.name")
       Media(:media="media" :project_name="$route.params.project")
-    v-col(v-else-if="section.line")
+    v-col(v-else-if="section.line" data-aos="fade" data-aos-anchor-placement="top-bottom" data-aos-offset="0")
       hr
     v-col(v-else-if="section.quote" :data-aos="section.animation ? section.animation : 'fade-up'")
       Quote(:quote="section.quote")
@@ -239,6 +239,11 @@ $section-space: clamp(64px, 4vw + 32px, 160px)
 // A text block without a heading that follows another text block continues it
 .project-body > .row.section.slim + .row.section.slim.untitled
   margin-top: var(--space-m)
+
+// A new section that follows text (not media) steps down one size: with no
+// image to frame it, xl reads as an empty gap
+.project-body > .row.section.slim:not(.line-section) + .row.section.slim:not(.untitled):not(.line-section)
+  margin-top: var(--space-l)
 
 .images
   display: flex

@@ -28,11 +28,19 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    // Without JS, AOS never reveals animated sections, so show them outright
+    noscript: [
+      { hid: 'aos-noscript', innerHTML: '<style>[data-aos]{opacity:1!important;transform:none!important}</style>' }
+    ],
+    __dangerouslyDisableSanitizersByTagID: { 'aos-noscript': ['innerHTML'] }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    // AOS's starting styles (opacity 0) must be in the first paint, or text
+    // rendered by the server shows, disappears when JS loads, then fades back in
+    'aos/dist/aos.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

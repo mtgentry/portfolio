@@ -46,6 +46,9 @@ export default {
     return { project }
   },
   head() {
+    // Scrolled-state colors, same fallbacks as makeBackgroundWhite in HideNavbar
+    const pageBg = this.project?.pageBackgroundColor || '#ffffff'
+    const pageText = this.project?.pageTextColor || '#282725'
     return {
       title: this.project?.cover?.title,
       meta: [
@@ -55,7 +58,19 @@ export default {
           name: 'description',
           content: this.project?.seo_description
         }
-      ]
+      ],
+      // A refresh partway down a case study should open in the scrolled colors,
+      // not flash the top-of-page color. The server can't know the scroll
+      // position, so the colors ship as variables and this script, which runs
+      // before the first paint, checks whether the visitor was scrolled past
+      // the switch point (recorded by HideNavbar) when they left.
+      style: [
+        { hid: 'page-colors', cssText: `:root { --page-bg: ${pageBg}; --page-text: ${pageText}; }` }
+      ],
+      script: [
+        { hid: 'start-scrolled', innerHTML: "try{if(sessionStorage.getItem('scrolledPast')===location.pathname)document.documentElement.classList.add('start-scrolled')}catch(e){}" }
+      ],
+      __dangerouslyDisableSanitizersByTagID: { 'page-colors': ['cssText'], 'start-scrolled': ['innerHTML'] }
     }
   },
   data() {

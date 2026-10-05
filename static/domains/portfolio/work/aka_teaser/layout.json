@@ -13,9 +13,9 @@
   "header": "For five years, AKA was a research studio working on decentralized identity. Then the AI era gave the company a new direction, and it needed a teaser site to reflect it. I designed and built the site from scratch.",
   "summary": {
     "role": "Concept, design, front-end build",
-    "team": "[TBD: aka team, collaborators]",
+    "team": "Me, plus aka engineers on browser support",
     "built": "React, Three.js (WebGPU), shaders, Rapier",
-    "shipped": "[TBD: what went live, when]",
+    "shipped": "aka.com",
     "outcome": "Hundreds of waitlist signups"
   },
   "seo_description": "",

@@ -21,6 +21,11 @@ export default {
       }
       this.lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
       if (!vue.$route.path.includes('work')) return
+      vue.rememberScrolled(st > 500)
+      // The browser just restored a refresh's scroll position: reveal in place
+      if (st > 500 && document.documentElement.classList.contains('start-scrolled')) {
+        vue.applyScrolledColors()
+      }
       if (st > 500) {
         vue.makeBackgroundWhite()
       } else {
@@ -28,8 +33,41 @@ export default {
       }
 
     }, false);
+
+    // A refresh partway down restores the scroll position without a scroll
+    // event, which would leave the top-of-page colors showing. Check where we
+    // landed once the page has settled.
+    this.$nextTick(this.applyScrolledColors)
+    window.addEventListener("load", this.applyScrolledColors)
+    // Never leave the content hidden for long if the scroll position doesn't
+    // come back (slow connection, or the page got shorter)
+    setTimeout(() => document.documentElement.classList.remove('start-scrolled'), 1500)
+  },
+  beforeDestroy() {
+    window.removeEventListener("load", this.applyScrolledColors)
   },
   methods: {
+    applyScrolledColors() {
+      const st = window.pageYOffset || document.documentElement.scrollTop
+      const scrolled = this.$route.path.includes('work') && st > 500
+      if (scrolled) {
+        this.makeBackgroundWhite()
+      }
+      // The page opened in its scrolled colors (see start-scrolled). Hand control
+      // back once the store matches, or once the page has fully loaded and the
+      // scroll position really is above the switch point.
+      const root = document.documentElement
+      if (root.classList.contains('start-scrolled') && (scrolled || document.readyState === 'complete')) {
+        setTimeout(() => root.classList.remove('start-scrolled'), 50)
+      }
+    },
+    // Lets the next refresh of this page open in the right colors before JS runs
+    rememberScrolled(scrolled) {
+      try {
+        if (scrolled) sessionStorage.setItem('scrolledPast', this.$route.path)
+        else if (sessionStorage.getItem('scrolledPast') === this.$route.path) sessionStorage.removeItem('scrolledPast')
+      } catch (e) {}
+    },
     showNav() {
       this.$refs.navbar.$el.classList.remove('hidden')
     },

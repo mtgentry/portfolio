@@ -313,6 +313,21 @@ export default {
   &.loaded
     opacity: 1
 
+// Set before first paint by the start-scrolled script in pages/work/_project.vue:
+// open in the scrolled colors with no fade, until HideNavbar takes over
+html.start-scrolled
+  #app, #app header, .project-header, .project-summary
+    background-color: var(--page-bg) !important
+    color: var(--page-text) !important
+    transition: none !important
+  .project-header, .project-summary
+    background-color: transparent !important
+  // The browser paints the top of the page before restoring the scroll
+  // position, which flashes the hero copy. Keep content hidden until
+  // HideNavbar reveals it at the restored position.
+  #app main
+    visibility: hidden
+
 html, body
   scrollbar-color: #C1C1C1 #F1F1F1
 
