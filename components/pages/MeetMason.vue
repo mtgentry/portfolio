@@ -372,7 +372,9 @@ export default {
     p
       margin-bottom: 20px
       font-size: 20px
-      line-height: 1.6
+      // 10% above the 140% that was actually rendering (the site-wide rule's
+      // !important was overriding the 1.6 set here)
+      line-height: 1.54 !important
       color: #1D1E20
 
   .signup-form

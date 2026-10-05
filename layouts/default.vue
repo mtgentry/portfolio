@@ -247,6 +247,8 @@ export default {
     font-weight: 300
     line-height: 140% !important
     margin-bottom: 30px
+    // Avoid a lone word on the last line
+    text-wrap: pretty
 
     @media (max-width: 768px)
       font-size: 19px !important

@@ -48,7 +48,7 @@
     {
       "title": "Under the hood",
       "text": [
-        "I built the site in React and Three.js, rendering with WebGPU and custom shaders for the cords' materials. For the physics of the cords, the bounce, weight, etc., I used Rapier, a JavaScript physics engine.",
+        "I built the site in React and Three.js, rendering with WebGPU and custom shaders for the cords' materials. Older browsers don't support WebGPU, but since most of the audience was technical, we built for it first and added a WebGL2 fallback so everyone else still sees a version of it. For the physics of the cords, the bounce, weight, etc., I used Rapier, a JavaScript physics engine.",
         "Everything was composed in full 3D, then locked in place in a 2D view."
       ]
     },

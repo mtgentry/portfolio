@@ -99,6 +99,8 @@ $hero-peek: 90px
 .project-header
   font-size: 40px
   line-height: 130%
+  // Avoid a lone word on the last line
+  text-wrap: pretty
   margin-bottom: 0
 
   @media (max-width: 768px)
