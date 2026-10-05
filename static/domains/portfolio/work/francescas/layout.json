@@ -4,7 +4,9 @@
       "name": "francescas_thumb.jpg"
     },
     "title": "Francesca's",
-    "categories": "Branding, Visual Design"
+    "categories": "Branding, Visual Design",
+    "width": "60%",
+    "position": "left"
   },
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",

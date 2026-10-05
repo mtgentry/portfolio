@@ -4,9 +4,11 @@
       "name": "colorsupply_thumb.jpg"
     },
     "title": "Color Supply",
-    "categories": "UI, UX, Product Design",
-    "width": "60%",
-    "position": "left"
+    "categories": "UI/UX, Product Design",
+    "multiple": "true",
+    "position": "right",
+    "width": "70%",
+    "mobileInherit": true
   },
   "backgroundColor": "#F8F080",
   "textColor": "#282725",
@@ -21,15 +23,13 @@
         }
       ]
     },
-{
-  "title": "Curation Over Complexity",
-  "text": [
-    "I created Color Supply because most color picking tools overwhelm users with too many choices at once. While precision is useful for fine-tuning, it often gets in the way when you are starting a project from scratch.",
-    "Instead of making users pick every single color manually, this tool provides smart starting points that can be refined as they go. This turns the \"math\" of color theory into a faster, more confident workflow."
-  ]
-},
-
-     
+    {
+      "title": "Curation Over Complexity",
+      "text": [
+        "I created Color Supply because most color picking tools overwhelm users with too many choices at once. While precision is useful for fine-tuning, it often gets in the way when you are starting a project from scratch.",
+        "Instead of making users pick every single color manually, this tool provides smart starting points that can be refined as they go. This turns the \"math\" of color theory into a faster, more confident workflow."
+      ]
+    },
     {
       "media": [
         {
@@ -38,13 +38,13 @@
         }
       ]
     },
-{
-  "title": "Visualizing Complex Rules",
-  "text": [
-    "The interface is built to turn abstract color rules into something you can feel. By interacting with the wheel, users see how different schemes like complementary or triadic work in real time.",
-    "It replaces manual calculation with instant visual feedback, making it easier to experiment and find the right balance."
-  ]
-},
+    {
+      "title": "Visualizing Complex Rules",
+      "text": [
+        "The interface is built to turn abstract color rules into something you can feel. By interacting with the wheel, users see how different schemes like complementary or triadic work in real time.",
+        "It replaces manual calculation with instant visual feedback, making it easier to experiment and find the right balance."
+      ]
+    },
     {
       "media": [
         {
@@ -53,15 +53,12 @@
         }
       ]
     },
- 
-
-
-{
-  "title": "Built for Scale",
-  "text": [
-    "I built Color Supply to solve a real problem for myself, and it ended up finding a massive audience of designers, artists, and developers worldwide. That kind of reach has taught me that people really value clarity over complicated features. It’s rewarding to see it become a trusted part of the daily workflow for so many professionals."
-  ]
-},
+    {
+      "title": "Built for Scale",
+      "text": [
+        "I built Color Supply to solve a real problem for myself, and it ended up finding a massive audience of designers, artists, and developers worldwide. That kind of reach has taught me that people really value clarity over complicated features. It’s rewarding to see it become a trusted part of the daily workflow for so many professionals."
+      ]
+    },
     {
       "media": [
         {
@@ -101,7 +98,9 @@
               "profileImage": "appmarkelabo.jpg",
               "displayName": "アプリマーケティング研究所",
               "displayBadges": [
-                { "type": "verified" }
+                {
+                  "type": "verified"
+                }
               ],
               "content": "This website lets you spin a color chart to discover attractive color combinations. It automatically applies the colors to sample shapes, making it easy to visualize the result.",
               "link": "colorsupplyyy.com",
@@ -139,7 +138,9 @@
               "profileImage": "hiiar.jpg",
               "displayName": "hiiarbonlang",
               "displayBadges": [
-                { "type": "verified" }
+                {
+                  "type": "verified"
+                }
               ],
               "content": "This website is fantastic for those who struggle to choose colors when designing. You can spin the wheel as much as you want, and every combination it generates is usable.",
               "link": "colorsupplyyy.com",
@@ -165,9 +166,17 @@
               "profileImage": "pandesaii.jpg",
               "displayName": "SAI",
               "displayBadges": [
-                { "type": "rainbow" },
-                { "type": "text", "content": "komiket pride" },
-                { "type": "emoji", "content": "🌷" }
+                {
+                  "type": "rainbow"
+                },
+                {
+                  "type": "text",
+                  "content": "komiket pride"
+                },
+                {
+                  "type": "emoji",
+                  "content": "🌷"
+                }
               ],
               "content": "the way this color picker site saved my ass through college",
               "link": "colorsupplyyy.com",
@@ -193,9 +202,16 @@
               "profileImage": "smashing.jpg",
               "displayName": "Smashing Magazine",
               "displayBadges": [
-                { "type": "flag", "content": "🇺🇦" },
-                { "type": "rainbow" },
-                { "type": "verified" }
+                {
+                  "type": "flag",
+                  "content": "🇺🇦"
+                },
+                {
+                  "type": "rainbow"
+                },
+                {
+                  "type": "verified"
+                }
               ],
               "content": "That's an interesting color picker, with previews and color schemes preselected by featured artists.",
               "link": "colorsupplyyy.com",
@@ -209,7 +225,9 @@
               "profileImage": "present.jpg",
               "displayName": "Present & Correct",
               "displayBadges": [
-                { "type": "verified" }
+                {
+                  "type": "verified"
+                }
               ],
               "content": "Neat palette selector.",
               "link": "colorsupplyyy.com",
@@ -295,7 +313,9 @@
               "profileImage": "icon_finder.jpg",
               "displayName": "Iconfinder",
               "displayBadges": [
-                { "type": "verified" }
+                {
+                  "type": "verified"
+                }
               ],
               "content": "Awesome little tool for #color pairing",
               "link": "colorsupplyyy.com",
@@ -333,13 +353,13 @@
         }
       ]
     },
-{
-  "title": "The Next Phase",
-  "text": [
-    "Color Supply has proven to be a strong financial success, including an exclusive deal with a Japanese firm that licensed the codebase for their market. In December 2025, I launched V2 to try out some bigger ideas.",
-    "There is still plenty of polishing to do, so I am iterating on the site regularly. It's a work in progress, but listening to user feedback in real time is the best way to make the final experience feel seamless."
-  ]
-},
+    {
+      "title": "The Next Phase",
+      "text": [
+        "Color Supply has proven to be a strong financial success, including an exclusive deal with a Japanese firm that licensed the codebase for their market. In December 2025, I launched V2 to try out some bigger ideas.",
+        "There is still plenty of polishing to do, so I am iterating on the site regularly. It's a work in progress, but listening to user feedback in real time is the best way to make the final experience feel seamless."
+      ]
+    },
     {
       "line": true
     },

@@ -1,6 +1,7 @@
 <template lang="pug">
   div.item(:data-aos=`project.name === "francescas" ? "" : "fade-up"`)
-    nuxt-link(:to="`/work/${project.name}`")
+    //- A cover can send its card to another project page via cover.link
+    nuxt-link(:to="project.cover.link || `/work/${project.name}`")
       Media(:project_name="project.name" :media="project.cover.media")
       div.pt-2.title(v-html="project.cover.title")
       div.categories(v-html="project.cover.categories")

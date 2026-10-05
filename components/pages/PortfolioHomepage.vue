@@ -3,7 +3,8 @@
     div.container
       div.content
         p.text
-          | Hi, I'm Mason
+          span.text-content
+            | Hi, I'm Mason
           HoverImage(
             :id="1"
             icon-src="/images/hover_icon_1.png"
@@ -16,7 +17,8 @@
             left-color="#477AF0"
             border-color="#477AF0"
           )
-          | . I'm a designer and founder based in Los Angeles. My experience spans high-growth startups and global firms, including Boston Consulting Group and TBWA\Chiat\Day
+          span.text-content
+            | . I'm a designer and founder based in Los Angeles. My experience spans high-growth startups and global firms, including Boston Consulting Group and TBWA\Chiat\Day
           HoverImage(
             :id="2"
             icon-src="/images/hover_icon_2.png"
@@ -29,10 +31,12 @@
             left-color="#6CB697"
             border-color="#6CB697"
           )
-          | . Along the way, I've shipped work for brands like Disney, Coke, and Nissan.
+          span.text-content
+            | . Along the way, I've shipped work for brands like Disney, Coke, and Nissan.
 
         p.text
-          | I previously built and sold Faucet Face, a glass
+          span.text-content
+            | I previously built and sold Faucet Face, a glass
           HoverImage(
             :id="3"
             icon-src="/images/hover_icon_3.png"
@@ -45,7 +49,8 @@
             left-color="#F1D5D5"
             border-color="#F1D5D5"
           )
-          |  bottle brand carried by retailers like Urban Outfitters and Fab. I also created Color Supply,
+          span.text-content
+            |  bottle brand carried by retailers like Urban Outfitters and Fab. I also created Color Supply,
           HoverImage(
             :id="4"
             icon-src="/images/hover_icon_4.png"
@@ -58,7 +63,8 @@
             left-color="#F6633A"
             border-color="#F6633A"
           )
-          |  a tool used by thousands of designers worldwide, and I write Design by Numbers, a popular
+          span.text-content
+            |  a tool used by thousands of designers worldwide, and I write Design by Numbers, a popular
           HoverImage(
             :id="5"
             icon-src="/images/hover_icon_5.png"
@@ -73,10 +79,12 @@
             left-color="#F1B456"
             border-color="#F1B456"
           )
-          |  newsletter for 9,000+ designers and developers.
+          span.text-content
+            |  newsletter for 9,000+ designers and developers.
 
         p.text
-          | In my spare time, I'm renovating
+          span.text-content
+            | In my spare time, I'm renovating
           HoverImage(
             :id="6"
             icon-src="/images/hover_icon_6.png"
@@ -89,7 +97,8 @@
             left-color="#2C2E31"
             border-color="#2C2E31"
           )
-          |  and restoring
+          span.text-content
+            |  and restoring
           HoverImage(
             :id="7"
             icon-src="/images/hover_icon_7.png"
@@ -102,7 +111,8 @@
             left-color="#477AF0"
             border-color="#477AF0"
           )
-          |  this 1908 Craftsman. The project is definitely on schedule and expected to be completed by 2050.
+          span.text-content
+            |  this 1908 Craftsman. The project is definitely on schedule and expected to be completed by 2050.
 
         p.email-contact
           | Say hello:
@@ -120,7 +130,10 @@ export default {
   },
   head() {
     return {
-      title: 'Mason Gentry'
+      title: 'Mason Gentry',
+      // The intro text and icons start hidden for the fade-in; show them if JS never runs
+      noscript: [{ hid: 'show-intro', innerHTML: '<style>.text-content, .image-wrapper { opacity: 1 !important }</style>' }],
+      __dangerouslyDisableSanitizersByTagID: { 'show-intro': ['innerHTML'] }
     }
   },
   data() {
@@ -135,26 +148,10 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      this.wrapTextNodes()
       this.animatePageLoad()
     })
   },
   methods: {
-    wrapTextNodes() {
-      // Wrap text nodes in spans so we can animate them separately from images
-      const paragraphs = document.querySelectorAll('p.text')
-      paragraphs.forEach(p => {
-        const nodes = Array.from(p.childNodes)
-        nodes.forEach(node => {
-          if (node.nodeType === 3 && node.textContent.trim()) { // Text node
-            const span = document.createElement('span')
-            span.className = 'text-content'
-            span.textContent = node.textContent
-            p.replaceChild(span, node)
-          }
-        })
-      })
-    },
     animatePageLoad() {
       const imageWrappers = document.querySelectorAll('.image-wrapper')
       const textContent = document.querySelectorAll('.text-content')

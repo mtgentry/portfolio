@@ -63,10 +63,12 @@ export default {
   //  '~/middleware/pdfProxy',  // Add this line
   // ],
 
+  // process.server isn't defined while this config loads, so a ternary on it
+  // always picked the relative URL, and server-side requests went to port 80.
+  // The axios module takes separate server and browser base URLs instead.
   axios: {
-    baseURL: process.server
-      ? `http://localhost:8127/domains/${process.env.IS_AGENCY === '1' ? 'agency' : 'portfolio'}`
-      : `/domains/${process.env.IS_AGENCY === '1' ? 'agency' : 'portfolio'}`
+    baseURL: `http://localhost:8127/domains/${process.env.IS_AGENCY === '1' ? 'agency' : 'portfolio'}`,
+    browserBaseURL: `/domains/${process.env.IS_AGENCY === '1' ? 'agency' : 'portfolio'}`
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

@@ -116,6 +116,9 @@ export default {
 </script>
 
 <style lang="sass">
+// Vertical rhythm between sections. Grows with window width so the gaps keep
+// pace with the full-width media; floored for small screens, capped for ultrawide
+$section-space: clamp(64px, 4vw + 32px, 160px)
 
 .section
   // padding-top: 15px  // Commented out to reduce spacing
@@ -126,8 +129,8 @@ export default {
 
   // Sections with media (images, videos, etc.)
   &:not(.slim)
-    padding-top: 65px  // Increased from 50px
-    padding-bottom: 65px  // Increased from 50px
+    padding-top: $section-space
+    padding-bottom: $section-space
     // border: 1px solid black !important  // DEBUG: Visualize media section boundary
 
   @media (max-width: 768px)
@@ -184,7 +187,7 @@ export default {
 
   // Only add space when followed by another slim section
   + .slim
-    margin-top: 80px
+    margin-top: $section-space
 
   .col, .v-col
     padding: 0 12px  // Keep horizontal padding, remove vertical

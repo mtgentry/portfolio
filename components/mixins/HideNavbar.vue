@@ -23,7 +23,7 @@ export default {
       if (!vue.$route.path.includes('work')) return
       if (st > 500) {
         vue.makeBackgroundWhite()
-      } else if (st > 0 && st <= 500) {
+      } else {
         vue.makeBackgroundBColor()
       }
 

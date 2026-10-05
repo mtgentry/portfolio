@@ -54,6 +54,9 @@ export default {
       }, {passive: true});
       window.addEventListener("resize", this.playVisibleVideos);
       window.addEventListener("DOMContentLoaded", this.playVisibleVideos);
+      // DOMContentLoaded has already fired after client-side navigation, so also
+      // check now, otherwise a video already on screen (like a hero) waits for a scroll
+      this.$nextTick(this.playVisibleVideos)
     }
     this.$refs.video.controls = this.isIos()
   },

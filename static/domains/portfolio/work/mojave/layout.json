@@ -1,24 +1,20 @@
 {
   "cover": {
     "media": {
-      "name": "mojave_thumb.jpg"
+      "name": "bedtime_thumb.jpg"
     },
-    "title": "Mojave",
-    "categories": "Product Design, Visual Design",
+    "title": "Bedtime",
+    "categories": "Product Design, Visual Design, UI/UX",
     "position": "right",
-    "width": "50%"
+    "width": "50%",
+    "link": "/work/bedtime"
   },
   "backgroundColor": "#3BA076",
   "textColor": "#fff",
-  "header": "Mojave is a browser extension that makes saving bookmarks simple again. Instead of pushing links into a black box that you never see again, Mojave turns your browser into a place where your saved web is always visible, organized, and ready to use.",
+  "header": "Bedtime is a mobile app rooted in a universal ritual. It invites strangers from around the world to exchange goodnight messages. Quiet. Gentle. Intentional. In a space defined by performance, Bedtime creates a pause. A reminder that even the smallest moments of connection still matter.",
   "seo_description": "",
   "layout": [
-    
-  
-
-
-
-{
+    {
       "media": [
         {
           "name": "drag_and_drop.mp4",
@@ -26,18 +22,12 @@
         }
       ]
     },
-
-
     {
-      
       "text": [
-        "Most bookmarking tools focus on tags, filters, and abstract information management. Pinboard, Pocket, Delicious and others are optimized for storage, not for seeing everything you have at a glance. Mojave takes the opposite approach. It gives you a single page that shows all your folders and links in one clear, spatial layout. You can scan your entire collection, drop new links into place, and rearrange things the way your brain already thinks about them."
+        "When the creators of Bedtime came to me, I loved the idea. A simple way to connect strangers through something we all understand. What began as an experiment turned into a true collaboration. The result is a product that trades noise for calm and performance for presence. A small app with a quietly ambitious goal to make the internet feel a little more human."
       ]
     },
-
- 
-
- {
+    {
       "media": [
         {
           "name": "menus.jpg",
@@ -45,22 +35,11 @@
         }
       ]
     },
-
-   {
-      
+    {
       "text": [
-        "When you can see all of your bookmarks in one view, saving becomes almost automatic. You drag a link into the right spot instead of pausing to invent the perfect tag. Decisions get lighter, flows get faster, and the cognitive load on the user goes down. Mojave turns bookmarking from a chore into a quick gesture that fits the rhythm of everyday browsing."
+        "Bedtime does not promise transformation. It offers something quieter. A pause, a gesture, a moment of care exchanged between strangers. It is a small product with a clear intent. And in a world that often rewards the loudest voice, that quiet feels like progress."
       ]
     },
-
-
-
-
-
-
-
-
-
     {
       "media": [
         {
@@ -69,30 +48,13 @@
         }
       ]
     },
-
-{
-      
-      "text": [
-        "I was the design lead for Mojave, responsible for product vision, interaction design, and the overall look and feel of the extension. The product developed a small but devoted base of users who trusted it with tens of thousands of bookmarks, and it remains a favorite example of how a simple, clear interface can completely change the way people work with information online."
-      
-       
-      ]
-    },
-
-
-
-    
     {
       "line": true
     },
     {
       "text": [
-        "Client: Mojave"
+        "Client: Bedtime"
       ]
     }
-
   ]
 }
-
-
-
