@@ -16,8 +16,10 @@
       :position="media.position"
       :project_name="project_name"
     )
-  div#iframe.d-flex(v-else-if="is_iframe" :class="{ 'full-width-iframe': media.fullWidth }" :style=`{'justify-content': justifyContent}`)
-    iframe.iframe-viewer(:src="mediaPath" :style=`{"width": media.width || "100%", "height": media.height || "800px", "border": "none"}` frameborder="0" allowfullscreen)
+  //- Wrapper keeps the caption below the iframe instead of beside it in the flex row
+  div(v-else-if="is_iframe")
+    div#iframe.d-flex(:class="{ 'full-width-iframe': media.fullWidth }" :style=`{'justify-content': justifyContent}`)
+      iframe.iframe-viewer(:src="mediaPath" :style=`{"width": media.width || "100%", "height": media.height || "800px", "border": "none"}` frameborder="0" allowfullscreen)
     div.media-caption.text-center.pt-1(v-if="media.title" v-html="media.title")
   div(v-else)
     div.aspect-container(:style=`{'justify-content': media.position || ''}`)

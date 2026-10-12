@@ -12,9 +12,13 @@
 // Fixed order so every case study answers the same questions in the same place
 const FIELDS = [
   { key: 'role', label: 'Role' },
+  { key: 'client', label: 'Client' },
+  { key: 'agency', label: 'Agency' },
   { key: 'team', label: 'Team' },
   { key: 'built', label: 'Built' },
   { key: 'shipped', label: 'Shipped' },
+  // For work that didn't launch (proposals, concepts): say so plainly
+  { key: 'status', label: 'Status' },
   { key: 'outcome', label: 'Outcome' }
 ]
 

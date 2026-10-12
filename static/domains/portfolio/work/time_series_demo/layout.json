@@ -1,21 +1,24 @@
 {
   "cover": {
     "media": {
-      "name": "cliffwater_thumb.jpg"
+      "name": "time_series_demo_thumb.jpg"
     },
-    "title": "TimescaleDB Design System",
-    "categories": "Design System, Visual Design, UI/UX",
+    "title": "Time-Series Demo",
+    "categories": "Visual Design, Front-end Development, Data Visualization",
     "position": "left",
-    "width": "70%",
-    "forbidIndex": true
+    "width": "70%"
   },
-  "backgroundColor": "#FFFFFF",
-  "textColor": "#00004A",
-  "header": "In high stakes industries like oil refining, a single sensor anomaly can lead to environmental disaster or mechanical failure. But using time series data can reveal patterns and predict failures before they happen. It provides the clarity needed to monitor infrastructure and prevent a crisis before it starts.",
+  "backgroundColor": "#F6F2EA",
+  "textColor": "#282725",
+  "header": "Time-series data is hard to picture in the abstract. For Timescale’s marketing, I designed a demo that makes it concrete: a dashboard for an energy site, where a steady stream of sensor readings becomes something anyone can read at a glance. I did the visual design and part of the front-end build.",
+  "summary": {
+    "role": "Visual design, front-end development",
+    "client": "Shell (via Timescale)",
+    "built": "HTML, CSS",
+    "status": "Marketing demo"
+  },
   "seo_description": "Senior Product Design Case Study: Translating complex database architecture into human centered design systems and real time visual narratives.",
   "layout": [
-   
-   
     {
       "media": [
         {
@@ -24,17 +27,40 @@
           "position": "center",
           "width": "100%",
           "height": "1150px",
-          "fullWidth": true
+          "fullWidth": true,
+          "title": "A static version of the demo. The original ran on Shell’s real field data."
         }
       ]
     },
-   
     {
-
+      "title": "Background",
       "text": [
-        "This demo was built to highlight the power of time series data in a professional setting. By pulling a live feed from real world sensors into a dedicated database I created an interface that simplifies complexity. It turns a wall of technical readings into a clear view that a person can read at a glance while making dense information feel clear and intuitive."
-
+        "Time-series data is any measurement recorded over time, like a sensor reading every second. On its own, that’s an abstract idea, and most people only care once they see what it lets you do. So instead of explaining the concept, we showed it in the real world. Shell let us use actual sensor data from its sites in the field, and the demo turned it into a dashboard where spotting a pattern early could prevent a failure, or an environmental incident."
       ]
+    },
+    {
+      "title": "Designing for a glance",
+      "text": [
+        "I organized the dashboard around the questions an operator asks first. Is the well on target? The top shows total production against its goal, with a single progress bar. Is anything about to fail? In Pressure Analytics, every well is plotted against a safety threshold, and any well that crosses it turns red. Out of thirteen wells, the three near the limit stand out immediately."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "pressure_analytics.jpg",
+          "position": "center",
+          "title": "Wells approaching the pressure limit turn red"
+        }
+      ]
+    },
+    {
+      "title": "Building it",
+      "text": [
+        "I also built parts of the front end myself, in HTML and CSS, so the design details survived the trip from mockup to working demo."
+      ]
+    },
+    {
+      "line": true
     }
   ]
 }

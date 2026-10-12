@@ -1,5 +1,8 @@
 <template lang="pug">
   div.portfolio-homepage
+    //- Pinned to the bottom of the page, outside the vertically centered content
+    p.page-footer
+      nuxt-link(to="/privacy") Privacy policy
     div.container
       div.content
         p.text
@@ -121,7 +124,7 @@
           p Over the past two years, AI has enabled me to do even more. I've built micro-sites, prototypes, custom tooling, and shipped designs myself instead of handing them off. I've also worked alongside developers, committing production code to GitHub.
           p Now I'm looking for my next great role. I'm not in a hurry. I want to find the right fit. And that's where you come in.
           p I'm taking on small, scoped design projects with a few early-stage startups. If it goes well, we continue the conversation. If it doesn't, you'll still have a design asset you can use for your business.
-          p If you'd like to see how I use design to drive outsized results for startups, sign up below.
+          p If you'd like to see how I use design to drive outsized results for startups, sign up below. I'll send a few emails over the next several days, then just the occasional update.
 
         form.signup-form(v-if="!isSubscribed" @submit.prevent="handleSubscribe")
           div.signup-row
@@ -146,6 +149,7 @@
               | {{ isSubmitting ? 'One moment...' : 'Submit' }}
           p.signup-error(v-if="subscribeError") {{ subscribeError }}
         p.signup-success(v-else) Thanks, {{ firstName }}! You'll hear from me soon.
+
 </template>
 
 <script>
@@ -165,9 +169,11 @@ export default {
     const image = 'https://masongentry.com/images/meet_mason_preview.jpg'
     return {
       title: 'Mason Gentry',
-      // The intro text and icons start hidden for the fade-in; show them if JS never runs
-      noscript: [{ hid: 'show-intro', innerHTML: '<style>.text-content, .image-wrapper { opacity: 1 !important }</style>' }],
-      __dangerouslyDisableSanitizersByTagID: { 'show-intro': ['innerHTML'] },
+      // The intro is visible in the HTML by default, so crawlers (including ad
+      // review) and visitors who prefer reduced motion see the full text. This
+      // runs before the first paint and opts real browsers into the fade-in.
+      script: [{ hid: 'intro-anim', innerHTML: "try{var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(!r&&!/bot|crawl|spider|slurp|preview|facebookexternalhit|lighthouse|inspectiontool/i.test(navigator.userAgent))document.documentElement.classList.add('intro-anim')}catch(e){}" }],
+      __dangerouslyDisableSanitizersByTagID: { 'intro-anim': ['innerHTML'] },
       meta: [
         { hid: 'description', name: 'description', content: description },
         { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -204,7 +210,11 @@ export default {
     this.$store.commit('updateState', {field: 'pageBackgroundColor', value: null})
     this.$store.commit('updateState', {field: 'pageTextColor', value: null})
     this.$nextTick(() => {
-      this.animatePageLoad()
+      // Only animate when the pre-paint script opted in; otherwise the intro is
+      // already showing
+      if (document.documentElement.classList.contains('intro-anim')) {
+        this.animatePageLoad()
+      }
       this.focusNameWhenVisible()
     })
   },
@@ -334,13 +344,33 @@ export default {
 
 <style lang="sass" scoped>
 .portfolio-homepage
+  position: relative
   background-color: #F8F7F4
   color: #1D1E20
   min-height: 100vh
   display: flex
   align-items: center
   justify-content: flex-start
-  padding: 80px 40px 10px 40px
+  padding: 80px 40px 70px 40px
+
+// Bottom of the page, in the same centered 650px column as the text (the
+// container adds 12px of side padding)
+.page-footer
+  position: absolute
+  bottom: 24px
+  left: 0
+  right: 0
+  max-width: 650px
+  padding: 0 12px
+  margin: 0 auto !important
+  font-size: 14px !important
+  line-height: 1.5 !important
+  color: #948F8B
+
+  // !important to beat the layout's `#app a { text-decoration: none }`
+  a
+    color: inherit
+    text-decoration: underline !important
 
 .container
   max-width: 650px
@@ -358,7 +388,6 @@ export default {
 
   .text-content
     display: inline
-    opacity: 0
 
   // Negative vertical margins let the images spill past their line instead
   // of pushing it taller, so every line is spaced evenly
@@ -461,7 +490,11 @@ export default {
   // 15px total per side: the layout's v-container adds 12px, this adds 3px,
   // and the inner .container's own Vuetify padding is removed
   .portfolio-homepage
-    padding: 60px 3px 10px 3px
+    padding: 60px 3px 60px 3px
+
+  // Mobile: the page has 3px side padding and the container none
+  .page-footer
+    padding: 0 3px
 
   .container
     padding-left: 0
@@ -476,7 +509,7 @@ export default {
 
 @media (max-width: 480px)
   .portfolio-homepage
-    padding: 40px 3px 10px 3px
+    padding: 40px 3px 60px 3px
 
   .content .signup-row
     flex-direction: column
@@ -513,5 +546,9 @@ export default {
   vertical-align: middle
   overflow: hidden
   border-radius: 15px
-  opacity: 0
+
+// Hidden only when the browser opted into the fade-in (see the intro-anim script)
+html.intro-anim .portfolio-homepage
+  .text-content, .image-wrapper
+    opacity: 0
 </style>
