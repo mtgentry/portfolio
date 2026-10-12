@@ -206,6 +206,11 @@ export default {
     min-height: unset
   &.loaded
     opacity: 1
+.media-caption
+  font-size: 14px !important
+  // pt-1's 4px + 3px
+  padding-top: 7px !important
+
 .aspect-container
   overflow: hidden
   display: flex

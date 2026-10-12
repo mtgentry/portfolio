@@ -15,7 +15,13 @@
             right-color="#477AF0"
             bottom-color="#164EED"
             left-color="#477AF0"
-            border-color="#477AF0"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
+            :tap-to-reveal="true"
           )
           span.text-content
             | . I'm a designer and founder based in Los Angeles. My experience spans high-growth startups and global firms, including Boston Consulting Group and TBWA\Chiat\Day
@@ -29,7 +35,13 @@
             right-color="#6CB697"
             bottom-color="#4A7E68"
             left-color="#6CB697"
-            border-color="#6CB697"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
+            :tap-to-reveal="true"
           )
           span.text-content
             | . Along the way, I've shipped work for brands like Disney, Coke, and Nissan.
@@ -47,7 +59,13 @@
             right-color="#F1D5D5"
             bottom-color="#E5A9AA"
             left-color="#F1D5D5"
-            border-color="#F1D5D5"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
+            :tap-to-reveal="true"
           )
           span.text-content
             |  bottle brand carried by retailers like Urban Outfitters and Fab. I also created Color Supply,
@@ -61,7 +79,13 @@
             right-color="#F6633A"
             bottom-color="#BF411C"
             left-color="#F6633A"
-            border-color="#F6633A"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
+            :tap-to-reveal="true"
           )
           span.text-content
             |  a tool used by thousands of designers worldwide, and I write Design by Numbers, a popular
@@ -77,7 +101,13 @@
             right-color="#F1B456"
             bottom-color="#C79445"
             left-color="#F1B456"
-            border-color="#F1B456"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
+            :tap-to-reveal="true"
           )
           span.text-content
             |  newsletter for 9,000+ designers and developers.
@@ -95,7 +125,13 @@
             right-color="#2C2E31"
             bottom-color="#1D1E20"
             left-color="#2C2E31"
-            border-color="#2C2E31"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
+            :tap-to-reveal="true"
           )
           span.text-content
             |  and restoring
@@ -109,7 +145,13 @@
             right-color="#477AF0"
             bottom-color="#164EED"
             left-color="#477AF0"
-            border-color="#477AF0"
+            border-color="transparent"
+            edge-color="#1D1E20"
+            :fill-opacity="0"
+            mid-frame-color="#1D1E20"
+            :mid-frame-count="3"
+            :telescope="true"
+            :tap-to-reveal="true"
           )
           span.text-content
             |  this 1908 Craftsman. The project is definitely on schedule and expected to be completed by 2050.
