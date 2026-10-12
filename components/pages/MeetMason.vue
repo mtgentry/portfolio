@@ -123,7 +123,7 @@
         div.body-copy
           p Over the past two years, AI has enabled me to do even more. I've built micro-sites, prototypes, custom tooling, and shipped designs myself instead of handing them off. I've also worked alongside developers, committing production code to GitHub.
           p Now I'm looking for my next great role. I'm not in a hurry. I want to find the right fit. And that's where you come in.
-          p I'm taking on small, scoped design projects with a few early-stage startups. If it goes well, we continue the conversation. If it doesn't, you'll still have a design asset you can use for your business.
+          p I'm doing a few paid trial projects with early-stage startups: something small and scoped, priced up front. If it goes well, we continue the conversation. If it doesn't, you'll still have a design asset you can use for your business.
           p If you'd like to see how I use design to drive outsized results for startups, sign up below. I'll send a few emails over the next several days, then just the occasional update.
 
         form.signup-form(v-if="!isSubscribed" @submit.prevent="handleSubscribe")
@@ -164,7 +164,7 @@ export default {
   head() {
     // Link preview for when /founders is shared on X, iMessage, Slack, etc.
     const title = 'Mason Gentry, design engineer'
-    const description = 'Design engineer in Los Angeles. Taking on small, scoped design projects with a few early-stage startups.'
+    const description = 'Design engineer in Los Angeles. Doing a few paid trial projects with early-stage startups.'
     const url = 'https://masongentry.com/founders'
     const image = 'https://masongentry.com/images/meet_mason_preview.jpg'
     return {
