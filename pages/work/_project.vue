@@ -1,12 +1,18 @@
 <template lang="pug">
   v-row(justify="center" align="center" v-if="project")
-    div.project-header-container
+    //- Projects without a problem statement (e.g. motion reels) skip the
+    //- full-screen header and start the work just below the nav
+    div.project-header-container(v-if="project.header && project.header.trim()")
       div.project-header(v-html="project.header"
         :style="{color: textColor, maxWidth: '80%', fontWeight: '300'}")
-    v-col.project-body(cols="12")
+    v-col.project-body(cols="12" :class="{ 'no-header': !(project.header && project.header.trim()) }")
       Section(v-for="(section, index) in project.layout" :section="section" :key="`section-${index}`")
       //- Role, team and results close out the case study, under the closing rule
-      ProjectSummary(v-if="project.summary" :summary="project.summary" :style="{color: textColor}")
+      //- Same row/column structure as the text sections (Section.vue .slim), so
+      //- the summary lines up with the copy at every width
+      v-row.section.slim.summary-section(v-if="project.summary")
+        v-col
+          ProjectSummary(:summary="project.summary" :style="{color: textColor}")
     Footer
 
 </template>
@@ -107,6 +113,13 @@ $hero-peek: 90px
 // Hero media starts right where the header area ends
 .project-body
   padding-top: 0
+
+  // No header area: clear the fixed nav instead
+  &.no-header
+    padding-top: 120px
+
+    @media (max-width: 768px)
+      padding-top: 90px
 
   ::v-deep > .section:first-child
     padding-top: 0

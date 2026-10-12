@@ -240,6 +240,12 @@ $section-space: clamp(64px, 4vw + 32px, 160px)
 .project-body > .row.section.slim + .row.section.slim.untitled
   margin-top: var(--space-m)
 
+// The summary belongs to the closing rule above it, then leaves room before
+// the footer (extra :not()s outrank the heading rule above)
+.project-body > .row.section.slim.summary-section:not(.untitled):not(.line-section)
+  margin-top: var(--space-s)
+  padding-bottom: var(--space-l)
+
 // A new section that follows text (not media) steps down one size: with no
 // image to frame it, xl reads as an empty gap
 .project-body > .row.section.slim:not(.line-section) + .row.section.slim:not(.untitled):not(.line-section)

@@ -163,7 +163,9 @@ export default {
     mainTextColor() {
       let color;
       if (this.homePage) {
-        color = "#FFFFFF"
+        // The agency homepage is dark; the portfolio's / and /work are light.
+        // (White here made text fade toward white while leaving a project for /work.)
+        color = this.isAgency ? "#FFFFFF" : "#1D1E20"
       } else {
         color = this.textColor || "#282725"
       }
@@ -266,8 +268,10 @@ export default {
     @media (max-width: 768px)
       font-size: 19px !important
 
+  // Same medium gray as the footer's top border, so dividers stay quiet on
+  // light and dark pages alike
   hr
-    border: .5px solid currentColor
+    border: .5px solid #808080
     border-top: none
     margin-top: 1px
     margin-bottom: 30px

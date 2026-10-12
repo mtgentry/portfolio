@@ -23,7 +23,7 @@
     div.media-caption.text-center.pt-1(v-if="media.title" v-html="media.title")
   div(v-else)
     div.aspect-container(:style=`{'justify-content': media.position || ''}`)
-      img.item( :src="mediaPath" :style=`{'width': media.width || '100%'}`
+      img.item(ref="img" :src="mediaPath" :style=`{'width': media.width || '100%'}`
         @load="load" :class="{'custom-fade-in': this.project_name === 'francescas', 'loaded': loaded}")
     div.media-caption.text-center.pt-1(v-if="media.title" v-html="media.title")
 </template>
@@ -45,15 +45,24 @@ export default {
     }
   },
   mounted() {
+    // Server-rendered images can finish loading before Vue attaches @load, so
+    // that event never reaches us; run the same handler for an already-loaded image
+    const img = this.$refs.img
+    if (img && img.complete && img.naturalWidth > 0) {
+      this.load()
+    }
     if (!this.$refs.video) {
       return
     }
     // Only add scroll listeners for looping videos
     if (this.media.loop !== false) {
-      window.addEventListener("scroll", () => {
+      // Kept on the instance so beforeDestroy can remove them; otherwise they
+      // outlive the page and keep the old video alive
+      this.onScroll = () => {
         clearTimeout(this.playVisibleVideosTimeout);
         this.playVisibleVideosTimeout = setTimeout(this.playVisibleVideos, 100);
-      }, {passive: true});
+      }
+      window.addEventListener("scroll", this.onScroll, {passive: true});
       window.addEventListener("resize", this.playVisibleVideos);
       window.addEventListener("DOMContentLoaded", this.playVisibleVideos);
       // DOMContentLoaded has already fired after client-side navigation, so also
@@ -61,6 +70,15 @@ export default {
       this.$nextTick(this.playVisibleVideos)
     }
     this.$refs.video.controls = this.isIos()
+  },
+  beforeDestroy() {
+    clearTimeout(this.playVisibleVideosTimeout)
+    if (this.onScroll) window.removeEventListener("scroll", this.onScroll)
+    window.removeEventListener("resize", this.playVisibleVideos)
+    window.removeEventListener("DOMContentLoaded", this.playVisibleVideos)
+    // Only pause: this runs as the page starts fading out, and clearing the
+    // source here would collapse the video and shift the page mid-fade
+    this.$refs.video?.pause()
   },
   computed: {
     is_video() {
@@ -134,11 +152,13 @@ export default {
       }, delay)
     },
     playVisibleVideos() {
-      if (this.elementIsVisible(this.$refs.video)) {
+      const video = this.$refs.video
+      if (!video) return
+      if (this.elementIsVisible(video)) {
         // play() rejects if a pause() lands first (e.g. a fast scroll past); that's fine
-        this.$refs.video.play()?.catch(() => {})
+        video.play()?.catch(() => {})
       } else {
-        this.$refs.video.pause()
+        video.pause()
       }
     },
     elementIsVisible(el) {

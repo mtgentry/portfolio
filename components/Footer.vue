@@ -6,7 +6,6 @@
       v-row.pa-0(v-if="!isAgency")
         v-col(cols="12" sm="6")
           span &copy; {{ year }}
-          span.pl-5(v-html="layout.name")
         v-col.contact(cols="12" sm="6")
           a(:href="`mailto:${layout.email}`") {{ layout.email }}
 </template>
@@ -52,7 +51,7 @@ export default {
 
 <style lang="sass" scoped>
 #footer
-  font-size: 18px
+  font-size: 17px
   font-weight: 100  // Resist Sans Light
   line-height: 24px
   width: 100%
@@ -60,8 +59,13 @@ export default {
   display: flex
   align-items: center
   height: 100px
-  border-top: #808080 1px solid  // Same grey as the rule above the project summary
+  border-top: #808080 .5px solid  // Same grey and weight as the rule above the project summary
   transition: border-top-color 1s ease-in-out, opacity 1s
+  // Arrives last on page load: after the hero's fade-in (0.5s delay + 1s)
+  animation: footerFadeIn 0.8s ease-out 1.5s both
+
+  @media (prefers-reduced-motion: reduce)
+    animation: none
 
   @media (max-width: 768px)
     text-align: center!important
@@ -74,6 +78,11 @@ export default {
 
 #footer a
   font-weight: inherit
+
+// Medium gray on any background: fade the page's text color rather than pick a
+// fixed gray, which would be too faint on dark project pages (e.g. aka)
+#footer span, #footer a
+  opacity: 0.65
 
 .contact
   text-align: right!important

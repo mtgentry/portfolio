@@ -41,12 +41,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-// Same column as the text sections: a 674px box with copy inset 12px
+// Width and alignment come from the row it sits in (see pages/work/_project.vue)
 .project-summary
-  width: 100%
-  max-width: 674px
-  margin: 8px 0 80px
-  padding: 0 12px
+  margin: 0
   display: grid
   grid-template-columns: repeat(3, minmax(0, 1fr))
   gap: 24px 32px

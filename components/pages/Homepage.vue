@@ -2,8 +2,10 @@
   v-row#main(justify="center" align="center" v-if="layout")
     v-col(cols="12")
       Header(:text="layout.header")
-    PortfolioGroup(v-if="projects !== {}" v-for="project_name in Object.keys(projects)" :project="projects[project_name]" :key="project_name")
-    Footer
+    PortfolioGroup(v-for="project_name in Object.keys(projects)" :project="projects[project_name]" :key="project_name")
+    //- Projects load one by one when arriving from another page; wait for them
+    //- so the footer doesn't appear mid-page and then get pushed down
+    Footer(v-if="Object.keys(projects).length")
 </template>
 
 <script>

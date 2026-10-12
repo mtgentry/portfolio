@@ -25,14 +25,14 @@ export default {
 .title
   font-family: 'Resist Sans', sans-serif !important
   font-weight: 700
-  font-size: 19px !important
-  padding-top: 7px !important
+  font-size: 17px !important
+  padding-top: 10px !important
   line-height: 100%
   color: #1D1E20
 
 @media (max-width: 768px)
   .title
-    font-size: 18px !important
+    font-size: 16px !important
     margin-bottom: -3px
  
 
