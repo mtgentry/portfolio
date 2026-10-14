@@ -10,11 +10,12 @@
   },
   "backgroundColor": "#F8F080",
   "textColor": "#282725",
-  "header": "Color Supply translates color theory into an intuitive, exploratory interface. With millions of sessions since launch, it demonstrates how complex ideas can be distilled into a simple experience that helps users make color choices with confidence.",
+  "header": "Color Supply translates color theory into an intuitive, exploratory interface. Since launch, it’s helped people pick colors with confidence across millions of sessions. I created it and designed the product.",
   "summary": {
     "role": "Creator, product designer",
     "team": "Me, plus a freelance developer",
     "shipped": "colorsupplyyy.com",
+    "status": "Live, mid-redesign",
     "outcome": "Millions of sessions; codebase licensed in Japan"
   },
   "seo_description": "",
@@ -54,12 +55,13 @@
       "media": [
         {
           "name": "triad.mp4",
-          "position": "center"
+          "position": "center",
+          "title": "Select a color on the wheel, and the rest of the scheme updates"
         }
       ]
     },
     {
-      "title": "Built for Scale",
+      "title": "Finding an Audience",
       "text": [
         "I built Color Supply to solve a real problem for myself, and it ended up finding a massive audience of designers, artists, and developers worldwide. That kind of reach has taught me that people really value clarity over complicated features."
       ]
@@ -366,7 +368,7 @@
     {
       "title": "Result",
       "text": [
-        "Color Supply has proven to be a strong financial success, including an exclusive deal with a Japanese firm that licensed the codebase for their market. People keep sharing it, too."
+        "Color Supply has proven to be a strong financial success, including an exclusive deal with a Japanese firm that licensed the codebase for their market. The live site is now mid-redesign, so it looks different from what’s shown here."
       ]
     },
     {

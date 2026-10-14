@@ -10,10 +10,11 @@
   },
   "backgroundColor": "#416685",
   "textColor": "#F8F6F2",
-  "header": "Developers love Postgres, and Timescale is built on it. I spearheaded the State of PostgreSQL report as a growth initiative. I led the concept, design, and art direction, and did some of the development.",
+  "header": "Developers love Postgres, and Timescale is built on it. I spearheaded the State of Postgres report as a growth initiative. I led the concept, design, art direction, and animation.",
   "summary": {
-    "role": "Concept, design, art direction",
-    "built": "Parts of the front end",
+    "role": "Concept, design, art direction, animation",
+    "built": "Blender, Three.js",
+    "shipped": "stateofpostgres.com",
     "outcome": "Thousands of signups; became a yearly report"
   },
   "seo_description": "",
@@ -28,20 +29,20 @@
         {
           "name": "flowers_new.mp4",
           "position": "center",
-          "title": "The flowers bloom as you scroll"
+          "title": "A scroll trigger makes the flowers bloom"
         }
       ]
     },
     {
       "title": "Background",
       "text": [
-        "Postgres was more popular than ever, and the developers using it were exactly who Timescale wanted to reach. The idea was to meet that interest with something genuinely useful: a survey of the Postgres community, published as a report, with a newsletter signup for anyone who wanted more."
+        "Postgres was more popular than ever, and the developers using it were exactly who Timescale wanted to reach. The idea was to give them something genuinely useful: a survey of the Postgres community, published as an immersive story, with a newsletter signup for anyone who wanted more."
       ]
     },
     {
-      "title": "Designing it to be shared",
+      "title": "Beyond a spreadsheet",
       "text": [
-        "Developer reports usually look like a spreadsheet with a logo on top. I wanted this one to feel like an event, so I gave it a dark, editorial layout and a cast of 3D illustrations built around the Postgres elephant. The goal was a report people would want to share, not just skim."
+        "Developer reports usually look like a boring spreadsheet. I wanted this one to feel like an event, so I gave it a dark, editorial layout and built it around a series of fun 3D elephants, the Postgres mascot. The goal was a report people would want to share, not just skim."
       ]
     },
     {
@@ -55,7 +56,7 @@
     {
       "title": "Building it",
       "text": [
-        "I also did some of the development, bringing the design and the animations to the web."
+        "I illustrated each elephant by hand first, then modeled it in 3D and animated it in Blender. Finally, I brought each animated sequence into Three.js, where I lit it for the web."
       ]
     },
     {
@@ -83,7 +84,7 @@
     {
       "title": "Result",
       "text": [
-        "It brought in thousands of newsletter signups, and worked well enough that State of PostgreSQL became a yearly report."
+        "It brought in thousands of newsletter signups, and worked well enough that State of Postgres became a yearly report."
       ]
     },
     {
