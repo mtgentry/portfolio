@@ -1,17 +1,22 @@
 {
   "cover": {
     "media": {
-      "name": "cliffwater_thumb.jpg"
+      "name": "timescale_1.png"
     },
-    "title": "TimescaleDB Design System",
-    "categories": "Design System, Visual Design, UI/UX",
+    "title": "Timescale Design System",
+    "categories": "Design System, UI Design, Art Direction",
     "position": "left",
-    "width": "70%",
-    "forbidIndex": true
+    "width": "40%"
   },
   "backgroundColor": "#FDB515",
   "textColor": "#00004A",
-  "header": "TimescaleDB brought the power of PostgreSQL to time series data. Our design system matched that technical strength. We built a clear, structured framework that respected deep technical work while making complex ideas easy to see. This visual system signaled to every developer: this is for you.",
+  "header": "Timescale is a time series database, built on Postgres. Every serious backend developer respects Postgres and open source, and is skeptical of marketing. So we created a visual system that signaled to every developer: this is for you.",
+  "summary": {
+    "role": "Design lead",
+    "team": "Me, plus a designer, an illustrator, and an icon designer",
+    "shipped": "Timescale’s product, docs, and marketing",
+    "outcome": "Replaced stock imagery with a custom visual identity"
+  },
   "seo_description": "Senior Product Design Case Study: Translating complex database architecture into human centered design systems and real time visual narratives.",
   "layout": [
     {
@@ -23,10 +28,11 @@
       ]
     },
     {
-      "title": "Design Philosophy & Foundations",
+      "title": "Design Philosophy",
       "text": [
-        "Developer tools existed in a visual paradox: they had to feel powerful without being intimidating, and technical without being sterile. We started by studying how developers interacted with documentation and dashboards. They did not want decoration; they wanted clarity. We built this system to achieve three goals: visualize abstract data, maintain technical credibility, and scale across every touchpoint.",
-        "We grounded these goals in a color palette built around high contrast accessibility and the specific needs of data visualization. A primary gold anchored the brand in warmth while staying professional. Banner blue and navy provided a technical backbone, while extended scales offered the flexibility needed for complex UI states and dense data."
+        "Developer tools need to feel powerful without being intimidating, and technical without feeling cold. We started by watching how developers used documentation and dashboards. It was clear from the start that they didn’t want decoration. They wanted clarity.",
+        "So the system had three jobs: make abstract data easy to see, earn developers’ trust, and hold together across the product, docs, and marketing.",
+        "The color palette came first. It needed strong contrast so it was easy to read, and enough range to work in charts. Gold gave the brand warmth while staying professional. Blue and navy made it feel technical. Lighter and darker shades of each covered everything the interface needed, like hover, disabled, and error states."
       ]
     },
     {
@@ -40,7 +46,7 @@
     {
       "title": "Interface & Workflow",
       "text": [
-        "Every UI element supported the developer workflow. Form fields, buttons, and interactive states followed familiar patterns while maintaining a distinct point of view. We prioritized high density layouts and clear feedback loops, ensuring that even as data complexity scaled, the interface remained predictable. Spacing was precise, states were comprehensive, and nothing was decorative. Every pixel served a functional purpose."
+        "Every UI element supported the developer workflow. Form fields, buttons, and interactive states followed familiar patterns while maintaining a distinct point of view. We prioritized high density layouts and clear feedback loops, ensuring that even as data complexity scaled, the interface remained predictable. Spacing was precise and nothing was decorative."
       ]
     },
     {
@@ -54,7 +60,7 @@
     {
       "title": "Consistency Across the Experience",
       "text": [
-        "Avatars and spot illustrations extended this system across the entire journey. They maintained a consistent voice while adapting to different contexts, from the deep product experience to high level marketing."
+        "Avatars and spot illustrations extended this system across the entire journey. They maintained a consistent voice while adapting to different contexts, from the product experience to brand marketing."
       ]
     },
     {
@@ -66,9 +72,9 @@
       ]
     },
     {
-      "title": "Visual Narrative: Bringing Technical Flow to Life",
+      "title": "Bringing Technical Flow to Life",
       "text": [
-        "Our illustration style used isometric perspective and technical line work to turn abstract concepts into tangible ideas. We moved beyond static slides by connecting these diagrams to live APIs for IRL presentations, which allowed the audience to actually feel the velocity and scale of the data moving through the system in real time. We transformed hypertables, data retention, and time series architecture into dynamic visual narratives rather than documentation hurdles. This approach helped make the invisible mechanics of the database visible and intuitive."
+        "Our illustration style turned abstract concepts into tangible ideas. We transformed hypertables, data retention, and time series architecture into dynamic visual narratives rather than documentation hurdles. This approach helped make the inner workings of the database visible and intuitive."
       ]
     },
     {
@@ -82,7 +88,7 @@
     {
       "title": "Visualizing the Stack",
       "text": [
-        "To support the technical content strategy, we created a suite of Editorial Illustrations designed specifically for engineering and product blog posts. These assets translated complex backend concepts like time series data, cloud partitioning, and distributed nodes into a cohesive isometric visual language that guided the reader through deep dive articles."
+        "To support the content strategy, we created a suite of editorial illustrations designed specifically for engineering and product blog posts. These assets translated complex backend concepts like time series data, cloud partitioning, and distributed nodes into a visual language that guided the reader through the articles."
       ]
     },
     {
@@ -94,14 +100,14 @@
       ]
     },
     {
-      "line": false
-    },
-    {
       "title": "Results",
       "text": [
-        "The comprehensive design system successfully moved the brand away from generic stock imagery toward a custom visual identity. By establishing a modular framework across all touchpoints, we improved technical clarity for the audience and created a scalable library of assets that unified the product experience and reinforced the reliability of the platform.",
-        "The result was a design system that felt like it was built by people who actually used databases. Because it was."
+        "The comprehensive design system successfully moved the brand away from generic stock imagery toward a custom visual identity. By establishing a modular framework, we created a scalable library of assets that unified the product experience.",
+        "The result was a design system that felt like it was built by people who actually used databases."
       ]
+    },
+    {
+      "line": true
     }
   ]
 }

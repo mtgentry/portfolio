@@ -303,7 +303,7 @@ export default {
 .content
   p.text
     margin-bottom: 24px
-    line-height: 1.7
+    line-height: 1.6 !important  // !important to beat the site-wide 140% in layouts/default.vue
     color: #1D1E20
     font-size: 32px !important
     width: 650px
@@ -312,6 +312,12 @@ export default {
   .text-content
     display: inline
     opacity: 0
+
+  // Negative vertical margins let the images spill past their line instead
+  // of pushing it taller, so every line is spaced evenly (same as /founders)
+  .image-wrapper
+    margin-top: -12px
+    margin-bottom: -12px
 
   p.email-contact
     margin-top: 60px
@@ -331,7 +337,7 @@ export default {
 
   .content p.text
     font-size: 28px !important
-    line-height: 1.7 !important
+    line-height: 1.6 !important
 
 @media (max-width: 480px)
   .portfolio-homepage
@@ -339,7 +345,7 @@ export default {
 
   .content p.text
     font-size: 28px !important
-    line-height: 1.7 !important
+    line-height: 1.6 !important
 </style>
 
 <style lang="sass">

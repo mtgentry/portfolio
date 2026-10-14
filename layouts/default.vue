@@ -141,7 +141,10 @@ export default {
   computed: {
     bgColor() {
       let backgroundColor;
-      if (this.homePage) {
+      if (!this.isAgency && this.$route.path.replace(/\/$/, '') === '/work') {
+        // The portfolio's work grid is plain white; / keeps the off-white
+        backgroundColor = '#FFFFFF'
+      } else if (this.homePage) {
         backgroundColor = this.homeBackgroundColor
       } else {
         backgroundColor = this.backgroundColor
@@ -307,6 +310,10 @@ export default {
 
   main
     min-height: 100vh
+    // Vuetify gives v-main `transition: all .2s`, which restarts a short color
+    // transition every frame while #app fades and makes text flicker. It only
+    // needs it for padding.
+    transition-property: padding
 
 .theme--dark.v-footer
   color: inherit

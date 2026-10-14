@@ -4,7 +4,7 @@
       "name": "aka_teaser_thumb.jpg"
     },
     "title": "AKA teaser site",
-    "categories": "Design, Front-end development, WebGL"
+    "categories": "Design, Front-end Development, 3D"
   },
   "backgroundColor": "#E8E2DA",
   "textColor": "#282725",
@@ -14,7 +14,7 @@
   "summary": {
     "role": "Concept, design, front-end build",
     "team": "Me, plus aka engineers on browser support",
-    "built": "React, Three.js (WebGPU), shaders, Rapier",
+    "built": "React, Three.js, WebGPU, shaders, Rapier",
     "shipped": "aka.com",
     "outcome": "Hundreds of waitlist signups"
   },
@@ -25,31 +25,32 @@
         {
           "name": "wild_render.mp4",
           "position": "center",
-          "title": "The final aka.com site"
+          "title": "The opening animation on aka.com"
         }
       ]
     },
     {
       "title": "Background",
       "text": [
-        "In the history of a startup, the time you launch is a pivotal moment. Before you launch, no one knows what you do, so people's curiosity is an asset. I created the teaser site to lean into that curiosity.",
-        "At the time, Twitter was full of people using Open Claw, and they were seeing their databases getting deleted by AI agents. It was a real problem, and everyone building with agents had felt it. And aka was working on a solution to the problem.",
-        "So the site became a visualization of this idea of AI agents running wild."
+        "Before a launch, no one knows what you do. That curiosity is one of the few advantages a startup has, and it doesn’t last. I created the teaser site to lean into it.",
+        "At the time, Twitter was full of people using OpenClaw to automate their lives, and seeing databases get deleted by agents in the process. It was a real problem, and everyone building with agents had felt it. And aka was building an AI-first identity product to help solve it.",
+        "So the concept was to show, loosely, what it looks like when agents run wild. The whole site builds tension, and the only way to release it is to enter your email."
       ]
     },
     {
       "media": [
         {
           "name": "database.mp4",
-          "position": "center"
+          "position": "center",
+          "title": "Scroll down and agents delete the word ‘databases’"
         }
       ]
     },
     {
       "title": "Under the hood",
       "text": [
-        "I built the site in React and Three.js, rendering with WebGPU and custom shaders for the cords' materials. Older browsers don't support WebGPU, but since most of the audience was technical, we built for it first and added a WebGL2 fallback so everyone else still sees a version of it. For the physics of the cords, the bounce, weight, etc., I used Rapier, a JavaScript physics engine.",
-        "Everything was composed in full 3D, then locked in place in a 2D view."
+        "With Claude Code as my daily driver, I built the site in React and Three.js, rendering with WebGPU and custom shaders for the cords’ materials. For the physics of the cords (the bounce, the weight), I used Rapier, a JavaScript physics engine.",
+        "Everything was built in full 3D, then locked in place in a 2D view for the user."
       ]
     },
     {
@@ -57,20 +58,20 @@
         {
           "name": "three_experiments.mp4",
           "position": "center",
-          "title": "A few of the dozen-plus experiments along the way"
+          "title": "A few of the dozen-plus experiments before the final site"
         }
       ]
     },
     {
       "text": [
-        "To make precise adjustments along the way, I built an editing layer on top. This let me adjust the cords in real time, tune the physics, and move the camera."
+        "To make precise adjustments along the way, I built a control panel on top of the scene. Its sliders let me shape the cords, tune the physics, and move the camera, all in real time."
       ]
     },
     {
       "title": "Result",
       "text": [
-        "The relaunch went great. Within a couple of weeks, hundreds of people had joined aka's waitlist.",
-        "Before AI, a site like this meant an agency team, or weeks of feedback rounds with a developer. Now I could design directly in code. And the overlay I built let me adjust the cords, physics, and camera right in the browser and see every change instantly."
+        "The relaunch went great. Within a few weeks, hundreds of people had joined aka’s waitlist.",
+        "Before AI, a site like this required an agency, or weeks of rounds with a developer. Now I could design directly in code. And the control panel I built let me adjust the cords, physics, and camera right in the browser and see every change instantly."
       ]
     },
     {

@@ -14,6 +14,11 @@
   "pageBackgroundColor": "#F6F6F6",
   "pageTextColor": "#282725",
   "header": "Cliffwater is the institutional authority on private debt with over $100B in assets. Their digital presence had not kept pace with their expertise. We partnered with their team to translate deep institutional knowledge into a high performance platform. By leading with the interface, we built a scalable visual system from the inside out. The result turns complex data into a clear experience designed to earn trust through substance.",
+  "summary": {
+    "role": "Design lead",
+    "agency": "Ghost Collective",
+    "shipped": "cliffwater.com"
+  },
   "seo_description": "",
   "layout": [
     {
@@ -70,11 +75,6 @@
     },
     {
       "line": true
-    },
-    {
-      "text": [
-        "Agency: Ghost Collective"
-      ]
     }
   ]
 }

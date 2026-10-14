@@ -24,7 +24,7 @@
   div(v-else)
     div.aspect-container(:style=`{'justify-content': media.position || ''}`)
       img.item(ref="img" :src="mediaPath" :style=`{'width': media.width || '100%'}`
-        @load="load" :class="{'custom-fade-in': this.project_name === 'francescas', 'loaded': loaded}")
+        @load="load" :class="{'loaded': loaded}")
     div.media-caption.text-center.pt-1(v-if="media.title" v-html="media.title")
 </template>
 
@@ -138,15 +138,7 @@ export default {
       const isTextAnimating = sessionStorage.getItem('textAnimationPlaying') === 'true'
       const delay = isTextAnimating ? 1200 : 100
       
-      if (this.project_name === 'francescas') {
-        // Delay the loaded state for francescas based on text animation
-        setTimeout(() => {
-          this.loaded = true
-        }, delay)
-        this.$store.commit('updateState', {field: 'loading', value: false})
-      } else {
-        this.loaded = true
-      }
+      this.loaded = true
       setTimeout(() => {
         this.$AOS.refresh()
       }, delay)

@@ -1,75 +1,95 @@
 {
   "cover": {
     "media": {
-      "name": "francescas_thumb.jpg"
+      "name": "stateofpostgres_thumb_v2.mp4"
     },
-    "title": "Francesca's",
-    "categories": "Branding, Visual Design",
-    "forbidIndex": true
+    "title": "State of Postgres",
+    "categories": "3D Illustration, Visual Design",
+    "position": "right",
+    "width": "50%"
   },
-  "backgroundColor": "#6CAF82",
-  "textColor": "#ffffff",
-  "header": "When Francesca's came to us, their brand was stale. Their 11-15 yr old female customers had grown more sophisticated than when the company was first founded in 2006. They now preferred hipper brands like Nasty Gal and Nylon. At the same time, our creative brief stated the rebrand shouldn't alienate the parents of these young women. We came up with a few solutions which tested very well with both young women and their parents.",
+  "backgroundColor": "#416685",
+  "textColor": "#F8F6F2",
+  "header": "Developers love Postgres, and Timescale is built on it. I spearheaded the State of PostgreSQL report as a growth initiative. I led the concept, design, and art direction, and did some of the development.",
+  "summary": {
+    "role": "Concept, design, art direction",
+    "built": "Parts of the front end",
+    "outcome": "Thousands of signups; became a yearly report"
+  },
   "seo_description": "",
   "layout": [
     {
-      "title": "The first paragraph headline",
-      "text": [
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla.",
-        "The first body copy, consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis."
-      ]
-    },
-    {
       "media": [
         {
-          "name": "6.mp4",
-          "position": "center"
-        }
-      ]
-    },
-    {
-      "media": [
-        {
-          "name": "1.jpg",
-          "position": "center"
-        }
-      ]
-    },
-    {
-      "title": "The second paragraph headline",
-      "text": ["The second paragraph of copy. This one is shorter. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis."]
-    },
-    {
-      "media": [
-        {
-          "name": "2.jpg",
-          "position": "left"
+          "name": "elephant_new.mp4",
+          "position": "center",
+          "title": "The Postgres elephant, airlifted in by drone"
         },
         {
-          "name": "3.jpg"
+          "name": "flowers_new.mp4",
+          "position": "center",
+          "title": "The flowers bloom as you scroll"
         }
       ]
     },
     {
+      "title": "Background",
       "text": [
-        "Third section of text here. No headline. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
+        "Postgres was more popular than ever, and the developers using it were exactly who Timescale wanted to reach. The idea was to meet that interest with something genuinely useful: a survey of the Postgres community, published as a report, with a newsletter signup for anyone who wanted more."
       ]
     },
     {
-      "title": "Fourth headline is here",
+      "title": "Designing it to be shared",
       "text": [
-        "Fourth section of text here. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
-      ]},
+        "Developer reports usually look like a spreadsheet with a logo on top. I wanted this one to feel like an event, so I gave it a dark, editorial layout and a cast of 3D illustrations built around the Postgres elephant. The goal was a report people would want to share, not just skim."
+      ]
+    },
     {
-      "title": "Fifth headline is here",
-      "text":  [
-        "Fifth body of text here. Consectetur adipiscing elit. Praesent vulputate magna ac mauris feugiat pharetra. Donec condimentum turpis at rutrum pharetra. Nam tempus erat ut odio blandit tristique. Nam tempor ullamcorper iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non odio id nisi tincidunt lobortis.",
-        "Nam metus eros, vulputate id ipsum eget, condimentum volutpat justo. Fusce mi purus, luctus eleifend volutpat vel, imperdiet non leo. Duis consectetur porta posuere. Proin a lacinia neque. Ut diam metus, venenatis in eros in, pulvinar tincidunt erat. Integer felis libero, sollicitudin sed sodales sed, suscipit et eros. Mauris risus lorem, egestas ut facilisis eget, cursus nec mi. Pellentesque bibendum consectetur ante ac fringilla."
-      ]}
-  ]
+      "media": [
+        {
+          "name": "pi_new.mp4",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "Building it",
+      "text": [
+        "I also did some of the development, bringing the design and the animations to the web."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "tail4.mp4",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "Giving the quotes a personality",
+      "text": [
+        "Survey quotes can read like a wall of text, so each one got its own small 3D moment. A fidget spinner for the developer who picked MongoDB because it was the latest fad, a wagging tail for the one who never fell for the hype."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "spin_3.mp4",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "Result",
+      "text": [
+        "It brought in thousands of newsletter signups, and worked well enough that State of PostgreSQL became a yearly report."
+      ]
+    },
+    {
+      "line": true
+    }
+  ],
+  "pageBackgroundColor": "#F6F6F6",
+  "pageTextColor": "#282725"
 }
-
-
-

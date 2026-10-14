@@ -3,9 +3,9 @@
   v-col.portfolio-group(:md="project.cover.multiple ? 6 : 12" cols=12
     :style=`{"justify-content": project.cover.position || 'center'}`)
     vue-if-bot(v-if="project.cover.forbidIndex" )
-      PortfolioItem.portfolio-item(:project="project" :style=`{"width": project.cover.width || '100%'}`
+      PortfolioItem.portfolio-item(:project="project" :style="itemStyle"
         :class="{'mobileFullWidth': !project.cover.mobileInherit}")
-    PortfolioItem.portfolio-item(:project="project" :style=`{"width": project.cover.width || '100%'}`
+    PortfolioItem.portfolio-item(:project="project" :style="itemStyle"
         :class="{'mobileFullWidth': !project.cover.mobileInherit}" v-else)
 
 </template>
@@ -16,6 +16,17 @@ export default {
   props: ['project'],
   components: {
      VueIfBot
+  },
+  computed: {
+    // cover.offset pulls a left- or right-aligned card in from its edge (e.g. "10%")
+    itemStyle() {
+      const cover = this.project.cover
+      return {
+        width: cover.width || '100%',
+        marginLeft: cover.position === 'left' ? cover.offset : null,
+        marginRight: cover.position === 'right' ? cover.offset : null,
+      }
+    }
   }
 }
 </script>
@@ -31,13 +42,19 @@ export default {
     @media (max-width: 768px)
       width: 100%!important
 
+  @media (max-width: 768px)
+    margin-left: 0!important
+    margin-right: 0!important
+
 .portfolio-group
-  padding-bottom: 20px
+  // Space between projects: the fluid --space-l step (layouts/default.vue),
+  // floored at 72px so phones keep room around the stacked cards. The plain
+  // 90px line is the fallback for browsers without CSS variables or max().
+  padding-bottom: 90px
+  padding-bottom: max(72px, var(--space-l))
   display: flex
   transition: opacity 1s ease-in-out,color 2s ease-in-out!important
 
-  @media (max-width: 768px)
-    padding-bottom: 90px
     justify-content: end!important
 
 

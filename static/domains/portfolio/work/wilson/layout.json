@@ -5,15 +5,19 @@
     },
     "title": "Wilson",
     "categories": "Visual Design",
-    "multiple": "true",
     "position": "right",
-    "width": "60%"
+    "width": "32%"
   },
   "backgroundColor": "#B72B35",
   "textColor": "#ffffff",
   "pageBackgroundColor": "#302626",
   "pageTextColor": "#ffffff",
   "header": "For over 100 years, Wilson has defined what it means to compete. As the brand looked to connect with a new generation of athletes, we helped shape a digital experience built for relevance, reach, and results.",
+  "summary": {
+    "role": "Senior visual designer",
+    "agency": "Phenomenon",
+    "shipped": "Golf and tennis on wilson.com"
+  },
   "seo_description": "",
   "layout": [
     {
@@ -54,11 +58,6 @@
     },
     {
       "line": true
-    },
-    {
-      "text": [
-        "Agency: Phenomenon"
-      ]
     }
   ]
 }

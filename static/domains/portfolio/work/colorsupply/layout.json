@@ -4,15 +4,19 @@
       "name": "colorsupply_thumb.jpg"
     },
     "title": "Color Supply",
-    "categories": "UI/UX, Product Design",
-    "multiple": "true",
-    "position": "right",
-    "width": "70%",
-    "mobileInherit": true
+    "categories": "Product Design",
+    "position": "left",
+    "width": "60%"
   },
   "backgroundColor": "#F8F080",
   "textColor": "#282725",
-  "header": "Color Supply translates complex color theory into an intuitive, exploratory interface. With millions of sessions since launch, it demonstrates how complex ideas can be distilled into a simple experience that helps users make color choices with confidence.",
+  "header": "Color Supply translates color theory into an intuitive, exploratory interface. With millions of sessions since launch, it demonstrates how complex ideas can be distilled into a simple experience that helps users make color choices with confidence.",
+  "summary": {
+    "role": "Creator, product designer",
+    "team": "Me, plus a freelance developer",
+    "shipped": "colorsupplyyy.com",
+    "outcome": "Millions of sessions; codebase licensed in Japan"
+  },
   "seo_description": "",
   "layout": [
     {
@@ -26,23 +30,24 @@
     {
       "title": "Curation Over Complexity",
       "text": [
-        "I created Color Supply because most color picking tools overwhelm users with too many choices at once. While precision is useful for fine-tuning, it often gets in the way when you are starting a project from scratch.",
-        "Instead of making users pick every single color manually, this tool provides smart starting points that can be refined as they go. This turns the \"math\" of color theory into a faster, more confident workflow."
+        "I created Color Supply because most color picking tools overwhelm users with too many choices. While precision is useful for fine-tuning, it often gets in the way when you are starting a project from scratch.",
+        "Instead of making users pick every single color manually, this tool provides starting points that can be refined as they go. This turns the \"math\" of color theory into a faster, more confident workflow."
       ]
     },
     {
       "media": [
         {
           "name": "color_wheels.jpg",
-          "position": "center"
+          "position": "center",
+          "title": "Six color wheels to start from, each with its own palette"
         }
       ]
     },
     {
       "title": "Visualizing Complex Rules",
       "text": [
-        "The interface is built to turn abstract color rules into something you can feel. By interacting with the wheel, users see how different schemes like complementary or triadic work in real time.",
-        "It replaces manual calculation with instant visual feedback, making it easier to experiment and find the right balance."
+        "The interface turns abstract color rules into something you can play with. By interacting with the wheel, users see how different schemes like complementary or triadic work in real time.",
+        "It replaces manual calculation with instant visual feedback, making it easier to experiment."
       ]
     },
     {
@@ -56,7 +61,12 @@
     {
       "title": "Built for Scale",
       "text": [
-        "I built Color Supply to solve a real problem for myself, and it ended up finding a massive audience of designers, artists, and developers worldwide. That kind of reach has taught me that people really value clarity over complicated features. It’s rewarding to see it become a trusted part of the daily workflow for so many professionals."
+        "I built Color Supply to solve a real problem for myself, and it ended up finding a massive audience of designers, artists, and developers worldwide. That kind of reach has taught me that people really value clarity over complicated features."
+      ]
+    },
+    {
+      "text": [
+        "Praise for Color Supply:"
       ]
     },
     {
@@ -354,19 +364,13 @@
       ]
     },
     {
-      "title": "The Next Phase",
+      "title": "Result",
       "text": [
-        "Color Supply has proven to be a strong financial success, including an exclusive deal with a Japanese firm that licensed the codebase for their market. In December 2025, I launched V2 to try out some bigger ideas.",
-        "There is still plenty of polishing to do, so I am iterating on the site regularly. It's a work in progress, but listening to user feedback in real time is the best way to make the final experience feel seamless."
+        "Color Supply has proven to be a strong financial success, including an exclusive deal with a Japanese firm that licensed the codebase for their market. People keep sharing it, too."
       ]
     },
     {
       "line": true
-    },
-    {
-      "text": [
-        "Project Type: Independent Venture"
-      ]
     }
   ]
 }

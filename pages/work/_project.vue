@@ -63,7 +63,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.project?.seo_description
-        }
+        },
+        // Keep case studies (client work) out of search results; links and
+        // link previews still work. robots.txt must not block /work/ pages, or
+        // crawlers never see this tag.
+        { hid: 'robots', name: 'robots', content: 'noindex' }
       ],
       // A refresh partway down a case study should open in the scrolled colors,
       // not flash the top-of-page color. The server can't know the scroll

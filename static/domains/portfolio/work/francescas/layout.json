@@ -5,8 +5,8 @@
     },
     "title": "Francesca’s",
     "categories": "Visual Design, Product Design",
-    "width": "60%",
-    "position": "left"
+    "position": "left",
+    "width": "50%"
   },
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",

@@ -1,0 +1,92 @@
+{
+  "cover": {
+    "media": {
+      "name": "aka_design_patterns_thumb.jpg"
+    },
+    "title": "aka Design Patterns",
+    "categories": "Product Design, UI Design",
+    "position": "left",
+    "width": "50%"
+  },
+  "backgroundColor": "#EFEFEF",
+  "textColor": "#282725",
+  "pageBackgroundColor": "#EFEFEF",
+  "pageTextColor": "#282725",
+  "header": "AI agents are new, so there’s no playbook for how people should watch them work, keep track of them, or share them. At aka, I explored what those patterns could look like, starting from questions no interface had answered yet.",
+  "summary": {
+    "role": "[Your role]",
+    "team": "[Who you worked with]",
+    "status": "Explorations"
+  },
+  "seo_description": "",
+  "layout": [
+    {
+      "media": [
+        {
+          "name": "patch_demo.mp4",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "add_patch.png",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "Seeing an agent at work",
+      "text": [
+        "An agent works in the background, which makes it easy to forget about and hard to trust. So the first question was simple: what does it look like when an agent is working?",
+        "I paired two views. A plain activity log lists each step as it happens, with a timestamp. Next to it, an abstract illustration moves while the agent works. The log is for people who want the detail. The illustration tells everyone else, at a glance, that something is happening.",
+        "The open question was whether seeing the process helps at all, even abstracted, or just adds noise. [Your take.]"
+      ]
+    },
+    {
+      "title": "A home for your agents",
+      "text": [
+        "Where does a normal person keep their agents? I treated it like a home screen. Your agents sit at the top as cards, each with its status (running, draft, or disabled), the apps it uses, and when it last ran. A draft shows a “Finish setup” link, so an unfinished agent is never a dead end."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "dashboard.png",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "Finding new agents",
+      "text": [
+        "There’s no app store for agents yet, so discovery was new territory too. A Discover row shows what other teams are running: who made each agent, which apps it connects to, and how many organizations use it. That last number works like a review score. It tells you other people already trust it."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "dashboard_discover.png",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "Using someone else’s agent",
+      "text": [
+        "Your colleagues build agents too. A team section lists what they’ve deployed and what each one is doing right now, like “Processing 45 new signups.”",
+        "Adding someone else’s agent, like Gainsight’s Patch, takes one confirmation. Before you commit, the dialog says what the agent does and which apps it needs, with the option to customize it first."
+      ]
+    },
+    {
+      "title": "Borrowing from the familiar",
+      "text": [
+        "With no existing patterns to copy, I leaned on ones people already know: activity logs, home screens, and app stores. Each gave people something familiar to hold onto while using something new."
+      ]
+    },
+    {
+      "line": true
+    }
+  ]
+}

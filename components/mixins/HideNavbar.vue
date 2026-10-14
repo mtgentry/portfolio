@@ -20,7 +20,7 @@ export default {
         vue.showNav()
       }
       this.lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-      if (!vue.$route.path.includes('work')) return
+      if (!vue.isCaseStudyPage()) return
       vue.rememberScrolled(st > 500)
       // The browser just restored a refresh's scroll position: reveal in place
       if (st > 500 && document.documentElement.classList.contains('start-scrolled')) {
@@ -47,9 +47,14 @@ export default {
     window.removeEventListener("load", this.applyScrolledColors)
   },
   methods: {
+    // Scroll colors are for individual case studies (/work/name), not the
+    // /work grid, which keeps its one background
+    isCaseStudyPage() {
+      return /^\/work\/[^/]+/.test(this.$route.path)
+    },
     applyScrolledColors() {
       const st = window.pageYOffset || document.documentElement.scrollTop
-      const scrolled = this.$route.path.includes('work') && st > 500
+      const scrolled = this.isCaseStudyPage() && st > 500
       if (scrolled) {
         this.makeBackgroundWhite()
       }
