@@ -46,6 +46,12 @@ export default {
     margin-left: 0!important
     margin-right: 0!important
 
+// vue-if-bot wraps forbidIndex cards in a plain full-width div (it doesn't
+// take a class), which made cover.position ignored: those cards always sat on
+// the left. Let the card itself be the flex item instead.
+.portfolio-group > div:not(.portfolio-item)
+  display: contents
+
 .portfolio-group
   // Space between projects: the fluid --space-l step (layouts/default.vue),
   // floored at 72px so phones keep room around the stacked cards. The plain

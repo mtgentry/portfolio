@@ -1,5 +1,6 @@
 {
   "header": "Design Engineer building intuitive systems and high-fidelity digital products. I design it, I build it, I ship it.",
+  "portfolioHeader": "Visual designer working across brand, illustration, 3D, and the web. I make complex ideas feel simple.",
   "name": "Mason Gentry",
   "email": "mgentry@masongentry.com",
   "order": [
@@ -11,6 +12,15 @@
     "wilson",
     "francescas",
     "cliffwater"
+  ],
+  "portfolioOrder": [
+    "aka_teaser",
+    "saint_jane_brand_refresh",
+    "stateofpostgres",
+    "francescas",
+    "wilson",
+    "cliffwater",
+    "timescale_design_system"
   ],
   "navBar": []
 }

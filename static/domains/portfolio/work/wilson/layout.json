@@ -22,7 +22,7 @@
   "layout": [
     {
       "text": [
-        "This project was part of a complete rebrand for Wilson with a renewed focus on digital. We were brought in to rethink the site from the inside out, starting with two of the brand’s core pillars — golf and tennis."
+        "This project was part of a complete rebrand for Wilson with a renewed focus on digital. We were brought in to rethink the site from the inside out, starting with two of the brand’s core pillars, golf and tennis."
       ]
     },
     {
@@ -59,5 +59,10 @@
     {
       "line": true
     }
-  ]
+  ],
+  "portfolio": {
+    "cover": {
+      "offset": "12%"
+    }
+  }
 }

@@ -47,10 +47,10 @@ export default {
     window.removeEventListener("load", this.applyScrolledColors)
   },
   methods: {
-    // Scroll colors are for individual case studies (/work/name), not the
-    // /work grid, which keeps its one background
+    // Scroll colors are for individual case studies (/work/name or
+    // /portfolio/name), not the grids, which keep their one background
     isCaseStudyPage() {
-      return /^\/work\/[^/]+/.test(this.$route.path)
+      return /^\/(work|portfolio)\/[^/]+/.test(this.$route.path)
     },
     applyScrolledColors() {
       const st = window.pageYOffset || document.documentElement.scrollTop

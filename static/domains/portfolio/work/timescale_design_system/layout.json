@@ -23,7 +23,8 @@
       "media": [
         {
           "name": "timescale_1.png",
-          "position": "center"
+          "position": "center",
+          "title": "A hero illustration by Birgit Palma, one of several I art directed"
         }
       ]
     },
@@ -109,5 +110,10 @@
     {
       "line": true
     }
-  ]
+  ],
+  "portfolio": {
+    "cover": {
+      "position": "right"
+    }
+  }
 }

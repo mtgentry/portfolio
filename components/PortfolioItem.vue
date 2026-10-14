@@ -1,7 +1,8 @@
 <template lang="pug">
   div.item(data-aos="fade-up")
     //- A cover can send its card to another project page via cover.link
-    nuxt-link(:to="project.cover.link || `/work/${project.name}`")
+    //- Cards link within their own grid: /work/... or /portfolio/...
+    nuxt-link(:to="project.cover.link || `${section}/${project.name}`")
       Media(:project_name="project.name" :media="project.cover.media")
       div.pt-2.title(v-html="project.cover.title")
       div.categories(v-html="project.cover.categories")
@@ -15,6 +16,11 @@ export default {
   props: ['project'],
   components: {
     Media,
+  },
+  computed: {
+    section() {
+      return this.$route.path.startsWith('/portfolio') ? '/portfolio' : '/work'
+    }
   }
 
 }

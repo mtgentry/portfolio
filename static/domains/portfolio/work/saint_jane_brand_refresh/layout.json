@@ -1,0 +1,113 @@
+{
+  "cover": {
+    "media": {
+      "name": "saint_jane_brand_refresh_thumb.jpg"
+    },
+    "title": "Saint Jane",
+    "categories": "Brand Refresh, 3D Art Direction",
+    "position": "left",
+    "width": "70%",
+    "forbidIndex": true
+  },
+  "backgroundColor": "#3F8B62",
+  "textColor": "#ffffff",
+  "header": "Saint Jane didn’t need a full rebrand. It needed a refreshed look that could rival heritage beauty brands while staying distinctly modern. I led the design and 3D art direction, creating new imagery, a color palette, typography, and UI components.",
+  "summary": {
+    "role": "Design and 3D art direction",
+    "client": "Saint Jane",
+    "agency": "Ghost Collective",
+    "shipped": "saintjanebeauty.com"
+  },
+  "seo_description": "",
+  "layout": [
+    {
+      "media": [
+        {
+          "name": "jane_brand_1.png",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "Defining Modern Luxury",
+      "text": [
+        "The challenge was to create a brand refresh that felt expensive without relying on tired luxury tropes. No marble. No botanical illustrations. The metallic label plaques became the signature detail: a physical marker of quality that translates across every touchpoint."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "jane_brand_3.png",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "Color Palette",
+      "text": [
+        "The color system balances restraint and personality. Sage green anchors the brand in natural efficacy. Vibrant pink and yellow provide energy without sacrificing sophistication. The extended scales and neutral palette give the system range from packaging to digital experiences and editorial applications."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "jane_brand_2.png",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "System Components",
+      "text": [
+        "Form states, toggles, and inputs reflect a commitment to thoughtful design. Nothing feels like an afterthought. The interface is as polished as the brand itself."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "jane_brand_4.png",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "3D Strategy & Testing",
+      "text": [
+        "We rendered every product in 3D to maintain complete control over lighting, composition, and context. Beyond the aesthetic, this was a strategic choice for iterative experimentation. By building these assets in a 3D environment, we were able to rapidly test and deploy dozens of visual variations for digital ads.",
+        "This data-driven design approach allowed us to identify which images and compositions drove the highest engagement, directly increasing ad effectiveness without the cost of a traditional reshoot. In one test we saw click-through rates increase 22% against the standard photo."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "jane_brand_5.png",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "Typography",
+      "text": [
+        "The typography system pairs PP Eiko with the clean functionality of Basis Grotesque. Display treatments remain intentionally restrained. The hierarchy works without shouting. Every size, weight, and spacing decision reinforces the premium positioning."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "jane_brand_6.png",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "title": "Result",
+      "text": [
+        "Saint Jane got a design system that works as hard as the products themselves. The client particularly loved the photorealistic 3D renders, which elevated the brand and brought down production costs.",
+        "This is a beauty brand that punches above its weight and refuses to cut corners."
+      ]
+    },
+    {
+      "line": true
+    }
+  ]
+}

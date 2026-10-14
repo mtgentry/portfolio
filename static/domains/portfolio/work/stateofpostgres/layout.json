@@ -10,10 +10,10 @@
   },
   "backgroundColor": "#416685",
   "textColor": "#F8F6F2",
-  "header": "Developers love Postgres, and Timescale is built on it. I spearheaded the State of Postgres report as a growth initiative. I led the concept, design, art direction, and animation.",
+  "header": "Developers love Postgres, and Timescale is built on it. I spearheaded State of Postgres as a growth initiative, turning a developer survey into an interactive microsite. I led the concept, design, and art direction.",
   "summary": {
-    "role": "Concept, design, art direction, animation",
-    "built": "Blender, Three.js",
+    "role": "Concept, design, art direction",
+    "built": "Three.js",
     "shipped": "stateofpostgres.com",
     "outcome": "Thousands of signups; became a yearly report"
   },
@@ -36,41 +36,43 @@
     {
       "title": "Background",
       "text": [
-        "Postgres was more popular than ever, and the developers using it were exactly who Timescale wanted to reach. The idea was to give them something genuinely useful: a survey of the Postgres community, published as an immersive story, with a newsletter signup for anyone who wanted more."
+        "Postgres has one of the most loyal developer communities around, and those developers were exactly who Timescale wanted to reach. The idea was to give them something genuinely useful: a survey of the Postgres community, published as an immersive story, with a newsletter signup for anyone who wanted more."
       ]
     },
     {
       "title": "Beyond a spreadsheet",
       "text": [
-        "Developer reports usually look like a boring spreadsheet. I wanted this one to feel like an event, so I gave it a dark, editorial layout and built it around a series of fun 3D elephants, the Postgres mascot. The goal was a report people would want to share, not just skim."
+        "Developer reports usually look like a boring spreadsheet. I wanted this one to have personality, so I turned the Postgres elephant into a cast of 3D characters. The goal was a report people would want to share, not just skim."
       ]
     },
     {
       "media": [
         {
           "name": "pi_new.mp4",
-          "position": "center"
+          "position": "center",
+          "title": "A scroll trigger has the elephant show off his Raspberry Pi"
         }
       ]
     },
     {
       "title": "Building it",
       "text": [
-        "I illustrated each elephant by hand first, then modeled it in 3D and animated it in Blender. Finally, I brought each animated sequence into Three.js, where I lit it for the web."
+        "The elephants were sketched by hand first, in different poses. Each pose needed to be visually interesting and support the narrative. Later, the chosen scenes were modeled in 3D and animated in Blender. Finally, I brought each animated sequence into Three.js, where I lit it."
       ]
     },
     {
       "media": [
         {
           "name": "tail4.mp4",
-          "position": "center"
+          "position": "center",
+          "title": "Developers have strong opinions about databases"
         }
       ]
     },
     {
       "title": "Giving the quotes a personality",
       "text": [
-        "Survey quotes can read like a wall of text, so each one got its own small 3D moment. A fidget spinner for the developer who picked MongoDB because it was the latest fad, a wagging tail for the one who never fell for the hype."
+        "Survey quotes can read like a wall of text, so each one got its own small 3D moment. A wagging tail for the developer who never fell for the hype, a fidget spinner for the one who picked MongoDB because it was the latest fad."
       ]
     },
     {
@@ -84,7 +86,7 @@
     {
       "title": "Result",
       "text": [
-        "It brought in thousands of newsletter signups, and worked well enough that State of Postgres became a yearly report."
+        "It brought in thousands of newsletter signups, and worked well enough that State of Postgres became a yearly report. It showed that even a developer survey could be something people look forward to."
       ]
     },
     {
@@ -92,5 +94,10 @@
     }
   ],
   "pageBackgroundColor": "#F6F6F6",
-  "pageTextColor": "#282725"
+  "pageTextColor": "#282725",
+  "portfolio": {
+    "cover": {
+      "categories": "Concept, Art Direction, 3D"
+    }
+  }
 }

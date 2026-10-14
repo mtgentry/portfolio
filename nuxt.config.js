@@ -142,7 +142,10 @@ export default {
         })
         projects.forEach(project => {
           routes.push(`/work/${project}`)
+          // The visual design portfolio serves the same case studies
+          if (domain === 'portfolio') routes.push(`/portfolio/${project}`)
         })
+        if (domain === 'portfolio') routes.push('/portfolio')
       }
 
       // Generate routes for audits

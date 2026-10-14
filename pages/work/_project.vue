@@ -36,13 +36,24 @@ export default {
   key: to => to.fullPath,
   // Runs on the server for the first load (and before client-side navigation),
   // so the case study is in the rendered HTML for search engines and link previews
-  async asyncData({ $axios, params, store, error }) {
+  async asyncData({ $axios, params, store, error, route }) {
     let project = store.state.projects?.[params.project]
     if (!project) {
       project = await $axios.$get(`/work/${params.project}/layout.json`).catch(() => null)
     }
     if (!project) {
       return error({ statusCode: 404, message: 'Project not found' })
+    }
+    // The same case study is also served under /portfolio (the visual design
+    // portfolio). A project can swap in a different intro and summary there with
+    // "portfolio": {"header": "...", "summary": {...}} in its layout.json.
+    const visual = route.path.startsWith('/portfolio') && project.portfolio
+    if (visual) {
+      project = {
+        ...project,
+        header: visual.header ?? project.header,
+        summary: visual.summary ? {...project.summary, ...visual.summary} : project.summary
+      }
     }
     store.commit('updateState', {field: 'backgroundColor', value: project.backgroundColor})
     store.commit('updateState', {field: 'textColor', value: project.textColor})

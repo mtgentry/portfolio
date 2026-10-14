@@ -141,8 +141,8 @@ export default {
   computed: {
     bgColor() {
       let backgroundColor;
-      if (!this.isAgency && this.$route.path.replace(/\/$/, '') === '/work') {
-        // The portfolio's work grid is plain white; / keeps the off-white
+      if (!this.isAgency && this.isGrid) {
+        // The portfolio's grids (/work, /portfolio) are plain white; / keeps the off-white
         backgroundColor = '#FFFFFF'
       } else if (this.homePage) {
         backgroundColor = this.homeBackgroundColor
@@ -153,8 +153,8 @@ export default {
     },
     txColor() {
       let textColor;
-      // Portfolio /work page gets dark color
-      if (this.$route.path === "/work" && !this.isAgency) {
+      // Portfolio grids get dark color
+      if (this.isGrid && !this.isAgency) {
         textColor = "#1D1E20"
       } else if (this.homePage) {
         textColor = this.homeTextColor
@@ -182,21 +182,31 @@ export default {
         (path) => path !== '/work/:project?' && this.layout.navBar.includes(path.replace('/', ''))
       ), this.layout.navBar)
     },
+    // /work is the design engineer grid, /portfolio the visual design grid;
+    // both open the same case studies under their own path
+    section() {
+      return this.$route.path.startsWith("/portfolio") ? "/portfolio" : "/work"
+    },
+    isGrid() {
+      const path = this.$route.path.replace(/\/$/, '')
+      return path === "/work" || path === "/portfolio"
+    },
     homePage() {
-      return this.$route.path === "/" || this.$route.path === "/work"
+      return this.$route.path === "/" || this.isGrid
     },
     isProjectPage() {
-      return this.$route.path.startsWith("/work/") && this.$route.path !== "/work/"
+      return /^\/(work|portfolio)\/[^/]+/.test(this.$route.path)
     },
     isWorkPage() {
-      return this.$route.path.startsWith("/work")
+      return this.$route.path.startsWith("/work") || this.$route.path.startsWith("/portfolio")
     },
     isAgency() {
       return process.env.IS_AGENCY
     },
     logoLink() {
-      // Portfolio logo links to /work, agency logo links to homepage
-      return this.isAgency ? "/" : "/work"
+      // Portfolio logo returns to the grid this page belongs to (/work or
+      // /portfolio); agency logo links to homepage
+      return this.isAgency ? "/" : this.section
     },
     ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'pageBackgroundColor', 'pageTextColor', 'loading', 'layout', 'paddingLayout'])
   },

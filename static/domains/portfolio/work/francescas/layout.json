@@ -10,7 +10,7 @@
   },
   "backgroundColor": "#6CAF82",
   "textColor": "#ffffff",
-  "header": "Francesca’s customers, girls aged 11 to 15, were growing up faster than the brand. At Phenomenon, we reimagined both the brand and the site around a new idea: Francesca’s as a stylish older sister. I was the visual and product designer.",
+  "header": "Francesca’s customers, girls aged 11 to 15, were outgrowing the brand. At Phenomenon, we reimagined it as a stylish older sister, with a new look and a new way to shop online. I was the visual and product designer.",
   "summary": {
     "role": "Visual and product designer",
     "agency": "Phenomenon",
@@ -35,9 +35,9 @@
       ]
     },
     {
-      "title": "A new brand: stylish, not intimidating",
+      "title": "Stylish, not intimidating",
       "text": [
-        "I designed a brand direction that balanced trend-forward style with approachability: a brighter palette, editorial photography, and a warmer, more confident tone. It tested well across audiences."
+        "I designed a brand direction that balanced trend-forward style with approachability. It had a brighter palette, editorial photography, and a more confident tone. It tested well across audiences."
       ]
     },
     {
@@ -49,10 +49,10 @@
       ]
     },
     {
-      "title": "A new site: shopping like a magazine",
+      "title": "Shopping like a magazine",
       "text": [
         "Working with Phenomenon’s strategists, I carried the brand into the site by taking cues from fashion magazines. I designed an editorial layer that suggested product pairings instead of pushing promotions, so shopping felt like advice from an older sister, not a sales pitch.",
-        "In user testing, it was one of the favorite parts of the new site. I also designed a CMS so the Francesca’s team could update the stories and pairings themselves."
+        "In user testing, the editorial layer was one of the favorite parts of the new site. I also redesigned the checkout, and we tested several flows with users to find the simplest path to purchase."
       ]
     },
     {
@@ -64,15 +64,9 @@
       ]
     },
     {
-      "title": "A smoother checkout",
-      "text": [
-        "I also redesigned the checkout, and we tested several flows with users to find the simplest path to purchase."
-      ]
-    },
-    {
       "title": "Result",
       "text": [
-        "The redesign never launched after the client’s priorities shifted, but the direction held up where it counted. It tested well with both girls and parents, and the editorial layer was one of the most-liked parts of the site in user testing."
+        "The redesign never launched after the client’s priorities shifted, but the direction held up where it counted. It tested well with both girls and parents."
       ]
     },
     {

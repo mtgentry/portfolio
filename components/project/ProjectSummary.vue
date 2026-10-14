@@ -44,6 +44,10 @@ export default {
 // Width and alignment come from the row it sits in (see pages/work/_project.vue)
 .project-summary
   margin: 0
+  // The case study's columns center their content, which shrank the grid to
+  // its text and pushed short summaries (e.g. Cliffwater) right. Fill the column
+  // so it starts at the same edge as the copy and closing rule.
+  align-self: stretch
   display: grid
   grid-template-columns: repeat(3, minmax(0, 1fr))
   gap: 24px 32px
