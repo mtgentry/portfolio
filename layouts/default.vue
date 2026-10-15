@@ -14,6 +14,8 @@
     v-main.pa-0
       v-container(fluid)
         Nuxt
+    //- Personal video from /hello_<name>; stays (minimized) while browsing
+    HelloVideo(v-if="!isAgency")
 </template>
 
 <script>
@@ -22,12 +24,15 @@ import { gsap } from 'gsap'
 import HideNavbar from "@/components/mixins/HideNavbar.vue";
 import AgencyLogo from "@/components/AgencyLogo.vue";
 import PortfolioLogo from "@/components/PortfolioLogo.vue";
+import HelloVideo from "@/components/HelloVideo.vue";
+import { sectionOf, isSectionGrid, isSectionProject } from "@/utils/sections";
 export default {
   name: 'DefaultLayout',
   mixins: [HideNavbar],
   components: {
     AgencyLogo,
     PortfolioLogo,
+    HelloVideo,
   },
   async fetch() {
     if (!this.$store.state.layout) {
@@ -142,7 +147,7 @@ export default {
     bgColor() {
       let backgroundColor;
       if (!this.isAgency && this.isGrid) {
-        // The portfolio's grids (/work, /portfolio) are plain white; / keeps the off-white
+        // The portfolio's grids (/work, /portfolio, /projects) are plain white; / keeps the off-white
         backgroundColor = '#FFFFFF'
       } else if (this.homePage) {
         backgroundColor = this.homeBackgroundColor
@@ -182,33 +187,37 @@ export default {
         (path) => path !== '/work/:project?' && this.layout.navBar.includes(path.replace('/', ''))
       ), this.layout.navBar)
     },
-    // /work is the design engineer grid, /portfolio the visual design grid;
-    // both open the same case studies under their own path
+    // /work, /portfolio and /projects are grids for different roles; each
+    // opens the same case studies under its own path (see utils/sections.js)
     section() {
-      return this.$route.path.startsWith("/portfolio") ? "/portfolio" : "/work"
+      // /hello_<name> shows that person's grid (HelloPage)
+      if (this.isHelloPage) return `/${this.hello?.section || 'work'}`
+      return `/${sectionOf(this.$route.path)}`
+    },
+    isHelloPage() {
+      return /^\/hello_/.test(this.$route.path)
     },
     isGrid() {
-      const path = this.$route.path.replace(/\/$/, '')
-      return path === "/work" || path === "/portfolio"
+      return isSectionGrid(this.$route.path) || this.isHelloPage
     },
     homePage() {
       return this.$route.path === "/" || this.isGrid
     },
     isProjectPage() {
-      return /^\/(work|portfolio)\/[^/]+/.test(this.$route.path)
+      return isSectionProject(this.$route.path)
     },
     isWorkPage() {
-      return this.$route.path.startsWith("/work") || this.$route.path.startsWith("/portfolio")
+      return this.isGrid || this.isProjectPage
     },
     isAgency() {
       return process.env.IS_AGENCY
     },
     logoLink() {
-      // Portfolio logo returns to the grid this page belongs to (/work or
-      // /portfolio); agency logo links to homepage
+      // Portfolio logo returns to the grid this page belongs to (/work,
+      // /portfolio, /projects); agency logo links to homepage
       return this.isAgency ? "/" : this.section
     },
-    ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'pageBackgroundColor', 'pageTextColor', 'loading', 'layout', 'paddingLayout'])
+    ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'pageBackgroundColor', 'pageTextColor', 'loading', 'layout', 'paddingLayout', 'hello'])
   },
 
 }

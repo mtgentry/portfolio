@@ -4,7 +4,7 @@
       "name": "stateofpostgres_thumb_v2.mp4"
     },
     "title": "State of Postgres",
-    "categories": "3D Illustration, Visual Design",
+    "categories": "3D Art Direction, Visual Design",
     "position": "right",
     "width": "50%"
   },
@@ -98,6 +98,11 @@
   "portfolio": {
     "cover": {
       "categories": "Concept, Art Direction, 3D"
+    }
+  },
+  "projects": {
+    "cover": {
+      "position": "left"
     }
   }
 }

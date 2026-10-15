@@ -1,6 +1,7 @@
 {
   "header": "Design Engineer building intuitive systems and high-fidelity digital products. I design it, I build it, I ship it.",
   "portfolioHeader": "Visual designer working across brand, illustration, 3D, and the web. I make complex ideas feel simple.",
+  "projectsHeader": "Product designer building intuitive systems and high-fidelity digital products. I design it, I build it, I ship it.",
   "name": "Mason Gentry",
   "email": "mgentry@masongentry.com",
   "order": [
@@ -21,6 +22,15 @@
     "wilson",
     "cliffwater",
     "timescale_design_system"
+  ],
+  "projectsOrder": [
+    "aka_teaser",
+    "timescale_design_system",
+    "cliffwater",
+    "stateofpostgres",
+    "colorsupply",
+    "francescas",
+    "wilson"
   ],
   "navBar": []
 }

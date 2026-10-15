@@ -120,6 +120,12 @@ export default {
         path: '/:project(experiment)',
         component: resolve(__dirname, 'pages/work/_project.vue')
       })
+      // Personal video pages: /hello_shawn, /hello_sally, ... (hellos.json)
+      routes.push({
+        name: 'hello',
+        path: '/hello_:name',
+        component: resolve(__dirname, 'components/pages/HelloPage.vue')
+      })
     }
   },
 
@@ -142,10 +148,20 @@ export default {
         })
         projects.forEach(project => {
           routes.push(`/work/${project}`)
-          // The visual design portfolio serves the same case studies
-          if (domain === 'portfolio') routes.push(`/portfolio/${project}`)
+          // The other grids (utils/sections.js) serve the same case studies
+          if (domain === 'portfolio') {
+            routes.push(`/portfolio/${project}`, `/projects/${project}`)
+          }
         })
-        if (domain === 'portfolio') routes.push('/portfolio')
+        if (domain === 'portfolio') routes.push('/portfolio', '/projects')
+
+        // Personal video pages, one per entry in hellos.json
+        const hellos = path.resolve(__dirname, `static/domains/${domain}/hello_there/hellos.json`)
+        if (fs.existsSync(hellos)) {
+          Object.keys(JSON.parse(fs.readFileSync(hellos, 'utf8'))).forEach(name => {
+            routes.push(`/hello_${name}`)
+          })
+        }
       }
 
       // Generate routes for audits

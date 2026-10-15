@@ -65,5 +65,10 @@
     {
       "line": true
     }
-  ]
+  ],
+  "projects": {
+    "cover": {
+      "position": "right"
+    }
+  }
 }

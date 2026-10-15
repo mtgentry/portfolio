@@ -12,7 +12,9 @@ const STATE_FIELDS = [
   "audits",
   "auditLayout",
   "auditClicked",
-  "paddingLayout"
+  "paddingLayout",
+  "hello",
+  "helloMode"
 ];
 
 export const state = () => ({
@@ -29,7 +31,12 @@ export const state = () => ({
   audits: null,
   auditLayout: null,
   auditClicked: 1,
-  paddingLayout: true
+  paddingLayout: true,
+  // Personal video for a /hello_<name> visit (see hello_there/hellos.json): the person's
+  // entry, and whether the player is "pending" (about to open), "open", "mini"
+  // or "closed"
+  hello: null,
+  helloMode: "closed"
 })
 
 export const mutations = {

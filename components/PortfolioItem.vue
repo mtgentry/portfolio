@@ -1,7 +1,7 @@
 <template lang="pug">
   div.item(data-aos="fade-up")
     //- A cover can send its card to another project page via cover.link
-    //- Cards link within their own grid: /work/... or /portfolio/...
+    //- Cards link within their own grid: /work/..., /portfolio/..., /projects/...
     nuxt-link(:to="project.cover.link || `${section}/${project.name}`")
       Media(:project_name="project.name" :media="project.cover.media")
       div.pt-2.title(v-html="project.cover.title")
@@ -11,15 +11,17 @@
 
 <script>
 import Media from "@/components/Media.vue";
+import { sectionOf } from "@/utils/sections";
 
 export default {
   props: ['project'],
+  inject: { gridSection: { default: null } },
   components: {
     Media,
   },
   computed: {
     section() {
-      return this.$route.path.startsWith('/portfolio') ? '/portfolio' : '/work'
+      return `/${this.gridSection ? this.gridSection() : sectionOf(this.$route.path)}`
     }
   }
 

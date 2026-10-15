@@ -13,6 +13,7 @@ import Header from '~/components/Header.vue'
 import PortfolioGroup from "@/components/PortfolioGroup.vue";
 import {mapState} from "vuex";
 import Footer from "@/components/Footer.vue";
+import { SECTIONS, sectionOf } from "@/utils/sections";
 export default {
   components: {
     Header,
@@ -21,6 +22,10 @@ export default {
   },
   transition: 'fade',
   fetchOnServer: true,
+  // Cards link into this grid's section, which on /hello_<name> isn't the URL's
+  provide() {
+    return { gridSection: () => this.section }
+  },
   head() {
     const meta = [
       // hid is used as unique identifier. Do not use `vmid` for it as it will not work
@@ -30,8 +35,9 @@ export default {
         content: ''
       }
     ]
-    // The /portfolio grid is a link Mason sends directly; keep it out of search
-    if (this.section === 'portfolio') {
+    // Only /work is public; the other grids are links Mason sends directly,
+    // so keep them out of search
+    if (this.section !== 'work') {
       meta.push({ hid: 'robots', name: 'robots', content: 'noindex' })
     }
     return { meta }
@@ -59,10 +65,10 @@ export default {
     } else {
       layout = this.$store.state.layout
     }
-    // /work and /portfolio show the same projects in different orders. The
-    // store caches each project's layout by name, shared by both grids and the
-    // case study pages; the order decides which ones this grid shows.
-    const order = (this.section === 'portfolio' ? layout.portfolioOrder : layout.order) || []
+    // Every grid (see utils/sections.js) shows the same projects in its own
+    // order. The store caches each project's layout by name, shared by all the
+    // grids and the case study pages; the order decides which ones this grid shows.
+    const order = layout[SECTIONS[this.section].order] || []
     const cache = {...(this.projectStore || {})}
     let projects = {}
     for (let i = 0; i < order.length; i++) {
@@ -79,21 +85,20 @@ export default {
     this.$store.commit('updateState', {field: 'projects', value: cache})
   },
   methods: {
-    // A project can give its /portfolio card its own size and position with
-    // "portfolio": {"cover": {...}} in its layout.json
+    // A project can give its card in another grid its own tags, size and
+    // position with e.g. "portfolio": {"cover": {...}} in its layout.json
     forSection(project) {
-      const cover = this.section === 'portfolio' && project.portfolio?.cover
+      const cover = this.section !== 'work' && project[this.section]?.cover
       return cover ? {...project, cover: {...project.cover, ...cover}} : project
     }
   },
   computed: {
-    // Which grid this is: the design engineer grid (/work) or the visual
-    // design grid (/portfolio)
+    // Which grid this is (see utils/sections.js)
     section() {
-      return this.$route.path.startsWith('/portfolio') ? 'portfolio' : 'work'
+      return sectionOf(this.$route.path)
     },
     headerText() {
-      return (this.section === 'portfolio' && this.layout?.portfolioHeader) || this.layout?.header
+      return this.layout?.[SECTIONS[this.section].header] || this.layout?.header
     },
     isAgency() {
       return process.env.IS_AGENCY

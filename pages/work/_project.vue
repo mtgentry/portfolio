@@ -22,6 +22,7 @@ import Section from "@/components/project/Section.vue";
 import ProjectSummary from "@/components/project/ProjectSummary.vue";
 import Footer from "@/components/Footer.vue";
 import { mapState } from 'vuex';
+import { sectionOf } from "@/utils/sections";
 
 export default {
   components: {
@@ -44,15 +45,17 @@ export default {
     if (!project) {
       return error({ statusCode: 404, message: 'Project not found' })
     }
-    // The same case study is also served under /portfolio (the visual design
-    // portfolio). A project can swap in a different intro and summary there with
-    // "portfolio": {"header": "...", "summary": {...}} in its layout.json.
-    const visual = route.path.startsWith('/portfolio') && project.portfolio
-    if (visual) {
+    // The same case study is also served under the other grids (/portfolio,
+    // /projects; see utils/sections.js). A project can swap in a different intro
+    // and summary there with e.g. "projects": {"header": "...", "summary": {...}}
+    // in its layout.json.
+    const section = sectionOf(route.path)
+    const override = section !== 'work' && project[section]
+    if (override) {
       project = {
         ...project,
-        header: visual.header ?? project.header,
-        summary: visual.summary ? {...project.summary, ...visual.summary} : project.summary
+        header: override.header ?? project.header,
+        summary: override.summary ? {...project.summary, ...override.summary} : project.summary
       }
     }
     store.commit('updateState', {field: 'backgroundColor', value: project.backgroundColor})
