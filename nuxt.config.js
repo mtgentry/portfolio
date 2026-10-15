@@ -131,6 +131,11 @@ export default {
 
   // Generate configuration for static site generation
   generate: {
+    // Pages fetch their data from the local dev server during generation.
+    // Nuxt's default (500 pages at once) flooded it once the /portfolio and
+    // /projects copies tripled the page count, and grids were built empty
+    // ("socket hang up"). A handful at a time is plenty fast.
+    concurrency: 8,
     routes() {
       const fs = require('fs')
       const path = require('path')

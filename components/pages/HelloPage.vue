@@ -28,7 +28,11 @@ export default {
     return {
       title: `Hi ${this.hello?.name}`,
       // Personal links: keep names out of search results
-      meta: [{ hid: 'robots', name: 'robots', content: 'noindex' }]
+      meta: [{ hid: 'robots', name: 'robots', content: 'noindex' }],
+      // Fetch the poster right away, ahead of the grid's videos, so the circle
+      // never sits empty waiting for it
+      link: this.hello?.poster ? [{ hid: 'hello-poster', rel: 'preload', as: 'image', fetchpriority: 'high',
+        href: `/domains/portfolio/hello_there/${this.hello.poster}` }] : []
     }
   },
   data() {

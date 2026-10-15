@@ -9,8 +9,11 @@
     div.hello-player(ref="player" role="dialog" :aria-modal="mode === 'open' ? 'true' : 'false'"
       :aria-label="`A video message for ${hello.name}`" tabindex="-1" @keydown.esc="minimize")
       div.hello-circle(ref="circle")
-        video.hello-media(ref="video" :src="src(hello.video)" :poster="hello.poster ? src(hello.poster) : null"
-          playsinline preload="metadata" @play="playing = true" @pause="playing = false"
+        //- Poster as a plain image, so it shows as soon as it downloads instead
+        //- of waiting for the video element to set itself up
+        img.hello-media(v-if="hello.poster && !started" :src="src(hello.poster)" alt="" fetchpriority="high")
+        video.hello-media(ref="video" :src="src(hello.video)" :class="{ 'is-hidden': !started && hello.poster }"
+          playsinline preload="metadata" @play="playing = true; started = true" @pause="playing = false"
           @ended="onEnded" @timeupdate="onTime" @loadedmetadata="onTime")
           track(v-if="hello.captions" ref="track" kind="captions" srclang="en" label="English" :src="src(hello.captions)")
         //- The whole circle is the play/pause control
@@ -81,6 +84,8 @@ export default {
       muted: false,
       progress: 0,
       caption: '',
+      // Has playback begun? Until then the poster image shows instead of the video
+      started: false,
       reduceMotion: false
     }
   },
@@ -354,6 +359,9 @@ $mini-size-phone: 92px
 
 .hello-media
   position: absolute
+  // Video stays invisible behind the poster image until it starts playing
+  &.is-hidden
+    opacity: 0
   // Tucked just under the ring's inner edge. The ring scales with the circle
   // (its stroke is 3% of the width), so this inset must scale too: a fixed
   // inset left a white sliver between video and ring at the small sizes.

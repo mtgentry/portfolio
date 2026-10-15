@@ -56,6 +56,12 @@ export default {
     setTimeout(() => {
       this.$AOS.refresh()
     }, delay)
+    // A static build can bake in an empty grid if its data requests failed
+    // (e.g. the build server dropped connections). Load the projects here in
+    // the browser instead of showing an empty page.
+    if (this.$fetchState?.error || !Object.keys(this.projects).length) {
+      this.$fetch()
+    }
   },
   async fetch() {
     let layout
@@ -75,7 +81,7 @@ export default {
       let project_name = order[i]
       let project = cache[project_name]
       if (!project) {
-        project = await this.$axios.$get(`/work/${project_name}/layout.json`).then((response) => response)
+        project = await this.getWithRetry(`/work/${project_name}/layout.json`)
         project.name = project_name
         cache[project_name] = project
       }
@@ -85,6 +91,19 @@ export default {
     this.$store.commit('updateState', {field: 'projects', value: cache})
   },
   methods: {
+    // Static generation fetches many pages' data from one local server at
+    // once; a dropped connection there used to bake an empty grid into the
+    // site. Retry a couple of times before giving up.
+    async getWithRetry(url, attempts = 3) {
+      for (let i = 1; ; i++) {
+        try {
+          return await this.$axios.$get(url)
+        } catch (e) {
+          if (i >= attempts) throw e
+          await new Promise(resolve => setTimeout(resolve, 300 * i))
+        }
+      }
+    },
     // A project can give its card in another grid its own tags, size and
     // position with e.g. "portfolio": {"cover": {...}} in its layout.json
     forSection(project) {
