@@ -38,10 +38,13 @@ export default {
   line-height: 100%
   color: #1D1E20
 
+// Same title-to-tags spacing as desktop (the old -3px margin here pulled the
+// tags up into the title); a little less space above, since 10px reads as a
+// bigger gap next to the smaller phone images and type
 @media (max-width: 768px)
   .title
     font-size: 16px !important
-    margin-bottom: -3px
+    padding-top: 7px !important
  
 
 

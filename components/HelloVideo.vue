@@ -132,8 +132,11 @@ export default {
     setMode(mode) {
       this.$store.commit('updateState', { field: 'helloMode', value: mode })
     },
-    // Seconds, or 0 for visitors who prefer reduced motion
-    d(seconds) {
+    // Reduced motion (an OS setting) removes movement: no zoom, rise, arc or
+    // pulse. Fades and the blur stay, since nothing moves in them; the move
+    // between the open view and the corner becomes a crossfade.
+    // move(seconds) is a duration for movement only: 0 when reduced.
+    move(seconds) {
       return this.reduceMotion ? 0 : seconds
     },
     killMotion() {
@@ -153,21 +156,31 @@ export default {
       const { backdrop, player, circle } = this.$refs
       if (!backdrop || !player || !circle) return
       this.killMotion()
+      const rise = this.reduceMotion ? 0 : 8
       this.motion = gsap.timeline()
         .set(backdrop, { visibility: 'visible' })
-        .fromTo(backdrop, UNFOCUSED, { ...FOCUSED, duration: this.d(1.1), ease: 'power2.inOut' }, 0)
-        .fromTo(player, { autoAlpha: 0 }, { autoAlpha: 1, duration: this.d(0.6), ease: 'power1.out' }, this.d(0.25))
-        .fromTo(circle, { scale: 0.9 }, { scale: 1, duration: this.d(0.8), ease: 'power3.out' }, this.d(0.25))
-        .fromTo(this.detailItems(), { autoAlpha: 0, y: 8 },
-          { autoAlpha: 1, y: 0, duration: this.d(0.5), stagger: this.d(0.08), ease: 'power2.out' }, this.d(0.6))
+        .fromTo(backdrop, UNFOCUSED, { ...FOCUSED, duration: 1.1, ease: 'power2.inOut' }, 0)
+        .fromTo(player, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.6, ease: 'power1.out' }, 0.25)
+        .fromTo(circle, { scale: this.reduceMotion ? 1 : 0.9 }, { scale: 1, duration: 0.8, ease: 'power3.out' }, 0.25)
+        .fromTo(this.detailItems(), { autoAlpha: 0, y: rise },
+          { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.08, ease: 'power2.out' }, 0.6)
     },
     // FLIP: measure the circle where it is now, switch modes, measure where it
     // lands, then animate from the old spot. y eases out while x eases in and
     // out, so the circle leaves vertically first and the path bows into a gentle
     // arc (about 100px over a full-screen trip) instead of a straight diagonal.
-    // A small pulse settles it at the end.
+    // A small pulse settles it at the end. With reduced motion it crossfades
+    // instead: fade out, switch, fade back in where it lands.
     async moveTo(mode) {
-      const circle = this.$refs.circle
+      const { circle, player } = this.$refs
+      if (this.reduceMotion) {
+        await gsap.to(player, { autoAlpha: 0, duration: 0.2, ease: 'power1.in' })
+        this.setMode(mode)
+        await this.$nextTick()
+        if (mode === 'open') gsap.set(this.detailItems(), { autoAlpha: 0 })
+        if (mode === 'mini') gsap.set(this.miniItems(), { autoAlpha: 0 })
+        return gsap.timeline().to(player, { autoAlpha: 1, duration: 0.3, ease: 'power1.out' })
+      }
       const first = circle.getBoundingClientRect()
       gsap.set(circle, { clearProps: 'transform,scale' })
       this.setMode(mode)
@@ -181,45 +194,46 @@ export default {
         y: first.top - last.top,
         scale: first.width / last.width
       })
-      const duration = this.d(0.75)
+      const duration = 0.75
       return gsap.timeline()
         .to(circle, { x: 0, duration, ease: 'power2.inOut' }, 0)
         // Minimizing arcs (y leads); expanding goes straight back to center,
         // since an arc there read as "drop, then slide over"
         .to(circle, { y: 0, duration, ease: mode === 'mini' ? 'sine.out' : 'power2.inOut' }, 0)
         .to(circle, { scale: 1, duration, ease: 'power2.inOut' }, 0)
-        .to(circle, { scale: 1.035, duration: this.d(0.12), ease: 'power1.out', transformOrigin: '50% 50%' })
-        .to(circle, { scale: 1, duration: this.d(0.22), ease: 'power2.inOut' })
+        .to(circle, { scale: 1.035, duration: 0.12, ease: 'power1.out', transformOrigin: '50% 50%' })
+        .to(circle, { scale: 1, duration: 0.22, ease: 'power2.inOut' })
     },
     async minimize() {
       if (this.mode !== 'open') return
       this.killMotion()
       const { backdrop } = this.$refs
       // Page comes back into focus while the name and buttons fade first
-      gsap.to(backdrop, { ...UNFOCUSED, duration: this.d(0.7), ease: 'power2.inOut',
+      gsap.to(backdrop, { ...UNFOCUSED, duration: 0.7, ease: 'power2.inOut',
         onComplete: () => gsap.set(backdrop, { visibility: 'hidden' }) })
-      await gsap.to(this.detailItems(), { autoAlpha: 0, duration: this.d(0.15), ease: 'power1.in' })
+      await gsap.to(this.detailItems(), { autoAlpha: 0, duration: 0.15, ease: 'power1.in' })
       if (this.mode !== 'open') return
       this.motion = await this.moveTo('mini')
-      this.motion.to(this.miniItems(), { autoAlpha: 1, scale: 1, duration: this.d(0.3), stagger: this.d(0.05), ease: 'back.out(2)' }, '-=0.25')
+      this.motion.to(this.miniItems(), { autoAlpha: 1, scale: 1, duration: 0.3, stagger: this.move(0.05),
+        ease: this.reduceMotion ? 'power1.out' : 'back.out(2)' }, '-=0.25')
     },
     async expand() {
       if (this.mode !== 'mini') return
       this.killMotion()
       const { backdrop } = this.$refs
-      await gsap.to(this.miniItems(), { autoAlpha: 0, scale: 0.6, duration: this.d(0.12), ease: 'power1.in' })
+      await gsap.to(this.miniItems(), { autoAlpha: 0, scale: this.reduceMotion ? 1 : 0.6, duration: 0.12, ease: 'power1.in' })
       if (this.mode !== 'mini') return
       gsap.set(backdrop, { visibility: 'visible' })
-      gsap.to(backdrop, { ...FOCUSED, duration: this.d(0.9), ease: 'power2.inOut' })
+      gsap.to(backdrop, { ...FOCUSED, duration: 0.9, ease: 'power2.inOut' })
       this.motion = await this.moveTo('open')
-      this.motion.to(this.detailItems(), { autoAlpha: 1, y: 0, duration: this.d(0.4), stagger: this.d(0.06), ease: 'power2.out' }, this.d(0.4))
+      this.motion.to(this.detailItems(), { autoAlpha: 1, y: 0, duration: 0.4, stagger: this.move(0.06), ease: 'power2.out' }, this.reduceMotion ? 0.1 : 0.4)
     },
     close() {
       this.$refs.video?.pause()
       this.killMotion()
       const { backdrop, player } = this.$refs
-      gsap.to(backdrop, { ...UNFOCUSED, duration: this.d(0.5), ease: 'power2.inOut' })
-      gsap.to(player, { autoAlpha: 0, duration: this.d(0.25), ease: 'power1.in',
+      gsap.to(backdrop, { ...UNFOCUSED, duration: 0.5, ease: 'power2.inOut' })
+      gsap.to(player, { autoAlpha: 0, duration: 0.25, ease: 'power1.in',
         onComplete: () => this.setMode('closed') })
       this.showPortfolioUrl()
     },
