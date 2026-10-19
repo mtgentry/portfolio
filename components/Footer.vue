@@ -7,14 +7,19 @@
         v-col(cols="12" sm="6")
           span &copy; {{ year }}
         v-col.contact(cols="12" sm="6")
-          a(:href="`mailto:${layout.email}`") {{ layout.email }}
+          span Say hello: 
+          EmailLink
 </template>
 
 <script>
 import {mapState} from "vuex";
+import EmailLink from "@/components/EmailLink.vue";
 
 export default {
   name: 'Footer',
+  components: {
+    EmailLink
+  },
   async mounted() {
     // Visitors who land directly on a project page haven't loaded the site
     // data (homepage.json) yet, and the footer and its contact email depend on it

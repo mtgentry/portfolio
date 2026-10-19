@@ -158,17 +158,19 @@
 
         p.email-contact
           | Say hello:
-          span.email-text {{ reversedEmail }}
+          EmailLink.email-text(:link="false")
 </template>
 
 <script>
 import { gsap } from 'gsap'
 import HoverImage from '@/components/HoverImage.vue'
+import EmailLink from '@/components/EmailLink.vue'
 
 export default {
   name: 'PortfolioHomepage',
   components: {
-    HoverImage
+    HoverImage,
+    EmailLink
   },
   head() {
     return {
@@ -176,16 +178,6 @@ export default {
       // The intro text and icons start hidden for the fade-in; show them if JS never runs
       noscript: [{ hid: 'show-intro', innerHTML: '<style>.text-content, .image-wrapper { opacity: 1 !important }</style>' }],
       __dangerouslyDisableSanitizersByTagID: { 'show-intro': ['innerHTML'] }
-    }
-  },
-  data() {
-    return {
-      emailParts: ['mgentry', '@', 'masongentry', '.', 'com']
-    }
-  },
-  computed: {
-    reversedEmail() {
-      return this.emailParts.join('')
     }
   },
   mounted() {

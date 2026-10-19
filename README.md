@@ -1,5 +1,23 @@
 # portfolio
 
+## Review checklists
+
+Three Claude Code skills audit portfolio pages the way a hiring manager would. Run one or more on any page before sharing it (a new case study, a grid, `/founders`, a hello page).
+
+| Skill | What it checks | How to run |
+| --- | --- | --- |
+| `portfolio-review` | A full review: copy, structure, positioning, case studies, visual design and calls to action, with each issue rated by severity | Type `/portfolio-review` in Claude Code |
+| `hiring-manager-bar` | Karl Koch's checklist: does the page answer the core hiring questions (what you're good at, what you shipped, your part in it, how you work, how to reach you)? Gives prioritized fixes tied to the actual files | Type `/hiring-manager-bar` in Claude Code |
+| `storyline-audit` | Storyline.design's 52-point "Audit your portfolio" checklist, partly automated: a script checks the live site in Chrome (contrast, broken or blurry images, phone layout, links, placeholders, load time), Claude judges the case study content, and you answer the few things neither can. Saves a dated report in `audits/` | Type `/storyline-audit` in Claude Code |
+
+Give them the goal for the version you're reviewing:
+
+- `/work`: landing a design engineer role with early-stage startup founders
+- `/projects`: landing a product designer role
+- `/portfolio`: landing a visual designer role
+
+The skills live outside this repo, in `~/.claude/skills/` (`portfolio-review/`, `hiring-manager-bar/`, `storyline-audit/`). Storyline audit reports are saved in `audits/`; for the other two, ask Claude to save a report if you want to keep one.
+
 ## Setup
 
 Have [Nodejs](https://nodejs.org/en/download) installed on your machine.

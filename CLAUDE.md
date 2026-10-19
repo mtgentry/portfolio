@@ -29,8 +29,9 @@ When writing or editing portfolio copy, aim for a voice halfway between Mason's 
 - Keep Mason's exact wording when he supplies copy; only fix typos and grammar unless he asks for rewrites.
 
 ## Portfolio Review Skills
-Two personal skills are installed for reviewing pages:
+Three personal skills are installed for reviewing pages:
 - `portfolio-review` (`~/.claude/skills/portfolio-review/`): a full hiring-manager review across copy, IA, positioning, case studies, visual design, and CTAs, with a severity-coded report.
 - `hiring-manager-bar` (`~/.claude/skills/hiring-manager-bar/`), by Karl Koch: checks whether a page answers the core hiring questions (what you're good at, what you shipped, your contribution, how you work, how to reach you) and gives prioritized fixes tied to the actual files. Can implement fixes on request.
+- `storyline-audit` (`~/.claude/skills/storyline-audit/`): the Storyline.design checklist, partly automated. A Playwright script measures the live site; reports are saved in `audits/`, and Mason's answers to non-automatable checks live in `audits/storyline-answers.md`.
 
-**When Mason finishes a page** (a case study, /founders, the homepage, etc.), remind him to run one or both skills on that page before moving on, e.g. "Want to run portfolio-review or hiring-manager-bar on this page?" Give them this goal: landing a design engineer role with early-stage startup founders.
+**When Mason finishes a page** (a case study, /founders, the homepage, etc.), remind him to run one or both skills on that page before moving on, e.g. "Want to run portfolio-review or hiring-manager-bar on this page?" Give them the goal for the version being reviewed: /work → landing a design engineer role with early-stage startup founders; /projects → landing a product designer role; /portfolio → landing a visual designer role. The README's "Review checklists" section documents this for Mason.

@@ -1,12 +1,26 @@
 <template lang="pug">
   v-app#app.display-animation(ref="app" :style=`{backgroundColor: bgColor, color: mainTextColor}`
     :class="{'loaded': !loading, 'paddingLayout': paddingLayout}")
-    v-app-bar.display-animation(:class="{'loaded': !loading}" fixed app :style=`{color: txColor}` flat ref="navbar")
-      nuxt-link(:to="logoLink" v-if="(isWorkPage && !isAgency) || isAgency")
+    v-app-bar.display-animation(:class="{'loaded': !loading, 'portfolio-nav': !isAgency}" fixed app :style=`{color: txColor}` flat ref="navbar")
+      nuxt-link(:to="logoLink" v-if="((isWorkPage || isAboutPage) && !isAgency) || isAgency")
         v-toolbar-title
           AgencyLogo(v-if="isAgency" :color="txColor")
           PortfolioLogo(v-else :color="txColor")
       v-spacer
+      //- Work and About on every portfolio page, the current one underlined, so
+      //- the nav keeps its shape. Work goes to the visitor's version (the same
+      //- place as the logo): /projects for a /projects visitor, /work by default.
+      span.pr-3(v-if="(isWorkPage || isAboutPage) && !isAgency")
+        .nav-link-wrapper.about-link(:class="{ 'is-active': isWorkPage }"
+          @mouseenter="animateLineIn($event)" @mouseleave="animateLineOut($event)")
+          NuxtLink(:to="logoLink" :aria-current="isWorkPage ? 'page' : null") Work
+          .underline
+      //- The shared bio at /about
+      span.pr-3(v-if="(isWorkPage || isAboutPage) && !isAgency")
+        .nav-link-wrapper.about-link(:class="{ 'is-active': isAboutPage }"
+          @mouseenter="animateLineIn($event)" @mouseleave="animateLineOut($event)")
+          NuxtLink(to="/about" :aria-current="isAboutPage ? 'page' : null") About
+          .underline
       span.pr-3(v-for="url in getUrls" :key="url")
         .nav-link-wrapper(@mouseenter="animateLineIn($event)" @mouseleave="animateLineOut($event)" :class="{ 'about-link': formatUrl(url) === 'About' }" v-if="!(isWorkPage && url === '/about' && !isAgency)")
           NuxtLink(:to="url") {{ formatUrl(url) }}
@@ -25,7 +39,7 @@ import HideNavbar from "@/components/mixins/HideNavbar.vue";
 import AgencyLogo from "@/components/AgencyLogo.vue";
 import PortfolioLogo from "@/components/PortfolioLogo.vue";
 import HelloVideo from "@/components/HelloVideo.vue";
-import { sectionOf, isSectionGrid, isSectionProject } from "@/utils/sections";
+import { sectionOf, isSectionGrid, isSectionProject, rememberSection, rememberedSection } from "@/utils/sections";
 export default {
   name: 'DefaultLayout',
   mixins: [HideNavbar],
@@ -40,7 +54,23 @@ export default {
       this.$store.commit('updateState', {field: 'layout', value: layout})
     }
   },
+  data() {
+    return {
+      // The version /about leads back to (the last one this visitor browsed)
+      aboutBackSection: 'work'
+    }
+  },
+  watch: {
+    $route() {
+      this.trackSection()
+      this.resetNavUnderlines()
+    },
+    hello() {
+      this.trackSection()
+    }
+  },
   async mounted() {
+    this.trackSection()
     this.$store.commit('updateState', {field: 'backgroundColor', value: this.backgroundColor})
     setTimeout(() => {
       this.$AOS.refresh()
@@ -53,6 +83,13 @@ export default {
     this.$store.commit('updateState', {field: 'loading', value: false})
   },
   methods:{
+    // Remember which portfolio version the visitor is in, so /about (and the
+    // root's "See my work") can send them back to it rather than to /work
+    trackSection() {
+      if (this.isAgency) return
+      if (this.isWorkPage) rememberSection(this.section.slice(1))
+      this.aboutBackSection = rememberedSection()
+    },
     formatUrl(s) {
       return s.substring(1).replace(/^_*(.)|_+(.)/g, (s, c, d) => c ? c.toUpperCase() : ' ' + d.toUpperCase())
     },
@@ -61,7 +98,17 @@ export default {
         (a, b) => sortArray.indexOf(a.replace('/', '')) - sortArray.indexOf(b.replace('/', ''))
       )
     },
+    // Hover underlines are animated inline; clear them on each page change so
+    // one left over from clicking a link (e.g. About, which skips its hover-out
+    // animation while current) doesn't stay on after leaving that page.
+    // The current page's underline comes from CSS (.is-active).
+    resetNavUnderlines() {
+      const underlines = this.$refs.navbar?.$el.querySelectorAll('.nav-link-wrapper .underline')
+      if (underlines?.length) gsap.set(underlines, { width: '0%', left: '0%' })
+    },
     animateLineIn(event) {
+      // The current page's link keeps its underline; no hover animation
+      if (event.currentTarget.classList.contains('is-active')) return
       const underline = event.currentTarget.querySelector('.underline')
       gsap.killTweensOf(underline) // Kill any existing animations
       gsap.fromTo(underline, 
@@ -70,6 +117,7 @@ export default {
       )
     },
     animateLineOut(event) {
+      if (event.currentTarget.classList.contains('is-active')) return
       const underline = event.currentTarget.querySelector('.underline')
       gsap.killTweensOf(underline) // Kill any existing animations
       gsap.to(underline, {
@@ -158,8 +206,9 @@ export default {
     },
     txColor() {
       let textColor;
-      // Portfolio grids get dark color
-      if (this.isGrid && !this.isAgency) {
+      // Portfolio grids and /about get dark color (the root hides its logo, so
+      // homeTextColor never had to suit it)
+      if ((this.isGrid || this.isAboutPage) && !this.isAgency) {
         textColor = "#1D1E20"
       } else if (this.homePage) {
         textColor = this.homeTextColor
@@ -201,7 +250,11 @@ export default {
       return isSectionGrid(this.$route.path) || this.isHelloPage
     },
     homePage() {
-      return this.$route.path === "/" || this.isGrid
+      return this.$route.path === "/" || this.isAboutPage || this.isGrid
+    },
+    // /about mirrors the root's bio
+    isAboutPage() {
+      return this.$route.path.replace(/\/$/, '') === '/about'
     },
     isProjectPage() {
       return isSectionProject(this.$route.path)
@@ -215,7 +268,9 @@ export default {
     logoLink() {
       // Portfolio logo returns to the grid this page belongs to (/work,
       // /portfolio, /projects); agency logo links to homepage
-      return this.isAgency ? "/" : this.section
+      if (this.isAgency) return "/"
+      // /about sits outside the versions: back to the one they came from
+      return this.isAboutPage ? `/${this.aboutBackSection}` : this.section
     },
     ...mapState(['backgroundColor', 'homeBackgroundColor', 'textColor', 'pageBackgroundColor', 'pageTextColor', 'loading', 'layout', 'paddingLayout', 'hello'])
   },
@@ -313,6 +368,18 @@ export default {
   width: 100% !important
   max-width: 100% !important
 
+// Portfolio nav sits on the content grid: the visible M and "About" line up
+// with the edges of the headline and cards (34px layout padding + 12px column
+// padding = 46px; 10px + 12px = 22px on phones). The logo has 10px of padding
+// around the M and the About link 12px on its right, so those come off here.
+.theme--dark.v-app-bar.v-toolbar.v-sheet.portfolio-nav
+  padding-left: 36px
+  padding-right: 34px
+
+  @media (max-width: 768px)
+    padding-left: 12px
+    padding-right: 10px
+
 .v-toolbar__title
   user-select: none
 
@@ -387,4 +454,10 @@ html, body
     width: 0%
     background-color: currentColor
     transition: none
+
+  // Current page: underline always shown. !important beats the inline width
+  // left behind by the hover animation on the previous page.
+  &.is-active .underline
+    left: 0 !important
+    width: 100% !important
 </style>

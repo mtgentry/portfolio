@@ -14,21 +14,21 @@
       p I don't sell your information or share it with anyone else for their own marketing.
 
       h2 Your choices
-      p Every email has an unsubscribe link. To have your information deleted, or with any questions, email me at #[a(:href="`mailto:${email}`") {{ email }}].
+      p Every email has an unsubscribe link. To have your information deleted, or with any questions, email me at #[EmailLink(name="privacy")].
       p You can limit tracking by blocking cookies in your browser, or opt out of personalized ads in your X settings.
 </template>
 
 <script>
+import EmailLink from '@/components/EmailLink.vue'
+
 export default {
   name: 'PrivacyPage',
+  components: {
+    EmailLink
+  },
   head() {
     return {
       title: 'Privacy policy'
-    }
-  },
-  data() {
-    return {
-      email: 'mtgentry81@yahoo.com'
     }
   },
   // This policy is for masongentry.com only; the agency site shares these pages

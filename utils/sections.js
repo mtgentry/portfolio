@@ -31,3 +31,22 @@ export function isSectionGrid(path) {
 export function isSectionProject(path) {
   return Object.keys(SECTIONS).some(name => new RegExp(`^/${name}/[^/]+`).test(path || ''))
 }
+
+// The version a visitor last browsed, so pages outside the versions (/about,
+// the root) can send them back to it instead of to /work. Browser storage only;
+// falls back to /work for first-time visitors or if storage is blocked.
+const SECTION_KEY = 'portfolioSection'
+
+export function rememberSection(name) {
+  if (!SECTIONS[name]) return
+  try { localStorage.setItem(SECTION_KEY, name) } catch (e) {}
+}
+
+export function rememberedSection() {
+  try {
+    const name = localStorage.getItem(SECTION_KEY)
+    return SECTIONS[name] ? name : 'work'
+  } catch (e) {
+    return 'work'
+  }
+}
