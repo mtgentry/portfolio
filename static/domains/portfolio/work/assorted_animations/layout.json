@@ -9,8 +9,10 @@
     "width": "70%",
     "forbidIndex": true
   },
-  "backgroundColor": "#ffffff",
+  "backgroundColor": "#F7F7F7",
   "textColor": "#333333",
+  "pageBackgroundColor": "#F7F7F7",
+  "pageTextColor": "#333333",
   "header": "I love creating motion in video and on the web. Here are a few snippets of things I've done.",
   "seo_description": "",
   "layout": [
@@ -113,6 +115,15 @@
           "name": "chiat_hover.mp4",
           "position": "center",
           "width": "60%"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "database.mp4",
+          "position": "center",
+          "width": "70%"
         }
       ]
     },
