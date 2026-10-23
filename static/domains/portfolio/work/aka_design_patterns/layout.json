@@ -4,7 +4,7 @@
       "name": "aka_design_patterns_thumb.jpg"
     },
     "title": "aka Design Patterns",
-    "categories": "Product Design, UI Design",
+    "categories": "Product Design, Prototyping",
     "position": "left",
     "width": "50%"
   },
@@ -12,10 +12,11 @@
   "textColor": "#282725",
   "pageBackgroundColor": "#EFEFEF",
   "pageTextColor": "#282725",
-  "header": "AI agents are new, so there’s no playbook for how people should watch them work, keep track of them, or share them. At aka, I explored what those patterns could look like, starting from questions no interface had answered yet.",
+  "header": "aka is building identity for a world where AI agents work alongside people. I designed and built prototypes in Vue to explore what it could look like for humans and agents to share an identity, from watching an agent work to giving it access to real accounts.",
   "summary": {
-    "role": "[Your role]",
-    "team": "[Who you worked with]",
+    "role": "Design engineer",
+    "team": "aka",
+    "built": "Vue",
     "status": "Explorations"
   },
   "seo_description": "",
@@ -24,65 +25,88 @@
       "media": [
         {
           "name": "patch_demo.mp4",
-          "position": "center"
-        }
-      ]
-    },
-    {
-      "media": [
-        {
-          "name": "add_patch.png",
-          "position": "center"
+          "position": "center",
+          "title": "An agent’s activity log, paired with an illustration that moves while it works"
         }
       ]
     },
     {
       "title": "Seeing an agent at work",
       "text": [
-        "An agent works in the background, which makes it easy to forget about and hard to trust. So the first question was simple: what does it look like when an agent is working?",
-        "I paired two views. A plain activity log lists each step as it happens, with a timestamp. Next to it, an abstract illustration moves while the agent works. The log is for people who want the detail. The illustration tells everyone else, at a glance, that something is happening.",
-        "The open question was whether seeing the process helps at all, even abstracted, or just adds noise. [Your take.]"
+        "Agents work in the background, which makes them easy to forget. The first question was simple. What if you could see an agent at work?",
+        "I paired two views. A plain activity log lists each step as it happens, with a timestamp. Beside it, an abstract illustration moves while the agent works. The log is for people who want the detail. The illustration tells everyone else, at a glance, that something is happening. It isn’t a literal picture of the work, more a signal that something is underway.",
+        "The open question: does seeing the process build trust, or just add noise?"
       ]
     },
     {
-      "title": "A home for your agents",
+      "title": "Sharing an agent",
       "text": [
-        "Where does a normal person keep their agents? I treated it like a home screen. Your agents sit at the top as cards, each with its status (running, draft, or disabled), the apps it uses, and when it last ran. A draft shows a “Finish setup” link, so an unfinished agent is never a dead end."
+        "If you tell a coworker about your workflow, they should be able to try it themselves. From an agent’s public profile, one click on “Use this Agent” shows what it does and which apps it needs, like HubSpot and Slack. Then you can add it as is or customize it first."
       ]
     },
     {
       "media": [
         {
-          "name": "dashboard.png",
-          "position": "center"
+          "name": "add_patch.png",
+          "position": "center",
+          "title": "Try someone else’s agent as is, or customize it first"
         }
       ]
     },
     {
-      "title": "Finding new agents",
+      "title": "Building an agent with words",
       "text": [
-        "There’s no app store for agents yet, so discovery was new territory too. A Discover row shows what other teams are running: who made each agent, which apps it connects to, and how many organizations use it. That last number works like a review score. It tells you other people already trust it."
+        "Most people can’t describe an agent as a workflow, but they can say what they want done. So in this exploration, you spin one up just by describing the job. Key words are highlighted as they’re recognized: Slack and Google Docs become integrations, and scan and summarize become actions. Before anything runs, the exact access the agent will need, like reading Slack messages or writing to Google Docs, is spelled out underneath.",
+        "Later, its steps are laid out in order, so it’s easy to see what your agent is doing or change it: a weekly schedule, scanning 23 Slack channels, pulling out complaints, ranking them, and writing the report. Or change it with words."
       ]
     },
     {
       "media": [
         {
-          "name": "dashboard_discover.png",
-          "position": "center"
+          "name": "customer_sentiment_text.png",
+          "position": "center",
+          "title": "Spin up an agent by telling it what to do"
         }
       ]
     },
     {
-      "title": "Using someone else’s agent",
-      "text": [
-        "Your colleagues build agents too. A team section lists what they’ve deployed and what each one is doing right now, like “Processing 45 new signups.”",
-        "Adding someone else’s agent, like Gainsight’s Patch, takes one confirmation. Before you commit, the dialog says what the agent does and which apps it needs, with the option to customize it first."
+      "media": [
+        {
+          "name": "customer_sentiment_flow.png",
+          "position": "center",
+          "title": "View or change it later, step by step"
+        }
       ]
     },
     {
-      "title": "Borrowing from the familiar",
+      "title": "AI-enabled services",
       "text": [
-        "With no existing patterns to copy, I leaned on ones people already know: activity logs, home screens, and app stores. Each gave people something familiar to hold onto while using something new."
+        "After a few months of exploring, we decided to focus first on AI-enabled services: companies that do work on behalf of their clients every day.",
+        "For Rivet, aka’s first client, I explored onboarding flows and interfaces that let tax accountants act on behalf of their clients, using the clients’ own credentials."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "welcome_to_rivet.png",
+          "position": "center",
+          "title": "Rivet’s onboarding, with setup tasks alongside each step"
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "connect_rivet.png",
+          "position": "center",
+          "title": "Before you sign in, Rivet lists exactly what it can access"
+        }
+      ]
+    },
+    {
+      "title": "Result",
+      "text": [
+        "Ultimately, aka decided to take the product in a different direction, so these explorations stayed explorations."
       ]
     },
     {
