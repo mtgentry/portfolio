@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Offer Page — Object Map</title>
+<style>
+  :root {
+    --core: #34b2e8;
+    --core-text: #ffffff;
+    --support: #fae639;
+    --support-border: #dbc932;
+    --metadata: #ec5d9f;
+    --metadata-border: #cf528b;
+    --nested: #aad9ed;
+    --nested-border: #6fb8d9;
+    --cta: #68cd66;
+    --cta-border: #4e9a4d;
+    --blank: #d8d8d8;
+    --blank-text: #71717a;
+    --ink: #18181b;
+    --ink-soft: #52525b;
+    --bg: #fafafa;
+    --line: #e4e4e7;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    padding: 32px 24px 64px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin: 0 0 4px;
+  }
+
+  .subtitle {
+    color: var(--ink-soft);
+    font-size: 14px;
+    max-width: 760px;
+    line-height: 1.5;
+    margin: 0 0 28px;
+  }
+
+  .subtitle code {
+    background: var(--line);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 12.5px;
+  }
+
+  /* ---- legend ---- */
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 32px;
+    padding: 16px 18px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+  }
+
+  .legend-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    max-width: 230px;
+  }
+
+  .swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .legend-item .label {
+    font-size: 12.5px;
+    font-weight: 600;
+    margin-bottom: 1px;
+  }
+
+  .legend-item .desc {
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+
+  .sw-core { background: var(--core); }
+  .sw-support { background: var(--support); }
+  .sw-metadata { background: var(--metadata); }
+  .sw-nested { background: var(--nested); }
+  .sw-cta { background: var(--cta); }
+  .sw-blank { background: var(--blank); }
+
+  /* ---- map ---- */
+
+  .map {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    overflow-x: auto;
+    padding-bottom: 24px;
+  }
+
+  .column {
+    flex: 0 0 170px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .column.wide { flex-basis: 200px; width: 200px; }
+
+  .ctas {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+    height: 210px;
+  }
+
+  .box {
+    border-radius: 6px;
+    padding: 7px 9px;
+    font-size: 12px;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  .box.cta {
+    background: var(--cta);
+    border: 1px solid var(--cta-border);
+    color: #063b1e;
+    font-weight: 500;
+  }
+
+  .box.core {
+    background: var(--core);
+    color: var(--core-text);
+    font-weight: 700;
+    font-size: 13.5px;
+    text-align: center;
+    padding: 10px 9px;
+    border-radius: 7px;
+  }
+
+  .box.blank {
+    background: var(--blank);
+    color: var(--blank-text);
+    font-weight: 700;
+    font-size: 13.5px;
+    text-align: center;
+    padding: 10px 9px;
+    border-radius: 7px;
+    font-style: italic;
+  }
+
+  .box.support {
+    background: var(--support);
+    border: 1px solid var(--support-border);
+    color: #4a3b00;
+  }
+
+  .box.metadata {
+    background: var(--metadata);
+    border: 1px solid var(--metadata-border);
+    color: #5c0a33;
+  }
+
+  .box.nested-header {
+    background: var(--nested);
+    border: 1px solid var(--nested-border);
+    color: #0b2e6b;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .attrs-group, .nested-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .nested-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 2px;
+  }
+
+  .uncertain {
+    opacity: 0.72;
+  }
+
+  .uncertain::after {
+    content: " ?";
+    font-weight: 700;
+  }
+
+  .note {
+    font-size: 10.5px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+    padding: 2px 1px 0;
+    font-style: italic;
+  }
+
+  .related {
+    font-size: 10.5px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    border-top: 1px dashed var(--line);
+    padding-top: 6px;
+    margin-top: 4px;
+  }
+
+  .related b {
+    display: block;
+    color: var(--ink);
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .spacer-sm { height: 2px; }
+
+  @media (max-width: 480px) {
+    body { padding: 20px 16px 48px; }
+    .legend { flex-direction: column; gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>The Offer Page — Object Map</h1>
+<p class="subtitle">
+  Visual object map of <code>research/conceptual_model/conceptual_model.md</code>, in the ORCA/OOUX convention, for
+  the redesigned offer page (Nov 2026). Every box traces back to the conceptual model. "?" marks an
+  attribute we're guessing at, not confirming.
+</p>
+
+<div class="legend">
+  <div class="legend-item">
+    <div class="swatch sw-core"></div>
+    <div><div class="label">Core object</div><div class="desc">A main concept in the model — what we've called an "object" throughout.</div></div>
+  </div>
+  <div class="legend-item">
+    <div class="swatch sw-support"></div>
+    <div><div class="label">Supporting object / attribute</div><div class="desc">A data point the core object has.</div></div>
+  </div>
+  <div class="legend-item">
+    <div class="swatch sw-metadata"></div>
+    <div><div class="label">Metadata</div><div class="desc">Data about the data (not used yet — none of our attributes are purely descriptive metadata).</div></div>
+  </div>
+  <div class="legend-item">
+    <div class="swatch sw-nested"></div>
+    <div><div class="label">Nested core object</div><div class="desc">Closely tied to a parent object, shown nested rather than given its own column.</div></div>
+  </div>
+  <div class="legend-item">
+    <div class="swatch sw-cta"></div>
+    <div><div class="label">CTA</div><div class="desc">A real task-domain operation only — no UI mechanics (see our own "Minimize" discussion).</div></div>
+  </div>
+  <div class="legend-item">
+    <div class="swatch sw-blank"></div>
+    <div><div class="label">Blank</div><div class="desc">Confirmed to exist, deliberately left unmodeled — out of scope for now.</div></div>
+  </div>
+</div>
+
+<div class="map">
+
+  <!-- Application -->
+  <div class="column">
+    <div class="ctas"></div>
+    <div class="box core">Application</div>
+    <div class="box support uncertain">Legal business name</div>
+    <div class="box support uncertain">Stage</div>
+
+    <div class="nested-group">
+      <div class="box nested-header">Documents</div>
+      <div class="box nested-header">Application Info</div>
+    </div>
+    <div class="note">Boundary of this model; not redesigned. The prototype’s progress trail shows the steps around the offer: Application, Offer, Review &amp; sign.</div>
+    <div class="related"><b>Related objects</b>Has one: Equipment · Has optionally: Equipment seller · Has many: Offer (one per lender, multi-lender assumption) · Has: Financing agreement, Stips</div>
+  </div>
+
+  <!-- Financing agreement -->
+  <div class="column">
+    <div class="ctas">
+      <div class="box cta">Sign</div>
+    </div>
+    <div class="box core">Financing agreement</div>
+    <div class="box support">Type (EFA / FMV lease)</div>
+    <div class="box support">Status (draft / signing / signed)</div>
+    <div class="note">Moves to signing when the buyer accepts. Open Issue #4: its type may duplicate Offer’s agreement type.</div>
+  </div>
+
+  <!-- Stips -->
+  <div class="column">
+    <div class="ctas"></div>
+    <div class="box core">Stips</div>
+    <div class="box support uncertain">Type (bank statements / driver's license / invoice / ...)</div>
+    <div class="note">Collection starts on acceptance. No documented operations yet: Open Issue #5.</div>
+  </div>
+
+  <!-- Offer -->
+  <div class="column wide">
+    <div class="ctas">
+      <div class="box cta">View</div>
+      <div class="box cta">Accept</div>
+      <div class="box cta">Estimate savings</div>
+    </div>
+    <div class="box core">Offer</div>
+    <div class="attrs-group">
+      <div class="box support">Fees</div>
+      <div class="box support">Currency</div>
+      <div class="box support">Expires at</div>
+      <div class="box support">Agreement type (EFA / FMV lease)</div>
+      <div class="box support">Advance payments</div>
+    </div>
+    <div class="note">Expiration is a state of the offer, not its own object. There’s no Decline: an offer the buyer doesn’t accept expires, and accepting one declines the others.</div>
+    <div class="related"><b>Related objects</b>Has one: Lender · Has optionally: Rebate · Has 1–3: Plan · Belongs to: Buyer · Has: Funding partner · Arranged by: Substrate · Produces: Savings estimate</div>
+  </div>
+
+  <!-- Plan -->
+  <div class="column">
+    <div class="ctas">
+      <div class="box cta">Select</div>
+      <div class="box cta">View details</div>
+      <div class="box cta">Customize</div>
+    </div>
+    <div class="box core">Plan</div>
+    <div class="attrs-group">
+      <div class="box support">Role (lowest down payment / balanced / lowest monthly)</div>
+      <div class="box support">Down payment %</div>
+      <div class="box support">Down payment amount</div>
+      <div class="box support">Amount financed</div>
+      <div class="box support">Length (months)</div>
+      <div class="box support">Monthly payment</div>
+      <div class="box support">Amount due at signing</div>
+    </div>
+
+    <div class="nested-group">
+      <div class="box nested-header">Term</div>
+    </div>
+    <div class="note">Called “Variant” A/B/C in the data. Down payment = lender minimum, +10%, +20%, capped at 50%, so an offer has 1–3 plans, never padded. Role replaces today’s Priority picker.</div>
+  </div>
+
+  <!-- Custom plan -->
+  <div class="column">
+    <div class="ctas">
+      <div class="box cta">Select</div>
+      <div class="box cta">Adjust</div>
+    </div>
+    <div class="box core">Custom plan</div>
+    <div class="box support">Down payment % (lowest plan’s up to 50%)</div>
+    <div class="box support">Based on (lender plan it reaches)</div>
+    <div class="box support">Terms</div>
+    <div class="box support">Estimate (needs ops confirmation)</div>
+    <div class="note">Priced like the highest lender plan it reaches, at the lender’s rate, so never cheaper than a lender plan. Open Issue #7: when is it confirmed?</div>
+  </div>
+
+  <!-- Equipment -->
+  <div class="column">
+    <div class="ctas">
+      <div class="box cta">View</div>
+    </div>
+    <div class="box core">Equipment</div>
+    <div class="box support">Name</div>
+    <div class="box support">Purchase price</div>
+    <div class="box support">Photo (optional)</div>
+    <div class="box support">Kind (for the rental benchmark)</div>
+  </div>
+
+  <!-- Rebate -->
+  <div class="column">
+    <div class="ctas"></div>
+    <div class="box core">Rebate</div>
+    <div class="box support">Incentive</div>
+    <div class="box support">Amount (doc fee × %)</div>
+    <div class="box support">Deadline</div>
+    <div class="note">Optional. Active until its deadline; the header countdown shows it first, then the offer’s expiry.</div>
+  </div>
+
+  <!-- Lender -->
+  <div class="column">
+    <div class="ctas"></div>
+    <div class="box core">Lender</div>
+    <div class="attrs-group">
+      <div class="box support">Name</div>
+      <div class="box support">Kind (marketplace / Substrate)</div>
+      <div class="box support">Rate</div>
+      <div class="box support">Minimum down payment</div>
+      <div class="box support">Max points</div>
+    </div>
+    <div class="note">Funds the loan. Rate prices custom plans but is never shown to the buyer. Open Issue #2: one concept with a kind, or two?</div>
+  </div>
+
+  <!-- Substrate (arranger) -->
+  <div class="column">
+    <div class="ctas"></div>
+    <div class="box core">Substrate (arranger)</div>
+    <div class="box support">Lender network</div>
+    <div class="note">Arranges every deal: “Arranged by Substrate · Funded by {lender}.” When Substrate is also the lender, it’s both.</div>
+  </div>
+
+  <!-- Savings estimate -->
+  <div class="column wide">
+    <div class="ctas">
+      <div class="box cta">View</div>
+    </div>
+    <div class="box core">Savings estimate</div>
+    <div class="box support">For plan (uses its monthly payment)</div>
+    <div class="box support">Rental savings (monthly range)</div>
+    <div class="box support">Tax savings (year 1)</div>
+    <div class="box support">Caveat text</div>
+
+    <div class="nested-group">
+      <div class="box nested-header">Rental savings</div>
+      <div class="box nested-header">Tax savings</div>
+    </div>
+    <div class="note">“What owning this saves you.” Nothing for the buyer to enter. Rental savings needs a rental benchmark; tax savings is US only (Section 179 at an assumed 30%). Replaces today’s ROI estimate, which used the buyer’s revenue: Resolved Issue #2.</div>
+  </div>
+
+  <!-- Rental benchmark -->
+  <div class="column">
+    <div class="ctas"></div>
+    <div class="box core">Rental benchmark</div>
+    <div class="box support">Kind of machine</div>
+    <div class="box support">Low</div>
+    <div class="box support">High</div>
+    <div class="box support">Currency</div>
+    <div class="note">Typical monthly rental range from dealer listings. No benchmark (van upfits, crane packages) means no rental savings.</div>
+  </div>
+
+  <!-- Buyer -->
+  <div class="column">
+    <div class="ctas"></div>
+    <div class="box core">Buyer</div>
+    <div class="box support">Business name</div>
+    <div class="box support">Personal guarantors</div>
+    <div class="box support">Country</div>
+    <div class="note">Country decides currency and whether tax savings applies. No revenue estimate: the redesign dropped the revenue question.</div>
+  </div>
+
+  <!-- Funding partner -->
+  <div class="column">
+    <div class="ctas">
+      <div class="box cta">Contact</div>
+    </div>
+    <div class="box core">Funding partner</div>
+    <div class="box support">Name</div>
+    <div class="box support">Photo</div>
+    <div class="box support">Contact methods (chat, call, text, email)</div>
+    <div class="note">e.g. Jamie Ortiz, the buyer’s contact through signing.</div>
+  </div>
+
+  <!-- Equipment seller -->
+  <div class="column">
+    <div class="ctas"></div>
+    <div class="box core">Equipment seller</div>
+    <div class="box support uncertain">Branding / logo</div>
+    <div class="note">Optional; not yet in the prototype. Open Issue #6: “seller” vs. “equipment provider.”</div>
+  </div>
+
+  <!-- Budget request -->
+  <div class="column">
+    <div class="ctas">
+      <div class="box cta">Submit</div>
+    </div>
+    <div class="box core">Budget request</div>
+    <div class="box support">Message</div>
+    <div class="note">“None of these fit your budget?” on the funding partner’s contact card. Doesn’t re-price the offer.</div>
+  </div>
+
+  <!-- Acceptance -->
+  <div class="column">
+    <div class="ctas">
+      <div class="box cta">Confirm</div>
+    </div>
+    <div class="box core">Acceptance</div>
+    <div class="box support">Plan + term snapshot (“the terms shown”)</div>
+    <div class="note">Moves the financing agreement into signing and starts stips collection.</div>
+  </div>
+
+</div>
+
+</body>
+</html>
