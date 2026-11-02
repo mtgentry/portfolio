@@ -1,0 +1,526 @@
+{
+  "_note": "All businesses, people and dollar amounts are fictional, but the offer math follows Substrate's real rules (see 'How an offer is made' in the brief). Money is in whole dollars. 'pointsAdded' and 'substrateMargin' are internal: today's page never shows them to the buyer.",
+  "1_typical_marketplace": {
+    "description": "The common case. One lender approval, three variants, US buyer who filled in the revenue question.",
+    "buyer": {
+      "business": "Rivera Outdoor Services LLC",
+      "state": "TX",
+      "country": "US",
+      "monthlyRevenueEstimate": 6500
+    },
+    "equipment": {
+      "label": "2024 Bobcat T76 compact track loader",
+      "purchasePrice": 86500
+    },
+    "approval": {
+      "source": "marketplace",
+      "lender": "Lender A (one of 30+ in the network)",
+      "maxApprovedAmount": 110000,
+      "buyRatePercent": 9.25,
+      "lenderMinDownPercent": 10,
+      "maxPoints": 10
+    },
+    "fees": {
+      "Documentation": 395
+    },
+    "advancePayments": 1,
+    "offerSentAt": "2026-10-20",
+    "expiresAt": "2026-11-19",
+    "rebate": {
+      "incentive": "Doc fee 100% off if accepted within 7 days",
+      "deadline": "2026-10-27"
+    },
+    "personalGuarantors": [
+      "Ana Rivera"
+    ],
+    "variants": {
+      "A": {
+        "label": "Lowest down payment",
+        "downPaymentPercent": 10,
+        "downPayment": 8650,
+        "amountFinanced": 77850,
+        "pointsAdded": 5,
+        "substrateMargin": 3892,
+        "terms": [
+          {
+            "termMonths": 36,
+            "monthlyPayment": 2609,
+            "dueAtSigning": 11654
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 2044,
+            "dueAtSigning": 11089
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 1707,
+            "dueAtSigning": 10752
+          }
+        ]
+      },
+      "B": {
+        "label": "Balanced",
+        "downPaymentPercent": 20,
+        "downPayment": 17300,
+        "amountFinanced": 69200,
+        "pointsAdded": 4,
+        "substrateMargin": 2768,
+        "terms": [
+          {
+            "termMonths": 36,
+            "monthlyPayment": 2297,
+            "dueAtSigning": 19992
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 1799,
+            "dueAtSigning": 19494
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 1503,
+            "dueAtSigning": 19198
+          }
+        ]
+      },
+      "C": {
+        "label": "Maximize monthly cash flow",
+        "downPaymentPercent": 30,
+        "downPayment": 25950,
+        "amountFinanced": 60550,
+        "pointsAdded": 3,
+        "substrateMargin": 1816,
+        "terms": [
+          {
+            "termMonths": 36,
+            "monthlyPayment": 1991,
+            "dueAtSigning": 28336
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 1559,
+            "dueAtSigning": 27904
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 1302,
+            "dueAtSigning": 27647
+          }
+        ]
+      }
+    }
+  },
+  "2_constrained_marketplace": {
+    "description": "High lender minimum down (40%) and a tight max-points deal: only two variants exist, and the buyer skipped the revenue question.",
+    "buyer": {
+      "business": "Northgate Earthworks Inc.",
+      "state": "OH",
+      "country": "US",
+      "monthlyRevenueEstimate": null
+    },
+    "equipment": {
+      "label": "2022 CAT 320 excavator (used)",
+      "purchasePrice": 212000
+    },
+    "approval": {
+      "source": "marketplace",
+      "lender": "Lender B",
+      "maxApprovedAmount": 212000,
+      "buyRatePercent": 8.5,
+      "lenderMinDownPercent": 40,
+      "maxPoints": 4
+    },
+    "fees": {
+      "Documentation": 495,
+      "UCC filing": 85
+    },
+    "advancePayments": 2,
+    "offerSentAt": "2026-10-02",
+    "expiresAt": "2026-11-01",
+    "rebate": null,
+    "personalGuarantors": [
+      "Dale Okafor",
+      "Priya Okafor"
+    ],
+    "variants": {
+      "A": {
+        "label": "Lowest down payment",
+        "downPaymentPercent": 40,
+        "downPayment": 84800,
+        "amountFinanced": 127200,
+        "pointsAdded": 3.2,
+        "substrateMargin": 4070,
+        "terms": [
+          {
+            "termMonths": 36,
+            "monthlyPayment": 4144,
+            "dueAtSigning": 93668
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 3236,
+            "dueAtSigning": 91852
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 2693,
+            "dueAtSigning": 90766
+          }
+        ]
+      },
+      "B": {
+        "label": "Balanced",
+        "downPaymentPercent": 50,
+        "downPayment": 106000,
+        "amountFinanced": 106000,
+        "pointsAdded": 2.0,
+        "substrateMargin": 2120,
+        "terms": [
+          {
+            "termMonths": 36,
+            "monthlyPayment": 3413,
+            "dueAtSigning": 113406
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 2665,
+            "dueAtSigning": 111910
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 2218,
+            "dueAtSigning": 111016
+          }
+        ]
+      }
+    }
+  },
+  "3_substrate_funded": {
+    "description": "Funded from Substrate's own balance sheet. Variants differ by down payment only: the rate comes from our own scoring and is the same for every variant.",
+    "buyer": {
+      "business": "Kim's Mobile Detailing",
+      "state": "CA",
+      "country": "US",
+      "monthlyRevenueEstimate": 2400
+    },
+    "equipment": {
+      "label": "Ford Transit 250 detailing van upfit",
+      "purchasePrice": 38900
+    },
+    "approval": {
+      "source": "substrate",
+      "lender": "Substrate",
+      "maxApprovedAmount": 45000,
+      "ratePercent": 16.9,
+      "minDownPercent": 0
+    },
+    "fees": {
+      "Documentation": 295
+    },
+    "advancePayments": 0,
+    "offerSentAt": "2026-10-25",
+    "expiresAt": "2026-11-24",
+    "rebate": {
+      "incentive": "Doc fee 50% off if accepted within 3 days",
+      "deadline": "2026-10-28"
+    },
+    "personalGuarantors": [
+      "Joon Kim"
+    ],
+    "variants": {
+      "A": {
+        "label": "Lowest down payment",
+        "downPaymentPercent": 0,
+        "downPayment": 0,
+        "amountFinanced": 38900,
+        "terms": [
+          {
+            "termMonths": 24,
+            "monthlyPayment": 1921,
+            "dueAtSigning": 295
+          },
+          {
+            "termMonths": 36,
+            "monthlyPayment": 1385,
+            "dueAtSigning": 295
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 1120,
+            "dueAtSigning": 295
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 965,
+            "dueAtSigning": 295
+          }
+        ]
+      },
+      "B": {
+        "label": "Balanced",
+        "downPaymentPercent": 10,
+        "downPayment": 3890,
+        "amountFinanced": 35010,
+        "terms": [
+          {
+            "termMonths": 24,
+            "monthlyPayment": 1729,
+            "dueAtSigning": 4185
+          },
+          {
+            "termMonths": 36,
+            "monthlyPayment": 1246,
+            "dueAtSigning": 4185
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 1008,
+            "dueAtSigning": 4185
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 868,
+            "dueAtSigning": 4185
+          }
+        ]
+      },
+      "C": {
+        "label": "Maximize monthly cash flow",
+        "downPaymentPercent": 20,
+        "downPayment": 7780,
+        "amountFinanced": 31120,
+        "terms": [
+          {
+            "termMonths": 24,
+            "monthlyPayment": 1537,
+            "dueAtSigning": 8075
+          },
+          {
+            "termMonths": 36,
+            "monthlyPayment": 1108,
+            "dueAtSigning": 8075
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 896,
+            "dueAtSigning": 8075
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 772,
+            "dueAtSigning": 8075
+          }
+        ]
+      }
+    }
+  },
+  "4_canada": {
+    "description": "Canadian buyer in CAD. No Section 179 tax story applies in Canada, so the live page drops the tax step.",
+    "buyer": {
+      "business": "Lavoie Paysagement Inc.",
+      "province": "QC",
+      "country": "CA",
+      "monthlyRevenueEstimate": 5200
+    },
+    "equipment": {
+      "label": "2025 Kubota KX040-4 mini excavator",
+      "purchasePrice": 94000
+    },
+    "approval": {
+      "source": "marketplace",
+      "lender": "Lender C",
+      "maxApprovedAmount": 94000,
+      "buyRatePercent": 10.5,
+      "lenderMinDownPercent": 20,
+      "maxPoints": 6
+    },
+    "currency": "CAD",
+    "fees": {
+      "Documentation": 450
+    },
+    "advancePayments": 1,
+    "offerSentAt": "2026-10-14",
+    "expiresAt": "2026-11-13",
+    "rebate": null,
+    "personalGuarantors": [
+      "Marc Lavoie"
+    ],
+    "variants": {
+      "A": {
+        "label": "Lowest down payment",
+        "downPaymentPercent": 20,
+        "downPayment": 18800,
+        "amountFinanced": 75200,
+        "pointsAdded": 4.8,
+        "substrateMargin": 3610,
+        "terms": [
+          {
+            "termMonths": 36,
+            "monthlyPayment": 2562,
+            "dueAtSigning": 21812
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 2018,
+            "dueAtSigning": 21268
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 1694,
+            "dueAtSigning": 20944
+          }
+        ]
+      },
+      "B": {
+        "label": "Balanced",
+        "downPaymentPercent": 30,
+        "downPayment": 28200,
+        "amountFinanced": 65800,
+        "pointsAdded": 3.0,
+        "substrateMargin": 1974,
+        "terms": [
+          {
+            "termMonths": 36,
+            "monthlyPayment": 2203,
+            "dueAtSigning": 30853
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 1735,
+            "dueAtSigning": 30385
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 1457,
+            "dueAtSigning": 30107
+          }
+        ]
+      },
+      "C": {
+        "label": "Maximize monthly cash flow",
+        "downPaymentPercent": 40,
+        "downPayment": 37600,
+        "amountFinanced": 56400,
+        "pointsAdded": 1.8,
+        "substrateMargin": 1015,
+        "terms": [
+          {
+            "termMonths": 36,
+            "monthlyPayment": 1866,
+            "dueAtSigning": 39916
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 1470,
+            "dueAtSigning": 39520
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 1234,
+            "dueAtSigning": 39284
+          }
+        ]
+      }
+    }
+  },
+  "5_extreme": {
+    "description": "Not a real deal: every field at its limit at once, so your layout can prove it survives. Long and non-Latin names, nine-figure amounts, seven terms on one variant, a single term on another.",
+    "buyer": {
+      "business": "Société Générale d'Équipements Lourds et de Terrassement du Grand Nord-Ouest Québécois 🚜 株式会社",
+      "country": "US",
+      "monthlyRevenueEstimate": 0
+    },
+    "equipment": {
+      "label": "Liebherr LR 13000 crawler crane with full counterweight package, luffing jib, and transport kit (3 units)",
+      "purchasePrice": 148500000
+    },
+    "approval": {
+      "source": "marketplace",
+      "lender": "Lender D",
+      "maxApprovedAmount": 150000000,
+      "buyRatePercent": 7.9,
+      "lenderMinDownPercent": 0,
+      "maxPoints": 2
+    },
+    "fees": {
+      "Documentation": 395,
+      "UCC filing": 85,
+      "Inspection": 12500,
+      "Title and registration": 3200
+    },
+    "advancePayments": 3,
+    "rebate": {
+      "incentive": "Doc fee 100% off if accepted within 7 days",
+      "deadline": "2026-10-29"
+    },
+    "personalGuarantors": [
+      "María José Fernández de la Torre-Castellanos",
+      "王小明",
+      "Jean-Baptiste Kowalczyk-Nakamura",
+      "Ngozi Adeyemi-Okonkwo"
+    ],
+    "variants": {
+      "A": {
+        "label": "Lowest down payment",
+        "downPaymentPercent": 0,
+        "downPayment": 0,
+        "amountFinanced": 148500000,
+        "pointsAdded": 1.6,
+        "substrateMargin": 2376000,
+        "terms": [
+          {
+            "termMonths": 12,
+            "monthlyPayment": 13117491,
+            "dueAtSigning": 39368653
+          },
+          {
+            "termMonths": 24,
+            "monthlyPayment": 6816834,
+            "dueAtSigning": 20466682
+          },
+          {
+            "termMonths": 36,
+            "monthlyPayment": 4720948,
+            "dueAtSigning": 14179024
+          },
+          {
+            "termMonths": 48,
+            "monthlyPayment": 3676246,
+            "dueAtSigning": 11044918
+          },
+          {
+            "termMonths": 60,
+            "monthlyPayment": 3052006,
+            "dueAtSigning": 9172198
+          },
+          {
+            "termMonths": 72,
+            "monthlyPayment": 2637984,
+            "dueAtSigning": 7930132
+          },
+          {
+            "termMonths": 84,
+            "monthlyPayment": 2344076,
+            "dueAtSigning": 7048408
+          }
+        ]
+      },
+      "B": {
+        "label": "Balanced",
+        "downPaymentPercent": 10,
+        "downPayment": 14850000,
+        "amountFinanced": 133650000,
+        "pointsAdded": 1.0,
+        "substrateMargin": 1336500,
+        "terms": [
+          {
+            "termMonths": 60,
+            "monthlyPayment": 2730584,
+            "dueAtSigning": 23057932
+          }
+        ]
+      }
+    }
+  }
+}
