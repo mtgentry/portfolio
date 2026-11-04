@@ -24,7 +24,12 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'theme-color', content: "#C1C1C1"}
+      { name: 'theme-color', content: "#C1C1C1"},
+      // Portfolio site: keep every page out of search by default. Only the
+      // homepage opts back in (components/pages/PortfolioHomepage.vue), so a
+      // search for Mason's name still finds him. Pages reach people through
+      // links, not search. The agency site keeps its normal indexing.
+      ...(process.env.IS_AGENCY === '1' ? [] : [{ hid: 'robots', name: 'robots', content: 'noindex' }])
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

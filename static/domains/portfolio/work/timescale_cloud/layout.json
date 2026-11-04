@@ -1,0 +1,102 @@
+{
+  "cover": {
+    "media": {
+      "name": "cloud_1.png"
+    },
+    "title": "Timescale Cloud",
+    "categories": "Product Design, UI Design, Design System",
+    "position": "left",
+    "width": "40%"
+  },
+  "backgroundColor": "#1977F3",
+  "textColor": "#FFFFFF",
+  "pageBackgroundColor": "#141E35",
+  "pageTextColor": "#FFFFFF",
+  "header": "Timescale Cloud is a database as a service. Developers get a powerful relational database without having to set up or manage the infrastructure under it. I led the design, from the first setup steps to the dashboards developers check every day.",
+  "summary": {
+    "role": "Design lead",
+    "team": "Myself, two developers",
+    "shipped": "Timescale Cloud",
+    "outcome": "Grew trial-to-paid conversion by 18%"
+  },
+  "seo_description": "Product design case study: designing Timescale Cloud, a database as a service, to be clear, fast to set up, and built for developers.",
+  "layout": [
+    {
+      "title": "The challenge",
+      "text": [
+        "Developers can run Postgres almost anywhere. To win them over, Timescale Cloud had to be a database service they actually want to use: the easiest place to get started, and the clearest place to see what’s going on."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "cloud_1.png",
+          "position": "center",
+          "title": "The database overview"
+        }
+      ]
+    },
+    {
+      "title": "Everything in one place",
+      "text": [
+        "Developers shouldn’t have to dig for the basics. Each database gets one overview page that shows how healthy it is, what specs it’s running on, and what it costs.",
+        "Any change to the database starts from this page, so nobody has to go looking."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "cloud_2.png",
+          "position": "center",
+          "title": "Actions, grouped by goal"
+        }
+      ]
+    },
+    {
+      "title": "From empty to running",
+      "text": [
+        "The first few minutes with a new database matter most. The Actions page turns setup into a short list, grouped by what you’re trying to do, like speeding up queries or getting ready for production.",
+        "Each task shows how long it takes, so it’s easy to pick one and finish it."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "cloud_3.png",
+          "position": "center",
+          "title": "Plans and billing"
+        }
+      ]
+    },
+    {
+      "title": "Pricing in plain sight",
+      "text": [
+        "Nobody likes a surprise bill. Plans sit side by side with the same rows, so it’s easy to compare compute, high availability, and backups, and see what an upgrade gets you."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "cloud_4.png",
+          "position": "center",
+          "title": "Monitoring"
+        }
+      ]
+    },
+    {
+      "title": "No DBA hat required",
+      "text": [
+        "Once a database is running, developers want to know it’s healthy. Monitoring puts CPU, memory, queries, and storage on one screen.",
+        "The result is a clean, modern interface built for developers, not database admins. They can check on a database at a glance and get back to building."
+      ]
+    },
+    {
+      "line": true
+    }
+  ],
+  "portfolio": {
+    "cover": {
+      "position": "right"
+    }
+  }
+}

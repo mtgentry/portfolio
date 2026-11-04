@@ -1,8 +1,9 @@
 User-Agent: *
 Disallow: /why_us
 Disallow: /audit
-# SLS case study images and notes: keep out of search (incl. Google Images).
-# The page itself stays crawlable so search engines can read its noindex tag.
-Disallow: /domains/portfolio/work/sls/
+# Every case study's images and data: keep out of search (incl. Google Images).
+# The pages themselves (/work/..., /portfolio/..., /projects/...) stay
+# crawlable so search engines can read their noindex tag.
+Disallow: /domains/portfolio/work/
 # Substrate take-home prototype: reachable by direct link only, never crawled.
 Disallow: /substrate/

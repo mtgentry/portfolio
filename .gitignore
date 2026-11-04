@@ -88,3 +88,12 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Private research notes (kept local, never published)
+static/domains/portfolio/work/sls/research.md
+
+# Mr. Cooper case study: local only for now, not ready to publish
+static/domains/portfolio/work/mrcooper/
+
+# Duplicate of docs/Instrument_copywriting.md, kept local
+instrument.com_copywriting.md

@@ -11,10 +11,13 @@
   },
   "backgroundColor": "#222533",
   "textColor": "#ffffff",
-  "header": "Bedtime is a mobile app rooted in a universal ritual. It invites strangers from around the world to exchange goodnight messages. Quiet. Gentle. Intentional. In a space defined by performance, Bedtime creates a pause. A reminder that even the smallest moments of connection still matter.",
+  "header": "Bedtime is a mobile app for saying goodnight to strangers. You record a short voice message, and it goes to someone else getting ready for bed, somewhere in the world.",
   "summary": {
     "role": "Product and visual design",
-    "client": "Bedtime"
+    "client": "Bedtime",
+    "team": "Myself, two founders",
+    "shipped": "iOS app",
+    "outcome": "A working proof of concept"
   },
   "seo_description": "",
   "layout": [
@@ -27,8 +30,10 @@
       ]
     },
     {
+      "title": "One job, done simply",
       "text": [
-        "When the creators of Bedtime came to me, I loved the idea. A simple way to connect strangers through something we all understand. What began as an experiment turned into a true collaboration. The result is a product that trades noise for calm and performance for presence. A small app with a quietly ambitious goal to make the internet feel a little more human."
+        "The idea came from Bedtime’s founders, and I designed the app with them. It does one thing. You record a goodnight, send it to a stranger, and listen to the ones sent to you. Each message shows the sender’s first name and their location around the world.",
+        "The app only opens after 9pm. That one rule keeps Bedtime tied to the end of the day, instead of becoming one more app to scroll at lunch."
       ]
     },
     {
@@ -40,8 +45,11 @@
       ]
     },
     {
+      "title": "Small by design",
       "text": [
-        "Bedtime does not promise transformation. It offers something quieter. A pause, a gesture, a moment of care exchanged between strangers. It is a small product with a clear intent. And in a world that often rewards the loudest voice, that quiet feels like progress."
+        "A low-poly night landscape sets the mood without getting in the way of the names. Profiles stay short: a name, a city, and a line about yourself. Listeners can send a heart back, and that’s it. No feed, no followers, no streaks.",
+        "In early testing, we learned that people liked getting goodnight messages from the opposite sex. So we built a simple algorithm that made an educated guess at each user’s gender from their first name, and used it to send more messages between men and women.",
+        "Record a goodnight, send it, hear one back. That’s the whole app, and that was the point."
       ]
     },
     {

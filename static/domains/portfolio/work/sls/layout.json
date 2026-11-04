@@ -1,0 +1,88 @@
+{
+  "cover": {
+    "media": {
+      "name": "sls_4.jpg"
+    },
+    "title": "SLS Las Vegas",
+    "categories": "Art Direction, Out-of-Home",
+    "position": "left",
+    "width": "70%"
+  },
+  "backgroundColor": "#1D1E20",
+  "textColor": "#F8F7F4",
+  "pageBackgroundColor": "#F6F6F6",
+  "pageTextColor": "#1D1E20",
+  "header": "When the Sahara closed, it took almost 60 years of Las Vegas history with it. When the property reopened as SLS Las Vegas, the new hotel didn’t want to forget that past. It wanted to honor it.",
+  "summary": {
+    "role": "Art director",
+    "client": "SLS Las Vegas (sbe)",
+    "agency": "Phenomenon",
+    "shipped": "Launch billboards, plus print, digital, and social"
+  },
+  "seo_description": "",
+  "layout": [
+    {
+      "media": [
+        {
+          "name": "sls_1.jpg",
+          "position": "center",
+          "title": "The casino table, then and now"
+        }
+      ]
+    },
+    {
+      "title": "Old Vegas, meet new Vegas",
+      "text": [
+        "The idea was to link old Vegas with new Vegas, literally. Every billboard in the “Be Legendary” campaign pairs a moment from the Sahara’s heyday with the same moment at the new SLS."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "sls_2.jpg",
+          "position": "center",
+          "title": "Walking the Strip"
+        }
+      ]
+    },
+    {
+      "title": "Two eras, one frame",
+      "text": [
+        "As art director on the campaign, I helped create the billboards themselves, pairing each vintage photo with its modern counterpart so the two read like the same night out. The vintage half came from Terry O’Neill’s archive. He photographed Sinatra, the Beatles, and the Rat Pack era. The modern half came from photographer Anna Wolf’s two-day shoot in Los Angeles, which I also helped art direct."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "sls_3.jpg",
+          "position": "center",
+          "title": "Getting ready"
+        }
+      ]
+    },
+    {
+      "title": "The legendary night out",
+      "text": [
+        "Together, the four billboards walk through a classic Vegas night: the casino table, the walk down the Strip, getting ready, and the show. In the last one, O’Neill’s photo of Sammy Davis Jr. performing at the Sahara sits beside performers in The Sayers Club, the new hotel’s nightclub."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "sls_4.jpg",
+          "position": "center",
+          "title": "Sammy Davis Jr. at the Sahara, and The Sayers Club at SLS"
+        }
+      ]
+    },
+    {
+      "title": "Result",
+      "text": [
+        "The billboards went up ahead of the hotel’s opening, and the campaign earned its own coverage in the Las Vegas Review-Journal and HOTELS Magazine. Inside the hotel, the same pairing of old and new showed up everywhere from the room prints to the suites."
+      ]
+    },
+    {
+      "line": true
+    }
+  ]
+}

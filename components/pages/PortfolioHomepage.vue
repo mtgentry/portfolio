@@ -175,6 +175,10 @@ export default {
   head() {
     return {
       title: 'Mason Gentry',
+      // The only searchable page on the portfolio site (the site default is
+      // noindex; see nuxt.config.js). This component also renders /about,
+      // which stays hidden.
+      meta: [{ hid: 'robots', name: 'robots', content: this.$route.path === '/' ? 'index, follow' : 'noindex' }],
       // The intro text and icons start hidden for the fade-in; show them if JS never runs
       noscript: [{ hid: 'show-intro', innerHTML: '<style>.text-content, .image-wrapper { opacity: 1 !important }</style>' }],
       __dangerouslyDisableSanitizersByTagID: { 'show-intro': ['innerHTML'] }

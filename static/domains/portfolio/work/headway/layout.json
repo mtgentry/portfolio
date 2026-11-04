@@ -1,0 +1,110 @@
+{
+  "cover": {
+    "media": {
+      "name": "therapy_1.png"
+    },
+    "title": "Headway",
+    "categories": "Product Design, UI Design",
+    "position": "left",
+    "width": "70%",
+    "forbidIndex": true
+  },
+  "backgroundColor": "#4EA76B",
+  "textColor": "#FFFFFF",
+  "pageBackgroundColor": "#222222",
+  "pageTextColor": "#FFFFFF",
+  "header": "Headway helps therapists take insurance, so more people can afford therapy. Fresh off a $100M raise, the team was ready to give the product therapists use every day a facelift. I redesigned the tools that keep a practice running, from the calendar to client assessments.",
+  "summary": {
+    "role": "Product Designer",
+    "client": "Headway",
+    "agency": "Ghost Collective",
+    "shipped": "Headway for therapists"
+  },
+  "seo_description": "Product design case study: redesigning the tools therapists use to run their practice on Headway, the mental health network that helps therapists take insurance.",
+  "layout": [
+    {
+      "media": [
+        {
+          "name": "therapy_1.png",
+          "position": "center",
+          "title": "The home screen, with the day’s to-dos up front"
+        }
+      ]
+    },
+    {
+      "title": "Start with what’s due",
+      "text": [
+        "A therapist’s day is full of sessions, not software. Home opens on a short to-do list, with sessions to confirm and clients to follow up with, so nothing slips between appointments."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "therapy_2.png",
+          "position": "center",
+          "title": "The calendar, with sessions and open slots side by side"
+        }
+      ]
+    },
+    {
+      "title": "The week at a glance",
+      "text": [
+        "The calendar shows booked sessions, open slots, and whether each one is video, phone, or in person. A busy week is easy to scan."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "therapy_3.png",
+          "position": "center",
+          "title": "The form library, with every consent form in one place"
+        }
+      ]
+    },
+    {
+      "title": "Paperwork, handled",
+      "text": [
+        "Consent forms and intake questionnaires live in one library. Save a form once, and it goes out automatically to every new client."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "therapy_4.png",
+          "position": "center",
+          "title": "Adding a form, with the option to upload one you already use"
+        }
+      ]
+    },
+    {
+      "title": "Bring your own forms",
+      "text": [
+        "Therapists can start from scratch, use a template, or upload the PDF they already use, and ask for a signature in one click."
+      ]
+    },
+    {
+      "media": [
+        {
+          "name": "therapy_5.png",
+          "position": "center",
+          "title": "A client’s profile, with assessment scores over time"
+        }
+      ]
+    },
+    {
+      "title": "Progress you can see",
+      "text": [
+        "Assessments like the PHQ-9 and GAD-7 go out every 30 days. Color-coded scores show how a client is doing since last time. Insurers increasingly ask for that data, so Headway rewards therapists who collect it."
+      ]
+    },
+    {
+      "title": "Result",
+      "text": [
+        "The redesign shipped to tens of thousands of Headway therapists across all 50 states. The goal on every screen was the same: less time on admin, more time with clients."
+      ]
+    },
+    {
+      "line": true
+    }
+  ]
+}
