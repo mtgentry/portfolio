@@ -97,3 +97,6 @@ static/domains/portfolio/work/mrcooper/
 
 # Duplicate of docs/Instrument_copywriting.md, kept local
 instrument.com_copywriting.md
+
+# Prive case study: local only for now, not ready to publish
+static/domains/portfolio/work/prive/
