@@ -11,7 +11,13 @@
   },
   "backgroundColor": "#142042",
   "textColor": "#ffffff",
-  "header": "Cliffwater wrote the book on private debt. With decades of experience and deep institutional knowledge, they are trusted advisers in a complex space. Yet the way their story was being told was holding their marketing back.",
+  "header": "Cliffwater wrote the book on private debt. With decades of experience and deep institutional knowledge, they are trusted advisers in a complex space. But their story only made sense to people who already knew the space.",
+  "summary": {
+    "role": "Art director, editor, and animator",
+    "client": "Cliffwater",
+    "agency": "Ghost Collective",
+    "shipped": "A two-minute explainer video on private debt"
+  },
   "seo_description": "",
   "layout": [
 
@@ -19,14 +25,16 @@
       "media": [
         {
           "name": "1.mp4",
-          "position": "center"
+          "position": "center",
+          "width": "75%",
+          "title": "Private debt: staying dry in stormy markets"
         }
       ]
     },
 
     {
       "text": [
-        "They came to me with a clear challenge. How do you explain private debt to a broader audience in a way that feels human, confident, and easy to grasp, without losing the nuance that institutional investors expect."
+        "Cliffwater faced a difficult challenge. How do you explain private debt to a broader audience in a way that feels easy to grasp, without losing the nuance that institutional investors expect?"
       ]
     },
 
@@ -34,14 +42,16 @@
       "media": [
         {
           "name": "2.mp4",
-          "position": "center"
+          "position": "center",
+          "width": "75%",
+          "title": "Solving the puzzle behind the returns"
         }
       ]
     },
 
     {
       "text": [
-        "I art directed, edited, and animated this two minute video that became the centerpiece of that effort. The video translates the moving parts of private debt into simple metaphors, guiding viewers from first principles to a clear understanding of the category and Cliffwater’s role within it."
+        "I art directed, edited, and animated this two minute video that became the centerpiece of that effort. I also helped with the script to make sure it was as focused as possible. The video translates the moving parts of private debt into simple metaphors, guiding viewers from first principles to a clear understanding of private debt and Cliffwater’s role within it."
       ]
     },
 
@@ -49,7 +59,9 @@
       "media": [
         {
           "name": "3.mp4",
-          "position": "center"
+          "position": "center",
+          "width": "75%",
+          "title": "Steady through rising and falling interest rates"
         }
       ]
     },
@@ -64,14 +76,16 @@
       "media": [
         {
           "name": "4.mp4",
-          "position": "center"
+          "position": "center",
+          "width": "75%",
+          "title": "Investors get paid back first"
         }
       ]
     },
 
 {
       "text": [
-        "What began as an educational piece became something larger. The film now acts as a living expression of the brand a clear, confident system of language and visuals that makes private debt approachable while reinforcing Cliffwater’s depth of expertise."
+        "What began as an educational piece became something larger. The video now acts as a living expression of the brand a clear, confident system of language and visuals that makes private debt approachable while reinforcing Cliffwater’s depth of expertise."
       ]
     },
 
@@ -79,21 +93,27 @@
       "media": [
         {
           "name": "5.mp4",
-          "position": "center"
+          "position": "center",
+          "width": "75%",
+          "title": "A direct line between borrowers and lenders"
         }
       ]
     },
 
-    
-
     {
-      "line": true
+      "media": [
+        {
+          "name": "full_video.mp4",
+          "position": "center",
+          "controls": true,
+          "poster": "full_video_poster.jpg",
+          "title": "Watch the full video (2:17)"
+        }
+      ]
     },
 
     {
-      "text": [
-        "Agency: Ghost Collective"
-      ]
+      "line": true
     }
 
   ]

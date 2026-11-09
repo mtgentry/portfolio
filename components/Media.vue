@@ -1,9 +1,12 @@
 <template lang="pug">
   div(v-if="is_video")
     div#video.d-flex(:style=`{'justify-content': justifyContent}`)
-      video.item(muted playsinline :loop="media.loop !== false" :autoplay="media.loop === false" ref="video" :style=`{"width": media.width || "100%"}`)
+      video.item(muted playsinline :loop="media.loop !== false && !media.controls" :autoplay="media.loop === false && !media.controls" :preload="media.controls ? 'metadata' : 'auto'" :poster="posterPath" ref="video" @play="started = true" :style=`{"width": media.width || "100%"}`)
         source(:src="mediaPath" :type="videoType")
         span Your browser does not support the video tag.
+      //- Browsers hide their own big play button once a poster is set, so
+      //- videos with controls get one until they're first played
+      button.play-overlay(v-if="media.controls && !started" @click="playFromOverlay" aria-label="Play video")
     div.media-caption.text-center.pt-1(v-if="media.title" v-html="media.title")
   div#pdf.d-flex(v-else-if="is_pdf" :style=`{'justify-content': justifyContent}`)
     embed.pdf-viewer(:src="mediaPath" type="application/pdf" :style=`{"width": media.width || "80%", "height": "800px"}`)
@@ -42,6 +45,7 @@ export default {
     return {
       loaded: false,
       playVisibleVideosTimeout: null,
+      started: false,
     }
   },
   mounted() {
@@ -52,6 +56,13 @@ export default {
       this.load()
     }
     if (!this.$refs.video) {
+      return
+    }
+    // A video with controls is a full film the viewer plays on purpose:
+    // sound on, no autoplay or loop, and no scroll-triggered playback
+    if (this.media.controls) {
+      this.$refs.video.muted = false
+      this.$refs.video.controls = true
       return
     }
     // Only add scroll listeners for looping videos
@@ -110,6 +121,10 @@ export default {
       }
       return this.media.position || 'center'
     },
+    posterPath() {
+      if (!this.media.poster) return null
+      return this.mediaPath.replace(this.media.name, this.media.poster)
+    },
     mediaPath() {
       if (this.media.name && this.media.name.startsWith('http')) {
         return this.media.name;
@@ -142,6 +157,9 @@ export default {
       setTimeout(() => {
         this.$AOS.refresh()
       }, delay)
+    },
+    playFromOverlay() {
+      this.$refs.video?.play()?.catch(() => {})
     },
     playVisibleVideos() {
       const video = this.$refs.video
@@ -198,6 +216,41 @@ export default {
     min-height: unset
   &.loaded
     opacity: 1
+#video
+  position: relative
+
+.play-overlay
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 96px
+  height: 96px
+  border: none
+  padding: 0
+  border-radius: 50%
+  background-color: rgba(20, 32, 66, 0.85)
+  cursor: pointer
+  transition: transform 0.2s ease, background-color 0.2s ease
+  // White triangle, nudged right so it looks centred in the circle
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 54%
+    transform: translate(-50%, -50%)
+    border-style: solid
+    border-width: 16px 0 16px 26px
+    border-color: transparent transparent transparent #fff
+  &:hover
+    transform: translate(-50%, -50%) scale(1.06)
+    background-color: rgba(20, 32, 66, 1)
+  @media (max-width: 768px)
+    width: 64px
+    height: 64px
+    &::after
+      border-width: 11px 0 11px 18px
+
 .media-caption
   font-size: 14px !important
   // pt-1's 4px + 3px
