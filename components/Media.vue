@@ -255,6 +255,13 @@ export default {
   font-size: 14px !important
   // pt-1's 4px + 3px
   padding-top: 7px !important
+  // Links in captions (v-html) match the caption text, underlined
+  ::v-deep a
+    color: inherit !important
+    text-decoration: underline !important
+    text-underline-offset: 3px
+    &:hover
+      opacity: 0.7
 
 .aspect-container
   overflow: hidden

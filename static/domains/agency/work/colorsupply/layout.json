@@ -79,6 +79,7 @@
             {
               "profileImage": "paamp.jpg",
               "displayName": "BEAR 🧸🍊 CMS OPEN !",
+              "handle": "paamp",
               "displayBadges": [],
               "content": "This website is for anyone looking for a tool to help choose colors for their design work. It even provides examples of how the colors look together and makes them pop—check it out, buddy ( 👉🏻)",
               "link": "colorsupplyyy.com",
@@ -91,6 +92,7 @@
             {
               "profileImage": "jerry.jpg",
               "displayName": "JJK³⁹ 🌸 #UNFORGIVEN",
+              "handle": "jerry",
               "displayBadges": [],
               "content": "For anyone struggling to choose the right color combinations, I always rely on this website. It offers a wide variety of options to choose from.",
               "link": "colorsupplyyy.com",
@@ -103,6 +105,7 @@
             {
               "profileImage": "appmarkelabo.jpg",
               "displayName": "アプリマーケティング研究所",
+              "handle": "appmarkelabo",
               "displayBadges": [
                 { "type": "verified" }
               ],
@@ -117,6 +120,7 @@
             {
               "profileImage": "sleepy.jpg",
               "displayName": "lin",
+              "handle": "sleepy",
               "displayBadges": [],
               "content": "I recommend this website for pairing colors for work—there are tons of combinations available. Give it a try! (ˊ˘ˋ)☆ﾟ°",
               "link": "colorsupplyyy.com",
@@ -129,6 +133,7 @@
             {
               "profileImage": "yamino.jpg",
               "displayName": "Yamino💙💛🌻",
+              "handle": "yamino",
               "displayBadges": [],
               "content": "This in-browser color palette designer is like p*rn for artists: I found the link for this!",
               "link": "colorsupplyyy.com",
@@ -141,6 +146,7 @@
             {
               "profileImage": "hiiar.jpg",
               "displayName": "hiiarbonlang",
+              "handle": "hiiarbonlang",
               "displayBadges": [
                 { "type": "verified" }
               ],
@@ -155,6 +161,7 @@
             {
               "profileImage": "satake.jpg",
               "displayName": "サタケシュンスケ | Shunsuke Sa...",
+              "handle": "satakeshunsuke",
               "displayBadges": [],
               "content": "Color Supply is a service that lets you create 2–4 color combinations in an incredibly simple yet appealing way. Even the free demo version is more than enough to get by...! Designed for designers and illustrators.",
               "link": "colorsupplyyy.com",
@@ -167,6 +174,7 @@
             {
               "profileImage": "pandesaii.jpg",
               "displayName": "SAI",
+              "handle": "pandesaii",
               "displayBadges": [
                 { "type": "rainbow" },
                 { "type": "text", "content": "komiket pride" },
@@ -183,6 +191,7 @@
             {
               "profileImage": "css.jpg",
               "displayName": "CSS-Tricks",
+              "handle": "css",
               "displayBadges": [],
               "content": "Pretty cool color picker :: (In that it shows you how the colors sit next to each in kinda \"real world\" ways.)",
               "link": "colorsupplyyy.com",
@@ -195,6 +204,7 @@
             {
               "profileImage": "smashing.jpg",
               "displayName": "Smashing Magazine",
+              "handle": "smashingmag",
               "displayBadges": [
                 { "type": "flag", "content": "🇺🇦" },
                 { "type": "rainbow" },
@@ -211,6 +221,7 @@
             {
               "profileImage": "present.jpg",
               "displayName": "Present & Correct",
+              "handle": "presentcorrect",
               "displayBadges": [
                 { "type": "verified" }
               ],
@@ -225,6 +236,7 @@
             {
               "profileImage": "ryan.jpg",
               "displayName": "Ryan Layer",
+              "handle": "ryanlayer",
               "displayBadges": [],
               "content": "Great color picker tool for designers and developers",
               "link": "colorsupplyyy.com",
@@ -237,6 +249,7 @@
             {
               "profileImage": "ux_passion.png",
               "displayName": "UX Passion",
+              "handle": "uxpassion",
               "displayBadges": [],
               "content": "Color supply is a beautiful, user-friendly web tool any web designer will love to use!",
               "link": "colorsupplyyy.com?ref=webde...",
@@ -249,6 +262,7 @@
             {
               "profileImage": "marion.jpg",
               "displayName": "Marion Esquian",
+              "handle": "marionesquian",
               "displayBadges": [],
               "content": "Someone at work shared this really cool app for color >>",
               "link": "colorsupplyyy.com",
@@ -261,6 +275,7 @@
             {
               "profileImage": "web_designer_mag.jpg",
               "displayName": "WebDesignerMag",
+              "handle": "WebDesignerMag",
               "displayBadges": [],
               "content": "Plenty of options to choose from in this this intuitive colour picker",
               "link": "colorsupplyyy.com",
@@ -273,6 +288,7 @@
             {
               "profileImage": "nice.png",
               "displayName": "Nicely Done",
+              "handle": "nicelydone",
               "displayBadges": [],
               "content": "Really interesting color theme tool by @mgentry81",
               "link": "colorsupplyyy.com",
@@ -285,6 +301,7 @@
             {
               "profileImage": "ruby_boy.jpg",
               "displayName": "Rubyboy",
+              "handle": "rubyboy",
               "displayBadges": [],
               "content": "Beautiful free color palettes from amazing designers",
               "link": "colorsupplyyy.com",
@@ -297,6 +314,7 @@
             {
               "profileImage": "icon_finder.jpg",
               "displayName": "Iconfinder",
+              "handle": "iconfinder",
               "displayBadges": [
                 { "type": "verified" }
               ],
@@ -311,6 +329,7 @@
             {
               "profileImage": "canni.jpg",
               "displayName": "🌿 donita 🌿",
+              "handle": "canni",
               "displayBadges": [],
               "content": "@ ARTIST/DESIGNER FRIENDS this is neato",
               "link": "colorsupplyyy.com",
@@ -323,6 +342,7 @@
             {
               "profileImage": "marion.jpg",
               "displayName": "Lucia Soto",
+              "handle": "luciasoto",
               "displayBadges": [],
               "content": "This is cool -",
               "link": "colorsupplyyy.com",

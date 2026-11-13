@@ -10,8 +10,8 @@
           :class="{ 'fade-in': index >= previousDisplayCount }"
         )
           Tweet(:tweet-data="tweet" :project_name="project_name")
-    // Load More button always visible, placed immediately after the tweets container.
-    button.load-more(:class="{ loading: isLoading }" @click="loadMore")
+    // Load More button, hidden once every tweet is showing
+    button.load-more(v-if="hasMore" :class="{ loading: isLoading }" @click="loadMore")
       | Load More
 </template>
 
@@ -51,6 +51,9 @@ export default {
   computed: {
     visibleTweets() {
       return this.tweets.slice(0, this.displayCount);
+    },
+    hasMore() {
+      return this.displayCount < this.tweets.length;
     }
   },
   methods: {

@@ -1,23 +1,26 @@
 <template lang="pug">
+  //- Styled to read like an X embed. Optional field: handle ("css", no @)
   div.tweet-container(:style=`{'width': width || '100%'}`)
     div.tweet-header
-      img.profile-image(:src="profileImagePath" alt="Profile")
+      img.profile-image(:src="profileImagePath" alt="")
       div.user-info
         div.display-name-container
-          span {{ tweetData.displayName }} 
+          span.display-name {{ tweetData.displayName }}
           span.rainbow-badge(v-if="hasBadge('rainbow')")
           span(v-for="badge in textBadges" :key="badge.content") {{ badge.content }}
           span.flower-emoji(v-for="badge in emojiBadges" :key="badge.content") {{ badge.content }}
+        div.handle(v-if="tweetData.handle") @{{ tweetData.handle }}
     div.tweet-content
-      | {{ tweetData.content }}
-    a.tweet-link(:href="tweetData.linkUrl" target="_blank") {{ tweetData.link }}
+      span {{ tweetData.content }}
+      | {{ ' ' }}
+      a.tweet-link(v-if="tweetData.link" :href="tweetData.linkUrl" target="_blank" rel="noopener") {{ tweetData.link }}
     div.tweet-actions
-      div.action-item(v-if="hasLikes")
-        svg.action-icon(viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
-          path(d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z")
+      div.action-item.likes(v-if="hasLikes")
+        svg.action-icon(viewBox="0 0 24 24")
+          path(d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z")
         span.action-count {{ formattedLikes }}
       div.action-item(v-if="hasRetweets")
-        svg.action-icon(viewBox="0 0 24 24" fill="currentColor" stroke="none")
+        svg.action-icon(viewBox="0 0 24 24")
           path(d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z")
         span.action-count {{ formattedRetweets }}
 </template>
@@ -84,48 +87,74 @@ export default {
       if (!this.tweetData.displayBadges) return false;
       return this.tweetData.displayBadges.some(badge => badge.type === type);
     },
+    // X rounds counts down: 14,900 -> "14.9K", 7,489 -> "7.4K"
     formatNumber(num) {
-      return new Intl.NumberFormat().format(num);
+      if (num < 1000) return String(num)
+      const units = num >= 1e6 ? [1e6, 'M'] : [1e3, 'K']
+      const value = Math.floor(num / units[0] * 10) / 10
+      return `${value}${units[1]}`
     }
   }
 }
 </script>
 
 <style lang="sass" scoped>
+// Matches X's embed: system font, #0f1419 text, #cfd9de border, 12px radius
+$x-text: #0f1419
+$x-grey: #536471
+$x-border: #cfd9de
+$x-blue: #1d9bf0
+
 .tweet-container
   max-width: 550px
-  border-radius: 16px
-  border: 1px solid #EAEAEA
-  padding: 12.8px 16px
+  border-radius: 12px
+  border: 1px solid $x-border
+  padding: 12px 16px
   background-color: #fff
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1)
   margin: 0 auto
-  height: 100%  // Fill entire height
-  display: flex  // Use flexbox
-  flex-direction: column  // Stack content vertically
+  height: 100%
+  display: flex
+  flex-direction: column
+  color: $x-text
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
+  text-align: left
 
 .tweet-header
   display: flex
   align-items: center
-  margin-bottom: 9.6px
-  padding-left: 2px
+  margin-bottom: 12px
 
 .profile-image
   width: 48px
   height: 48px
   border-radius: 50%
-  margin-right: 12px
+  margin-right: 8px
+  object-fit: cover
   background-color: #f5f5f5
+  flex-shrink: 0
 
 .user-info
   display: flex
   flex-direction: column
+  min-width: 0
+  flex: 1
+  line-height: 20px
 
 .display-name-container
   display: flex
   align-items: center
-  font-weight: bold
-  font-size: 18px
+  font-weight: 700
+  font-size: 15px
+  min-width: 0
+
+.display-name
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.handle
+  color: $x-grey
+  font-size: 15px
 
 .rainbow-badge
   display: inline-block
@@ -139,47 +168,44 @@ export default {
   margin: 0 4px
 
 .tweet-content
-  font-size: 18px
-  line-height: 1.2
-  margin-bottom: 10px
-  text-align: left
-  padding-left: 2px
+  font-size: 17px
+  line-height: 24px
+  margin-bottom: 12px
+  word-wrap: break-word
 
 .tweet-link
-  color: #0077cc !important
+  color: $x-blue !important
   text-decoration: none
-  font-size: 18px
-  line-height: 1.2
-  margin-bottom: 5px
-  display: block
-  word-break: break-all
-  padding-left: 2px
+  // Wrap the whole URL to the next line rather than splitting it mid-word
+  white-space: nowrap
+  &:hover
+    text-decoration: underline
 
-
+// Pinned to the bottom so cards in a row line up
 .tweet-actions
   display: flex
-  justify-content: flex-start
-  gap: 24px
+  gap: 20px
+  margin-top: auto
   padding-top: 12px
-  color: #536471
-  font-size: 13px
-  padding-left: 2px
+  border-top: 1px solid #eff3f4
+  color: $x-grey
 
 .action-item
   display: flex
   align-items: center
-  &:nth-child(2)
-    margin-left: -8px
+  &.likes .action-icon
+    fill: #f91880
 
 .action-icon
-  width: 22px
-  height: 22px
-  margin-right: 8px
-  opacity: 0.6
+  width: 20px
+  height: 20px
+  margin-right: 4px
+  fill: $x-grey
 
 .action-count
-  color: #536471
-  font-size: 15.6px
+  font-size: 14px
+  font-weight: 700
+  color: $x-grey
 
 @media (max-width: 768px)
   .tweet-container

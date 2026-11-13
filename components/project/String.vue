@@ -85,6 +85,13 @@ h5
 
 p
   margin-top: 0  // Remove default top margin
+  // Links in body copy (v-html) match the text, underlined
+  ::v-deep a
+    color: inherit !important
+    text-decoration: underline !important
+    text-underline-offset: 3px
+    &:hover
+      opacity: 0.7
 
 // Project body copy: Resist Sans Light, overriding the site-wide paragraph size
 // and line height set in layouts/default.vue. Credit lines keep their own size.
