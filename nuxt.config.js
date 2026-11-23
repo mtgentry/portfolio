@@ -141,6 +141,10 @@ export default {
     // /projects copies tripled the page count, and grids were built empty
     // ("socket hang up"). A handful at a time is plenty fast.
     concurrency: 8,
+    // Hand-built sites in static/work/<project>/live/ are linked from case
+    // studies. Without this, the crawler follows the link, finds no Nuxt page,
+    // and writes a 404 over the site's own index.html.
+    exclude: [/^\/work\/[^/]+\/live\/?$/],
     routes() {
       const fs = require('fs')
       const path = require('path')
